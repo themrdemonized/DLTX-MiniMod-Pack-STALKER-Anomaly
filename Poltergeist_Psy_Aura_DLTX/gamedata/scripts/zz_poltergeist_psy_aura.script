@@ -3,8 +3,8 @@
 -------------------------------------------
 
 --SETTINGS------------------------------------------------------------
-local c_controller_psy_aura_max_damage = 0.15 --Maximal psy health damage 1 meters from the Controller
-local c_controller_psy_aura_range = 50 --Range of the controller's psy aura in meters
+local c_controller_psy_aura_max_damage = 0.1 --Maximal psy health damage 1 meters from the Controller
+local c_controller_psy_aura_range = 40 --Range of the controller's psy aura in meters
 
 
 --TABLES-----------------------------------------------------------------------------------------

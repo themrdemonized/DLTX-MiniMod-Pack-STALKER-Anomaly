@@ -1887,7 +1887,6 @@ function UIWorkshopCraft:UpdateItem (n, sec, amount, result, toolkit_idx, toolki
 		
 		-- Check and Allow/Prevent
 		local count = 0
-		local dischargeAmount = amount
 		for _,cnt in pairs(parts_id) do
 			count = count + cnt
 		end
@@ -1932,7 +1931,6 @@ function UIWorkshopCraft:UpdateItem (n, sec, amount, result, toolkit_idx, toolki
 			-- to delete
 			if (count <= amount) then
 				self.craft_item[n][#self.craft_item[n] + 1] = id
-				dischargeAmount = dischargeAmount - count
 			end
 			
 			if count == amount then
@@ -1941,7 +1939,7 @@ function UIWorkshopCraft:UpdateItem (n, sec, amount, result, toolkit_idx, toolki
 			
 			-- to discharge
 			if count > amount then
-				self.craft_item_remain[n] = { id = id , cnt = (count - (count - dischargeAmount)) }
+				self.craft_item_remain[n] = { id = id , cnt = (count - amount) }
 				break
 			end
 		end

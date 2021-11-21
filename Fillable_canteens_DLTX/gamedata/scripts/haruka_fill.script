@@ -34,7 +34,7 @@ local function actor_on_footstep(mat)
     local current_material = tostring(mat)
     --printf(current_material)
     near_water = sf(current_material, "water") or sf(current_material, "actor")
-    local nearby_camp = get_nearby_campfire(3, true)
+    local nearby_camp = get_nearby_campfire(4, true)
     near_campfire = nearby_camp and nearby_camp:is_on()
 end
 
