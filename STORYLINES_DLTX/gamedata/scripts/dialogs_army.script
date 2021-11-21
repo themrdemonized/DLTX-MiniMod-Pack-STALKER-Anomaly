@@ -1,0 +1,88 @@
+function kuznecov_find_document_1()
+   task_manager.get_task_manager():give_task("kuznecov_find_document_1")
+end
+
+function is_has_document_agr_kuznec(first_speaker, second_speaker)
+return first_speaker:object("main_story_1_quest_case") ~= nil 
+end 
+
+function transfer_agr_document_to_kuznec(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "main_story_1_quest_case")
+end
+
+function kuznecov_find_document_2()
+   task_manager.get_task_manager():give_task("kuznecov_find_document_2")
+end
+
+function is_has_document_x18_kuznec(first_speaker, second_speaker)
+return first_speaker:object("main_story_2_lab_x18_documents") ~= nil 
+end 
+
+function transfer_x18_document_to_kuznec(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "main_story_2_lab_x18_documents")
+end
+
+function kuznecov_find_document_3()
+   task_manager.get_task_manager():give_task("kuznecov_find_document_3")
+end
+
+function turn_off_bra()
+   task_manager.get_task_manager():give_task("turn_off_brain_scorcher")
+end
+
+function is_has_document_x16_kuznec(first_speaker, second_speaker)
+return first_speaker:object("main_story_3_lab_x16_documents") ~= nil 
+end 
+
+function transfer_x16_document_to_kuznec(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "main_story_3_lab_x16_documents")
+end
+
+function kuznecov_find_document_4()
+   task_manager.get_task_manager():give_task("kuznecov_find_document_4")
+end
+
+function is_has_document_x10_kuznec(first_speaker, second_speaker)
+return first_speaker:object("main_story_4_lab_x10_documents") ~= nil 
+end 
+
+function transfer_x10_document_to_kuznec(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "main_story_4_lab_x10_documents")
+end
+
+function kuznecov_find_document_5()
+   task_manager.get_task_manager():give_task("kuznecov_find_document_5")
+end
+
+function is_has_document_x8_kuznec(first_speaker, second_speaker)
+return first_speaker:object("main_story_5_lab_x8_documents") ~= nil 
+end 
+
+function transfer_x8_document_to_kuznec(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "main_story_5_lab_x8_documents")
+end
+
+function kuznecov_find_document_6()
+   task_manager.get_task_manager():give_task("kuznecov_find_document_6")
+end
+
+function is_has_document_jupugr_kuznec(first_speaker, second_speaker)
+return first_speaker:object("main_story_6_jup_ug_documents") ~= nil 
+end 
+
+function transfer_jupugr_document_to_kuznec(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "main_story_6_jup_ug_documents")
+end
+
+function kuznecov_find_document_7()
+   task_manager.get_task_manager():give_task("kuznecov_find_document_7")
+end
+
+function is_has_document_contrbunker_kuznec(first_speaker, second_speaker)
+return first_speaker:object("main_story_7_mon_con_documents") ~= nil 
+end 
+
+function transfer_document_contrbunker_kuznec(first_speaker, second_speaker)
+    dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "main_story_7_mon_con_documents")
+end
+

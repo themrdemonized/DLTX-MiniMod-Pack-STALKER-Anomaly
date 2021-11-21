@@ -1,0 +1,12 @@
+<string_table>
+	<string id="st_flaskrad">
+		<text>Zone water</text>
+	</string>
+	<string id="st_flaskrad_descr">
+		<text>Zone Water test.\n \n
+		%c[ui_gray_3]PROPERTIES:\n
+		%c[d_blue] • %c[ui_gray_2] drink\n
+		%c[d_blue] • %c[ui_gray_2] clean nutrition source\n
+		</text>
+	</string>
+</string_table>

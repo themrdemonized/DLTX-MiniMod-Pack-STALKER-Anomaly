@@ -1,0 +1,153 @@
+ini_manager = ini_manager or ini_file("items\\settings\\itms_manager.ltx")
+
+local n = 0
+local result,id,value = "","",""
+
+--CODE FOR GETTING HUNTER BACKPACKS LIST
+function get_hunter_backpack_list(section_name)
+	local item_group = {}
+	local n = ini_manager:line_count(section_name)
+	--printf("items in section %s -  %s", section_name, n)
+	for i=0,n-1 do
+		result, id, value = ini_manager:r_line_ex(section_name,i,"","")
+		--printf("id %s", id)
+		if ini_sys:section_exist(id) then
+			--printf("id %s exist", id)
+			item_group[#item_group+1] = id
+		end
+	end
+	return item_group
+end
+
+--CODE FOR GETTING HUNTER BACKPACK BONUSES
+function get_hunter_list()
+	local bonuses = {}
+	local kit_hunt_list = get_hunter_backpack_list("hunter_backpacks_section")
+	for i,hunt in ipairs(kit_hunt_list) do
+		--printf("backpack %s, chance %s", hunt, ini_sys:r_float_ex(hunt,"bonus_mutant_part_chance"))
+		bonuses[hunt] = ini_sys:r_float_ex(hunt,"bonus_mutant_part_chance") or 0
+	end
+	return bonuses
+end
+
+local sec_kit_hunt = get_hunter_list()
+local item_prop_table = { cond_r = {30,70} , cond_ct = "part" , cond_cr = {0.5,0.75,1} }
+
+local function hasHkObject()
+	local hkObjectChance = 0
+	local hkObject
+	for key,chance in pairs(sec_kit_hunt) do
+		--printf("checking %s", key)
+		if (db.actor:object(key)) and (chance > hkObjectChance) then
+			--printf("%s found", key)
+			hkObjectChance = chance
+			hkObject = db.actor:object(key)
+		end
+	end
+	return hkObject
+end
+
+ui_mutant_loot.UIMutantLoot.Loot = function(self, loot_all)
+	printf("calling ui_mutant_loot.Loot overrride")
+	local obj_mutant = level.object_by_id(self.id)
+	if (not obj_mutant) then
+		self:Close()
+		return
+	end
+	
+	local is_looted
+	local sim = alife()
+	local actor = db.actor
+	local backpack = actor:item_in_slot(13)
+	local hkObject = hasHkObject()
+	local is_huntkit
+	local bonus_part_chance = 0
+	local needs_equipped_hk = ui_options.get("gameplay/general/need_equipped_hkit")
+
+	-- for k,v in pairs(sec_kit_hunt) do
+	-- 	printf("kit hunt %s, chance %s", k, v)
+	-- end
+
+	if (needs_equipped_hk and backpack and sec_kit_hunt[backpack:section()]) or (not needs_equipped_hk and hkObject) then
+		local currentBackpack = needs_equipped_hk and backpack or hkObject
+		printf("actor has huntkit %s and receive bonus %s", currentBackpack:section(), sec_kit_hunt[currentBackpack:section()])
+		is_huntkit = true
+		bonus_part_chance = sec_kit_hunt[currentBackpack:section()] or 0
+	else
+		--printf("actor don't have huntkit, his kit is %s, chance %s", backpack:section(), sec_kit_hunt[backpack:section()])
+	end
+	
+	-- Spawn selected items, clean from loot table
+	if loot_all then
+		local tbl = self.loot -- temp
+		for sec,t in pairs(tbl) do
+			for i=1,t.count do
+				is_looted = true
+				item_knife.degradate()
+				
+				alife_create_item(sec, db.actor, item_prop_table)
+
+				if is_huntkit and (math.random(100) < bonus_part_chance) then
+					printf("received bonus item %s", sec)
+					alife_create_item(sec, db.actor, item_prop_table)
+				end
+				self.loot[sec].count = self.loot[sec].count - 1
+				if (self.loot[sec].count == 0) then
+					self.loot[sec] = nil
+				end
+			end
+		end
+	else
+		for idx,ci in pairs(self.CC.cell) do
+			if ci.flags.selected then
+				local sec = ci.section
+				is_looted = true
+				item_knife.degradate()
+				
+				alife_create_item(sec, db.actor, item_prop_table)
+
+				if is_huntkit and (math.random(100) < bonus_part_chance) then
+					printf("received bonus item %s", sec)
+					alife_create_item(sec, db.actor, item_prop_table)
+				end
+				
+				self.loot[sec].count = self.loot[sec].count - 1
+				if self.loot[sec].count == 0 then
+					self.loot[sec] = nil
+				end
+			end
+		end
+	end
+	
+	-- If no item is looted, don't proceed
+	if (not is_looted) then
+		return
+	end
+	
+	-- Animation boost if player has Hunter Kit or Well Dressed Achievement
+	if (actor_effects) then
+		local boost = (game_achievements.has_achievement("well_dressed") and 1 or 0) + (is_huntkit and 1 or 0)
+		if (boost == 2) then
+			actor_effects.play_item_fx("mutant_looting_boost_2")
+		elseif (boost == 1) then
+			actor_effects.play_item_fx("mutant_looting_boost_1")
+		else
+			actor_effects.play_item_fx("mutant_looting")
+		end
+	end
+	xr_sound.set_sound_play(AC_ID,"inv_mutant_loot_animal")
+	
+	-- Increat field dressings stat
+	game_statistics.increment_statistic("field_dressings")
+	
+	-- Mutant post-state
+	save_var(obj_mutant,"loot",self.loot)
+	local is_more_loot = not is_empty(self.loot)
+	
+	-- Refill loot list if there's loot left
+	if ((not actor_effects.is_animations_on()) and is_more_loot) then
+		self:FillList()
+	else
+		self:Close()
+	end
+end

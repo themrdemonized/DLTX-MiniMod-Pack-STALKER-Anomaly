@@ -1,0 +1,104 @@
+local near_water = false
+local near_campfire = false
+
+local get_nearby_campfire = bind_campfire.get_nearby_campfire
+local alife_create_item = alife_create_item
+local alife_release = alife_release
+local get_object_by_id = get_object_by_id
+local translate_string = game.translate_string
+local random_float = random_float
+local sf = string.find
+local tostring = tostring
+local CreateTimeEvent = CreateTimeEvent
+
+local waters = {
+    flask = true,
+    dirty_water = true,
+    boiled_water = true
+}
+
+local sound_objs =  {
+    boiling_water=sound_object("fillable_canteens\\boiling_water"),
+    filling_water=sound_object("fillable_canteens\\filling_water")
+}
+local sound_volume = 1
+
+local function play_sound(sound)
+    sound:play(db.actor, 0, sound_object.s2d)
+    sound.volume = sound_volume
+    sound.frequency = random_float(0.97, 1.03)
+    return true
+end
+
+local function actor_on_footstep(mat)
+    local current_material = tostring(mat)
+    --printf(current_material)
+    near_water = sf(current_material, "water") or sf(current_material, "actor")
+    local nearby_camp = get_nearby_campfire(3, true)
+    near_campfire = nearby_camp and nearby_camp:is_on()
+end
+
+local function actor_on_item_use(obj)
+    local sec = obj:section()
+
+    if waters[sec] and obj:get_remaining_uses() == 0 then
+        alife_create_item("empty_canteen", db.actor)
+    end
+end
+
+local function set_uses(id, uses)
+    get_object_by_id(id):set_remaining_uses(uses)
+    return true
+end
+
+local function start_water(obj, sec)
+    if sec == "dirty_water" then
+        obj:set_remaining_uses(obj:get_max_uses())
+    else
+        alife_create_item("dirty_water", obj:parent())
+        alife_release(obj)
+    end
+    CreateTimeEvent("play_filling_water_sound", "play_filling_water_sound", 0.01, play_sound, sound_objs.filling_water)
+end
+
+local function start_campfire(obj, sec)
+    local uses = obj:get_remaining_uses()
+    local se_itm = alife_create_item("boiled_water", obj:parent())
+    CreateTimeEvent("play_boiling_water_sound", "play_boiling_water_sound", 0.01, play_sound, sound_objs.boiling_water)
+    alife_release(obj)
+    CreateTimeEvent(se_itm.id, se_itm.id, 0.02, set_uses, se_itm.id, uses)
+end
+
+-- return "use" name
+function menu_fill(obj)
+    local p = obj:parent()
+    if not (p and p:id() == AC_ID) then return end
+    local sec = obj:section()
+
+    if (sec == "empty_canteen" or (sec == "dirty_water" and obj:get_remaining_uses() < obj:get_max_uses())) and near_water then
+        return translate_string("st_haruka_fill")
+    end
+
+    if sec == "dirty_water" and near_campfire then
+        return translate_string("st_haruka_campfire")
+    end
+end
+
+function func_fill(obj)
+    local p = obj:parent()
+    if not (p and p:id() == AC_ID) then return end
+    local sec = obj:section()
+
+    if (sec == "empty_canteen" or (sec == "dirty_water" and obj:get_remaining_uses() < obj:get_max_uses())) and near_water then
+        return start_water(obj, sec)
+    end
+
+    if sec == "dirty_water" and near_campfire then
+        return start_campfire(obj, sec)
+    end
+end
+
+function on_game_start()
+    RegisterScriptCallback("actor_on_footstep", actor_on_footstep)
+    RegisterScriptCallback("actor_on_item_use", actor_on_item_use)
+end

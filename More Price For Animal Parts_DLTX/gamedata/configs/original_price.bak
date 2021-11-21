@@ -1,0 +1,158 @@
+![mutant_part_krovosos_jaw]
+cost				                               = 1380
+
+![mutant_part_boar_leg]
+cost				                               = 670
+
+![mutant_part_chimera_kogot]
+cost				                               = 3740
+
+![mutant_part_chimera_claw]
+cost				                               = 790
+
+![mutant_part_dog_tail]
+cost				                               = 620
+
+![mutant_part_flesh_eye]
+cost				                               = 640
+
+![mutant_part_psevdodog_tail]
+cost				                               = 690
+
+![mutant_part_snork_leg]
+cost				                               = 790
+
+![mutant_part_snork_mask]
+cost				                               = 1060
+
+![mutant_part_tushkano_head]
+cost				                               = 510
+
+![mutant_part_pseudogigant_hand]
+cost				                               = 5340
+
+![mutant_part_pseudogigant_eye]
+cost				                               = 5620
+
+![mutant_part_controller_glass]
+cost				                               = 4790
+
+![mutant_part_controller_hand]
+cost				                               = 4180
+
+![mutant_part_burer_hand]
+cost				                               = 2940
+
+![mutant_part_cat_tail]
+cost                                               = 690
+
+![mutant_part_fracture_hand]
+cost                                               = 560
+
+![mutant_part_zombi_hand]
+cost                                               = 620
+
+![mutant_part_crow_beak]
+cost                                               = 1630
+
+![mutant_part_lurker_tail]
+cost				                               = 640
+
+![mutant_part_lurker_eye]
+cost				                               = 640
+
+![mutant_part_psysucker_hand]
+cost				                               = 640
+
+![mutant_part_dog_liver]
+cost				                               = 375
+
+![mutant_part_dog_heart]
+cost				                               = 361
+
+![mutant_part_cat_thyroid]
+cost				                               = 415
+
+![mutant_part_cat_claw]
+cost				                               = 325
+
+![mutant_part_tusk_boar]
+cost				                               = 375
+
+![mutant_part_heart_bloodsucker]
+cost				                               = 620
+
+![mutant_part_fang_psevdodog]
+cost				                               = 250
+
+![mutant_part_brain_burer]
+cost				                               = 1750
+
+![mutant_part_heart_chimera]
+cost				                               = 1400
+
+![mutant_part_flesh_meat]
+cost			                                   = 504
+
+![mutant_part_boar_chop]
+cost				                               = 669
+
+![mutant_part_dog_meat]
+cost				                               = 209
+
+![mutant_part_psevdodog_meat]
+cost				                               = 529
+
+![mutant_part_krovosos_meat]
+cost				                               = 917
+
+![mutant_part_psysucker_meat]
+cost				                               = 1100
+
+![mutant_part_snork_hand]
+cost				                               = 452
+
+![mutant_part_chimera_meat]
+cost				                               = 1408
+
+![mutant_part_lurker_meat]
+cost				                               = 1408
+
+![mutant_part_tushkano_meat]
+cost				                               = 166
+
+![powder_poltergeist]
+cost				                               = 2760
+
+![hide_chimera]
+cost				                               = 3284 
+
+![hide_pseudogiant]
+cost				                               = 4090 
+
+![hide_psy_dog]
+cost				                               = 1570 
+
+![hide_pseudodog]
+cost				                               = 940 
+
+![hide_burer]
+cost				                               = 2540 
+
+![hide_controller]
+cost				                               = 3040 
+
+![hide_bloodsucker]
+cost				                               = 2020 
+
+![hide_psysucker]
+cost				                               = 2020 
+
+![hide_lurker]
+cost				                               = 730 
+
+![hide_boar]
+cost				                               = 730 
+
+![hide_flesh]
+cost				                               = 640 

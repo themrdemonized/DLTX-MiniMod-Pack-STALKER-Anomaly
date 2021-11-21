@@ -1,0 +1,156 @@
+-------------------------------------------------------
+--Arszi's Campfire Roasting
+--By Arszi
+--Last update 2020.09.21.
+-------------------------------------------------------
+function menu_roast()
+	local campfire = bind_campfire.get_nearby_campfire(2.0, false)
+	if (campfire) then
+		if (is_player_looking_at_campfire(campfire)) then
+			return game.translate_string("roast")
+		end
+	end
+end
+
+function use_roast(item)
+	if (not item) then return end
+	if (not can_use_campfire()) then return end
+
+	local section = item:section()
+	local roasting_time = 0
+    
+	if (string.match(section, "mutant_part_chimera_meat")) then
+	    manage_food("meat_chimera", item)
+	    roasting_time = roasting_time + 30
+	end
+	
+	if (string.match(section, "mutant_part_psysucker_meat")) then
+	    manage_food("meat_psysucker", item)
+	    roasting_time = roasting_time + 20
+	end
+	
+	if (string.match(section, "mutant_part_krovosos_meat")) then
+	    manage_food("meat_bloodsucker", item)
+	    roasting_time = roasting_time + 20
+	end
+	
+	if (string.match(section, "mutant_part_psevdodog_meat")) then
+	    manage_food("meat_pseudodog", item)
+	    roasting_time = roasting_time + 15
+	end
+    
+	if (string.match(section, "mutant_part_lurker_meat")) then
+	    manage_food("meat_lurker", item)
+	    roasting_time = roasting_time + 15
+	end
+	
+	if (string.match(section, "mutant_part_boar_chop")) then
+		manage_food("meat_boar", item)
+		roasting_time = roasting_time + 10
+	end
+
+	if (string.match(section, "mutant_part_flesh_meat")) then
+		manage_food("meat_flesh", item)
+		roasting_time = roasting_time + 5
+	end
+
+	if (string.match(section, "mutant_part_dog_meat")) then
+		manage_food("meat_dog", item)
+		roasting_time = roasting_time + 5
+	end
+
+	if (string.match(section, "mutant_part_snork_hand")) then
+		manage_food("meat_snork", item)
+		roasting_time = roasting_time + 10
+	end
+
+	if (string.match(section, "mutant_part_tushkano_meat")) then
+		manage_food("meat_tushkano", item)
+		roasting_time = roasting_time + 5
+	end
+
+	if (roasting_time > 0) then
+		level.add_pp_effector("sleep_fade.ppe", 11, false)
+		level.change_game_time(0, 0, roasting_time)
+	end
+end
+
+function is_player_looking_at_campfire(campfire)
+	local poscamp = campfire:position()
+
+	local dir1 = vector():set(db.actor:direction())
+	local dir2 = vector():set(poscamp:sub(db.actor:position()))
+
+	local v1 = -math.deg(math.atan2(dir1.x, dir1.z))
+	local v2 = -math.deg(math.atan2(dir2.x, dir2.z))
+	local rot_y = math.abs(math.min(math.abs(v1-v2), 360-math.abs(v1)-math.abs(v2)))
+
+	if (rot_y < 10) then
+		return true
+	else
+		return false
+	end
+end
+
+function manage_food(food_to_create, mutant_part_to_remove)
+	alife():create(food_to_create, db.actor:position(), 1, db.actor:game_vertex_id(), db.actor:id())
+	alife():release(alife():object(mutant_part_to_remove:id()), true)
+end
+
+function can_use_campfire()
+	--Hide inventory
+	hide_hud_all()
+
+	--Check for lit campfire
+	if (check_for_not_lit_campfire()) then
+		local str = strformat(game.translate_string("st_arszi_campfire_roast_campfire_off"),text)
+		actor_menu.set_msg(1, str,4)
+		return false
+	end
+	
+	--Check for enemies in the nearby
+	if (not is_empty(xr_combat_ignore.fighting_with_actor_npcs)) then
+		local str = strformat(game.translate_string("st_arszi_campfire_roast_danger"),text)
+		actor_menu.set_msg(1, str,4)
+		return false
+	end
+
+	--Check if blowout has started
+	if (surge_manager.is_started()) then
+		local str = strformat(game.translate_string("st_arszi_campfire_roast_surge"),text)
+		actor_menu.set_msg(1, str,4)
+		return false
+	end
+
+	--Check if psy storm has started
+	if (psi_storm_manager.is_started()) then
+		local str = strformat(game.translate_string("st_arszi_campfire_roast_psi_storm"),text)
+		actor_menu.set_msg(1, str,4)
+		return false
+	end
+
+	return true
+end
+
+function get_nearby_lit_campfire(dist)
+	local pos = db.actor:position()
+	for id,binder in pairs(bind_campfire.campfires_all) do
+		if (binder and binder.campfire and binder.campfire:is_on()) then
+			if (pos:distance_to_sqr(binder.object:position()) <= dist) then
+				return true
+			end
+		end 
+	end 
+	return false
+end
+
+function check_for_not_lit_campfire()
+	local result = get_nearby_lit_campfire(2.0)
+	return (not result)
+end
+
+function trace_this(to_trace)
+	local log_file = io.open("log_arszi_roast.txt", "a")
+	log_file:write(to_trace.."\n")
+	log_file:close(log_file)
+end

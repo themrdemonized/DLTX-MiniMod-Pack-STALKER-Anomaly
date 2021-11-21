@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="st_empty_canteen">
+		<text>Empty flask</text>
+	</string>
+	<string id="st_empty_canteen_descr">
+		<text>This empty flask is not much to look at. You have a strange feeling that throwing it away would improve the aesthetics somewhat; might as well fill it with something first. \n \n</text>
+	</string>
+	<string id="st_dirty_water">
+		<text>Dirty water</text>
+	</string>
+	<string id="st_dirty_water_descr">
+		<text>Military flask filled with dirty water. You can purify it with «Akvatabs» or by boiling. \n \n
+		%c[ui_gray_3]PROPERTIES:\n
+		%c[d_blue] • %c[ui_gray_2] drink\n</text>
+	</string>
+	<string id="st_boiled_water">
+		<text>Boiled water</text>
+	</string>
+	<string id="st_boiled_water_descr">
+		<text>Military flask filled with boiled dirty water. While most of dangerous microorganisms were killed, heavy radioactive elements are still lying around. You can purify it further with «Akvatabs». \n \n
+		%c[ui_gray_3]PROPERTIES:\n
+		%c[d_blue] • %c[ui_gray_2] drink\n</text>
+	</string>
+	<string id="st_haruka_fill">
+		<text>fill</text>
+	</string>
+	<string id="st_haruka_campfire">
+		<text>boil water</text>
+	</string>
+</string_table>

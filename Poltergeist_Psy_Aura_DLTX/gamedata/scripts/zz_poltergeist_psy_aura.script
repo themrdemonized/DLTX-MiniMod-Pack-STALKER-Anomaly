@@ -1,0 +1,98 @@
+-------------------------------------------
+--Based on Arszi Controller Overhaul 1.1
+-------------------------------------------
+
+--SETTINGS------------------------------------------------------------
+local c_controller_psy_aura_max_damage = 0.15 --Maximal psy health damage 1 meters from the Controller
+local c_controller_psy_aura_range = 50 --Range of the controller's psy aura in meters
+
+
+--TABLES-----------------------------------------------------------------------------------------
+local controller_table = {}
+
+--MISC---------------------------------------------------------------------------------------------------
+local arszi_previous_time = nil
+local c_in_game_seconds_multiplier = 6 --6 in game seconds are one real life second
+
+function on_game_start()
+    RegisterScriptCallback("actor_on_update", actor_on_update)
+    RegisterScriptCallback("monster_on_update",monster_on_update)
+end
+
+function actor_on_update()
+    local curr_time = game.get_game_time()
+    if (arszi_previous_time == nil) then arszi_previous_time = curr_time end
+  
+    if (curr_time:diffSec(arszi_previous_time) > 1) then
+        arszi_previous_time = curr_time
+
+        manage_controller_psy_aura()
+    end
+end
+
+function is_controller(obj)
+    return obj:clsid() == clsid.poltergeist_s
+end
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------PSY AURA-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+local psy_aura_counter = 0 --One increment per in-game seconds, do damage at every 6th in-game second
+function manage_controller_psy_aura()
+
+    if (psy_aura_counter == 4) then
+        psy_aura_counter = 0
+
+        for k_controller, v_controller in pairs(controller_table) do
+            local controller = level.object_by_id(k_controller)
+            if (controller and controller:alive()) then
+
+                local distance = get_distance(controller:position(), db.actor:position())
+                if (distance <= c_controller_psy_aura_range) then
+                    local damage = get_psy_aura_damage(distance, c_controller_psy_aura_max_damage)
+
+                    local h = hit()
+                    h.type = hit.telepatic
+                    h.power = damage
+                    h.impulse = 1
+                    h.direction = VEC_Z
+                    h.draftsman = db.actor
+                    db.actor:hit(h)
+
+                    --level.add_pp_effector("controller_hit.ppe", 777)
+                    --level.set_pp_effector_factor(777, 0.2)
+                end
+            end
+        end
+    else
+        psy_aura_counter = psy_aura_counter + 1
+    end
+end
+
+function get_psy_aura_damage(distance, max_power)
+    local distance_factor = 1 - (distance / c_controller_psy_aura_range)
+    return max_power * distance_factor
+end
+
+function monster_on_update(npc)
+    if (not npc) then return end
+    if (not npc:alive()) then return end
+
+    if (is_controller(npc) and not controller_table[npc:id()]) then
+        controller_table[npc:id()] = true
+        trace_this("POLTERGEIST added to poltergeist table: "..npc:name())
+    end
+end
+
+function get_distance(position_1, position_2)
+    local x = math.abs(position_1.x - position_2.x)
+    local z = math.abs(position_1.z - position_2.z)
+    local distance = math.sqrt((x * x) + (z * z))
+    return distance
+end
+
+function trace_this(to_trace)
+	printf(to_trace)
+	--local log_file = io.open("log_arszi_controller.txt", "a")
+	--log_file:write(to_trace.."\n")
+	--log_file:close(log_file)
+end

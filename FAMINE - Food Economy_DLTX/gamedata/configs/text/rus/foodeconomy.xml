@@ -1,0 +1,8 @@
+<string_table>
+	<string id="st_flaskrad">
+		<text>«ональна€ вода</text>
+	</string>
+	<string id="st_flaskrad_descr">
+		<text>“ест воды «оны.\n \n %c[ui_gray_3]—¬ќ…—“¬ј:\n %c[d_blue] Х %c[ui_gray_2] напиток\n %c[d_blue] Х %c[ui_gray_2] источник чистого питани€\n</text>
+	</string>
+</string_table>

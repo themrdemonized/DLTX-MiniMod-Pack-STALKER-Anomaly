@@ -1,0 +1,94 @@
+-- Prepare ini files
+ini_manager = ini_manager or ini_file("items\\settings\\itms_manager.ltx")
+
+local n = 0
+local result,id,value = "","",""
+
+--CODE FOR GETTING STUFF ON DRUGS
+function add_drug_items(item_group_name)
+	item_group = {}
+	local n = ini_manager:line_count(item_group_name)
+	for i=0,n-1 do
+		result, id, value = ini_manager:r_line_ex(item_group_name,i,"","")
+		if ini_sys:section_exist(id) then
+			item_group[id] = item_group_name
+		end
+	end
+	return item_group
+end
+
+local jar = add_drug_items("jar")
+local jar_textolite_syringe = add_drug_items("jar_textolite_syringe")
+local jar_film_syringe_textolite = add_drug_items("jar_film_syringe_textolite")
+local jar_film_textolite = add_drug_items("jar_film_textolite")
+local film = add_drug_items("film")
+-- local film_syringe = add_drug_items("film_syringe")
+
+function give_items_after_use(sec, obj, items_single, items_multiuse, items_multiuse_add_on_empty)
+	if IsItem("multiuse", sec) then
+		local uses = obj:get_remaining_uses()
+		printf("- %s uses: [%s]", sec, uses)
+		for i, item in ipairs(items_multiuse) do
+			printf("giving item %s", item)
+			alife_create_item(item, db.actor)
+		end
+		if uses and (uses == 0) then
+			for i, item in ipairs(items_multiuse_add_on_empty) do
+				printf("giving item on empty %s", item)
+				alife_create_item(item, db.actor)
+			end
+		end
+	else
+		for i, item in ipairs(items_single) do
+			printf("giving item %s", item)
+			alife_create_item(item, db.actor)
+		end
+	end
+end
+
+function base_itms_manager_actor_on_item_use() end
+
+function more_drops_from_drugs(obj)
+	printf("calling override itms_manager.actor_on_item_use")
+	if (db.actor:has_info("actor_made_wish_for_riches")) then
+		return 
+	end
+
+	local sec = obj:section()
+
+	--GIVE STUFF WHEN TAKING DRUGS
+	local dbg_str = "used section - %s"
+	if jar[sec] then
+		dbg_str = dbg_str .. ", group %s"
+		printf(dbg_str, sec, jar[sec])
+		give_items_after_use(sec, obj, {"jar"}, {}, {"jar"})
+		
+	elseif jar_textolite_syringe[sec] then
+		dbg_str = dbg_str .. ", group %s"
+		printf(dbg_str, sec, jar_textolite_syringe[sec])
+		give_items_after_use(sec, obj, {"jar", "e_syringe", "prt_i_textolite"}, {"jar", "e_syringe"}, {"prt_i_textolite"})		
+
+	elseif jar_film_syringe_textolite[sec] then
+		dbg_str = dbg_str .. ", group %s"
+		printf(dbg_str, sec, jar_film_syringe_textolite[sec])
+		give_items_after_use(sec, obj, {"jar", "prt_i_plastic", "e_syringe", "prt_i_textolite"}, {"jar", "e_syringe", "prt_i_plastic"}, {"prt_i_textolite"})
+		
+	elseif jar_film_textolite[sec] then
+		dbg_str = dbg_str .. ", group %s"
+		printf(dbg_str, sec, jar_film_textolite[sec])
+		give_items_after_use(sec, obj, {"jar", "prt_i_plastic", "prt_i_textolite"}, {"jar", "prt_i_plastic"}, {"prt_i_textolite"})
+
+	elseif film[sec] then
+		dbg_str = dbg_str .. ", group %s"
+		printf(dbg_str, sec, film[sec])
+		give_items_after_use(sec, obj, {"prt_i_plastic"}, {}, {"prt_i_plastic"})
+		
+	-- elseif film_syringe[sec] then
+	-- 	give_items_after_use(sec, obj, {"e_syringe", "prt_i_plastic"}, {"e_syringe"}, {"prt_i_plastic"})
+	end
+
+	return base_itms_manager_actor_on_item_use(obj)
+end
+
+base_itms_manager_actor_on_item_use = itms_manager.actor_on_item_use
+itms_manager.actor_on_item_use = more_drops_from_drugs

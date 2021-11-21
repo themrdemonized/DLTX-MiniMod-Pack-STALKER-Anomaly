@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="st_empty_canteen">
+		<text>Пустая фляга</text>
+	</string>
+	<string id="st_empty_canteen_descr">
+		<text>Эта пустая фляга не представляет из себя ничего особенного. Вам даже кажется, что выбросив её подальше, вы несколько облагородите обстановку. Впрочем, при желании её можно чем-нибудь наполнить. \n \n</text>
+	</string>
+	<string id="st_dirty_water">
+		<text>Грязная вода</text>
+	</string>
+	<string id="st_dirty_water_descr">
+		<text>Военная фляга, наполненная грязной водой. При желании можно дезинфицировать, бросив пару таблеток «Акватабса» или вскипятив на костре. \n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n</text>
+	</string>
+	<string id="st_boiled_water">
+		<text>Кипяченая вода</text>
+	</string>
+	<string id="st_boiled_water_descr">
+		<text>Военная фляга, наполненная кипяченой неочищенной водой. Несмотря на кипячение и обеззараживание от большинства микроорганизмов, тяжелые радиоактивные вещества все еще находятся в воде. При желании можно дезинфицировать, бросив «Акватабс». \n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n</text>
+	</string>
+	<string id="st_haruka_fill">
+		<text>наполнить</text>
+	</string>
+	<string id="st_haruka_campfire">
+		<text>вскипятить</text>
+	</string>
+</string_table>

@@ -1,0 +1,35 @@
+-- autocomplete v3 (20-01-08)
+-- for Anomaly 1.5 Update 4 Hotfix 8.1 (19-12-05)
+-- add "autocomplete = true" to task config to have a task autocomplete when the stage_complete stage is reached
+
+function on_game_start()
+	RegisterScriptCallback("actor_on_update",actor_on_update)
+end
+
+function actor_on_update()
+	local tm = task_manager.get_task_manager()
+	local task_info = tm.task_info
+	for tid,tsk in pairs(tm.task_info) do
+		if check(tid, tsk.stage) then
+			printf('autocompleted -> %s',tid)
+			tm:set_task_completed(tid)
+		end
+	end
+end
+
+local _cfg = {}
+function check(tid, stage)
+	if not _cfg[tid] then
+		_cfg[tid] = utils_data.parse_ini_section_to_array(task_manager.task_ini, tid)
+	end
+	
+	if 
+		stage 
+		and _cfg[tid].stage_complete 
+		and tonumber(_cfg[tid].stage_complete) == stage 
+		and _cfg[tid].autocomplete 
+		and _cfg[tid].autocomplete == 'true' 
+	then
+		return true
+	end
+end
