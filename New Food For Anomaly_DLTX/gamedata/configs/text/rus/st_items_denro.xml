@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="energy_drink_stalker">
+		<text>Энергетический напиток "Сталкер"</text>
+	</string>
+	<string id="st_energy_drink_stalker_descr">
+		<text>Часто используется сталкерами в многодневных походах, когда нет возможности остановиться и отдохнуть. Напиток содержит легкоусваиваемые углеводы, а также препараты, вызывающие выброс адреналина в кровь.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] импортный\n
+		%c[d_blue] • %c[ui_gray_2] стимулятор\n
+		%c[d_blue] • %c[ui_gray_2] сильное отрезвляющее действие\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="energy_drink_non_stop">
+		<text>Энергетик Non Stop</text>
+	</string>
+	<string id="st_energy_drink_non_stop_descr">
+		<text>Отличный энергетический напиток Non Stop. Содержит кофеин, таурин и мощный витаминный комплекс, снимающие усталость и прибавляющие силы. Не в состоянии сделать даже шаг? Тогда это именно то, что нужно.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] импортный\n
+		%c[d_blue] • %c[ui_gray_2] стимулятор\n
+		%c[d_blue] • %c[ui_gray_2] сильное отрезвляющее действие\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="sok_0">
+		<text>Яблочный сок «Моя семья»</text>
+	</string>
+	<string id="st_sok_0_descr">
+		<text>Питательный продукт, отлично восстанавливающий здоровье.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] импортный\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="sok_1">
+		<text>Апельсиновый сок «Моя семья»</text>
+	</string>
+	<string id="st_sok_1_descr">
+		<text>Питательный продукт, отлично восстанавливающий здоровье.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] импортный\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_galet">
+		<text>Галеты</text>
+	</string>
+	<string id="st_galet_descr">
+		<text>Довольно питательный, позволяющий долгое хранение продукт, однако особо им не насытишься. Обычно встречаются у военных.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортный\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n</text>
+	</string>
+	<string id="st_kilka">
+		<text>Килька в томатном соусе</text>
+	</string>
+	<string id="st_kilka_descr">
+		<text>Очень вкусная рыбка в томатном соусе, выловленная в Тихом океане, и перевезенная какими-то сталкерами в зону отчуждения.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="jaguar">
+		<text>"Ягуар"</text>
+	</string>
+	<string id="st_jaguar_descr">
+		<text>Напиток называется «Ягуар», потому что содержит алкоголь. Напиток содержит 5% алкоголя, а также препараты, вызывающие выброс адреналина в кровь.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] импортный\n
+		%c[d_blue] • %c[ui_gray_2] стимулятор\n
+		%c[d_red] • %c[ui_gray_2] слабый алкоголь\n
+		</text>
+	</string>
+		<string id="st_pivo_0">
+		<text>Пиво "Клинское"</text>
+	</string>
+	<string id="st_pivo_0_descr">
+		<text>Довольно неплохое пиво. Легко пьётся.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] стимулятор\n
+		%c[d_red] • %c[ui_gray_2] слабый алкоголь\n
+		</text>
+	</string>
+		<string id="st_korkunov">
+		<text>Шоколад «Коркунов»</text>
+	</string>
+	<string id="st_korkunov_descr">
+		<text>С дроблёным орехом и изюмом. Любимое лакомство многих сталкеров. Отличное средство против плохого настроения.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+		<string id="st_milka">
+		<text>Молочный шоколад "Милка"</text>
+	</string>
+	<string id="st_milka_descr">
+		<text>Очень вкусный молочный шоколад. Большая редкость в Зоне.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_bondauel_1">
+		<text>Зелёный горошек "Бондуэлль"</text>
+	</string>
+	<string id="st_bondauel_1_descr">
+		<text>Зелёный горошек сорта "Нежный". Отборный и сладкий зелёный горошек от "Bonduelle" бережно собран, очищен в поле и произведён в день сбора урожая.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+		<string id="st_twix">
+		<text>"Твикс"</text>
+	</string>
+	<string id="st_twix_descr">
+		<text>Два печенья с карамелью покрытые шоколадом. Отличнот подходит утром с чаем.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+		<string id="st_milki_wey">
+		<text>"Милки Вей"</text>
+	</string>
+	<string id="st_milki_wey_descr">
+		<text>Вкусный батончик из молочного шоколада с начинкой из суфле. Отличное средство против плохого настроения.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_vodka_0">
+		<text>Водка "Залповая"</text>
+	</string>
+	<string id="st_vodka_0_descr">
+		<text>Дешевая и некачественная водка 38 градусов. Если денег нет на хорошую водку, тогда и можно выпить.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] стимулятор\n
+		%c[d_red] • %c[ui_gray_2] крепкий алкоголь\n
+		%c[d_red] • %c[ui_gray_2] некачественная продукция\n
+		</text>
+	</string>
+	<string id="st_cup_pivo">
+		<text>Кружка пива</text>
+	</string>
+	<string id="st_cup_pivo_descr">
+		<text>Бокал наполненый свежим,светлым пивом.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] стимулятор\n
+		%c[d_red] • %c[ui_gray_2] слабый алкоголь\n
+		</text>
+	</string>
+	<string id="st_cup">
+		<text>Железная кружка</text>
+	</string>
+	<string id="st_cup_descr">
+		<text>Обычная железная кружка. Незаменимая вещь как на Большой земле, так и в Зоне.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] повсеместное применение\n
+		</text>
+	</string>
+	<string id="st_spoon">
+		<text>Столовая ложка</text>
+	</string>
+	<string id="st_spoon_descr">
+		<text>Обычная железная столовая ложка. Незаменимая вещь как на Большой земле, так и в Зоне.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] повсеместное применение\n
+		</text>
+	</string>
+	<string id="st_termos">
+		<text>Термос</text>
+	</string>
+	<string id="st_termos_descr">
+		<text>Вид бытовой теплоизоляционной посуды для продолжительного сохранения более высокой или низкой температуры продуктов питания, по сравнению с температурой окружающей среды. Является разновидностью сосуда Дьюара.Термос может использоваться не только для хранения готовых напитков и еды, но и для их приготовления, например — различных настоев и каш. Был разработан на НИИ Лукашук.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] повсеместное применение\n
+		</text>
+	</string>
+	<string id="st_termos_tea">
+		<text>Термос с чаем</text>
+	</string>
+	<string id="st_termos_tea_descr">
+		<text>Термос с крпепким чаем.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] сильное отрезвляющее действие\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_termos_coffee">
+		<text>Термос с кофе</text>
+	</string>
+	<string id="st_termos_coffee_descr">
+		<text>Термос с кофе. Подойдет утром для бодрости перед очередной вылазкой .\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] сильное отрезвляющее действие\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_korkunov_0_descr">
+		<text>Горький. Любимое лакомство многих сталкеров. Отличное средство против плохого настроения.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_korkunov_1_descr">
+		<text>Молочный. Любимое лакомство многих сталкеров. Отличное средство против плохого настроения.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_korkunov_2_descr">
+		<text>Горький цельным миндалем. Любимое лакомство многих сталкеров. Отличное средство против плохого настроения.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_korkunov_3_descr">
+		<text>Горький с цельным фундуком. Любимое лакомство многих сталкеров. Отличное средство против плохого настроения.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_korkunov_4_descr">
+		<text>Молочный с цельным фундуком. Любимое лакомство многих сталкеров. Отличное средство против плохого настроения.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_milka_0_descr">
+		<text>С карамелью. Очень вкусный молочный шоколад. Большая редкость в Зоне.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_milka_1_descr">
+		<text>Воздушный. Очень вкусный молочный шоколад. Большая редкость в Зоне.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_milka_2_descr">
+		<text>Белый. Очень вкусный молочный шоколад. Большая редкость в Зоне.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_milka_3_descr">
+		<text>Цельный миндаль. Очень вкусный молочный шоколад. Большая редкость в Зоне.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_milka_4_descr">
+		<text>Тук. Очень вкусный молочный шоколад. Большая редкость в Зоне.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_milka_5_descr">
+		<text>Клубничный. Очень вкусный молочный шоколад. Большая редкость в Зоне.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_milka_6_descr">
+		<text>Клубника со сливками. Очень вкусный молочный шоколад. Большая редкость в Зоне.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_milka_7_descr">
+		<text>Фундук и изюм. Очень вкусный молочный шоколад. Большая редкость в Зоне.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_milka_8_descr">
+		<text>Фундук. Очень вкусный молочный шоколад. Большая редкость в Зоне.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+        <string id="st_meat_korova">
+	        <text>Говядина</text>
+        </string>
+	<string id="st_meat_korova_descr">
+		<text>Ваша любимая говядина - прекрасно выдержанная и умеренно солёная , она поддержит ваши силы в течение нескольких часов. Эта отдельная партия была собрана от лучшего мяса в Зоне, поэтому побочные эффекты немного слабее , чем от типичного сталкерского рациона.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_olivki">
+		<text>Оливки</text>
+	</string>
+	<string id="st_olivki_descr">
+		<text>Свежая банка оливок, в Зоне других не бывает. Популярный и очень ходовой товар у сталкеров, но быстро портящийся в условиях зоны.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_sir">
+		<text>Плавленый сырок «Янтарь»</text>
+	</string>
+	<string id="st_sir_descr">
+		<text>Обычный плавленый сырок с местного подпольного завода. Несмотря на то, что готовится в Зоне, никто пока не отравился.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_orehi">
+		<text>Банка с орешками «Бим бом»</text>
+	</string>
+	<string id="st_orehi_descr">
+		<text>Особая банка орешков с увеличенным количеством витаминов. Ими можно быстро насытиться и немного восстановить энергию.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="sok">
+		<text>Мультифруктовый сок «Моя семья»</text>
+	</string>
+	<string id="st_sok_descr">
+		<text>Питательный продукт, отлично восстанавливающий здоровье.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] импортный\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+		<string id="st_pivo">
+		<text>Пиво "Бавария 86"</text>
+	</string>
+	<string id="st_pivo_descr">
+		<text>Достаточно крепкое пиво, но не вкусное.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] стимулятор\n
+		%c[d_red] • %c[ui_gray_2] слабый алкоголь\n
+		</text>
+	</string>
+		<string id="st_batonchik">
+		<text>Шоколадный батончик</text>
+	</string>
+	<string id="st_batonchik_descr">
+		<text>Вкусный батончик из молочного шоколада с кремовой начинкой. Отличное средство против плохого настроения.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_samogon">
+		<text>Чернобыльский самогон</text>
+	</string>
+	<string id="st_samogon_descr">
+		<text>Домашняя горилка , свежесваренная для экскурсий в Зону. Содержит некоторые специальные ингредиенты, состав которых передаётся от сталкера к сталкеру.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] стимулятор\n
+		%c[d_red] • %c[ui_gray_2] крепкий алкоголь\n
+		%c[d_blue] • %c[ui_gray_2] произведено в Зоне\n
+		</text>
+	</string>
+		<string id="st_cookies">
+		<text>Овсяное печенье</text>
+	</string>
+	<string id="st_cookies_descr">
+		<text>Овсяное печенье с шоколадными капельками. Наверное это самая полезная пища, которая может быть в Зоне.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+		<string id="st_suhariki">
+		<text>Соленные сухарики</text>
+	</string>
+	<string id="st_suhariki_descr">
+		<text>Эти хрустящие кусочки прекрасные идут под пиво или в суп.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		</text>
+	</string>
+	<string id="st_geroin">
+		<text>Пакетик с героином</text>
+	</string>
+	<string id="st_geroin_descr">
+		<text>Сильнодействующий наркотик - героин. Некоторые сталкеры любят им побаловаться, но к хорошему это ни когда не приводит.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+                %c[ui_gray_3]ЗДОРОВЬЕ:\n
+		%c[d_blue] • %c[ui_gray_2] быстрое использование (шприц)\n		
+		%c[d_blue] • %c[ui_gray_2] стимулятор\n
+		</text>
+	</string>
+	<string id="st_conserva_0">
+		<text>Консервы «Завтрак туриста»</text>
+	</string>
+	<string id="st_conserva_0_descr">
+		<text>Предположительно, консервы с растащенного сталкерами армейского продовольственного склада; точно установить не представляется возможным из-за отсутствия какой-либо этикетки. Главное, что срок годности вроде бы ещё не истёк.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="redbull">
+		<text>Энергетический напиток "Ред Булл"</text>
+	</string>
+	<string id="st_redbull_descr">
+		<text>Ред Булл — это функциональный напиток, который окрыляет, когда это необходимо. Ты сталкер и тебе предстоит ночная вылазка? Сталкерская жизнь может быть непростой, но с крыльями Ред Булл ты можешь оставаться на вершине.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] импортный\n
+		%c[d_blue] • %c[ui_gray_2] стимулятор\n
+		%c[d_blue] • %c[ui_gray_2] сильное отрезвляющее действие\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="sok_2">
+		<text> Персико-абрикосовый сок «Моя семья»</text>
+	</string>
+	<string id="st_sok_2_descr">
+		<text>Питательный продукт, отлично восстанавливающий здоровье.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] импортный\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="sok_3">
+		<text>Яблочно-вишневый сок «Моя семья»</text>
+	</string>
+	<string id="st_sok_3_descr">
+		<text>Питательный продукт, отлично восстанавливающий здоровье.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] импортный\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_vodka_1">
+		<text>Водка «Казаки»</text>
+	</string>
+	<string id="st_vodka_1_descr">
+		<text>Водка производства компании GSC. Хорошо пьётся, заметно снижает воздействие радиации на организм, хотя злоупотреблять ею не следует.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] стимулятор\n
+		%c[d_red] • %c[ui_gray_2] крепкий алкоголь\n
+		</text>
+	</string>
+	<string id="adrenaline">
+		<text>Энергетический напиток "Адреналин"</text>
+	</string>
+	<string id="st_adrenaline_descr">
+		<text>Адреналин Раш — это специально разработанный комплекс эффективных тонизирующих ингредиентов, который даcт заряд энергии, для чего бы он тебе ни понадобился.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] импортный\n
+		%c[d_blue] • %c[ui_gray_2] стимулятор\n
+		%c[d_blue] • %c[ui_gray_2] сильное отрезвляющее действие\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_dirol">
+		<text>Жувачка "Дирол"»</text>
+	</string>
+	<string id="st_dirol_descr">
+		<text> Жувачка со вкусом мяты. Отличный способ избавиться от неприятного запаха во рту. Не содержит сахара.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		</text>
+	</string>
+	<string id="st_dirol_0_descr">
+		<text> Жувачка со вкусом арбуза и дыни. Отличный способ избавиться от неприятного запаха во рту. Не содержит сахара.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		</text>
+	</string>
+	<string id="st_dirol_1_descr">
+		<text> Жувачка со вкусом манго. Отличный способ избавиться от неприятного запаха во рту. Не содержит сахара.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		</text>
+	</string>
+	<string id="st_dirol_2_descr">
+		<text> Жувачка со вкусом маракуи. Отличный способ избавиться от неприятного запаха во рту. Не содержит сахара.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		</text>
+	</string>
+	<string id="st_dirol_3_descr">
+		<text> Сладкая мята. Отличный способ избавиться от неприятного запаха во рту. Не содержит сахара.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		</text>
+	</string>
+	<string id="st_dirol_4_descr">
+		<text> Жувачка со вкусом кокоса и клубники. Отличный способ избавиться от неприятного запаха во рту. Не содержит сахара.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		</text>
+	</string>
+	<string id="st_dirol_5_descr">
+		<text> Жувачка со вкусом арбуза. Отличный способ избавиться от неприятного запаха во рту. Не содержит сахара.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		</text>
+	</string>
+	<string id="st_dirol_6_descr">
+		<text> Жувачка со вкусом клубники. Отличный способ избавиться от неприятного запаха во рту. Не содержит сахара.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		</text>
+	</string>
+	<string id="st_dirol_7_descr">
+		<text> Жувачка со вкусом земляники. Отличный способ избавиться от неприятного запаха во рту. Не содержит сахара.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		</text>
+	</string>
+	<string id="st_dirol_8_descr">
+		<text> Жувачка со вкусом мандарина. Отличный способ избавиться от неприятного запаха во рту. Не содержит сахара.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		</text>
+	</string>
+	<string id="st_galet_0_descr">
+		<text>С c луком. Довольно питательный, позволяющий долгое хранение продукт, однако особо им не насытишься. Обычно встречаются у военных.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортный\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n</text>
+	</string>
+	<string id="st_galet_1_descr">
+		<text> Классические. Довольно питательный, позволяющий долгое хранение продукт, однако особо им не насытишься. Обычно встречаются у военных.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортный\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n</text>
+	</string>
+	<string id="st_galet_2_descr">
+		<text>С сыром. Довольно питательный, позволяющий долгое хранение продукт, однако особо им не насытишься. Обычно встречаются у военных.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортный\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n</text>
+	</string>
+	<string id="st_galet_3_descr">
+		<text>С маком. Довольно питательный, позволяющий долгое хранение продукт, однако особо им не насытишься. Обычно встречаются у военных.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортный\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n</text>
+	</string>
+	<string id="st_sguha">
+		<text>Cгущённое молоко</text>
+	</string>
+	<string id="st_sguha_descr">
+		<text>Обычное концентрированное молоко с сахаром. Отлично заходит с хлебом и горячим чаем.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_sguha_0">
+		<text>Варёная сгущёнка</text>
+	</string>
+	<string id="st_sguha_0_descr">
+		<text>Обычное концентрированное варённое молоко с сахаром. Вернёт вам вкус ушедшего детсва.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_tolkanka">
+		<text>Туалетная бумага</text>
+	</string>
+	<string id="st_tolkanka_descr">
+		<text>В Зоне туалетная бумага сильно цениться и поэтому сталкеры сразу же всё скупают у торговцев. Конечно же лопухи никто не отменял, но всё же обычной туалетной бумагой куда приятнее.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] повсеместное применение\n
+		</text>
+	</string>
+	<string id="st_bondauel_0">
+		<text>Сладкая кукуруза "Бондуэлль"</text>
+	</string>
+	<string id="st_bondauel_0_descr">
+		<text>Сладкая кукуруза в зёрнах "Бондуэлль". Отличный завтрак для каждого сталкера. Вся кукуруза сделана из высшего сорта!\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_bondauel_2">
+		<text>Зелёный горошек с морковью "Бондуэлль"</text>
+	</string>
+	<string id="st_bondauel_2_descr">
+		<text>Зелёный горошек с морковью в кубиках. "Нежный" горошек с морковью нарезанами кубиками в сладком маринаде, один из лучших завтраков каждого сталкера.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_bondauel_3">
+		<text>Свекла "Бондуэлль"</text>
+	</string>
+	<string id="st_bondauel_3_descr">
+		<text>Свекла в кубиках в кисло-сладком маринаде. Маринад от свеклы отлино поможет утром после небольшой пьянки.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_bondauel_4">
+		<text>Белая фасоль в томатном соусе "Бондуэлль"</text>
+	</string>
+	<string id="st_bondauel_4_descr">
+		<text>Белая фасоль в томатном соусе "Пикантная". Готовое блюдо, великолепное в своей простоте и питательности. Легкий томатный соус удачно подчеркивает и обогащает вкус белой фасоли. А если ее добавить к яичнице и бекону, то получится традиционный английский завтрак — сытный и полезный, дающий организму необходимые белки, углеводы, клетчатку и железо.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_bondauel_5">
+		<text>Красная фасоль "Бондуэлль"</text>
+	</string>
+	<string id="st_bondauel_5_descr">
+		<text>Красная фасоль в собственном соку — это идеальный компонент для соусов и горячих блюд: приготовленная по классической технологии, фасоль имеет более рассыпчатую текстуру, а легкий аромат сладкого перца и чеснока органично дополняет ее вкус.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_bondauel_6">
+		<text>Белая фасоль "Бондуэлль"</text>
+	</string>
+	<string id="st_bondauel_6_descr">
+		<text>Белая фасоль в собственном соку — это идеальный компонент для соусов и горячих блюд: приготовленная по классической технологии, фасоль имеет более рассыпчатую текстуру, а легкий аромат сладкого перца и чеснока органично дополняет ее вкус.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_bondauel_7">
+		<text>Морковь "Экстра" "Бондуэлль"</text>
+	</string>
+	<string id="st_bondauel_7_descr">
+		<text>Отличный завтрак для каждого сталкера.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_bondauel_8">
+		<text>Оливки "Бондуэлль"</text>
+	</string>
+	<string id="st_bondauel_8_descr">
+		<text>Оливки без косточки. Незаменимый источник витаминов и минералов.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_bondauel_9">
+		<text>Маслины "Бондуэлль"</text>
+	</string>
+	<string id="st_bondauel_9_descr">
+		<text>Маслины с косточкой. Маленькое солнечное испанское счастье — так можно описать вкус оливок Bonduelle. Поэтому без них никак не обойтись в приготовлении вкусных и изящных закусок, особенно, канапе и тарталеток. В банку, в которой вы никогда не найдете лишней воды, попадают только тщательно отобранные по размеру, зрелые плоды со сбалансированным вкусом.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="kvas">
+		<text>Квас «Очаковский»</text>
+	</string>
+	<string id="st_kvas_descr">
+		<text>Квас «Очаковский» приготовлен полностью из натуральных продуктов - лучшее утоление жажды в любой день.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] импортный\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_vodka_2">
+		<text>Водка "Добрый медведь"</text>
+	</string>
+	<string id="st_vodka_2_descr">
+		<text>Водка сделана на основе сприрта "ЛЮКС". Классический мягкий вкус.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] стимулятор\n
+		%c[d_red] • %c[ui_gray_2] крепкий алкоголь\n
+		</text>
+	</string>
+	<string id="st_vodka_3">
+		<text>Водка "Белочка я пришла"</text>
+	</string>
+	<string id="st_vodka_3_descr">
+		<text>Водка «Белочка пришла!» пользуется очень большой популярностью за ее нестандартный дизайн и превосходные вкусовые качества, которые вызывают самое настоящее восхищение у сталкеров.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] стимулятор\n
+		%c[d_red] • %c[ui_gray_2] крепкий алкоголь\n
+		</text>
+	</string>
+	<string id="st_vodka_6">
+		<text>Ликер "Ягермейстер"</text>
+	</string>
+	<string id="st_vodka_6_descr">
+		<text>Немецкий крепкий травяной ликер. Изготовлен из 56 компонентов и выдержан в течение 12 месяцев в дубовых бочках. На этикетке бутылки изображен олень с крестом на рогах. Согласно легенде, оленя видел святой Губерт, покровитель охотников.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] стимулятор\n
+		%c[d_red] • %c[ui_gray_2] крепкий алкоголь\n
+		</text>
+	</string>
+	<string id="st_vodka_5">
+		<text>Водка "Смирнофф"</text>
+	</string>
+	<string id="st_vodka_5_descr">
+		<text>Импортная водка хорошего качества, попавшая в Зону через одного из командиров блокпоста на Кордоне.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] стимулятор\n
+		%c[d_red] • %c[ui_gray_2] крепкий алкоголь\n
+		</text>
+	</string>
+	<string id="st_vino">
+		<text>Вино "Массандра"</text>
+	</string>
+	<string id="st_vino_descr">
+		<text>Вино сделанное Барменом.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] напиток\n
+		%c[d_blue] • %c[ui_gray_2] стимулятор\n
+		%c[d_blue] • %c[ui_gray_2] произведено в Зоне\n
+		%c[d_red] • %c[ui_gray_2] крепкий алкоголь\n
+		</text>
+	</string>
+	<string id="st_conserva_1">
+		<text>Каша пшенная с говядиной</text>
+	</string>
+	<string id="st_conserva_1_descr">
+		<text>Пшенная каша с мелкими кусочками говядины.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_conserva_2">
+		<text>Каша пшенная с курицей</text>
+	</string>
+	<string id="st_conserva_2_descr">
+		<text>Пшенная каша с кусочками куринной грудки. Входит в состав ИРП России и Украины.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_conserva_3">
+		<text>Каша гречневая со свининой</text>
+	</string>
+	<string id="st_conserva_3_descr">
+		<text>Гречневая каша с кусочками свинины и жирком.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_conserva_4">
+		<text>Каша гречневая с говядиной</text>
+	</string>
+	<string id="st_conserva_4_descr">
+		<text>Гречневая каша с кусочками говядины.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_conserva_5">
+		<text>Каша гречневая с сосисками</text>
+	</string>
+	<string id="st_conserva_5_descr">
+		<text>.Гречневая каша с мелко порезанными сосисками.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_conserva_6">
+		<text>Каша перловая со свининой</text>
+	</string>
+	<string id="st_conserva_6_descr">
+		<text>Перловая каша с кусочками свинины и жирком.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_conserva_7">
+		<text>Каша перловая с говядиной</text>
+	</string>
+	<string id="st_conserva_7_descr">
+		<text>Перловая каша с кусочками говядины.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_conserva_8">
+		<text>Каша рисовая с говядиной</text>
+	</string>
+	<string id="st_conserva_8_descr">
+		<text>Рисовая каша с кусочками говядины. Входит в состав ИРП России и Украины.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_conserva_9">
+		<text>Каша гречневая с карасем</text>
+	</string>
+	<string id="st_conserva_9_descr">
+		<text>Гречневая каша с кусочками карася.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_conserva_10">
+		<text>Паштет из трески</text>
+	</string>
+	<string id="st_conserva_10_descr">
+		<text>Из печени и икры тресковых рыб.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_conserva_11">
+		<text>Паштет из шпрот</text>
+	</string>
+	<string id="st_conserva_11_descr">
+		<text>Отлично идет под закусь.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_conserva_12">
+		<text>Паштет из лосося</text>
+	</string>
+	<string id="st_conserva_12_descr">
+		<text>Паштет лососевый классический.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_conserva_13">
+		<text>Паштет из сайры</text>
+	</string>
+	<string id="st_conserva_13_descr">
+		<text>Паштет из тихоокеанской сайры.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_conserva_14">
+		<text>Паштет печеночный</text>
+	</string>
+	<string id="st_conserva_14_descr">
+		<text>Паштет из печени коровы, гуся и куруцы.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_conserva_15">
+		<text>Паштет "Пражский"</text>
+	</string>
+	<string id="st_conserva_15_descr">
+		<text>Таким и должен быть паштетик, хорошая консистенция, сбалансированный вкус, в составе нет химии, по ГОСТу.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_conserva_16">
+		<text>Паштет сливочный</text>
+	</string>
+	<string id="st_conserva_16_descr">
+		<text>Паштет из куриной печени.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+	<string id="st_conserva_17">
+		<text>Паштет</text>
+	</string>
+	<string id="st_conserva_17_descr">
+		<text>Паштет из говяжьей печени.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортные\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+        <string id="st_kitkat">
+		<text>Батончик "Кит Кат"</text>
+	</string>
+	<string id="st_kitkat_descr">
+		<text>Шоколадный батончик.Хрустящие вафли покрытые молочным шоколадом.Хороший десерт к чаю.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+        <string id="st_mars">
+		<text>"Батончик "Марс"</text>
+	</string>
+	<string id="st_mars_descr">
+		<text>Шоколадный батончик.Нуга покрытая карамелью и толстым, толстым слоем шоколада.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+        <string id="st_snikers">
+		<text>"Батончик "Сникерс"</text>
+	</string>
+	<string id="st_snikers_descr">
+		<text>Голоден, устал? Не тормози!Сникерсни! Орехи в карамели,покрытые черным шоколадом.\n \n
+		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
+		%c[d_blue] • %c[ui_gray_2] пища\n
+		%c[d_blue] • %c[ui_gray_2] импортное\n
+		%c[d_blue] • %c[ui_gray_2] здоровое питание\n
+		</text>
+	</string>
+</string_table>
