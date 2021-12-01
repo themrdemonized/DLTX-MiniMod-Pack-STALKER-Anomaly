@@ -1,0 +1,6 @@
+<specific_character id="sim_default_isg_3_default_17" team_default = "1">
+#include "gameplay\profiles\character_desc_isg_3.xml"
+    <icon>ui_inGame2_Soldier_2</icon>
+    <snd_config>characters_voice\human\killer_3\</snd_config>
+    <visual>actors\stalker_isg\operator_suit</visual>
+</specific_character>

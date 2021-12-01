@@ -1,0 +1,104 @@
+<specific_character id="sim_default_stalker_2_default_76" team_default = "1">
+#include "gameplay\profiles\character_desc_stalker_2.xml"
+    <icon>ui_npc_u_stalker_neytral_rukzak_2</icon>
+    <snd_config>characters_voice\human\stalker_2\</snd_config>
+    <visual>actors\stalker_neutral\nbc_coat</visual>
+</specific_character>
+
+<specific_character id="sim_default_stalker_3_default_61" team_default = "1">
+#include "gameplay\profiles\character_desc_stalker_3.xml"
+    <icon>ui_inGame2_neutral_2</icon>
+    <snd_config>characters_voice\human\stalker_2\</snd_config>
+    <visual>actors\stalker_neutral\ps5m_gasmask</visual>
+</specific_character>
+
+<specific_character id="sim_default_stalker_3_default_62" team_default = "1">
+#include "gameplay\profiles\character_desc_stalker_3.xml"
+    <icon>ui_inGame2_neutral_2</icon>
+    <snd_config>characters_voice\human\stalker_2\</snd_config>
+    <visual>actors\stalker_neutral\ps5m_respo</visual>
+</specific_character>
+
+<specific_character id="sim_default_stalker_3_default_63" team_default = "1">
+#include "gameplay\profiles\character_desc_stalker_2.xml"
+    <icon>ui_npc_u_stalker_neytral_rukzak_2</icon>
+    <snd_config>characters_voice\human\stalker_2\</snd_config>
+    <visual>actors\stalker_neutral\nbc_coat</visual>
+</specific_character>
+
+<specific_character id="sim_default_stalker_3_default_64" team_default = "1">
+#include "gameplay\profiles\character_desc_stalker_4.xml"
+    <icon>ui_inGame2_neutral_2</icon>
+    <snd_config>characters_voice\human\stalker_3\</snd_config>
+    <visual>actors\stalker_neutral\loner_skattus</visual>
+</specific_character>
+
+<specific_character id="sim_default_stalker_3_default_65" team_default = "1">
+#include "gameplay\profiles\character_desc_stalker_3.xml"
+    <icon>ui_inGame2_neutral_2</icon>
+    <snd_config>characters_voice\human\stalker_2\</snd_config>
+    <visual>actors\stalker_neutral\scope</visual>
+</specific_character>
+
+<specific_character id="sim_default_stalker_3_default_66" team_default = "1">
+#include "gameplay\profiles\character_desc_stalker_3.xml"
+    <icon>ui_inGame2_neutral_2</icon>
+    <snd_config>characters_voice\human\stalker_2\</snd_config>
+    <visual>actors\stalker_neutral\wayfarer</visual>
+</specific_character>
+
+<specific_character id="sim_default_stalker_4_default_10" team_default = "1">
+#include "gameplay\profiles\character_desc_stalker_4.xml"
+    <icon>ui_inGame2_neutral_2</icon>
+    <snd_config>characters_voice\human\stalker_3\</snd_config>
+    <visual>actors\stalker_neutral\military_loner_outfit</visual>
+</specific_character>
+
+<specific_character id="sim_default_stalker_4_default_11" team_default = "1">
+#include "gameplay\profiles\character_desc_stalker_3.xml"
+    <icon>ui_inGame2_neutral_2</icon>
+    <snd_config>characters_voice\human\stalker_2\</snd_config>
+    <visual>actors\stalker_neutral\ps5m_gasmask</visual>
+</specific_character>
+
+<specific_character id="sim_default_stalker_4_default_12" team_default = "1">
+#include "gameplay\profiles\character_desc_stalker_3.xml"
+    <icon>ui_inGame2_neutral_2</icon>
+    <snd_config>characters_voice\human\stalker_2\</snd_config>
+    <visual>actors\stalker_neutral\ps5m_respo</visual>
+</specific_character>
+
+<specific_character id="sim_default_stalker_4_default_13" team_default = "1">
+#include "gameplay\profiles\character_desc_stalker_2.xml"
+    <icon>ui_npc_u_stalker_neytral_rukzak_2</icon>
+    <snd_config>characters_voice\human\stalker_2\</snd_config>
+    <visual>actors\stalker_neutral\nbc_coat</visual>
+</specific_character>
+
+<specific_character id="sim_default_stalker_4_default_14" team_default = "1">
+#include "gameplay\profiles\character_desc_stalker_4.xml"
+    <icon>ui_inGame2_neutral_4</icon>
+    <snd_config>characters_voice\human\stalker_3\</snd_config>
+    <visual>actors\stalker_neutral\neutral_exolight_legend</visual>
+</specific_character>
+
+<specific_character id="sim_default_stalker_4_default_15" team_default = "1">
+#include "gameplay\profiles\character_desc_stalker_4.xml"
+    <icon>ui_inGame2_neutral_2</icon>
+    <snd_config>characters_voice\human\stalker_3\</snd_config>
+    <visual>actors\stalker_neutral\loner_skattus</visual>
+</specific_character>
+
+<specific_character id="sim_default_stalker_4_default_16" team_default = "1">
+#include "gameplay\profiles\character_desc_stalker_3.xml"
+    <icon>ui_inGame2_neutral_2</icon>
+    <snd_config>characters_voice\human\stalker_2\</snd_config>
+    <visual>actors\stalker_neutral\scope</visual>
+</specific_character>
+
+<specific_character id="sim_default_stalker_4_default_17" team_default = "1">
+#include "gameplay\profiles\character_desc_stalker_3.xml"
+    <icon>ui_inGame2_neutral_2</icon>
+    <snd_config>characters_voice\human\stalker_2\</snd_config>
+    <visual>actors\stalker_neutral\wayfarer</visual>
+</specific_character>

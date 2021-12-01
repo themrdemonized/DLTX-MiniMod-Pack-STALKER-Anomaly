@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+
+	<!-- Loner Pack -->
+		<string id="nbc_coat_name">
+			<text>"Ranger" stalker suit</text>
+		</string>
+		<string id="nbc_coat_description">
+			<text>%c[ui_gray_1]A modified Sunrise suit that has been progressively upgraded throughout its time in the zone. Unlike the standard NBC Suit, it was crafted to integrate both its efficient weight distribution system as well as the improved protection offered by other Stalker suits.\n \n
+			</text>
+		</string>
+
+		<string id="ps5m_neutral1_outfit_name">
+			<text>"Rogue" PS5-M Universal Protection</text>
+		</string>
+		<string id="ps5m_neutral1_outfit_description">
+			<text>%c[ui_gray_1] A customized PS5-M Suit favored by veteran and expert stalkers both for its anomalous protection system as well as its improved capacity to handle combat. While it sacrifices the SEVA suit's unique ventilation systems, it has consequently become much more cheaper to maintain. \n \n
+			</text>
+		</string>
+
+		<string id="ps5m_neutral2_outfit_name">
+			<text>"Stitch" PS5-M Universal Protection</text>
+		</string>
+		<string id="ps5m_neutral2_outfit_description">
+			<text>%c[ui_gray_1]A customized PS5-M Suit favored by veteran and expert stalkers both for its anomalous protection system as well as its improved capacity to handle combat. While it sacrifices the SEVA suit's unique ventilation systems, it has consequently become much more cheaper to maintain. \n \n
+			</text>
+		</string>
+
+		<string id="military_loner_name">
+			<text>"Strider" Skat-9 armoured suit</text>
+		</string>
+		<string id="military_loner_description">
+			<text>%c[ui_gray_1]An excellent protective suit for the Zone. This heavy military-grade armour is designed for major battle operations in anomalous areas. Comprises a PSZ-12p heavy military armoured suit, built-in compensation suit, and an anomalous protection bodysuit. The armour provides excellent protection against bullet and fragmentation damage, without greatly reducing the wearer�s mobility. Although originally intended for the sole use of Military stalkers and experienced Spetsnaz operators, this armour occasionally finds its way into factions outside of the Military through unknown means. This variant has been slightly modified to become lighter by sacrificing certain components used in its construction.\n \n
+			</text>
+		</string>
+
+		<string id="exolight_outfit_neutral_legend_name">
+			<text>"Legend" Exosuit</text>
+		</string>
+		<string id="exolight_outfit_neutral_legend_description">
+			<text>The "underwear" of an exoskeleton, sometimes mistakenly known as the "Radsuit". This outfit provides almost all the protection one can expect from a full exoskeleton, but due to being stripped of its servos and batteries, it provides none of the strength enhancement. On the positive side, this means the suit is now easier to maintain and, unlike a full exoskeleton, does not prevent the wearer from sprinting. Consists of an integrated tactical helmet, a heavy armoured vest and a reinforced environmental jumpsuit. Often used by experts and legends in the zone, this radsuit has seen various upgrades and personal touches. \n \n
+			</text>
+		</string>
+
+		<string id="ps5m_neutral3_outfit_name">
+			<text>"Scope" PS5-M Universal Protection</text>
+		</string>
+		<string id="ps5m_neutral3_outfit_description">
+			<text>%c[ui_gray_1] A customized PS5-M Suit favored by veteran and expert stalkers both for its anomalous protection system as well as its improved capacity to handle combat. While it sacrifices the SEVA suit's unique ventilation systems, it has consequently become much more cheaper to maintain. \n \n
+			</text>
+		</string>
+
+		<string id="ps5m_neutral4_outfit_name">
+			<text>"Wayfarer" PS5-M Universal Protection</text>
+		</string>
+		<string id="ps5m_neutral4_outfit_description">
+			<text>%c[ui_gray_1] A customized PS5-M Suit favored by veteran and expert stalkers for its anomalous protections. Where others sough to enhance other aspects, variants favored by stalkers such as the deceased "Wayfarer" sought to enhance its anomalous protections. \n \n
+			</text>
+		</string>
+
+		<string id="military_loner2_name">
+			<text>"Knife" Skat-9 armoured suit</text>
+		</string>
+		<string id="military_loner2_description">
+			<text>%c[ui_gray_1]An excellent protective suit for the Zone. This heavy military-grade armour is designed for major battle operations in anomalous areas. Comprises a PSZ-12p heavy military armoured suit, built-in compensation suit, and an anomalous protection bodysuit. The armour provides excellent protection against bullet and fragmentation damage, without greatly reducing the wearer�s mobility. Although originally intended for the sole use of Military stalkers and experienced Spetsnaz operators, this armour occasionally finds its way into factions outside of the Military through unknown means.\n \n
+			</text>
+		</string>
+
+	<!-- ISG Pack -->
+		<string id="operator_isg_outfit_name">
+			<text>"Operator" ISG Combat Suit </text>
+		</string>
+		<string id="operator_isg_outfit_description">
+			<text>%c[ui_gray_1]A modified UNISG Combat Suit issued to veteran operators. Using information extracted by field scientists and ripped from Ecologist and Clear Sky captives, ISG has been able to increase anomalous and ballistic protections alongside an experimental stealth system. \n \n
+			</text>
+		</string>
+
+		<string id="ghost_isg_outfit_name">
+			<text>"Ghost" Exosuit</text>
+		</string>
+		<string id="ghost_isg_outfit_description">
+			<text>%c[ui_gray_1]The "underwear" of an exoskeleton, sometimes mistakenly known as the "Radsuit". This outfit provides almost all the protection one can expect from a full exoskeleton, but due to being stripped of its servos and batteries, it provides none of the strength enhancement. On the positive side, this means the suit is now easier to maintain and, unlike a full exoskeleton, does not prevent the wearer from sprinting. Consists of an integrated tactical helmet, a heavy armoured vest and a reinforced environmental jumpsuit. This outfit has been provided an experimental stealth system to facilitate UNISG's covert operations.  \n \n
+			</text>
+		</string>
+
+	<!-- Merc Pack -->
+		<string id="wolfhound_outfit_mercenary_name">
+			<text>"Wolfhound" Combat Suit </text>
+		</string>
+		<string id="wolfhound_outfit_mercenary_description">
+			<text>%c[ui_gray_1] A medium tactical suit that is named "Wolfhound" after the unscrupulous mercenary commander who operated in 2012. The suit is built around the currently distributed PS5-M Universal Protection suit and designed to accommodate the Mercenaries' nature as professional killers while covering for their gaps in knowledge of the zone's dangers.\n \n
+			</text>
+		</string>
+
+		<string id="scar_outfit_mercenary_name">
+			<text>"Scar" Trenchcoat</text>
+		</string>
+		<string id="scar_outfit_mercenary_description">
+			<text>%c[ui_gray_1] A modified trenchcoat designated "Scar" after the veteran who led a major spearhead into the heart of the zone itself. It was designed in commemoration of him by a team of Mercenaries and Clear Sky. \n \n
+			</text>
+		</string>
+
+</string_table>
