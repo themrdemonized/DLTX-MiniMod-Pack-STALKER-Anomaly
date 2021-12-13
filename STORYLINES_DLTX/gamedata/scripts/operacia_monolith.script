@@ -1,6 +1,8 @@
--- Воюем на АЭС -----
+local time_global = time_global
+local time_interval = 2000
+local tg = 0
 
-function actor_on_update()
+-- Воюем на АЭС -----
 local kvartet_1 = "Говорит Квартет, Отсутствие излучения подтверждено, крупных скоплений противника не обнаружено, я запросил высадить отряд на Радаре для проведения разведки, операция по захвату Центра Зоны начинается! Всем отрядам спецназа и военных сталкеров перегруппироваться и готовиться выступать на ЧАЭС!"
 local kvartet_3 = "Говорит Квартет, Мы контролируем южную часть АЭС, Теперь необходимо прорваться на север и захватить генераторы. Будьте осторожны, монолитовцы занали укромные снайперские позиции в северной части станции."
 local kvartet_4 = "Говорит Квартет, Мы заняли генераторы! Задача выполнена! Всем отрядам удерживать свои позиции и ждать дальнейших указаний, а тебе, солдат, следует собрать всю информацию из лабораторий и отчитаться перед командованием."
@@ -9,8 +11,16 @@ local cs_task1_news = "Спора: Эй сталкер, у нас пропал разведчик. Его позывной -
 local cs_task1_news1 = "Вы: Постараюсь найти его."
 local cs_task1_news2 = "Холод: Сталкер, нам удалось расшифровать КПК Костыля. Подойди ко мне, как будет время, есть дело."
 local cs_task8_news3 = "Гамаюн: Сталкер, По нашим сведениям, фанатики контратакуют. Уничтожь их!"
-local hours = level.get_time_hours()
-local level_name = level.name()
+
+
+
+function actor_on_update()
+	local t = time_global()
+	if t < tg then return end
+	tg = t + time_interval
+	
+	local hours = level.get_time_hours()
+	local level_name = level.name()
 	if (db.actor:object("cs_informer_pda") ~= nil) and (not has_alife_info("cs_task2_start")) and has_alife_info("cs_task1_start") then		
 		db.actor:give_info_portion("cs_task2_start")
 		task_manager.get_task_manager():give_task("cs_story_task2")
