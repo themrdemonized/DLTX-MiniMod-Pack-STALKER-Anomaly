@@ -1,0 +1,171 @@
+
+-------------------------- trader artiinject -------------------------
+local trade_table = {
+
+	["bandit"] = {
+		[1] = {
+			["water_pills"] = 2,
+		},
+		[2] = {
+			["water_pills"] = 3,
+		},
+		[3] = {
+			["water_pills"] = 4,
+		},
+	},
+
+	["dolg"] = {
+		[1] = {
+			["water_pills"] = 2,
+		},
+		[2] = {
+			["water_pills"] = 3,
+		},
+		[3] = {
+			["water_pills"] = 4,
+		},
+	},
+
+	["ecolog"] = {
+		[1] = {
+			["water_pills"] = 2,
+		},
+		[2] = {
+			["water_pills"] = 3,
+		},
+		[3] = {
+			["water_pills"] = 4,
+		},
+	},
+
+	["freedom"] = {
+		[1] = {
+			["water_pills"] = 2,
+		},
+		[2] = {
+			["water_pills"] = 3,
+		},
+		[3] = {
+			["water_pills"] = 4,
+		},
+	},
+
+	["killer"] = {
+		[1] = {
+			["water_pills"] = 2,
+		},
+		[2] = {
+			["water_pills"] = 3,
+		},
+		[3] = {
+			["water_pills"] = 4,
+		},
+	},
+
+	["army"] = {
+		[1] = {
+			["water_pills"] = 2,
+		},
+		[2] = {
+			["water_pills"] = 3,
+		},
+		[3] = {
+			["water_pills"] = 4,
+		},
+	},
+
+	["monolith"] = {
+		[1] = {
+			["water_pills"] = 2,
+		},
+		[2] = {
+			["water_pills"] = 3,
+		},
+		[3] = {
+			["water_pills"] = 4,
+		},
+	},
+
+	["greh"] = {
+		[1] = {
+			["water_pills"] = 2,
+		},
+		[2] = {
+			["water_pills"] = 3,
+		},
+		[3] = {
+			["water_pills"] = 4,
+		},
+	},
+
+	["stalker"] = {
+		[1] = {
+			["water_pills"] = 2,
+		},
+		[2] = {
+			["water_pills"] = 3,
+		},
+		[3] = {
+			["water_pills"] = 4,
+		},
+	},
+
+	["csky"] = {
+		[1] = {
+			["water_pills"] = 2,
+		},
+		[2] = {
+			["water_pills"] = 3,
+		},
+		[3] = {
+			["water_pills"] = 4,
+		},
+	},
+
+	["isg"] = {
+		[1] = {
+			["water_pills"] = 2,
+		},
+		[2] = {
+			["water_pills"] = 3,
+		},
+		[3] = {
+			["water_pills"] = 4,
+		},
+	},
+
+	["renegade"] = {
+		[1] = {
+			["water_pills"] = 2,
+		},
+		[2] = {
+			["water_pills"] = 3,
+		},
+		[3] = {
+			["water_pills"] = 4,
+		},
+	},
+
+}
+
+function water_pills_stock(npc)
+
+	local is_trader = trader_autoinject.get_trader_type(npc) == trader_autoinject.SUPPLIER
+	if not is_trader then return end
+
+	local community = npc:character_community() or "stalker"
+	local trader_table = trade_table[community] or trade_table["stalker"]
+	local supply_level = clamp(trader_autoinject.supply_level(npc, true) or 1, 1, 3)
+
+	if trader_table[supply_level] then
+		trader_autoinject.spawn_items(npc, trader_table[supply_level], true)
+	end
+
+end
+
+TraderAuto = trader_autoinject.update
+
+function trader_autoinject.update(npc)
+    TraderAuto(npc)
+    water_pills_stock(npc)
+end

@@ -10,7 +10,7 @@
 		<text>Dirty water</text>
 	</string>
 	<string id="st_dirty_water_descr">
-		<text>Military flask filled with dirty water. You can purify it with «Akvatabs» or by boiling. \n \n
+		<text>Military flask filled with dirty water. You can purify it with «Akvatabs»/«Aquabreeze» or by boiling. \n \n
 		%c[ui_gray_3]PROPERTIES:\n
 		%c[d_blue] • %c[ui_gray_2] drink\n</text>
 	</string>
@@ -18,7 +18,7 @@
 		<text>Boiled water</text>
 	</string>
 	<string id="st_boiled_water_descr">
-		<text>Military flask filled with boiled dirty water. While most of dangerous microorganisms were killed, heavy radioactive elements are still lying around. You can purify it further with «Akvatabs». \n \n
+		<text>Military flask filled with boiled dirty water. While most of dangerous microorganisms were killed, heavy radioactive elements are still lying around. You can purify it further with «Akvatabs»/«Aquabreeze». \n
 		%c[ui_gray_3]PROPERTIES:\n
 		%c[d_blue] • %c[ui_gray_2] drink\n</text>
 	</string>

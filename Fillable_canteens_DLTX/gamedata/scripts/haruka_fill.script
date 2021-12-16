@@ -98,6 +98,34 @@ function func_fill(obj)
     end
 end
 
+------------------------------------ Fix by Longreed -------------------------------------
+itms_manager.dropdrop_Basic_Combination = function(obj_1, obj_2, sec_1, sec_2)
+    
+    local multi
+    local med_table = {
+        ["water_pills"] = true, 
+        ["akvatab"]     = true
+    }
+    
+    local sec_new = itms_manager.item_combine[sec_1][sec_2]
+    actor_effects.play_item_fx("item_combination")
+    
+    alife_create_item(sec_new, db.actor)
+    
+    if sec_1 ~= sec_2 and med_table[sec_1] then multi = obj_1 end
+    if sec_1 ~= sec_2 and med_table[sec_2] then multi = obj_2 end
+    
+    if multi then
+        local uses = multi:get_remaining_uses()
+        if uses > 1 then multi:set_remaining_uses(uses - 1)
+        else multi = nil end
+    end
+    
+    if not multi or multi:section() ~= sec_1 then alife_release(obj_1) end
+    if not multi or multi:section() ~= sec_2 then alife_release(obj_2) end
+end
+-----------------------------------------------------------------------------------------
+
 function on_game_start()
     RegisterScriptCallback("actor_on_footstep", actor_on_footstep)
     RegisterScriptCallback("actor_on_item_use", actor_on_item_use)

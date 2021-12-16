@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+
+	<string id="st_water_pills_name">
+		<text>Aquabreeze</text>
+	</string>
+	<string id="st_water_pills_descr">
+		<text>Aquabreeze tablets are intended for disinfection of drinking water containing bacteria and viruses. Usually used for transportation and storage of drinking water in field and extreme conditions, as well as in emergency situations during water consumption from non-centralized sources (rivers, lakes, ponds, etc.). Water disinfection should be carried out only in a container with a screw cap (flask, etc.). One package contains 10 tablets, it is recommended to use tablets at the rate of - 2 tablets per 1 liter of water.\n
+		%c[ui_gray_3]PROPERTIES:\n
+		%c[d_red] • %c[ui_gray_2] slow usage (dispersible tablets)\n
+		%c[d_green] • %c[ui_gray_2] clean nutrition source\n
+		</text>
+	</string>
+
+</string_table>
