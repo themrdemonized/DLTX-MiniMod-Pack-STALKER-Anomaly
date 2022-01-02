@@ -148,6 +148,8 @@ local trade_table = {
 
 }
 
+spawn_chance = 0.33
+
 function water_pills_stock(npc)
 
 	local is_trader = trader_autoinject.get_trader_type(npc) == trader_autoinject.SUPPLIER
@@ -158,7 +160,17 @@ function water_pills_stock(npc)
 	local supply_level = clamp(trader_autoinject.supply_level(npc, true) or 1, 1, 3)
 
 	if trader_table[supply_level] then
-		trader_autoinject.spawn_items(npc, trader_table[supply_level], true)
+		local t = dup_table(trader_table[supply_level])
+		for k, v in pairs(t) do
+			local s = 0
+			for i = 1, v do
+				if math.random() < spawn_chance then
+					s = s + 1
+				end
+			end
+			t[k] = s
+		end
+		trader_autoinject.spawn_items(npc, t, true)
 	end
 
 end
