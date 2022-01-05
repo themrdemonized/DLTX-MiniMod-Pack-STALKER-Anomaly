@@ -35,6 +35,11 @@ snd_switch = weapons\ak74\ak74_switch
 snd_reload_empty = weapons\galil\galil_reload_empty
 snd_reload_misfire = weapons\galil\galil_misfire
 
+![wpn_ace21_sounds]
+snd_reload				                                          = weapons\ace21\ace21_reload
+snd_reload_empty				                                          = weapons\ace21\ace21_reload
+snd_reload_misfire				                                          = weapons\ace21\ace21_reload
+
 ![wpn_aug_sounds]
 snd_reload_empty = weapons\aug\aug_reload_empty
 
@@ -81,11 +86,7 @@ snd_reload_misfire = weapons\m14\m14_misfire
 ![wpn_m4a1_sounds]
 snd_reload_empty = weapons\m4a1\m4a1_reload_empty
 
-; ![wpn_m16_sounds]
-; snd_reload_empty = weapons\m16\m16_reload_empty
-; snd_reload_misfire = weapons\m16\m16_misfire
-
-[wpn_m16a2_sounds]:wpn_m16_sounds
+![wpn_m16_sounds]
 snd_reload = weapons\m16\m16_reload
 snd_reload_empty = weapons\m16\m16_reload_empty
 snd_reload_misfire = weapons\m16\m16_misfire
@@ -120,8 +121,8 @@ snd_reload_empty = weapons\l96a1\l96a1_reload_empty
 snd_reload_misfire = weapons\l96a1\l96a1_misfire
 
 ![wpn_sv98_sounds]
-snd_shoot = weapons\sv98\sv98_shoot
-snd_shoot_actor = weapons\sv98\sv98_shoot
+; snd_shoot = weapons\sv98\sv98_shoot
+; snd_shoot_actor = weapons\sv98\sv98_shoot
 snd_reload = weapons\l96a1\l96a1_reload
 snd_reload_empty = weapons\l96a1\l96a1_reload_empty
 snd_reload_misfire = weapons\l96a1\l96a1_misfire
@@ -141,11 +142,13 @@ snd_reload_misfire = weapons\vintorez\vintorez_misfire
 ; !snd_switch_mode
 
 ![wpn_vihr_sounds]
-!snd_shoot
-!snd_shoot_actor
-!snd_switch_mode
-!snd_draw
-!snd_holster
+; !snd_shoot
+; !snd_shoot_actor
+; !snd_switch_mode
+; !snd_draw
+; !snd_holster
+snd_reload_empty                                                  = weapons\vihr\vihr_reload_empty
+snd_reload_misfire				                                  = weapons\vihr\vihr_reload_empty
 
 ![wpn_vintorez_sounds]
 snd_reload_empty = weapons\vintorez\vintorez_reload_empty
@@ -162,20 +165,26 @@ snd_reload_empty = weapons\vityaz\vityaz_reload_empty
 snd_reload_empty = weapons\vssk\vssk_reload_empty, 0.7
 
 ![wpn_9a91_sounds]
-snd_silncer_shot = wpn_smg9_snd_silenced
-snd_silncer_shot_actor = wpn_smg9_snd_silenced_actor
+; snd_silncer_shot = wpn_smg9_snd_silenced
+; snd_silncer_shot_actor = wpn_smg9_snd_silenced_actor
 ; !snd_reload_misfire
 ; !snd_switch_mode
 ; !snd_draw
 ; !snd_holster
+snd_reload				                                          = weapons\9a91\9a91_reload
+snd_reload_empty                                                  = weapons\9a91\9a91_reload_empty
+snd_reload_misfire                                                  = weapons\9a91\9a91_reload_empty
 
-; ![wpn_vsk94_sounds]
+![wpn_vsk94_sounds]
 ; !snd_reload_misfire
 ; !snd_switch_mode
 ; !snd_draw
 ; !snd_holster
 ; !snd_silncer_shot
 ; !snd_silncer_shot_actor
+snd_reload				                                          = weapons\9a91\9a91_reload
+snd_reload_empty                                                  = weapons\9a91\9a91_reload_empty
+snd_reload_misfire				                                  = weapons\9a91\9a91_reload_empty
 
 ![wpn_sr25_sounds]:wpn_m16_sounds, !wpn_m4_sounds
 snd_reload = weapons\m16\m16_reload
@@ -186,10 +195,10 @@ snd_reload_misfire = weapons\m16\m16_misfire
 snd_reload_empty = weapons\xm8\xm8_reload_empty
 
 ![wpn_ash12_sounds]
-snd_shoot = wpn_svt40_snd_shoot
-snd_shoot_actor = wpn_svt40_snd_shoot_actor
-snd_silncer_shot = wpn_dmr_snd_silenced
-snd_silncer_shot_actor = wpn_dmr_snd_silenced_actor
+; snd_shoot = wpn_svt40_snd_shoot
+; snd_shoot_actor = wpn_svt40_snd_shoot_actor
+; snd_silncer_shot = wpn_dmr_snd_silenced
+; snd_silncer_shot_actor = wpn_dmr_snd_silenced_actor
 
 ![wpn_sig552_sounds]
 snd_reload_empty = weapons\sig552\sig552_reload_empty
@@ -224,6 +233,7 @@ anm_idle_aim_moving_crouch = lancew_vsk94_moving_v2, idle, 0.7
 anm_idle_moving = lancew_vsk94_moving_v2
 anm_idle_sprint = lancew_vsk94_sprint_v2
 anm_reload = vsk94_reload_short, reload_short
+anm_reload_misfire                       = lancew_vsk94_reload, reload
 anm_reload_empty = lancew_vsk94_reload, reload
 anm_show = lancew_vsk94_draw
 
@@ -786,6 +796,9 @@ anm_shots = galil_shoot_v2, shoot
 ; aim_hud_offset_pos_16x9 = -0.0545,0.015,-0.05
 ; aim_hud_offset_rot = 0.002,0,0
 ; aim_hud_offset_rot_16x9 = 0.002,0,0
+anm_reload                               = ace21_reload, reload
+anm_reload_empty                               = ace21_reload, reload
+anm_reload_misfire                              = ace21_reload, reload
 
 ![wpn_ace21_ac10632_hud]
 ; aim_hud_offset_pos = -0.0545,0.0001,-0.05
@@ -967,6 +980,19 @@ anm_shots_w_gl = lr300_shoot_w_gl_v2, shoot
 ; !gl_hud_offset_pos_16x9
 ; !gl_hud_offset_rot
 ; !gl_hud_offset_rot_16x9
+
+![wpn_m16]
+!snd_reload_misfire
+!snd_reload_empty
+!snd_reload
+
+![wpn_m16_hud]
+anm_reload = m16_reload, reload
+anm_reload_empty = m16_reload_empty, reload_empty
+anm_reload_misfire = m16_misfire, misfire
+anm_reload_w_gl = m16_reload_w_gl, reload
+anm_reload_empty_w_gl = m16_reload_empty_w_gl, reload_empty
+anm_reload_misfire_w_gl = m16_misfire_w_gl, misfire
 
 ![wpn_m16a2]:wpn_m16a2_sounds, !wpn_m16_sounds
 !snd_reload_misfire
@@ -1684,6 +1710,7 @@ anm_idle_moving = lancew_sr3m_moving_v2
 anm_idle_sprint = lancew_sr3m_sprint_v2
 anm_reload = sr3m_reload_short, reload_short
 anm_reload_empty = lancew_sr3m_reload, reload
+anm_reload_misfire = lancew_sr3m_reload, reload
 
 ![wpn_vihr_1p29_hud]
 ; aim_hud_offset_pos = -0.057,0.006,-0.05
@@ -1817,6 +1844,7 @@ anm_idle_moving = lancew_vsk94_moving_v2
 anm_idle_sprint = lancew_vsk94_sprint_v2
 anm_reload = vsk94_reload_short, reload_short
 anm_reload_empty = lancew_vsk94_reload, reload
+anm_reload_misfire                       = lancew_vsk94_reload, reload
 
 ![wpn_vsk94_1p29_hud]
 ; aim_hud_offset_pos = -0.06,-0.005,-0.07
