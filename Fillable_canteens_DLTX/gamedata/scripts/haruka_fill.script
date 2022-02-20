@@ -2,14 +2,8 @@ local near_water = false
 local near_campfire = false
 
 local get_nearby_campfire = bind_campfire.get_nearby_campfire
-local alife_create_item = alife_create_item
-local alife_release = alife_release
-local get_object_by_id = get_object_by_id
 local translate_string = game.translate_string
-local random_float = random_float
 local sf = string.find
-local tostring = tostring
-local CreateTimeEvent = CreateTimeEvent
 
 local waters = {
     flask = true,

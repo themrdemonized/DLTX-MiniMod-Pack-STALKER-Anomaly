@@ -1,0 +1,1536 @@
+![simulation_task_1]
+precondition = false
+
+![simulation_task_2]
+precondition = false
+
+![simulation_task_3]
+precondition = false
+
+![simulation_task_4]
+precondition = false
+
+![simulation_task_5]
+precondition = false
+
+![simulation_task_6]
+precondition = false
+
+![simulation_task_7]
+precondition = false
+
+![simulation_task_8]
+precondition = false
+
+![simulation_task_9]
+precondition = false
+
+![simulation_task_10]
+precondition = false
+
+![simulation_task_11]
+precondition = false
+
+![simulation_task_12]
+precondition = false
+
+![simulation_task_13]
+precondition = false
+
+![simulation_task_14]
+precondition = false
+
+![simulation_task_15]
+precondition = false
+
+![simulation_task_16]
+precondition = false
+
+![simulation_task_21]
+precondition = false
+
+![simulation_task_22]
+precondition = false
+
+![simulation_task_24]
+precondition = false
+
+![simulation_task_25]
+precondition = false
+
+;======================================
+;========== xcvb's extras ===================
+;======================================
+
+;------------------------------------------------
+;-- Fetch Artefacts
+;------------------------------------------------
+[simulation_task_68]
+
+icon = ui_inGame2_Kontrakt_s_uchenimi
+storyline = false
+prior = 25
+sim_communities = csky
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_68_name
+title_functor = general_fetch_task
+descr = simulation_task_68_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_68_about
+fetch_descr = simulation_task_68_fetch_about
+task_complete_descr = simulation_task_68_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_68)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_68_fetch:artefacts:1:1)%
+on_complete = %=fetch_reward_and_remove(simulation_task_68_fetch:0.8) =reward_stash(true) =complete_task_inc_goodwill(35:csky) =inc_task_stage(simulation_task_68) =pstor_reset(simulation_task_68_fetch) =drx_sl_unregister_task_giver(simulation_task_68) =drx_sl_reset_stored_task(simulation_task_68)%
+on_fail = %=fail_task_dec_goodwill(70:csky) =pstor_reset(simulation_task_68_fetch) =drx_sl_unregister_task_giver(simulation_task_68) =drx_sl_reset_stored_task(simulation_task_68)%
+
+
+;------------------------------------------------
+[simulation_task_69]
+
+icon = ui_inGame2_Kontrakt_s_uchenimi
+storyline = false
+prior = 25
+sim_communities = ecolog
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_69_name
+title_functor = general_fetch_task
+descr = simulation_task_69_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_69_about
+fetch_descr = simulation_task_69_fetch_about
+task_complete_descr = simulation_task_69_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_69)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_69_fetch:artefacts:1:1)%
+on_complete = %=fetch_reward_and_remove(simulation_task_69_fetch:1.3) =reward_stash(true) =complete_task_inc_goodwill(40:ecolog) =inc_task_stage(simulation_task_69) =pstor_reset(simulation_task_69_fetch) =drx_sl_unregister_task_giver(simulation_task_69) =drx_sl_reset_stored_task(simulation_task_69)%
+on_fail = %=fail_task_dec_goodwill(80:ecolog) =pstor_reset(simulation_task_69_fetch) =drx_sl_unregister_task_giver(simulation_task_69) =drx_sl_reset_stored_task(simulation_task_69)%
+
+;------------------------------------------------
+[simulation_task_70]
+
+icon = ui_inGame2_Kontrakt_s_uchenimi
+storyline = false
+prior = 25
+sim_communities = freedom
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_70_name
+title_functor = general_fetch_task
+descr = simulation_task_70_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_70_about
+fetch_descr = simulation_task_70_fetch_about
+task_complete_descr = simulation_task_70_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_70)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_70_fetch:artefacts:1:1)%
+on_complete = %=fetch_reward_and_remove(simulation_task_70_fetch:0.9) =reward_stash(true) =complete_task_inc_goodwill(25:freedom) =inc_task_stage(simulation_task_70) =pstor_reset(simulation_task_70_fetch) =drx_sl_unregister_task_giver(simulation_task_70) =drx_sl_reset_stored_task(simulation_task_70)%
+on_fail = %=fail_task_dec_goodwill(50:freedom) =pstor_reset(simulation_task_70_fetch) =drx_sl_unregister_task_giver(simulation_task_70) =drx_sl_reset_stored_task(simulation_task_70)%
+
+;------------------------------------------------
+[simulation_task_71]
+
+icon = ui_inGame2_Kontrakt_s_uchenimi
+storyline = false
+prior = 25
+sim_communities = killer
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_71_name
+title_functor = general_fetch_task
+descr = simulation_task_71_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_71_about
+fetch_descr = simulation_task_71_fetch_about
+task_complete_descr = simulation_task_71_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_71)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_71_fetch:artefacts:1:1)%
+on_complete = %=fetch_reward_and_remove(simulation_task_71_fetch:1.1) =reward_stash(true) =complete_task_inc_goodwill(15:killer) =inc_task_stage(simulation_task_71) =pstor_reset(simulation_task_71_fetch) =drx_sl_unregister_task_giver(simulation_task_71) =drx_sl_reset_stored_task(simulation_task_71)%
+on_fail = %=fail_task_dec_goodwill(45:killer) =pstor_reset(simulation_task_71_fetch) =drx_sl_unregister_task_giver(simulation_task_71) =drx_sl_reset_stored_task(simulation_task_71)%
+
+;------------------------------------------------
+[simulation_task_72]
+
+icon = ui_inGame2_Kontrakt_s_uchenimi
+storyline = false
+prior = 25
+sim_communities = stalker
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_72_name
+title_functor = general_fetch_task
+descr = simulation_task_72_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_72_about
+fetch_descr = simulation_task_72_fetch_about
+task_complete_descr = simulation_task_72_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_72)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_72_fetch:artefacts:1:1)%
+on_complete = %=fetch_reward_and_remove(simulation_task_72_fetch:0.8) =reward_stash(true) =complete_task_inc_goodwill(35:stalker) =inc_task_stage(simulation_task_72) =pstor_reset(simulation_task_72_fetch) =drx_sl_unregister_task_giver(simulation_task_72) =drx_sl_reset_stored_task(simulation_task_72)%
+on_fail = %=fail_task_dec_goodwill(50:stalker) =pstor_reset(simulation_task_72_fetch) =drx_sl_unregister_task_giver(simulation_task_72) =drx_sl_reset_stored_task(simulation_task_72)%
+
+
+;------------------------------------------------
+[simulation_task_73]
+
+icon = ui_inGame2_Kontrakt_s_uchenimi
+storyline = false
+prior = 25
+sim_communities = army
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_73_name
+title_functor = general_fetch_task
+descr = simulation_task_73_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_73_about
+fetch_descr = simulation_task_73_fetch_about
+task_complete_descr = simulation_task_73_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_73)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_73_fetch:artefacts:1:1)%
+on_complete = %=fetch_reward_and_remove(simulation_task_73_fetch:0.8) =reward_stash(true) =complete_task_inc_goodwill(25:army) =inc_task_stage(simulation_task_73) =pstor_reset(simulation_task_73_fetch) =drx_sl_unregister_task_giver(simulation_task_73) =drx_sl_reset_stored_task(simulation_task_73)%
+on_fail = %=fail_task_dec_goodwill(50:army) =pstor_reset(simulation_task_73_fetch) =drx_sl_unregister_task_giver(simulation_task_73) =drx_sl_reset_stored_task(simulation_task_73)%
+
+
+;------------------------------------------------
+;-- Fetch Mutant Meat COMMON
+;------------------------------------------------
+[simulation_task_74]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 30
+sim_communities = csky
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_74_name
+title_functor = general_fetch_task
+descr = simulation_task_74_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_74_about
+fetch_descr = simulation_task_74_fetch_about
+task_complete_descr = simulation_task_74_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_74)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_74_fetch:mutant_meat_common_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_74_fetch:1.1) =reward_stash(true) =complete_task_inc_goodwill(10:csky) =inc_task_stage(simulation_task_74) =pstor_reset(simulation_task_74_fetch) =drx_sl_unregister_task_giver(simulation_task_74) =drx_sl_reset_stored_task(simulation_task_74)%
+on_fail = %=fail_task_dec_goodwill(20:csky) =pstor_reset(simulation_task_74_fetch) =drx_sl_unregister_task_giver(simulation_task_74) =drx_sl_reset_stored_task(simulation_task_74)%
+
+;------------------------------------------------
+[simulation_task_75]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 30
+sim_communities = stalker
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_75_name
+title_functor = general_fetch_task
+descr = simulation_task_75_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_75_about
+fetch_descr = simulation_task_75_fetch_about
+task_complete_descr = simulation_task_75_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_75)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_75_fetch:mutant_meat_common_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_75_fetch:1.1) =reward_stash(true) =complete_task_inc_goodwill(7:stalker) =inc_task_stage(simulation_task_75) =pstor_reset(simulation_task_75_fetch) =drx_sl_unregister_task_giver(simulation_task_75) =drx_sl_reset_stored_task(simulation_task_75)%
+on_fail = %=fail_task_dec_goodwill(15:stalker) =pstor_reset(simulation_task_75_fetch) =drx_sl_unregister_task_giver(simulation_task_75) =drx_sl_reset_stored_task(simulation_task_75)%
+
+;------------------------------------------------
+[simulation_task_76]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 30
+sim_communities = bandit
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_76_name
+title_functor = general_fetch_task
+descr = simulation_task_76_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_76_about
+fetch_descr = simulation_task_76_fetch_about
+task_complete_descr = simulation_task_76_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_76)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_76_fetch:mutant_meat_common_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_76_fetch:1.0) =reward_stash(true) =complete_task_inc_goodwill(5:bandit) =inc_task_stage(simulation_task_76) =pstor_reset(simulation_task_76_fetch) =drx_sl_unregister_task_giver(simulation_task_76) =drx_sl_reset_stored_task(simulation_task_76)%
+on_fail = %=fail_task_dec_goodwill(15:bandit) =pstor_reset(simulation_task_76_fetch) =drx_sl_unregister_task_giver(simulation_task_76) =drx_sl_reset_stored_task(simulation_task_76)%
+
+;------------------------------------------------
+[simulation_task_77]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 30
+sim_communities = renegade
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_77_name
+title_functor = general_fetch_task
+descr = simulation_task_77_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_77_about
+fetch_descr = simulation_task_77_fetch_about
+task_complete_descr = simulation_task_77_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_77)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_77_fetch:mutant_meat_common_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_77_fetch:1.0) =reward_stash(true) =complete_task_inc_goodwill(5:renegade) =inc_task_stage(simulation_task_77) =pstor_reset(simulation_task_77_fetch) =drx_sl_unregister_task_giver(simulation_task_77) =drx_sl_reset_stored_task(simulation_task_77)%
+on_fail = %=fail_task_dec_goodwill(15:renegade) =pstor_reset(simulation_task_77_fetch) =drx_sl_unregister_task_giver(simulation_task_77) =drx_sl_reset_stored_task(simulation_task_77)%
+
+;------------------------------------------------
+[simulation_task_78]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 30
+sim_communities = monolith
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_78_name
+title_functor = general_fetch_task
+descr = simulation_task_78_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_78_about
+fetch_descr = simulation_task_78_fetch_about
+task_complete_descr = simulation_task_78_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_78)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_78_fetch:mutant_meat_common_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_78_fetch:1.0) =reward_stash(true) =complete_task_inc_goodwill(10:monolith) =inc_task_stage(simulation_task_78) =pstor_reset(simulation_task_78_fetch) =drx_sl_unregister_task_giver(simulation_task_78) =drx_sl_reset_stored_task(simulation_task_78)%
+on_fail = %=fail_task_dec_goodwill(20:monolith) =pstor_reset(simulation_task_78_fetch) =drx_sl_unregister_task_giver(simulation_task_78) =drx_sl_reset_stored_task(simulation_task_78)%
+
+;------------------------------------------------
+[simulation_task_79]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 30
+sim_communities = army
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_79_name
+title_functor = general_fetch_task
+descr = simulation_task_79_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_79_about
+fetch_descr = simulation_task_79_fetch_about
+task_complete_descr = simulation_task_79_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_79)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_79_fetch:mutant_meat_common_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_79_fetch:1.0) =reward_stash(true) =complete_task_inc_goodwill(5:army) =inc_task_stage(simulation_task_79) =pstor_reset(simulation_task_79_fetch) =drx_sl_unregister_task_giver(simulation_task_79) =drx_sl_reset_stored_task(simulation_task_79)%
+on_fail = %=fail_task_dec_goodwill(10:army) =pstor_reset(simulation_task_79_fetch) =drx_sl_unregister_task_giver(simulation_task_79) =drx_sl_reset_stored_task(simulation_task_79)%
+
+;------------------------------------------------
+[simulation_task_80]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 30
+sim_communities = freedom
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_80_name
+title_functor = general_fetch_task
+descr = simulation_task_80_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_80_about
+fetch_descr = simulation_task_80_fetch_about
+task_complete_descr = simulation_task_80_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_80)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_80_fetch:mutant_meat_common_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_80_fetch:1.1) =reward_stash(true) =complete_task_inc_goodwill(5:freedom) =inc_task_stage(simulation_task_80) =pstor_reset(simulation_task_80_fetch) =drx_sl_unregister_task_giver(simulation_task_80) =drx_sl_reset_stored_task(simulation_task_80)%
+on_fail = %=fail_task_dec_goodwill(10:freedom) =pstor_reset(simulation_task_80_fetch) =drx_sl_unregister_task_giver(simulation_task_80) =drx_sl_reset_stored_task(simulation_task_80)%
+
+
+;------------------------------------------------
+;-- Fetch Mutant Meat RARE
+;------------------------------------------------
+[simulation_task_81]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 30
+sim_communities = ecolog
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_81_name
+title_functor = general_fetch_task
+descr = simulation_task_81_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_81_about
+fetch_descr = simulation_task_81_fetch_about
+task_complete_descr = simulation_task_81_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_81)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_81_fetch:mutant_meat_rare_x:1:2)%
+on_complete = %=fetch_reward_and_remove(simulation_task_81_fetch:2.2) =reward_stash(true) =complete_task_inc_goodwill(10:ecolog) =inc_task_stage(simulation_task_81) =pstor_reset(simulation_task_81_fetch) =drx_sl_unregister_task_giver(simulation_task_81) =drx_sl_reset_stored_task(simulation_task_81)%
+on_fail = %=fail_task_dec_goodwill(15:ecolog) =pstor_reset(simulation_task_81_fetch) =drx_sl_unregister_task_giver(simulation_task_81) =drx_sl_reset_stored_task(simulation_task_81)%
+
+;------------------------------------------------
+[simulation_task_82]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 30
+sim_communities = dolg
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_82_name
+title_functor = general_fetch_task
+descr = simulation_task_82_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_82_about
+fetch_descr = simulation_task_82_fetch_about
+task_complete_descr = simulation_task_82_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_82)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_82_fetch:mutant_meat_rare_x:1:2)%
+on_complete = %=fetch_reward_and_remove(simulation_task_82_fetch:1.8) =reward_stash(true) =complete_task_inc_goodwill(10:dolg) =inc_task_stage(simulation_task_82) =pstor_reset(simulation_task_82_fetch) =drx_sl_unregister_task_giver(simulation_task_82) =drx_sl_reset_stored_task(simulation_task_82)%
+on_fail = %=fail_task_dec_goodwill(20:dolg) =pstor_reset(simulation_task_82_fetch) =drx_sl_unregister_task_giver(simulation_task_82) =drx_sl_reset_stored_task(simulation_task_82)%
+
+
+;------------------------------------------------
+;-- Fetch Mutant Parts COMMON
+;------------------------------------------------
+[simulation_task_83]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = stalker
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_83_name
+title_functor = general_fetch_task
+descr = simulation_task_83_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_83_about
+fetch_descr = simulation_task_83_fetch_about
+task_complete_descr = simulation_task_83_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_83)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_83_fetch:mutant_part_common_x:2:6)%
+on_complete = %=fetch_reward_and_remove(simulation_task_83_fetch:1.4) =reward_stash(true) =complete_task_inc_goodwill(10:stalker) =inc_task_stage(simulation_task_83) =pstor_reset(simulation_task_83_fetch) =drx_sl_unregister_task_giver(simulation_task_83) =drx_sl_reset_stored_task(simulation_task_83)%
+on_fail = %=fail_task_dec_goodwill(20:stalker) =pstor_reset(simulation_task_83_fetch) =drx_sl_unregister_task_giver(simulation_task_83) =drx_sl_reset_stored_task(simulation_task_83)%
+
+;------------------------------------------------
+[simulation_task_84]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = csky
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_84_name
+title_functor = general_fetch_task
+descr = simulation_task_84_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_84_about
+fetch_descr = simulation_task_84_fetch_about
+task_complete_descr = simulation_task_84_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_84)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_84_fetch:mutant_part_common_x:2:6)%
+on_complete = %=fetch_reward_and_remove(simulation_task_84_fetch:1.5) =reward_stash(true) =complete_task_inc_goodwill(15:csky) =inc_task_stage(simulation_task_84) =pstor_reset(simulation_task_84_fetch) =drx_sl_unregister_task_giver(simulation_task_84) =drx_sl_reset_stored_task(simulation_task_84)%
+on_fail = %=fail_task_dec_goodwill(30:csky) =pstor_reset(simulation_task_84_fetch) =drx_sl_unregister_task_giver(simulation_task_84) =drx_sl_reset_stored_task(simulation_task_84)%
+
+;------------------------------------------------
+[simulation_task_85]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = freedom
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_85_name
+title_functor = general_fetch_task
+descr = simulation_task_85_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_85_about
+fetch_descr = simulation_task_85_fetch_about
+task_complete_descr = simulation_task_85_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_85)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_85_fetch:mutant_part_common_x:2:6)%
+on_complete = %=fetch_reward_and_remove(simulation_task_85_fetch:1.8) =reward_stash(true) =complete_task_inc_goodwill(10:freedom) =inc_task_stage(simulation_task_85) =pstor_reset(simulation_task_85_fetch) =drx_sl_unregister_task_giver(simulation_task_85) =drx_sl_reset_stored_task(simulation_task_85)%
+on_fail = %=fail_task_dec_goodwill(20:freedom) =pstor_reset(simulation_task_85_fetch) =drx_sl_unregister_task_giver(simulation_task_85) =drx_sl_reset_stored_task(simulation_task_85)%
+
+;------------------------------------------------
+[simulation_task_86]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = dolg
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_86_name
+title_functor = general_fetch_task
+descr = simulation_task_86_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_86_about
+fetch_descr = simulation_task_86_fetch_about
+task_complete_descr = simulation_task_86_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_86)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_86_fetch:mutant_part_common_x:2:6)%
+on_complete = %=fetch_reward_and_remove(simulation_task_86_fetch:1.7) =reward_stash(true) =complete_task_inc_goodwill(12:dolg) =inc_task_stage(simulation_task_86) =pstor_reset(simulation_task_86_fetch) =drx_sl_unregister_task_giver(simulation_task_86) =drx_sl_reset_stored_task(simulation_task_86)%
+on_fail = %=fail_task_dec_goodwill(25:dolg) =pstor_reset(simulation_task_86_fetch) =drx_sl_unregister_task_giver(simulation_task_86) =drx_sl_reset_stored_task(simulation_task_86)%
+
+;------------------------------------------------
+[simulation_task_87]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = army
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_87_name
+title_functor = general_fetch_task
+descr = simulation_task_87_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_87_about
+fetch_descr = simulation_task_87_fetch_about
+task_complete_descr = simulation_task_87_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_87)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_87_fetch:mutant_part_common_x:2:6)%
+on_complete = %=fetch_reward_and_remove(simulation_task_87_fetch:1.6) =reward_stash(true) =complete_task_inc_goodwill(7:army) =inc_task_stage(simulation_task_87) =pstor_reset(simulation_task_87_fetch) =drx_sl_unregister_task_giver(simulation_task_87) =drx_sl_reset_stored_task(simulation_task_87)%
+on_fail = %=fail_task_dec_goodwill(15:army) =pstor_reset(simulation_task_87_fetch) =drx_sl_unregister_task_giver(simulation_task_87) =drx_sl_reset_stored_task(simulation_task_87)%
+
+
+;------------------------------------------------
+;-- Fetch Mutant Parts MEDIUM
+;------------------------------------------------
+[simulation_task_88]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = stalker
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_88_name
+title_functor = general_fetch_task
+descr = simulation_task_88_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_88_about
+fetch_descr = simulation_task_88_fetch_about
+task_complete_descr = simulation_task_88_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_88)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_88_fetch:mutant_part_medium_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_88_fetch:1.6) =reward_stash(true) =complete_task_inc_goodwill(15:stalker) =inc_task_stage(simulation_task_88) =pstor_reset(simulation_task_88_fetch) =drx_sl_unregister_task_giver(simulation_task_88) =drx_sl_reset_stored_task(simulation_task_88)%
+on_fail = %=fail_task_dec_goodwill(30:stalker) =pstor_reset(simulation_task_88_fetch) =drx_sl_unregister_task_giver(simulation_task_88) =drx_sl_reset_stored_task(simulation_task_88)%
+
+;------------------------------------------------
+[simulation_task_89]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = ecolog
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_89_name
+title_functor = general_fetch_task
+descr = simulation_task_89_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_89_about
+fetch_descr = simulation_task_89_fetch_about
+task_complete_descr = simulation_task_89_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_89)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_89_fetch:mutant_part_medium_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_89_fetch:2) =reward_stash(true) =complete_task_inc_goodwill(25:ecolog) =inc_task_stage(simulation_task_89) =pstor_reset(simulation_task_89_fetch) =drx_sl_unregister_task_giver(simulation_task_89) =drx_sl_reset_stored_task(simulation_task_89)%
+on_fail = %=fail_task_dec_goodwill(50:ecolog) =pstor_reset(simulation_task_89_fetch) =drx_sl_unregister_task_giver(simulation_task_89) =drx_sl_reset_stored_task(simulation_task_89)%
+
+;------------------------------------------------
+[simulation_task_90]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = dolg
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_90_name
+title_functor = general_fetch_task
+descr = simulation_task_90_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_90_about
+fetch_descr = simulation_task_90_fetch_about
+task_complete_descr = simulation_task_90_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_90)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_90_fetch:mutant_part_medium_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_90_fetch:1.8) =reward_stash(true) =complete_task_inc_goodwill(17:dolg) =inc_task_stage(simulation_task_90) =pstor_reset(simulation_task_90_fetch) =drx_sl_unregister_task_giver(simulation_task_90) =drx_sl_reset_stored_task(simulation_task_90)%
+on_fail = %=fail_task_dec_goodwill(35:dolg) =pstor_reset(simulation_task_90_fetch) =drx_sl_unregister_task_giver(simulation_task_90) =drx_sl_reset_stored_task(simulation_task_90)%
+
+;------------------------------------------------
+[simulation_task_91]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = killer
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_91_name
+title_functor = general_fetch_task
+descr = simulation_task_91_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_91_about
+fetch_descr = simulation_task_91_fetch_about
+task_complete_descr = simulation_task_91_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_91)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_91_fetch:mutant_part_medium_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_91_fetch:1.9) =reward_stash(true) =complete_task_inc_goodwill(15:killer) =inc_task_stage(simulation_task_91) =pstor_reset(simulation_task_91_fetch) =drx_sl_unregister_task_giver(simulation_task_91) =drx_sl_reset_stored_task(simulation_task_91)%
+on_fail = %=fail_task_dec_goodwill(30:killer) =pstor_reset(simulation_task_91_fetch) =drx_sl_unregister_task_giver(simulation_task_91) =drx_sl_reset_stored_task(simulation_task_91)%
+
+
+;------------------------------------------------
+;-- Fetch Mutant Parts RARE
+;------------------------------------------------
+[simulation_task_92]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = ecolog
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_92_name
+title_functor = general_fetch_task
+descr = simulation_task_92_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_92_about
+fetch_descr = simulation_task_92_fetch_about
+task_complete_descr = simulation_task_92_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_92)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_92_fetch:mutant_part_rare_x:1:1)%
+on_complete = %=fetch_reward_and_remove(simulation_task_92_fetch:2.4) =reward_stash(true) =complete_task_inc_goodwill(45:ecolog) =inc_task_stage(simulation_task_92) =pstor_reset(simulation_task_92_fetch) =drx_sl_unregister_task_giver(simulation_task_92) =drx_sl_reset_stored_task(simulation_task_92)%
+on_fail = %=fail_task_dec_goodwill(90:ecolog) =pstor_reset(simulation_task_92_fetch) =drx_sl_unregister_task_giver(simulation_task_92) =drx_sl_reset_stored_task(simulation_task_92)%
+
+;------------------------------------------------
+[simulation_task_93]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = dolg
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_93_name
+title_functor = general_fetch_task
+descr = simulation_task_93_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_93_about
+fetch_descr = simulation_task_93_fetch_about
+task_complete_descr = simulation_task_93_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_93)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_93_fetch:mutant_part_rare_x:1:1)%
+on_complete = %=fetch_reward_and_remove(simulation_task_93_fetch:1.9) =reward_stash(true) =complete_task_inc_goodwill(30:dolg) =inc_task_stage(simulation_task_93) =pstor_reset(simulation_task_93_fetch) =drx_sl_unregister_task_giver(simulation_task_93) =drx_sl_reset_stored_task(simulation_task_93)%
+on_fail = %=fail_task_dec_goodwill(60:dolg) =pstor_reset(simulation_task_93_fetch) =drx_sl_unregister_task_giver(simulation_task_93) =drx_sl_reset_stored_task(simulation_task_93)%
+
+;------------------------------------------------
+[simulation_task_94]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = killer
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_94_name
+title_functor = general_fetch_task
+descr = simulation_task_94_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_94_about
+fetch_descr = simulation_task_94_fetch_about
+task_complete_descr = simulation_task_94_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_94)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_94_fetch:mutant_part_rare_x:1:1)%
+on_complete = %=fetch_reward_and_remove(simulation_task_94_fetch:2.1) =reward_stash(true) =complete_task_inc_goodwill(35:killer) =inc_task_stage(simulation_task_94) =pstor_reset(simulation_task_94_fetch) =drx_sl_unregister_task_giver(simulation_task_94) =drx_sl_reset_stored_task(simulation_task_94)%
+on_fail = %=fail_task_dec_goodwill(70:killer) =pstor_reset(simulation_task_94_fetch) =drx_sl_unregister_task_giver(simulation_task_94) =drx_sl_reset_stored_task(simulation_task_94)%
+
+
+;------------------------------------------------
+;-- Fetch Mutant Hides COMMON
+;------------------------------------------------
+;------------------------------------------------
+[simulation_task_95]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = stalker
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_95_name
+title_functor = general_fetch_task
+descr = simulation_task_95_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_95_about
+fetch_descr = simulation_task_95_fetch_about
+task_complete_descr = simulation_task_95_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_95)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_95_fetch:mutant_hide_common_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_95_fetch:1.4) =reward_stash(true) =complete_task_inc_goodwill(7:stalker) =inc_task_stage(simulation_task_95) =pstor_reset(simulation_task_95_fetch) =drx_sl_unregister_task_giver(simulation_task_95) =drx_sl_reset_stored_task(simulation_task_95)%
+on_fail = %=fail_task_dec_goodwill(15:stalker) =pstor_reset(simulation_task_95_fetch) =drx_sl_unregister_task_giver(simulation_task_95) =drx_sl_reset_stored_task(simulation_task_95)%
+
+;------------------------------------------------
+[simulation_task_96]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = csky
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_96_name
+title_functor = general_fetch_task
+descr = simulation_task_96_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_96_about
+fetch_descr = simulation_task_96_fetch_about
+task_complete_descr = simulation_task_96_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_96)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_96_fetch:mutant_hide_common_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_96_fetch:1.5) =reward_stash(true) =complete_task_inc_goodwill(10:csky) =inc_task_stage(simulation_task_96) =pstor_reset(simulation_task_96_fetch) =drx_sl_unregister_task_giver(simulation_task_96) =drx_sl_reset_stored_task(simulation_task_96)%
+on_fail = %=fail_task_dec_goodwill(20:csky) =pstor_reset(simulation_task_96_fetch) =drx_sl_unregister_task_giver(simulation_task_96) =drx_sl_reset_stored_task(simulation_task_96)%
+
+
+;------------------------------------------------
+;-- Fetch Mutant Hides MEDIUM
+;------------------------------------------------
+[simulation_task_97]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = stalker
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_97_name
+title_functor = general_fetch_task
+descr = simulation_task_97_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_97_about
+fetch_descr = simulation_task_97_fetch_about
+task_complete_descr = simulation_task_97_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_97)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_97_fetch:mutant_hide_medium_x:1:2)%
+on_complete = %=fetch_reward_and_remove(simulation_task_97_fetch:1.5) =reward_stash(true) =complete_task_inc_goodwill(12:stalker) =inc_task_stage(simulation_task_97) =pstor_reset(simulation_task_97_fetch) =drx_sl_unregister_task_giver(simulation_task_97) =drx_sl_reset_stored_task(simulation_task_97)%
+on_fail = %=fail_task_dec_goodwill(25:stalker) =pstor_reset(simulation_task_97_fetch) =drx_sl_unregister_task_giver(simulation_task_97) =drx_sl_reset_stored_task(simulation_task_97)%
+
+;------------------------------------------------
+[simulation_task_98]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = ecolog
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_98_name
+title_functor = general_fetch_task
+descr = simulation_task_98_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_98_about
+fetch_descr = simulation_task_98_fetch_about
+task_complete_descr = simulation_task_98_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_98)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_98_fetch:mutant_hide_medium_x:1:2)%
+on_complete = %=fetch_reward_and_remove(simulation_task_98_fetch:1.9) =reward_stash(true) =complete_task_inc_goodwill(20:ecolog) =inc_task_stage(simulation_task_98) =pstor_reset(simulation_task_98_fetch) =drx_sl_unregister_task_giver(simulation_task_98) =drx_sl_reset_stored_task(simulation_task_98)%
+on_fail = %=fail_task_dec_goodwill(40:ecolog) =pstor_reset(simulation_task_98_fetch) =drx_sl_unregister_task_giver(simulation_task_98) =drx_sl_reset_stored_task(simulation_task_98)%
+
+
+;------------------------------------------------
+;-- Fetch Mutant Hides RARE
+;------------------------------------------------
+[simulation_task_99]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = ecolog
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_99_name
+title_functor = general_fetch_task
+descr = simulation_task_99_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_99_about
+fetch_descr = simulation_task_99_fetch_about
+task_complete_descr = simulation_task_99_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_99)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_99_fetch:mutant_hide_rare_x:1:1)%
+on_complete = %=fetch_reward_and_remove(simulation_task_99_fetch:2.3) =reward_stash(true) =complete_task_inc_goodwill(35:ecolog) =inc_task_stage(simulation_task_99) =pstor_reset(simulation_task_99_fetch) =drx_sl_unregister_task_giver(simulation_task_99) =drx_sl_reset_stored_task(simulation_task_99)%
+on_fail = %=fail_task_dec_goodwill(70:ecolog) =pstor_reset(simulation_task_99_fetch) =drx_sl_unregister_task_giver(simulation_task_99) =drx_sl_reset_stored_task(simulation_task_99)%
+
+;------------------------------------------------
+[simulation_task_100]
+
+icon = ui_inGame2_Logovo_krovososov
+storyline = false
+prior = 35
+sim_communities = killer
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_100_name
+title_functor = general_fetch_task
+descr = simulation_task_100_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_100_about
+fetch_descr = simulation_task_100_fetch_about
+task_complete_descr = simulation_task_100_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_100)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_100_fetch:mutant_hide_rare_x:1:1)%
+on_complete = %=fetch_reward_and_remove(simulation_task_100_fetch:1.9) =reward_stash(true) =complete_task_inc_goodwill(25:killer) =inc_task_stage(simulation_task_100) =pstor_reset(simulation_task_100_fetch) =drx_sl_unregister_task_giver(simulation_task_100) =drx_sl_reset_stored_task(simulation_task_100)%
+on_fail = %=fail_task_dec_goodwill(50:killer) =pstor_reset(simulation_task_100_fetch) =drx_sl_unregister_task_giver(simulation_task_100) =drx_sl_reset_stored_task(simulation_task_100)%
+
+
+;------------------------------------------------
+;-- Fetch Medical
+;------------------------------------------------
+[simulation_task_101]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = stalker
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_101_name
+title_functor = general_fetch_task
+descr = simulation_task_101_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_101_about
+fetch_descr = simulation_task_101_fetch_about
+task_complete_descr = simulation_task_101_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_101)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_101_fetch:medical_x:2:5)%
+on_complete = %=fetch_reward_and_remove(simulation_task_101_fetch:0.8) =reward_stash(true) =complete_task_inc_goodwill(12:stalker) =inc_task_stage(simulation_task_101) =pstor_reset(simulation_task_101_fetch) =drx_sl_unregister_task_giver(simulation_task_101) =drx_sl_reset_stored_task(simulation_task_101)%
+on_fail = %=fail_task_dec_goodwill(25:stalker) =pstor_reset(simulation_task_101_fetch) =drx_sl_unregister_task_giver(simulation_task_101) =drx_sl_reset_stored_task(simulation_task_101)%
+
+;------------------------------------------------
+[simulation_task_102]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = csky
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_102_name
+title_functor = general_fetch_task
+descr = simulation_task_102_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_102_about
+fetch_descr = simulation_task_102_fetch_about
+task_complete_descr = simulation_task_102_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_102)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_102_fetch:medical_x:2:5)%
+on_complete = %=fetch_reward_and_remove(simulation_task_102_fetch:0.7) =reward_stash(true) =complete_task_inc_goodwill(15:csky) =inc_task_stage(simulation_task_102) =pstor_reset(simulation_task_102_fetch) =drx_sl_unregister_task_giver(simulation_task_102) =drx_sl_reset_stored_task(simulation_task_102)%
+on_fail = %=fail_task_dec_goodwill(30:csky) =pstor_reset(simulation_task_102_fetch) =drx_sl_unregister_task_giver(simulation_task_102) =drx_sl_reset_stored_task(simulation_task_102)%
+
+;------------------------------------------------
+[simulation_task_103]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = freedom
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_103_name
+title_functor = general_fetch_task
+descr = simulation_task_103_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_103_about
+fetch_descr = simulation_task_103_fetch_about
+task_complete_descr = simulation_task_103_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_103)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_103_fetch:medical_x:2:5)%
+on_complete = %=fetch_reward_and_remove(simulation_task_103_fetch:1.2) =reward_stash(true) =complete_task_inc_goodwill(20:freedom) =inc_task_stage(simulation_task_103) =pstor_reset(simulation_task_103_fetch) =drx_sl_unregister_task_giver(simulation_task_103) =drx_sl_reset_stored_task(simulation_task_103)%
+on_fail = %=fail_task_dec_goodwill(40:freedom) =pstor_reset(simulation_task_103_fetch) =drx_sl_unregister_task_giver(simulation_task_103) =drx_sl_reset_stored_task(simulation_task_103)%
+
+;------------------------------------------------
+[simulation_task_104]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = bandit
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_104_name
+title_functor = general_fetch_task
+descr = simulation_task_104_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_104_about
+fetch_descr = simulation_task_104_fetch_about
+task_complete_descr = simulation_task_104_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_104)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_104_fetch:medical_x:2:5)%
+on_complete = %=fetch_reward_and_remove(simulation_task_104_fetch:0.7) =reward_stash(true) =complete_task_inc_goodwill(7:bandit) =inc_task_stage(simulation_task_104) =pstor_reset(simulation_task_104_fetch) =drx_sl_unregister_task_giver(simulation_task_104) =drx_sl_reset_stored_task(simulation_task_104)%
+on_fail = %=fail_task_dec_goodwill(15:bandit) =pstor_reset(simulation_task_104_fetch) =drx_sl_unregister_task_giver(simulation_task_104) =drx_sl_reset_stored_task(simulation_task_104)%
+
+;------------------------------------------------
+[simulation_task_105]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = renegade
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_105_name
+title_functor = general_fetch_task
+descr = simulation_task_105_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_105_about
+fetch_descr = simulation_task_105_fetch_about
+task_complete_descr = simulation_task_105_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_105)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_105_fetch:medical_x:2:5)%
+on_complete = %=fetch_reward_and_remove(simulation_task_105_fetch:0.6) =reward_stash(true) =complete_task_inc_goodwill(7:renegade) =inc_task_stage(simulation_task_105) =pstor_reset(simulation_task_105_fetch) =drx_sl_unregister_task_giver(simulation_task_105) =drx_sl_reset_stored_task(simulation_task_105)%
+on_fail = %=fail_task_dec_goodwill(15:renegade) =pstor_reset(simulation_task_105_fetch) =drx_sl_unregister_task_giver(simulation_task_105) =drx_sl_reset_stored_task(simulation_task_105)%
+
+
+;------------------------------------------------
+;-- Fetch Food Drink Cigs
+;------------------------------------------------
+[simulation_task_106]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = stalker
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_106_name
+title_functor = general_fetch_task
+descr = simulation_task_106_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_106_about
+fetch_descr = simulation_task_106_fetch_about
+task_complete_descr = simulation_task_106_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_106)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_106_fetch:food_x:1:5)%
+on_complete = %=fetch_reward_and_remove(simulation_task_106_fetch:0.5) =reward_stash(true) =complete_task_inc_goodwill(7:stalker) =inc_task_stage(simulation_task_106) =pstor_reset(simulation_task_106_fetch) =drx_sl_unregister_task_giver(simulation_task_106) =drx_sl_reset_stored_task(simulation_task_106)%
+on_fail = %=fail_task_dec_goodwill(15:stalker) =pstor_reset(simulation_task_106_fetch) =drx_sl_unregister_task_giver(simulation_task_106) =drx_sl_reset_stored_task(simulation_task_106)%
+
+;------------------------------------------------
+[simulation_task_107]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = csky
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_107_name
+title_functor = general_fetch_task
+descr = simulation_task_107_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_107_about
+fetch_descr = simulation_task_107_fetch_about
+task_complete_descr = simulation_task_107_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_107)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_107_fetch:food_x:1:5)%
+on_complete = %=fetch_reward_and_remove(simulation_task_107_fetch:0.5) =reward_stash(true) =complete_task_inc_goodwill(10:csky) =inc_task_stage(simulation_task_107) =pstor_reset(simulation_task_107_fetch) =drx_sl_unregister_task_giver(simulation_task_107) =drx_sl_reset_stored_task(simulation_task_107)%
+on_fail = %=fail_task_dec_goodwill(20:csky) =pstor_reset(simulation_task_107_fetch) =drx_sl_unregister_task_giver(simulation_task_107) =drx_sl_reset_stored_task(simulation_task_107)%
+
+;------------------------------------------------
+[simulation_task_108]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = dolg
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_108_name
+title_functor = general_fetch_task
+descr = simulation_task_108_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_108_about
+fetch_descr = simulation_task_108_fetch_about
+task_complete_descr = simulation_task_108_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_108)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_108_fetch:food_x:1:5)%
+on_complete = %=fetch_reward_and_remove(simulation_task_108_fetch:0.5) =reward_stash(true) =complete_task_inc_goodwill(7:dolg) =inc_task_stage(simulation_task_108) =pstor_reset(simulation_task_108_fetch) =drx_sl_unregister_task_giver(simulation_task_108) =drx_sl_reset_stored_task(simulation_task_108)%
+on_fail = %=fail_task_dec_goodwill(15:dolg) =pstor_reset(simulation_task_108_fetch) =drx_sl_unregister_task_giver(simulation_task_108) =drx_sl_reset_stored_task(simulation_task_108)%
+
+;------------------------------------------------
+[simulation_task_109]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = freedom
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_109_name
+title_functor = general_fetch_task
+descr = simulation_task_109_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_109_about
+fetch_descr = simulation_task_109_fetch_about
+task_complete_descr = simulation_task_109_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_109)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_109_fetch:food_x:1:5)%
+on_complete = %=fetch_reward_and_remove(simulation_task_109_fetch:0.6) =reward_stash(true) =complete_task_inc_goodwill(7:freedom) =inc_task_stage(simulation_task_109) =pstor_reset(simulation_task_109_fetch) =drx_sl_unregister_task_giver(simulation_task_109) =drx_sl_reset_stored_task(simulation_task_109)%
+on_fail = %=fail_task_dec_goodwill(15:freedom) =pstor_reset(simulation_task_109_fetch) =drx_sl_unregister_task_giver(simulation_task_109) =drx_sl_reset_stored_task(simulation_task_109)%
+
+;------------------------------------------------
+[simulation_task_110]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = bandit
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_110_name
+title_functor = general_fetch_task
+descr = simulation_task_110_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_110_about
+fetch_descr = simulation_task_110_fetch_about
+task_complete_descr = simulation_task_110_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_110)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_110_fetch:food_x:1:5)%
+on_complete = %=fetch_reward_and_remove(simulation_task_110_fetch:0.5) =reward_stash(true) =complete_task_inc_goodwill(5:bandit) =inc_task_stage(simulation_task_110) =pstor_reset(simulation_task_110_fetch) =drx_sl_unregister_task_giver(simulation_task_110) =drx_sl_reset_stored_task(simulation_task_110)%
+on_fail = %=fail_task_dec_goodwill(15:bandit) =pstor_reset(simulation_task_110_fetch) =drx_sl_unregister_task_giver(simulation_task_110) =drx_sl_reset_stored_task(simulation_task_110)%
+
+;------------------------------------------------
+[simulation_task_111]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = renegade
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_111_name
+title_functor = general_fetch_task
+descr = simulation_task_111_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_111_about
+fetch_descr = simulation_task_111_fetch_about
+task_complete_descr = simulation_task_111_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_111)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_111_fetch:food_x:1:5)%
+on_complete = %=fetch_reward_and_remove(simulation_task_111_fetch:0.5) =reward_stash(true) =complete_task_inc_goodwill(5:renegade) =inc_task_stage(simulation_task_111) =pstor_reset(simulation_task_111_fetch) =drx_sl_unregister_task_giver(simulation_task_111) =drx_sl_reset_stored_task(simulation_task_111)%
+on_fail = %=fail_task_dec_goodwill(15:renegade) =pstor_reset(simulation_task_111_fetch) =drx_sl_unregister_task_giver(simulation_task_111) =drx_sl_reset_stored_task(simulation_task_111)%
+
+;------------------------------------------------
+[simulation_task_112]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = killer
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_112_name
+title_functor = general_fetch_task
+descr = simulation_task_112_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_112_about
+fetch_descr = simulation_task_112_fetch_about
+task_complete_descr = simulation_task_112_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_112)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_112_fetch:food_x:1:5)%
+on_complete = %=fetch_reward_and_remove(simulation_task_112_fetch:0.7) =reward_stash(true) =complete_task_inc_goodwill(7:killer) =inc_task_stage(simulation_task_112) =pstor_reset(simulation_task_112_fetch) =drx_sl_unregister_task_giver(simulation_task_112) =drx_sl_reset_stored_task(simulation_task_112)%
+on_fail = %=fail_task_dec_goodwill(15:killer) =pstor_reset(simulation_task_112_fetch) =drx_sl_unregister_task_giver(simulation_task_112) =drx_sl_reset_stored_task(simulation_task_112)%
+
+
+;------------------------------------------------
+;-- Fetch Utils
+;------------------------------------------------
+[simulation_task_113]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = stalker
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_113_name
+title_functor = general_fetch_task
+descr = simulation_task_113_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_113_about
+fetch_descr = simulation_task_113_fetch_about
+task_complete_descr = simulation_task_113_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_113)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_113_fetch:utils_x:1:1)%
+on_complete = %=fetch_reward_and_remove(simulation_task_113_fetch:0.6) =reward_stash(true) =complete_task_inc_goodwill(10:stalker) =inc_task_stage(simulation_task_113) =pstor_reset(simulation_task_113_fetch) =drx_sl_unregister_task_giver(simulation_task_113) =drx_sl_reset_stored_task(simulation_task_113)%
+on_fail = %=fail_task_dec_goodwill(20:stalker) =pstor_reset(simulation_task_113_fetch) =drx_sl_unregister_task_giver(simulation_task_113) =drx_sl_reset_stored_task(simulation_task_113)%
+
+;------------------------------------------------
+[simulation_task_114]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = freedom
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_114_name
+title_functor = general_fetch_task
+descr = simulation_task_114_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_114_about
+fetch_descr = simulation_task_114_fetch_about
+task_complete_descr = simulation_task_114_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_114)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_114_fetch:utils_x:1:1)%
+on_complete = %=fetch_reward_and_remove(simulation_task_114_fetch:0.8) =reward_stash(true) =complete_task_inc_goodwill(12:freedom) =inc_task_stage(simulation_task_114) =pstor_reset(simulation_task_114_fetch) =drx_sl_unregister_task_giver(simulation_task_114) =drx_sl_reset_stored_task(simulation_task_114)%
+on_fail = %=fail_task_dec_goodwill(25:freedom) =pstor_reset(simulation_task_114_fetch) =drx_sl_unregister_task_giver(simulation_task_114) =drx_sl_reset_stored_task(simulation_task_114)%
+
+;------------------------------------------------
+[simulation_task_115]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = bandit
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_115_name
+title_functor = general_fetch_task
+descr = simulation_task_115_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_115_about
+fetch_descr = simulation_task_115_fetch_about
+task_complete_descr = simulation_task_115_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_115)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_115_fetch:utils_x:1:1)%
+on_complete = %=fetch_reward_and_remove(simulation_task_115_fetch:0.5) =reward_stash(true) =complete_task_inc_goodwill(7:bandit) =inc_task_stage(simulation_task_115) =pstor_reset(simulation_task_115_fetch) =drx_sl_unregister_task_giver(simulation_task_115) =drx_sl_reset_stored_task(simulation_task_115)%
+on_fail = %=fail_task_dec_goodwill(15:bandit) =pstor_reset(simulation_task_115_fetch) =drx_sl_unregister_task_giver(simulation_task_115) =drx_sl_reset_stored_task(simulation_task_115)%
+
+
+;------------------------------------------------
+;-- Fetch Junk
+;------------------------------------------------
+[simulation_task_116]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = stalker
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_116_name
+title_functor = general_fetch_task
+descr = simulation_task_116_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_116_about
+fetch_descr = simulation_task_116_fetch_about
+task_complete_descr = simulation_task_116_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_116)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_116_fetch:junk_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_116_fetch:0.5) =reward_stash(true) =complete_task_inc_goodwill(5:stalker) =inc_task_stage(simulation_task_116) =pstor_reset(simulation_task_116_fetch) =drx_sl_unregister_task_giver(simulation_task_116) =drx_sl_reset_stored_task(simulation_task_116)%
+on_fail = %=fail_task_dec_goodwill(10:stalker) =pstor_reset(simulation_task_116_fetch) =drx_sl_unregister_task_giver(simulation_task_116) =drx_sl_reset_stored_task(simulation_task_116)%
+
+;------------------------------------------------
+[simulation_task_117]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = csky
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_117_name
+title_functor = general_fetch_task
+descr = simulation_task_117_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_117_about
+fetch_descr = simulation_task_117_fetch_about
+task_complete_descr = simulation_task_117_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_117)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_117_fetch:junk_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_117_fetch:0.6) =reward_stash(true) =complete_task_inc_goodwill(7:csky) =inc_task_stage(simulation_task_117) =pstor_reset(simulation_task_117_fetch) =drx_sl_unregister_task_giver(simulation_task_117) =drx_sl_reset_stored_task(simulation_task_117)%
+on_fail = %=fail_task_dec_goodwill(15:csky) =pstor_reset(simulation_task_117_fetch) =drx_sl_unregister_task_giver(simulation_task_117) =drx_sl_reset_stored_task(simulation_task_117)%
+
+;------------------------------------------------
+[simulation_task_118]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = bandit
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_118_name
+title_functor = general_fetch_task
+descr = simulation_task_118_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_118_about
+fetch_descr = simulation_task_118_fetch_about
+task_complete_descr = simulation_task_118_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_118)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_118_fetch:junk_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_118_fetch:0.4) =reward_stash(true) =complete_task_inc_goodwill(5:bandit) =inc_task_stage(simulation_task_118) =pstor_reset(simulation_task_118_fetch) =drx_sl_unregister_task_giver(simulation_task_118) =drx_sl_reset_stored_task(simulation_task_118)%
+on_fail = %=fail_task_dec_goodwill(10:bandit) =pstor_reset(simulation_task_118_fetch) =drx_sl_unregister_task_giver(simulation_task_118) =drx_sl_reset_stored_task(simulation_task_118)%
+
+;------------------------------------------------
+[simulation_task_119]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = renegade
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_119_name
+title_functor = general_fetch_task
+descr = simulation_task_119_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_119_about
+fetch_descr = simulation_task_119_fetch_about
+task_complete_descr = simulation_task_119_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_119)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_119_fetch:junk_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_119_fetch:0.3) =reward_stash(true) =complete_task_inc_goodwill(5:renegade) =inc_task_stage(simulation_task_119) =pstor_reset(simulation_task_119_fetch) =drx_sl_unregister_task_giver(simulation_task_119) =drx_sl_reset_stored_task(simulation_task_119)%
+on_fail = %=fail_task_dec_goodwill(10:renegade) =pstor_reset(simulation_task_119_fetch) =drx_sl_unregister_task_giver(simulation_task_119) =drx_sl_reset_stored_task(simulation_task_119)%
+
+;------------------------------------------------
+[simulation_task_120]
+
+icon = ui_inGame2_Pripasi
+storyline = false
+prior = 35
+sim_communities = freedom
+repeat_timeout = 21600
+;precondition = true
+
+title = simulation_task_120_name
+title_functor = general_fetch_task
+descr = simulation_task_120_text
+descr_functor = general_fetch_task
+job_descr = simulation_task_120_about
+fetch_descr = simulation_task_120_fetch_about
+task_complete_descr = simulation_task_120_fetch_finish
+
+stage_complete = 1
+target_functor = general_fetch_task
+status_functor = actor_has_fetch_item
+condlist_0 = {!task_giver_alive(simulation_task_120)} fail
+
+fetch_func = %=setup_fetch_task(simulation_task_120_fetch:junk_x:1:3)%
+on_complete = %=fetch_reward_and_remove(simulation_task_120_fetch:0.6) =reward_stash(true) =complete_task_inc_goodwill(7:freedom) =inc_task_stage(simulation_task_120) =pstor_reset(simulation_task_120_fetch) =drx_sl_unregister_task_giver(simulation_task_120) =drx_sl_reset_stored_task(simulation_task_120)%
+on_fail = %=fail_task_dec_goodwill(15:freedom) =pstor_reset(simulation_task_120_fetch) =drx_sl_unregister_task_giver(simulation_task_120) =drx_sl_reset_stored_task(simulation_task_120)%
+
