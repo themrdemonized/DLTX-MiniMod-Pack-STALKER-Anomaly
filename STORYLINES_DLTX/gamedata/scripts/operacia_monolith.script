@@ -1,17 +1,7 @@
 local time_global = time_global
-local time_interval = 2000
+local time_interval = 10000
 local tg = 0
-
--- Воюем на АЭС -----
-local kvartet_1 = "Говорит Квартет, Отсутствие излучения подтверждено, крупных скоплений противника не обнаружено, я запросил высадить отряд на Радаре для проведения разведки, операция по захвату Центра Зоны начинается! Всем отрядам спецназа и военных сталкеров перегруппироваться и готовиться выступать на ЧАЭС!"
-local kvartet_3 = "Говорит Квартет, Мы контролируем южную часть АЭС, Теперь необходимо прорваться на север и захватить генераторы. Будьте осторожны, монолитовцы занали укромные снайперские позиции в северной части станции."
-local kvartet_4 = "Говорит Квартет, Мы заняли генераторы! Задача выполнена! Всем отрядам удерживать свои позиции и ждать дальнейших указаний, а тебе, солдат, следует собрать всю информацию из лабораторий и отчитаться перед командованием."
-local cherep = "Задача выполнена, отправляйся к генералу Воронину, а мы тут закрепимся."
-local cs_task1_news = "Спора: Эй сталкер, у нас пропал разведчик. Его позывной - Костыль. Помоги его найти, пока не поздно, по ночам болотные твари орудуют. Последний сигнал SOS был получен с севера Болот, должно быть около дороги."
-local cs_task1_news1 = "Вы: Постараюсь найти его."
-local cs_task1_news2 = "Холод: Сталкер, нам удалось расшифровать КПК Костыля. Подойди ко мне, как будет время, есть дело."
-local cs_task8_news3 = "Гамаюн: Сталкер, По нашим сведениям, фанатики контратакуют. Уничтожь их!"
-
+local gc = game.translate_string
 
 
 function actor_on_update()
@@ -32,7 +22,7 @@ function actor_on_update()
 	end
                 if (db.actor:object("cs_deshefrator") ~= nil) and (not has_alife_info("cs_task8_storytask_start")) then		
 		task_manager.get_task_manager():give_task("cs_task8_storytask")	
-		news_manager.send_tip(db.actor, cs_task8_news3, 1, nil, 30000)
+		news_manager.send_tip(db.actor, gc("cs_task8_news3"), 1, nil, 15000)
 		db.actor:give_info_portion("cs_task8_storytask_start")
 	end
 	if (db.actor:object("pda_shmatko") ~= nil) and (not has_alife_info("dolg_story_task_3_dop_started")) then		
@@ -57,31 +47,31 @@ function actor_on_update()
 	end 
 	if (has_alife_info("kuznecov_task_4_zavercheno")) and (has_alife_info("document_x10_kuznecov")) and (not has_alife_info("come_to_aes_vidan")) then 
 		task_manager.get_task_manager():give_task("come_to_aes")
-		news_manager.send_tip(db.actor, kvartet_1, 4, nil, 30000)
+		news_manager.send_tip(db.actor, gc("kvartet_1"), 4, army, 30000)
 		db.actor:give_info_portion("come_to_aes_vidan")
 	end
 	if has_alife_info("monolith_defense_squad_1_death") and has_alife_info("monolith_defense_squad_2_death") and has_alife_info("monolith_defense_squad_3_death") and not has_alife_info("road_clear") then
 		db.actor:give_info_portion("road_clear")
 		task_manager.get_task_manager():give_task("assault_gen")
-		news_manager.send_tip(db.actor, kvartet_3, 4, nil, 30000)
+		news_manager.send_tip(db.actor, gc("kvartet_3"), 4, army, 30000)
 	end
 	if has_alife_info("monolith_defense_squad_gen_death") and not has_alife_info("zadacha_vipolnena") then
 		db.actor:give_info_portion("zadacha_vipolnena")
-		news_manager.send_tip(db.actor, kvartet_4, 4, nil, 30000)
+		news_manager.send_tip(db.actor, gc("kvartet_4"), 4, army, 30000)
 	end
 	if has_alife_info("mil_smart_terrain_7_7_freedom_leader_stalker_squad_dead") and not has_alife_info("zadacha_vipolnena_1") then
 		db.actor:give_info_portion("zadacha_vipolnena_1")
-		news_manager.send_tip(db.actor, cherep, 4, nil, 30000)
+		news_manager.send_tip(db.actor, gc("st_cherep_1"), 4, nil, 30000)
 	end
         if (hours>=21) and (hours<23) and (not has_alife_info("cs_task1_start")) and has_alife_info("cs_story_task0_done") then
-		news_manager.send_tip(db.actor, cs_task1_news, 4, nil, 30000)
-		news_manager.send_tip(db.actor, cs_task1_news1, 7, nil, 30000)
+		news_manager.send_tip(db.actor, gc("cs_task1_news"), 4, csky, 30000)
+		news_manager.send_tip(db.actor, gc("cs_task1_news1"), 7, nil, 30000)
 		db.actor:give_info_portion("cs_task1_start")
 		task_manager.get_task_manager():give_task("cs_story_task1")
 		alife(k00_marsh):create("cs_informer",vector():set(105.97696685791,1.1209254264832,332.66290283203),201708,84):on_death()    
 	end
         if (hours>=12) and (hours<22) and (not has_alife_info("holod_soobshil")) and has_alife_info("cs_story_task2_done") then		
-		news_manager.send_tip(db.actor, cs_task1_news2, 1, nil, 30000)
+		news_manager.send_tip(db.actor, gc("cs_task1_news2"), 1, csky, 30000)
 		db.actor:give_info_portion("holod_soobshil")
 		task_manager.get_task_manager():give_task("cs_story_task3_start") 	    
 	end
@@ -90,20 +80,19 @@ function actor_on_update()
 	end	
 end
 
-function attack_aes1(first_speaker, second_speaker) 
-local kvartet_2 = "Говорит Квартет, Начинаем атаку! Противник сосредоточил свои силы в 3 местах, это вход в Саркофаг, дорога вдоль ЖД путей и главный въезд на станцию, отрядам приказ рассредоточиться!"      
+function attack_aes1(first_speaker, second_speaker)   
 	   task_manager.get_task_manager():give_task("army_assault_1")
-		news_manager.send_tip(db.actor, kvartet_2, 4, nil, 30000)      
+		news_manager.send_tip(db.actor, gc("kvartet_2"), 4, army, 30000)  
 end
 
-function attack_aes2(first_speaker, second_speaker) 
-local kvartet_2 = "Говорит Квартет, Начинаем атаку!"      
-	   task_manager.get_task_manager():give_task("army_assault_2")		      
+function attack_aes2(first_speaker, second_speaker)      
+	   task_manager.get_task_manager():give_task("army_assault_2")
+       news_manager.send_tip(db.actor, gc("kvartet_5"), 4, army, 10000) 	   
 end
 
-function attack_aes3(first_speaker, second_speaker) 
-local kvartet_2 = "Говорит Квартет, Начинаем атаку!"      
-	   task_manager.get_task_manager():give_task("army_assault_3")		      
+function attack_aes3(first_speaker, second_speaker)      
+	   task_manager.get_task_manager():give_task("army_assault_3")	
+       news_manager.send_tip(db.actor, gc("kvartet_5"), 4, army, 10000) 	   
 end
 
 function maks_quest_1_start(first_speaker, second_speaker)     
