@@ -1,5 +1,5 @@
 [logic@dragun]
-suitable = {=target_squad_name(dragun_squad) =check_npc_name(dragun)} true
+suitable = {=target_squad_name(dragun_squad) = {=target_squad_name(dragun_squad) =check_npc_name(dragun)} true
 prior = 200
 active = walker
 
@@ -11,3 +11,4 @@ invulnerable = true
 wounded_enabled = false
 combat_ignore_keep_when_attacked = true
 on_info = {+cs_task5_start} nil
+
