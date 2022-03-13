@@ -1205,14 +1205,14 @@ specific_characters_files                = character_desc_general, character_des
 [ah_sarik_squad]:online_offline_group
 faction = ecolog
 npc = ah_sarik
-target_smart = {-ahi_meet_actor} esc_smart_terrain_2_12, {+ahi_meet_actor} %=remove_squad(ah_sarik)%
+target_smart = {-ahi_meet_actor} esc_smart_terrain_2_12, {+ahi_meet_actor} %=remove_squad(ah_sarik_squad)%
 relationship = neutral
 story_id = ah_sarik_squad
 
 [ah_bol_kovalev_squad]:online_offline_group
 faction = ecolog
 npc = ah_bol_kovalev
-target_smart = {-ahi_kovalev_2_quest_end} mar_smart_terrain_8_11, {+ahi_kovalev_2_quest_end !actor_on_level(k00_marsh)} %=remove_squad(ah_bol_kovalev)%, mar_smart_terrain_8_11
+target_smart = {-ahi_kovalev_2_quest_end} mar_smart_terrain_8_11, {+ahi_kovalev_2_quest_end !actor_on_level(k00_marsh)} %=remove_squad(ah_bol_kovalev_squad)%, mar_smart_terrain_8_11
 relationship = neutral
 invulnerable = true	
 story_id = ah_bol_kovalev_squad
@@ -1221,7 +1221,7 @@ on_death = %+ah_kovalev_dead%
 [ah_yan_markov_squad]:online_offline_group
 faction = ecolog
 npc = ah_yan_markov
-target_smart = {-ahi_markov_3_quest_end} yan_smart_terrain_6_4, {+ahi_markov_3_quest_end !actor_on_level(l08_yantar)} %=remove_squad(ah_yan_markov)%, yan_smart_terrain_6_4
+target_smart = {-ahi_markov_3_quest_end} yan_smart_terrain_6_4, {+ahi_markov_3_quest_end !actor_on_level(l08_yantar)} %=remove_squad(ah_yan_markov_squad)%, yan_smart_terrain_6_4
 relationship = neutral
 invulnerable = true	
 story_id = ah_yan_markov_squad
@@ -1230,7 +1230,7 @@ on_death = %+ah_markov_dead%
 [ah_dark_pirogov_squad]:online_offline_group
 faction = ecolog
 npc = ah_dark_pirogov
-target_smart = {-ahi_pirogov_3_quest_end} val_smart_terrain_4_0, {+ahi_pirogov_3_quest_end !actor_on_level(l04_darkvalley)} %=remove_squad(ah_dark_pirogov)%, val_smart_terrain_4_0
+target_smart = {-ahi_pirogov_3_quest_end} val_smart_terrain_4_0, {+ahi_pirogov_3_quest_end !actor_on_level(l04_darkvalley)} %=remove_squad(ah_dark_pirogov_squad)%, val_smart_terrain_4_0
 relationship = neutral
 invulnerable = true	
 story_id = ah_dark_pirogov_squad
@@ -1239,7 +1239,7 @@ on_death = %+ah_pirogov_dead%
 [ah_mil_chernov_squad]:online_offline_group
 faction = ecolog
 npc = ah_mil_chernov
-target_smart = {-ahi_chernov_6_quest_end} mil_smart_terrain_2_4, {+ahi_chernov_6_quest_end !actor_on_level(l07_military)} %=remove_squad(ah_mil_chernov)%, mil_smart_terrain_2_4
+target_smart = {-ahi_chernov_6_quest_end} mil_smart_terrain_2_4, {+ahi_chernov_6_quest_end !actor_on_level(l07_military)} %=remove_squad(ah_mil_chernov_squad)%, mil_smart_terrain_2_4
 relationship = neutral
 invulnerable = true	
 story_id = ah_mil_chernov_squad
@@ -1248,7 +1248,7 @@ on_death = %+ah_chernov_dead%
 [ah_up_juk_squad]:online_offline_group
 faction = ecolog
 npc = ah_up_juk
-target_smart = {-ahi_juk_3_quest_end} jup_a6, {+ahi_juk_3_quest_end !actor_on_level(jupiter)} %=remove_squad(ah_up_juk)%, jup_a6
+target_smart = {-ahi_juk_3_quest_end} jup_a6, {+ahi_juk_3_quest_end !actor_on_level(jupiter)} %=remove_squad(ah_up_juk_squad)%, jup_a6
 relationship = neutral
 invulnerable = true	
 story_id = ah_up_juk_squad
@@ -1257,7 +1257,7 @@ on_death = %+ah_juk_dead%
 [ah_zat_vorobushkin_squad]:online_offline_group
 faction = ecolog
 npc = ah_zat_vorobushkin
-target_smart = {-ahi_vorobushkin_2_quest_end} zat_b5_smart_terrain, {+ahi_vorobushkin_2_quest_end !actor_on_level(zaton)} %=remove_squad(ah_zat_vorobushkin)%, zat_b5_smart_terrain
+target_smart = {-ahi_vorobushkin_2_quest_end} zat_b5_smart_terrain, {+ahi_vorobushkin_2_quest_end !actor_on_level(zaton)} %=remove_squad(ah_zat_vorobushkin_squad)%, zat_b5_smart_terrain
 relationship = neutral
 invulnerable = true
 story_id = ah_zat_vorobushkin_squad
@@ -1275,7 +1275,7 @@ on_death = %+ah_skabinsky_dead%
 [ah_aes_skabinsky_final_squad]:online_offline_group
 faction = ecolog
 npc = ah_aes_skabinsky_final, ah_zat_vorobushkin , ah_up_juk, ah_mil_chernov, ah_dark_pirogov, ah_bol_kovalev
-target_smart = {-ahi_skabinsky_1_quest_end} zat_b52, {+ahi_skabinsky_1_quest_end !actor_on_level(zaton)} %=remove_squad(ah_aes_skabinsky_final)%, {+ahi_skabinsky_1_quest_end} gen_smart_terrain_military
+target_smart = {-ahi_skabinsky_1_quest_end} zat_b52, {+ahi_skabinsky_1_quest_end !actor_on_level(zaton)} %=remove_squad(ah_aes_skabinsky_final_squad)%, {+ahi_skabinsky_1_quest_end} gen_smart_terrain_military
 story_id = ah_aes_skabinsky_final_squad
 on_death = %+ah_skabinsky_final_dead%
 
