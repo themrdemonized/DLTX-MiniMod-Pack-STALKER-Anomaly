@@ -4,151 +4,151 @@ local trade_table = {
 
 	["bandit"] = {
 		[1] = {
-			["water_pills"] = 2,
+			["water_pills"] = 1,
 		},
 		[2] = {
-			["water_pills"] = 3,
+			["water_pills"] = 1,
 		},
 		[3] = {
-			["water_pills"] = 4,
+			["water_pills"] = 2,
 		},
 	},
 
 	["dolg"] = {
 		[1] = {
-			["water_pills"] = 2,
+			["water_pills"] = 1,
 		},
 		[2] = {
-			["water_pills"] = 3,
+			["water_pills"] = 1,
 		},
 		[3] = {
-			["water_pills"] = 4,
+			["water_pills"] = 2,
 		},
 	},
 
 	["ecolog"] = {
 		[1] = {
-			["water_pills"] = 2,
+			["water_pills"] = 1,
 		},
 		[2] = {
-			["water_pills"] = 3,
+			["water_pills"] = 1,
 		},
 		[3] = {
-			["water_pills"] = 4,
+			["water_pills"] = 2,
 		},
 	},
 
 	["freedom"] = {
 		[1] = {
-			["water_pills"] = 2,
+			["water_pills"] = 1,
 		},
 		[2] = {
-			["water_pills"] = 3,
+			["water_pills"] = 1,
 		},
 		[3] = {
-			["water_pills"] = 4,
+			["water_pills"] = 2,
 		},
 	},
 
 	["killer"] = {
 		[1] = {
-			["water_pills"] = 2,
+			["water_pills"] = 1,
 		},
 		[2] = {
-			["water_pills"] = 3,
+			["water_pills"] = 1,
 		},
 		[3] = {
-			["water_pills"] = 4,
+			["water_pills"] = 2,
 		},
 	},
 
 	["army"] = {
 		[1] = {
-			["water_pills"] = 2,
+			["water_pills"] = 1,
 		},
 		[2] = {
-			["water_pills"] = 3,
+			["water_pills"] = 1,
 		},
 		[3] = {
-			["water_pills"] = 4,
+			["water_pills"] = 2,
 		},
 	},
 
 	["monolith"] = {
 		[1] = {
-			["water_pills"] = 2,
+			["water_pills"] = 1,
 		},
 		[2] = {
-			["water_pills"] = 3,
+			["water_pills"] = 1,
 		},
 		[3] = {
-			["water_pills"] = 4,
+			["water_pills"] = 2,
 		},
 	},
 
 	["greh"] = {
 		[1] = {
-			["water_pills"] = 2,
+			["water_pills"] = 1,
 		},
 		[2] = {
-			["water_pills"] = 3,
+			["water_pills"] = 1,
 		},
 		[3] = {
-			["water_pills"] = 4,
+			["water_pills"] = 2,
 		},
 	},
 
 	["stalker"] = {
 		[1] = {
-			["water_pills"] = 2,
+			["water_pills"] = 1,
 		},
 		[2] = {
-			["water_pills"] = 3,
+			["water_pills"] = 1,
 		},
 		[3] = {
-			["water_pills"] = 4,
+			["water_pills"] = 2,
 		},
 	},
 
 	["csky"] = {
 		[1] = {
-			["water_pills"] = 2,
+			["water_pills"] = 1,
 		},
 		[2] = {
-			["water_pills"] = 3,
+			["water_pills"] = 1,
 		},
 		[3] = {
-			["water_pills"] = 4,
+			["water_pills"] = 2,
 		},
 	},
 
 	["isg"] = {
 		[1] = {
-			["water_pills"] = 2,
+			["water_pills"] = 1,
 		},
 		[2] = {
-			["water_pills"] = 3,
+			["water_pills"] = 1,
 		},
 		[3] = {
-			["water_pills"] = 4,
+			["water_pills"] = 2,
 		},
 	},
 
 	["renegade"] = {
 		[1] = {
-			["water_pills"] = 2,
+			["water_pills"] = 1,
 		},
 		[2] = {
-			["water_pills"] = 3,
+			["water_pills"] = 1,
 		},
 		[3] = {
-			["water_pills"] = 4,
+			["water_pills"] = 2,
 		},
 	},
 
 }
 
-spawn_chance = 0.33
+spawn_chance = 0.4
 
 function water_pills_stock(npc)
 
