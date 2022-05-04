@@ -1,0 +1,256 @@
+local char_ini = ini_file("item_upgrades.ltx")
+local param_ini = ini_file("misc\\stalkers_upgrade_info.ltx")
+local eco_ini = ini_file("plugins\\difficulty.ltx")
+local cur_price_percent = 2
+
+local rank_discount ={
+        a = smooth_prog_mcm.get_tierdisc("tier1"),
+        b = smooth_prog_mcm.get_tierdisc("tier1"),
+        c = smooth_prog_mcm.get_tierdisc("tier2"),
+        d = smooth_prog_mcm.get_tierdisc("tier2"),
+        e = smooth_prog_mcm.get_tierdisc("tier3"),
+        f = smooth_prog_mcm.get_tierdisc("tier3"),
+}          
+
+
+
+local upgr_tier_con = {
+	[1] = 0.3,
+	[2] = 0.6,
+	[3] = 0.9,
+}
+local upg_ind = {
+	["a"] = 0,
+	["b"] = 0,
+	["c"] = 2,
+	["d"] = 1,
+	["e"] = 3,
+	["f"] = 3,
+}
+local property_table = {
+-- prop_name - name of the property
+-- parameter_caption - parameter string in the section
+-- koeff - multiplier
+-- use_sign - do not use the +
+-- parameter_description - a string of characteristic values
+--|				prop_name				|	=	|		parameter_caption			|	koeff	|use_sign	|parameter_description	|
+	["prop_restore_health"]		    =	{[1]="health_restore_speed",		[2]=10000,	[3]=false,	[4]="ui_inv_per_10sec",},
+	["prop_restore_bleeding"]		=	{[1]="bleeding_restore_speed",		[2]=10000,	[3]=false,	[4]="ui_inv_per_10sec",},
+	["prop_power"]				    =	{[1]="power_restore_speed",			[2]=1000,	[3]=false,	[4]="ui_inv_per_sec",},
+	["prop_stamina"]				=	{[1]="power_loss",					[2]=-100,	[3]=true,	[4]="ui_inv_percent",},
+	["prop_restore_radiation"]	    =	{[1]="radiation_restore_speed",		[2]=10000,	[3]=false,	[4]="ui_inv_per_10sec",},
+	["prop_chem"]					=	{[1]="chemical_burn_protection",	[2]=100,	[3]=false,	[4]="",},
+	["prop_psy"]					=	{[1]="telepatic_protection",		[2]=200,	[3]=false,	[4]="",},
+	["prop_radio"]				    =	{[1]="radiation_protection",		[2]=200,	[3]=false,	[4]="",},
+	["prop_thermo"]				    =	{[1]="burn_protection",				[2]=100,	[3]=false,	[4]="",},
+	["prop_electro"]				=	{[1]="shock_protection",			[2]=100,	[3]=false,	[4]="",},
+	["prop_damage"]				    =	{[1]="wound_protection",			[2]=100,	[3]=false,	[4]="",},
+	["prop_armor"]				    =	{[1]="armor_value",					[2]=1,		[3]=false,	[4]="",},
+	["prop_durability"]			    =	{[1]="durability_value",			[2]=1,		[3]=false,	[4]="ui_inv_percent",},
+	["prop_tonnage"]				=	{[1]="additional_inventory_weight",	[2]=1,		[3]=false,	[4]="st_kg",},
+	["prop_weightoutfit"]			=	{[1]="inv_weight",					[2]=1,		[3]=false,	[4]="st_kg",},
+	["prop_weighthelm"]			    =	{[1]="inv_weight",					[2]=1,		[3]=false,	[4]="st_kg",},
+	["prop_weight"]				    =	{[1]="inv_weight",					[2]=1,		[3]=false,	[4]="st_kg",},
+	["prop_artefact"]				=	{[1]="artefact_count",				[2]=1,		[3]=false,	[4]="",},
+	["prop_max_health"]			    =	{[1]="max_health_add",				[2]=100,	[3]=false,	[4]="",},
+	["prop_jump_speed"]			    =	{[1]="jump_speed_add",				[2]=25,		[3]=false,	[4]="",},
+	["prop_walk_speed"]			    =	{[1]="walk_accel_add",				[2]=10,		[3]=false,	[4]="",},
+	["prop_binoc_weight"]			=	{[1]="inv_weight",					[2]=1,		[3]=false,	[4]="st_kg",},
+	["prop_ammo_size"]			    =	{[1]="ammo_mag_size",				[2]=1,		[3]=false,	[4]="",},
+	["prop_rpm"]					=	{[1]="rpm",							[2]=1,		[3]=false,	[4]="",},
+}
+
+
+
+function inventory_upgrades.get_upgrade_cost(section)
+    cur_price_percent = inventory_upgrades.get_price_percent()
+    -- The text variable to be displayed
+    local str = " "
+    if db.actor then
+        -- Read the amount necessary for installation
+        rank = section:sub(14,14)
+        local price = math.floor(char_ini:r_u32(section, "cost")*cur_price_percent*smooth_prog_mcm.get_wpndisc("wpn_upgr_mult")*(rank_discount[rank] or 1))
+        
+                    
+        -- Enter into the text variable the cost of the upgrade
+        str = " " .. game.translate_string("st_upgr_cost") .. ": " .. price
+    end
+    return str
+end
+
+
+function inventory_upgrades.get_global_precondition_functor(victim, section) -- Tronex
+
+-- 0 = available
+-- 1 = unavailable
+-- 2 = unavailable due to precondition
+
+	local ret = 0
+	local custom = false
+	local mechanic_name = victim:section()
+	
+	-- Read upgrade section parameter
+	if (param_ini:line_exist(mechanic_name .. "_upgr", section)) then
+		local param = param_ini:r_string_ex(mechanic_name .. "_upgr", section)
+		if (param) then
+			custom = true
+			if (param=="false") then
+				ret = 1
+			elseif (param~="true") then
+				local possibility_table = xr_logic.parse_condlist(victim, mechanic_name.."_upgr", section, param)
+				local possibility = xr_logic.pick_section_from_condlist(db.actor, victim, possibility_table)
+				if not(possibility) or (possibility=="false") then
+					ret = 2
+				end
+			end
+		end
+	end
+	
+	-- Read global precondition if upgrade has no defined precondition
+	if (ret == 0) and (not custom) then
+		local indx = section:sub(14,14)
+		local tier = indx and upg_ind[indx] or 1
+		local tier_con = param_ini:r_float_ex(mechanic_name, "def_upgr_tier_" .. tier)
+		--printf("upgrade global precond | mechanic_name: %s - tier: %s - tier_con: %s ", mechanic_name, tier, tier_con)
+		
+		-- check if mechanic has tools suitable upgrade's tier
+		if (tier_con == 0) then
+			if (not has_alife_info(mechanic_name .. "_upgrade_tier_" .. tier)) then
+				--cur_hint = {"st_upgr_condlist"}
+				ret = 2
+				--printf("Need tools!")
+			end
+			
+		-- permanently locked
+		elseif (tier_con == 1) then
+			ret = 1
+			
+		-- permanently unlocked
+		elseif (tier_con == 2) then
+			
+		end
+	end
+	
+	return ret
+end
+
+function inventory_upgrades.precondition_functor_a( param1, section ) -- disable upgrade
+	--printf("precondition_functor_a(%s, %s)", param1, section)
+    cur_price_percent = inventory_upgrades.get_price_percent()
+	if inventory_upgrades.force_upgrade then
+		return 0
+	end
+	
+	local actor = db.actor
+	local victim = get_speaker()
+	if not (victim) then 
+		return 2 
+	end
+
+	local ret = inventory_upgrades.get_global_precondition_functor(victim, section)
+	
+	if not (actor) then -- needed
+		return ret 
+	end
+	if actor then
+		-- We check the availability of the required amount
+		rank = section:sub(14,14)
+        local price = math.floor(char_ini:r_u32(section, "cost")*cur_price_percent*smooth_prog_mcm.get_wpndisc("wpn_upgr_mult")*(rank_discount[rank] or 1))
+		local cash = actor:money()
+		if(cash<price) then
+			ret = 2
+		end
+	end
+
+	return ret
+end
+
+function inventory_upgrades.effect_functor_a( param2, section, loading ) --( string, string, int ) -- action on upgrading
+	--printf("effect_functor_a(%s, %s, %s)", param2, section, loading)
+    cur_price_percent = inventory_upgrades.get_price_percent()
+	if inventory_upgrades.force_upgrade then
+		return
+	end
+	
+	if loading == 0 then
+		rank = section:sub(14,14)
+        local price = math.floor(char_ini:r_u32(section, "cost")*cur_price_percent*smooth_prog_mcm.get_wpndisc("wpn_upgr_mult")*(rank_discount[rank] or 1))
+		db.actor:give_money( -1 * price )
+
+		inventory_upgrades.effect_funct = true
+
+		-- Do I need to hide the menu after the upgrade?
+		if char_ini:section_exist(section) and (char_ini:r_bool_ex(section, "hide_menu") == true) then
+			hide_hud_inventory()
+		end
+		
+		-- Clear cached ammo types for ammo wheel, cause player might change weapon calibre so this will force updating types
+		item_weapon.clear_cache()
+	end
+end
+
+function inventory_upgrades.prereq_functor_a( param3, section )
+    cur_price_percent = inventory_upgrades.get_price_percent()
+	local victim = get_speaker()
+	if not (victim) then 
+		return ""
+	end
+	
+	local mechanic_name = victim:section()
+	local str = ""
+	local custom = false
+	
+	-- check section precondition
+	if (param_ini:line_exist(mechanic_name.."_upgr", section)) then
+		local param = param_ini:r_string_ex(mechanic_name.."_upgr", section)
+		if (param) then
+			custom = true
+			if (param=="false") then
+				return str
+			else
+				cur_hint = nil
+				local possibility_table = xr_logic.parse_condlist(victim, mechanic_name.."_upgr", section, param)
+				local possibility = xr_logic.pick_section_from_condlist(db.actor, victim, possibility_table)
+				if not(possibility) or (possibility=="false") then
+					str = str .. inventory_upgrades.get_possibility_string(mechanic_name, possibility_table)
+				end
+			end
+		end
+	end
+
+	-- Check global precondition
+	if (not custom) then
+		local indx = section:sub(14,14)
+		local tier = indx and upg_ind[indx] or 1
+		local tier_con = param_ini:r_float_ex(mechanic_name, "def_upgr_tier_" .. tier)
+		--printf("upgrade global precond | mechanic_name: %s - tier: %s - tier_con: %s ", mechanic_name, tier, tier_con)
+		
+		-- check if mechanic has tools suitable upgrade's tier
+		if (tier_con == 0) then
+			if (not has_alife_info(mechanic_name .. "_upgrade_tier_" .. tier)) then
+				str = str .. "\\n - " .. game.translate_string("st_upgr_condlist")
+			end
+		-- permanently locked
+		elseif (tier_con == 1) then
+			str = str .. "\\n - " .. game.translate_string("st_upgr_cant_do")
+		end
+	end
+	
+	-- Check money
+	local actor = db.actor
+	if actor then
+		-- We read from the upgrade section its price
+		rank = section:sub(14,14)
+        local price = math.floor(char_ini:r_u32(section, "cost")*cur_price_percent*smooth_prog_mcm.get_wpndisc("wpn_upgr_mult")*(rank_discount[rank] or 1))
+		-- Read the number of dough from YY
+		local cash = actor:money()
+		-- If the bubble is not enough, then we list the corresponding line
+		if (cash < price) then
+			str = str .. "\\n - "..game.translate_string("st_upgr_enough_money").."\\n   "..price-cash.." RU"
+		end
+	end
+	--
+	return str
+end
+
+
