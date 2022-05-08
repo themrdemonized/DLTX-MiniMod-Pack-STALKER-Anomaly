@@ -45,6 +45,7 @@
 		<actor_dialog>drx_sl_task_completed_dialog</actor_dialog>
 		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
 		<actor_dialog>drx_sl_agr_smart_terrain_1_6_near_2_military_colonel_kovalski_meet_dialog</actor_dialog>
+		<actor_dialog>dm_important_documents</actor_dialog>
                 <actor_dialog>est_work_kuznecov</actor_dialog>
                 <actor_dialog>work_vip_kuznecov_agr_undr</actor_dialog>
                 <actor_dialog>work_vip_kuznecov_x18</actor_dialog>
