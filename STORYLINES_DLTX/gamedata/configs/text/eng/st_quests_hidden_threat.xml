@@ -9,379 +9,338 @@
     
 	<!---------------------- Task 1 ------------------------------------------->
 	<string id="st_sl_hidden_threat_task_1_stage_0_title">
-	    <text>Скрытая угроза: Начало</text>
+	    <text>Hidden Threat: The Beginning</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_1_stage_0_descr">
-	    <text>Командир дал задание: найти черную кошку в темной комнате.\n
-    		Роспросить Полковника Кузнецова о задании более подробно.</text>
+	    <text>The commander gave a mission: to find the black cat in the dark room.\n Ask Colonel Kuznetsov about the mission in more detail.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_1_stage_1_title">
-	    <text>Скрытая угроза: Выживший сталкер</text>
+	    <text>Hidden Threat: Surviving Stalker</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_1_stage_1_descr">
-	    <text>Ни какой существенной информации от Кузнецова больше не последовало, касательно моего 
-    		задания. Так же полковник поручил проверить, что случилось со сталкерами в Темной лощине. 
-			На Ферме, что на Кордоне, находиться сталкер, который выжил после нападения на Лесопилку. 
-			Придёться воспользоваться маскировкой, чтобы с ним поговорить.</text>
+	    <text>There was no further substantial information from Kuznetsov concerning my assignment. Also, the colonel instructed me to check what happened to the stalkers in the Darkscape. At the farm, which is on Cordon, there is a stalker who survived the attack on the Sawmill. Will have to use disguise to talk to him.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_1_stage_2_title">
-	    <text>Скрытая угроза: Вернуться к полковнику Кузнецову</text>
+	    <text>Hidden Threat: Return to Colonel Kuznetsov.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_1_stage_2_descr">
-	    <text>Что-то пошло не так, и сталкер мертв. Сообщить Кузнецову о провале.</text>
+	    <text>Something went wrong and the stalker is dead. Inform Kuznetsov of the failure.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_1_stage_3_title">
-	    <text>Скрытая угроза: Добраться до Лесопилки в Темной лощине</text>
+	    <text>Hidden Threat: Get to the Sawmill in the Darkscape</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_1_stage_3_descr">
-	    <text>Стоит осмотреться самому на Лесопилке, в поисках любой полезной информации, которая может 
-    		пролить свет, на события происходившие тут, в недавнем прошлом.</text>
+	    <text>It's worth looking around the Sawmill yourself, looking for any useful information that might shed some light on the events that took place here in the recent past.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_1_stage_4_title">
-	    <text>Скрытая угроза: Осмотреть здание Лесопилки</text>
+	    <text>Hidden Threat: Examine the Sawmill Building</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_1_stage_4_descr">
-	    <text>Стоит осмотреться самому на Лесопилке, в поисках любой полезной информации, которая может 
-    		пролить свет, на события происходившие тут, в недавнем прошлом.</text>
+	    <text>It's worth looking around the Sawmill yourself, searching for any useful information that might shed some light on what happened here in the recent past.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_1_stage_5_title">
-	    <text>Скрытая угроза: Вернуться к полковнику Кузнецову</text>
+	    <text>Hidden Threat: Return to Colonel Kuznetsov</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_1_stage_5_descr">
-	    <text>Нашлось, мягко говоря, не густо. Больше здесь делать нечего, пора возвращаться к командиру
-    		с докладом.</text>
+	    <text>Found not much, to say the least. Nothing more to do here, it's time to go back to the commander with a report.</text>
 	</string>
 	<!---------------------- Task 2 ------------------------------------------->
 	<string id="st_sl_hidden_threat_task_2_stage_0_title">
-	    <text>Скрытая угроза: Отключить «Выжигатель мозгов»</text>
+	    <text>Hidden Threat: Disable Brain Scorcher</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_2_stage_0_descr">
-	    <text>«Выжигатель мозгов» серьёзно сковывает военных операций на севере. Кузнецов дал 
-    		непростое задание: разобраться с ним. Ученые на Янтаре, наверняка уже придумали способ, 
-			как это сделать. Нужно поговорить с Сахаровым.</text>
+	    <text>"Brain Scorcher" is seriously hampering military operations in the north. Kuznetsov has given a difficult assignment: to deal with it. The scientists on Yantar must have already figured out a way to do it. We need to talk to Sakharov.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_2_stage_1_title">
-	    <text>Скрытая угроза: Вернуться к полковнику Кузнецову</text>
+	    <text>Hidden Threat: Return to Colonel Kuznetsov.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_2_stage_1_descr">
-	    <text>«Выжигатель мозгов» отключен. Осталось отчитаться перед полковником.</text>
+	    <text>"Brain Scorcher is disabled. Remains to report to the colonel.</text>
 	</string>
 	<!---------------------- Task 3 ------------------------------------------->
 	<string id="st_sl_hidden_threat_task_3_stage_0_title">
-	    <text>Скрытая угроза: Добраться до завода «Юпитер»</text>
+	    <text>Hidden Threat: Get to the Jupiter plant.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_3_stage_0_descr">
-	    <text>Был получен сигнал «SOS», от отделение которое отправил Дегтярёв, на секретную миссию. 
-    		Сообщалось, что отделение было атаковано на территории завода «Юпитер» неизвестными и им срочно 
-			требуется огневая поддержка.</text>
+	    <text>An "SOS" signal was received, from the squad that Degtyarev had sent, on a secret mission. It was reported that the squad was attacked on the territory of the factory "Jupiter" by unknown and they urgently need fire support.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_3_stage_1_title">
-	    <text>Скрытая угроза: Осмотреть производственные помещения завода «Юпитер»</text>
+	    <text>Hidden Threat: Inspect the production facilities of the "Jupiter" plant</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_3_stage_1_descr">
-	    <text>На проходной завода пусто, из административных помещений, так же не звука. Нужно идти дальше, в 
-    		производственные помещения.</text>
+	    <text>At the entrance of the plant is empty, from the administrative premises, the same sound. We need to go further into the production facilities.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_3_stage_2_title">
-	    <text>Скрытая угроза: Осмотреть тела нападавших</text>
+	    <text>Hidden Threat: Examine the bodies of the attackers</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_3_stage_2_descr">
-	    <text>Бойцы погибли, спасти не удалось. Какую миссию они выполняли на заводе, знает только 
-    		Дегтярёв. Неизвестные сталкеры устроили мне теплую встречу. Они что-то искали на заводе. 
-			Хм... шевроны с неизвестной мне символикой. Возможно полковник знает больше. Нужно взять 
-			хотя бы один.</text>
+	    <text>Soldiers are dead, could not be saved. What mission they performed at the plant, only Degtyarev knows. Unknown stalkers gave me a warm welcome. They were looking for something at the plant. Hmm... Chevrons with symbols unknown to me. Perhaps the colonel knows more. We should get at least one.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_3_stage_3_title">
-	    <text>Скрытая угроза: Поговорить с полковником Кузнецовым</text>
+	    <text>Hidden Threat: Talk to Colonel Kuznetsov.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_3_stage_3_descr">
-	    <text>У неизвестных сталкеров, были нашивки с незнакомой мне символикой. Возможно полковник 
-    		знает о них больше.</text>
+	    <text>The unknown stalkers, had patches with unknown to me symbols. Perhaps the colonel knows more about them.</text>
 	</string>
 	<!---------------------- Task 4 ------------------------------------------->
 	<string id="st_sl_hidden_threat_task_4_stage_0_title">
-	    <text>Скрытая угроза: Поговорить с ст.лейтенантом Кирилловым</text>
+	    <text>Hidden Threat: Talk to Lieutenant Kirillov.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_4_stage_0_descr">
-	    <text>Ст.лейтенант Кириллов просил зайти к нему. Узнаю, что ему нужно от меня.</text>
+	    <text>Lieutenant Kirillov asked me to stop by and see him. Find out what he needs from me.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_4_stage_1_title">
-	    <text>Скрытая угроза: Отнести рацию военным в Темной долине</text>
+	    <text>Hidden Threat: Take the radio military in the Dark Valley</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_4_stage_1_descr">
-	    <text>Требуется всего ни чего, поработать почтальоном Печкиным. Думаю справлюсь.
-    		Отряд военных охраняет вход в «X-18» в Темной долине, и ждут мою посылку.</text>
+	    <text>All it takes is a little work as the letter carrier Pechkin. I think I can handle it. A detachment of military guards the entrance to the "X-18" in the Dark Valley, and waiting for my package.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_4_stage_2_title">
-	    <text>Скрытая угроза: Отразить нападение ИИГ</text>
+	    <text>Hidden Threat: Repel the ISG attack.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_4_stage_2_descr">
-	    <text>Вот дела! Оказался не в то время, не в том месте. Нужно организовать оборону.</text>
+	    <text>Oh, man! Wrong time, wrong place. I need to organize a defense.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_4_stage_3_title">
-	    <text>Скрытая угроза: Осмотреть нападавших</text>
+	    <text>Hidden Threat: Examine the attackers.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_4_stage_3_descr">
-	    <text>Так-с. Жив, здоров, вот и ладненько. Нужно осмотреть нападавших, на предмет полезной 
-    		информации.</text>
+	    <text>Alright. Alive and well, that's good. We need to examine the attackers for useful information.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_4_stage_4_title">
-	    <text>Скрытая угроза: Поговорить с ст.лейтенантом Кирилловым</text>
+	    <text>Hidden Threat: Talk to Lieutenant Kirillov.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_4_stage_4_descr">
-	    <text>Нашел КПК у одного наёмника ИИГ, скорее всего это был командир группы. КПК заблокирован, 
-    		наш техник, должен с этим справиться, пусть поколдует, может выйдет взломать.</text>
+	    <text>Found a PDA on one of the ISG mercenaries, most likely it was the commander of the group. PDA is blocked, our technician should be able to cope with this, let him cast spells, maybe come out hacking.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_4_stage_5_title">
-	    <text>Скрытая угроза: Ждать когда Кириллов разблокирует КПК</text>
+	    <text>Hidden Threat: Waiting for Kirillov to unlock the PDA</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_4_stage_5_descr">
-	    <text>Кириллов сообщил, что на взлом уйдет не мало времени. Сутки или больше. Можно пока заняться 
-    		своими делами.</text>
+	    <text>Kirillov said that the hacking will not take much time. A day or more. We can mind our own business in the meantime.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_4_stage_6_title">
-	    <text>Скрытая угроза: Поговорить с ст.лейтенантом Кирилловым</text>
+	    <text>Hidden Threat: Talk to Lieutenant Kirillov</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_4_stage_6_descr">
-	    <text>Технарь сообщил, что КПК похоже взломан.</text>
+	    <text>The technician reports that the PDA seems to have been hacked.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_4_stage_7_title">
-	    <text>Скрытая угроза: Поговорить с полковником Кузнецовым</text>
+	    <text>Hidden Threat: Talk to Colonel Kuznetsov</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_4_stage_7_descr">
-	    <text>На картах с КПК, обнаружились отметки, которые мне уже знакомы. Завод «Юпитер», 
-	    	Завод над «Х-18». Там где я и встречался с ИИГ. Следовательно, остальные отметки, являются 
-			так же целями ИИГ, нужно доложить об этом Кузнецову.</text>
+	    <text>On the maps from the PDA, there were marks that I am already familiar with. Jupiter Plant, Plant over X-18. That's where I met up with the ISG. Consequently, the other markers are also the targets of the ISG, I need to report this to Kuznetsov.</text>
 	</string>
 	<!---------------------- Task 5 ------------------------------------------->
 	<string id="st_sl_hidden_threat_task_5_stage_0_title">
-	    <text>Скрытая угроза: встретиться с серж.Горобец</text>
+	    <text>Hidden Threat: Meet Sergeant Gorobetz.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_5_stage_0_descr">
-	    <text>Сержант заметил группу ИИГ, и запросил помощь. Место встречи - Госпиталь в 
-    		Окраинах Припяти. Заняться мне больше не чем, ни каких заданий полковник больше не дал.</text>
+	    <text>The sergeant spotted the ISG group and asked for help. The meeting place is the Hospital in the outskirts of Pripyat. I have nothing else to do, no more tasks the colonel did not give.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_5_stage_1_title">
-	    <text>Скрытая угроза: Мышь в мышеловке</text>
+	    <text>Hidden Threat: The Mouse in the Mousetrap.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_5_stage_1_descr">
 	    <text>.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_5_stage_2_title">
-	    <text>Скрытая угроза: Уничтожить снайпера ИИГ</text>
+	    <text>Hidden Threat: Destroy ISG Sniper</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_5_stage_2_descr">
-	    <text>ИИГ планирует ликвидировать полковника Дегтярёва. У него нет шансов. Спецгруппа ИИГ уже 
-    		отправленна давно и я скорее всего не успею предупредить полковника. Но я могу рискнуть и 
-			уничтожить снайпера, и не дать ловушке захлопнуться.</text>
+	    <text>The ISG plans to eliminate Colonel Degtyarev. He doesn't stand a chance. The ISG task force has already been dispatched a long time ago, and I probably won't have time to warn the colonel. But I can take a risk and destroy the sniper and prevent the trap from slamming.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_5_stage_3_title">
-	    <text>Скрытая угроза: Оказать огневую поддержку отряду СБУ</text>
+	    <text>Hidden Threat: Provide fire support to the SSU detachment</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_5_stage_3_descr">
-	    <text>Снайпер уничтожен. Отряд СБУ во главе с Дегтярёвым, атакован штурмовой группой ИИГ, нужно 
-    		поспешить им на помощь.</text>
+	    <text>The sniper is eliminated. SSU detachment, led by Degtyarev, attacked by the ISG assault group, you need to rush to their aid.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_5_stage_4_title">
-	    <text>Скрытая угроза: Поговорить с полковником Дегтярёвым</text>
+	    <text>Hidden Threat: Talk to Colonel Degtyarev</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_5_stage_4_descr">
-	    <text>Группа ИИГ ликвидирована. Поговорить с полковником.</text>
+	    <text>The ISG group has been eliminated. Talk to the colonel.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_5_stage_5_title">
-	    <text>Скрытая угроза: Найти кейс в Универмаге</text>
+	    <text>Hidden Threat: Find the case in the department store</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_5_stage_5_descr">
-	    <text>Полковник поручил забрать кейс из Универмага, оставленный агентом СБУ.</text>
+	    <text>The colonel instructed him to retrieve the briefcase from the department store, left by an SSU agent.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_5_stage_6_title">
-	    <text>Скрытая угроза: Отнести кейс на Агропром</text>
+	    <text>Hidden Threat: Take the case to the Agroprom</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_5_stage_6_descr">
-	    <text>Дегтярёв ждет меня с кейсом на военной базе Агропрома.</text>
+	    <text>Degtyarev is waiting for me with the case at the military base Agroprom.</text>
 	</string>
 	<!---------------------- Task 6 ------------------------------------------->
 	<string id="st_sl_hidden_threat_task_6_stage_0_title">
-	    <text>Скрытая угроза: Поговорить с полковником Дегтярёвым</text>
+	    <text>Hidden Threat: Talk to Colonel Degtyarev</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_0_descr">
-	    <text>Пришёл приказ от полковника, вернуться на базу и зайти к нему.</text>
+	    <text>Received an order from the colonel, return to the base and go to him.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_1_title">
-	    <text>Скрытая угроза: Сделать закладку в Мёртвом городе</text>
+	    <text>Hidden Threat: Bookmark the Dead City</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_1_descr">
-	    <text>Задание не пыльное, добраться до Мёртвого города, и в доме который стоит особняком на юго-западе 
-    		заложить диктофон.</text>
+	    <text>The task is not dusty, get to the Dead City, and in a house that stands alone in the south-west to lay the recorder.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_2_title">
-	    <text>Скрытая угроза: Ждать 2 дня</text>
+	    <text>Hidden Threat: Wait 2 days.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_2_descr">
-	    <text>Закладка сделана. Через 2 дня заберу ее.</text>
+	    <text>The bookmark is done. Two days to pick it up.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_3_title">
-	    <text>Скрытая угроза: Забрать закладку из Мёртвого города</text>
+	    <text>Hidden Threat: To pick up the bookmark from Dead City.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_3_descr">
-	    <text>2 дня прошли, нужно забрать диктофон и отнести к полковнику Дегтярёву.</text>
+	    <text>2 days have passed, you need to pick up the recorder and take it to Colonel Degtyarev.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_4_title">
-	    <text>Скрытая угроза: Вернуться к Дегтярёву</text>
+	    <text>Hidden Threat: Return to Degtyarev.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_4_descr">
-	    <text>Диктофон у меня, нужно отнести его полковнику Дегтярёву.</text>
+	    <text>I have the recorder, you need to take it to Colonel Degtyarev.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_5_title">
-	    <text>Скрытая угроза: Поговорить с командиром отряда на ЧАЭС</text>
+	    <text>Hidden Threat: Talk to the squad leader at CNPP.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_5_descr">
-	    <text>ИИГ планируют прорваться сквозь монохромных на ЧАЭС. Они скорее всего уже там, и моя задача: 
-    		не допустить их к Сакофагу. Мой отряд поддержки ждет меня в условленном месте.</text>
+	    <text>The ISG are planning to break through the monochrome ones at CNPP. They're most likely already there, and my job is to keep them out of Sarcophagus. My support squad is waiting for me at the arranged location.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_6_title">
-	    <text>Скрытая угроза: Перейти на северо-запад ЧАЭС</text>
+	    <text>Hidden Threat: Go to the northwest of CNPP.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_6_descr">
-	    <text>У главного входа, обнаруженны только наёмники. ИИГ найти не удалось. Командир отделения сообщил, 
-    		что один из его разведчиков перестал выходить на связь. Возможно он был обнаружен и уничтожен, Так 
-			как у главного входа нет нашей главной цели, стоит проверить дорогу из Госпиталя.</text>
+	    <text>At the main entrance, only mercenaries were found. The ISG could not be found. Squad leader reported that one of his scouts stopped contact. He may have been detected and destroyed, Since the main entrance is not our main target, it is worth checking the road from the Hospital.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_7_title">
-	    <text>Скрытая угроза: Ликвидировать группу ИИГ</text>
+	    <text>Hidden Threat: Eliminate the ISG team.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_7_descr">
-	    <text>Все так и как я и предполагал. Наёмники отвлекали основные силы монохромных, а группа ИИГ, тихо 
-    		зашла со стороны Госпиталя, не привлекая внимания. К бою!</text>
+	    <text>It's just as I suspected. The mercenaries were distracting the main monochrome forces, and the group of ISG, quietly came in from the side of the Hospital, not attracting attention. To Combat!</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_8_title">
-	    <text>Скрытая угроза: Доложить об успехе Дегтярёву</text>
+	    <text>Hidden Threat: Report success to Degtyarev</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_8_descr">
-	    <text>Задание выполнено, группа ИИГ уничтожена, осталось отчитаться перед полковником.</text>
+	    <text>The mission was completed, the group of ISGs was destroyed, and now I have to report to the colonel.</text>
 	</string>
 	<!---------------------- Task 7 ------------------------------------------->
 	<string id="st_sl_hidden_threat_task_7_stage_0_title">
-	    <text>Скрытая угроза: Явиться к полковнику Кузнецову</text>
+	    <text>Hidden Threat: Report to Colonel Kuznetsov.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_7_stage_0_descr">
-	    <text>В отстуствии Дегтярёва, я теперь снова подчиняюсь Кузнецову, и зачем я ему понадобился? 
-    		Ни дня покоя ...</text>
+	    <text>In the absence of Degtyarev, I now once again obey Kuznetsov, and why did he need me? Not a day's peace ...</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_7_stage_1_title">
-	    <text>Скрытая угроза: Поговорить с майором Верещагиным</text>
+	    <text>Hidden Threat: Talk to Major Vereshchagin</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_7_stage_1_descr">
-	    <text>Сказать что я удивлён, ни чего ни сказать. Майор Верещагин - тот самый агент СБУ, который 
-    		спас мне жизнь в Припяти, я его узнал. Что же могло случиться, чтоб он оказался здесь?</text>
+	    <text>To say I was surprised is nothing to say. Major Vereshchagin is the same SSU agent who saved my life in Pripyat, I recognized him. What could have happened to bring him here?</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_7_stage_2_title">
-	    <text>Скрытая угроза: Добраться до входа в Путепровод «Припять-1»</text>
+	    <text>Hidden Threat: To get to the entrance to the Pripyat Underground</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_7_stage_2_descr">
-	    <text>Давно пора уже покончить с ИИГ... Меня ждёт мой штурмовой отряд у входа в путепровод, со 
-    		стороны Юпитера.</text>
+	    <text>It's about time I was done with the ISG My assault squad is waiting for me at the entrance to the Pripyat Underground, on the Jupiter side.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_7_stage_3_title">
-	    <text>Скрытая угроза: Войти в Путепровод</text>
+	    <text>Hidden Threat: Entering the Pripyat Underground.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_7_stage_3_descr">
-	    <text>Давно пора уже покончить с ИИГ...</text>
+	    <text>It's about time we were done with ISG...</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_7_stage_4_title">
-	    <text>Скрытая угроза: Ликвидировать любое вражеское присуствие в Путепроводе</text>
+	    <text>Hidden Threat: Eliminate any enemy presence in the Pripyat Underground</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_7_stage_4_descr">
-	    <text>Давно пора уже покончить с ИИГ...</text>
+	    <text>It's about time we put an end to ISG...</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_7_stage_5_title">
-	    <text>Скрытая угроза: Доложить майору Верещагину об успехе</text>
+	    <text>Hidden Threat: Report success to Major Vereshchagin</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_7_stage_5_descr">
-	    <text>С ИИГ покончено, штурм прошёл успешно, пора отчитаться перед майором Верещагиным.</text>
+	    <text>ISG is done, the assault was a success, it's time to report to Major Vereshchagin.</text>
 	</string>
 	<!---------------------- Second Task 1 ------------------------------------>
 	<string id="st_sl_hidden_threat_second_task_1_stage_0_title">
-	    <text>[HT]Южный блокпост: Отдать документы</text>
+	    <text>[HT]Southern Checkpoint: Hand over the documents</text>
 	</string>
 	<string id="st_sl_hidden_threat_second_task_1_stage_0_descr">
-	    <text>Отдать бухгалтерские отчеты майору Журов, на Южный блокпост Кордона.</text>
+	    <text>Give the accounting reports to Major Zhurov, at the Southern roadblock Cordon.</text>
 	</string>
 	<!---------------------- Second Task 2 ------------------------------------>
 	<string id="st_sl_hidden_threat_second_task_2_stage_0_title">
-	    <text>[HT]Агропром: Найти курьера</text>
+	    <text>[HT]Agroprom: Find courier</text>
 	</string>
 	<string id="st_sl_hidden_threat_second_task_2_stage_0_descr">
-	    <text>Сержант Ложкин поручил найти курьера, который где-то затерялся по дороге, на базу 
-    		со Свалки. Сержанта больше интересует посылка, которую нес курьер для него.</text>
+	    <text>Sergeant Lozhkin instructed to find the courier, which is somewhere lost on the road, to the base from the dump. Sergeant is more interested in the package that the courier was carrying for him.</text>
 	</string>
 	<string id="st_sl_hidden_threat_second_task_2_stage_1_title">
-	    <text>[HT]Агропром: Вернуть посылку Ложкину</text>
+	    <text>[HT]Agroprom: Return the package to Lozhkin</text>
 	</string>
 	<string id="st_sl_hidden_threat_second_task_2_stage_1_descr">
-	    <text>Сержант Ложкин поручил найти курьера, который где-то затерялся по дороге, на базу 
-    		со Свалки. Сержанта больше интересует посылка, которую нес курьер для него.</text>
+	    <text>Sergeant Lozhkin is instructed to find the courier, who got lost somewhere on the road, to the base from the Dump. The sergeant is more interested in the package the courier was carrying for him.</text>
 	</string>
-	<!---------- Tips message для "Скрытая угроза" ---------------------------->
+	<!---------- Tips message для "Hidden Threat" ---------------------------->
 	<string id="st_sl_hidden_threat_msg_start">
-	    <text>%s, твое присутствие требуется на базе. Есть срочное задание.</text>
+	    <text>%s, your presence is required at the base. There is an urgent assignment.</text>
 	</string>
 	<string id="st_sl_hidden_threat_msg_task_2_start">
-	    <text>Военсталкер, по-нашему делу пока глухо. Но для тебя есть непростое задание: нашим северным 
-    		операциям сильно мешает «Выжигатель мозгов». Поговори с Сахаровым на Янтаре и найди способ 
-			его отключить.</text>
+	    <text>Milstalker, our case is still a dead end. But there's a difficult assignment for you. Our northern operations are severely hampered by the Brain Scorcher. Talk to Sakharov on Yantar and find a way to disable it.</text>
 	</string>
 	<string id="st_sl_hidden_threat_msg_task_3_start">
-	    <text>Военсталкер, зайди ко мне, есть разговор.</text>
+	    <text>Milstalker, come see me, I need to talk to you.</text>
 	</string>
 	<string id="st_sl_hidden_threat_msg_task_4_start">
-	    <text>%s, заскочи на минутку, нужно поговорить.</text>
+	    <text>%s, come in for a minute, we need to talk.</text>
 	</string>
 	<string id="st_sl_hidden_threat_msg_task_4_stg_6_msg">
-	    <text>%s, на счет твоего КПК. Подходи, есть о чем поговорить.</text>
+	    <text>%s, about your PDA. Come on over, we got something to talk about.</text>
 	</string>
 	<string id="st_sl_hidden_threat_msg_task_5_start">
-	    <text>Привет %s, давно не виделись. Я тут заметил группу ИИГ, один не справлюсь, нужна помощь. 
-    		Если кишка не тонка подходи к Госпиталю в Окраинах Припяти, может даже новые лычки 
-			заработаем от начальства.</text>
+	    <text>Hey %s, long time no see. I spotted a group of ISG I can't do this alone, I need help. If you have the guts to go to the hospital in the outskirts of Pripyat, maybe even earn new stripes from the bosses.</text>
 	</string>
 	<string id="st_sl_hidden_threat_msg_task_6_start">
-	    <text>Военсталкер %s, приказ прибыть на базу и сразу ко мне.</text>
+	    <text>Milstalker %s, orders are to arrive at the base and come straight to me.</text>
 	</string>
 	<string id="st_sl_hidden_threat_msg_task_7_start">
-	    <text>Военсталкер %s, приказ прибыть ко мне срочно!</text>
+	    <text>Milstalker %s, orders to report to me immediately!</text>
 	</string>
 	<string id="st_sl_hidden_threat_msg_armistice_title">
-	    <text>Получено:</text>
+	    <text>Received:</text>
 	</string>
 	<string id="st_sl_hidden_threat_msg_armistice_msg">
-	    <text>%s: вольные сталкеры - 2 часа</text>
+	    <text>%s: free stalkers - 2 hours</text>
 	</string>
 	<string id="st_sl_hidden_threat_msg_armistice_path">
-	    <text>Перемирие</text>
+	    <text>Armistice</text>
 	</string>
 	<string id="st_sl_hidden_threat_msg_armistice_start">
-	    <text>%s за тебя попросили. Мы открыли свободный проход на наши базы на 2 часа. Давай без 
-    		глупостей, если жить охото. Парни у нас, страсть как не любят вояк.</text>
+	    <text>%s asked for you. We opened a free pass to our bases for 2 hours. Let's not do anything stupid, if you want to live. Our boys, they don't like warriors very much.</text>
 	</string>
 	<string id="st_sl_hidden_threat_msg_armistice_end">
-	    <text>%s перемирие закончилось.</text>
+	    <text>%s truce is over.</text>
 	</string>
 	<string id="st_sl_hidden_threat_spooner_notes_title">
-	    <text>Получено:</text>
+	    <text>Received:</text>
 	</string>
 	<string id="st_sl_hidden_threat_spooner_notes_descr">
-	    <text>Новая запись в КПК: Записка от сержанта Ложкина</text>
+	    <text>New PDA entry: A note from Sgt. Lozhkin</text>
 	</string>
 	<string id="st_sl_hidden_threat_darkvalley_msg_header">
-	    <text>Военный</text>
+	    <text>Military</text>
 	</string>
 	<string id="st_sl_hidden_threat_darkvalley_msg_text">
-	    <text>Вижу противника! К бою!</text>
+	    <text>I see the enemy! To battle!</text>
 	</string>
     <!------------------------------------------------------------------------->
     <string id="st_sl_hidden_threat_map_spot_cf">
-	    <text>Место интереса</text>
+	    <text>Place of interest</text>
 	</string>
 
 </string_table>

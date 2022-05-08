@@ -7,62 +7,55 @@
 -->
 <string_table>
 	<string id="st_sl_ht_accounting_report_name">
-		<text>Бухгалтерские отчеты</text>
+		<text>Accounting reports</text>
 	</string>
 	<string id="st_sl_ht_accounting_report_desc">
-		<text>Увесистая папка с докуметами, финансовой отчесностью за текущий месяц, которую ждет 
-    		у себя майор Журов от своего подчиненного, сержанта Ложкина.</text>
+		<text>A weighty folder with documents, financial statements for the current month, which Major Zhurov is waiting at his place from his subordinate, Sergeant Lozhkin.</text>
 	</string>
 	<string id="st_sl_ht_spooner_quest_package_name">
-		<text>Посылка</text>
+		<text>Parcel</text>
 	</string>
 	<string id="st_sl_ht_spooner_quest_package_desc">
-		<text>Посылка, переданная сталкером для доставки своему знакомому. Содержимое неизвестно. Как ни странно, не имеет вообще никакой защиты от взлома посторонними людьми.\n \n
-		%c[ui_gray_3]ХАРАКТЕРИСТИКИ:\n
-		%c[d_blue] • %c[ui_gray_2] личные вещи\n
-		%c[d_blue] • %c[ui_gray_2] высокая ценность\n
-		</text>
+		<text>A package given by a stalker for delivery to his acquaintance. The contents are unknown. Oddly enough, it has no protection at all against tampering by outsiders.\n \n %c[ui_gray_3]CHARACTERISTICS:\n %c[d_blue] • %c[ui_gray_2] personal belongings\n %c[d_blue] • %c[ui_gray_2] high value\n </text>
 	</string>
 	<string id="st_sl_ht_walkie_talkie_name">
-		<text>Армейская рация</text>
+		<text>Army radio</text>
 	</string>
 	<string id="st_sl_ht_walkie_talkie_desc">
-		<text>Портативная УКВ радиостанция Р-002ПП.</text>
+		<text>Portable VHF radio R-002PP.</text>
 	</string>
 	<string id="st_sl_ht_pda_isg_leader_name">
-		<text>КПК командира группы ИИГ</text>
+		<text>PDA of the ISG commander</text>
 	</string>
 	<string id="st_sl_ht_pda_isg_leader_desc">
-		<text>Данный КПК заблокирован.</text>
+		<text>This PDA is locked.</text>
 	</string>
 	<string id="st_sl_ht_usb_quest_task_4_name">
-		<text>USB - накопитель</text>
+		<text>USB memory stick.</text>
 	</string>
 	<string id="st_sl_ht_usb_quest_task_4_desc">
-		<text>На этом носителе, содержится, та небольшая часть информации, которую удалось спасти 
-    		Кириллову.</text>
+		<text>This storage device contains a small part of the information Kirillov managed to save.</text>
 	</string>
 	<string id="st_sl_ht_case_quest_task_5_name">
-		<text>Кейс агента СБУ</text>
+		<text>SSU agent's briefcase</text>
 	</string>
 	<string id="st_sl_ht_case_quest_task_5_desc">
-		<text>Содержимое данного кейса неизвестно, предположительно информация о деятельности ИИГ.</text>
+		<text>The contents of this case are unknown, presumably, information about ISG activities.</text>
 	</string>
 	<string id="st_sl_ht_voice_recorder_task_6_name">
-		<text>Диктофон</text>
+		<text>Voice recorder</text>
 	</string>
 	<string id="st_sl_ht_voice_recorder_task_6_desc">
-		<text>С виду обычный диктофон, который можно найти повсеместно. Но этот был модернизирован старшим 
-    		лейтенантом Кирилловым, реагирует на звук и производит запись.</text>
+		<text>It looks like an ordinary voice recorder, which can be found everywhere. But this one has been upgraded by Senior Lieutenant Kirillov, it reacts to sound and makes a recording.</text>
 	</string>
 	<!------------------- Items Tips ------------------------->
 	<string id="st_sl_hidden_threat_locked_door_tips">
-	    <text>Найди другой способ попасть внутрь</text>
+	    <text>Find another way in.</text>
 	</string>
 	<string id="st_sl_hidden_threat_radio_tips_1">
-	    <text>Спрятать диктофон($$ACTION_USE$$)</text>
+	    <text>Hide the recorder($$ACTION_USE$$)</text>
 	</string>
 	<string id="st_sl_hidden_threat_radio_tips_2">
-	    <text>Забрать диктофон($$ACTION_USE$$)</text>
+	    <text>Retrieve the recorder($$ACTION_USE$$)</text>
 	</string>
 </string_table>

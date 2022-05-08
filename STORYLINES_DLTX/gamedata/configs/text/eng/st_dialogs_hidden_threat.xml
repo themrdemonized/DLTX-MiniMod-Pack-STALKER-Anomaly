@@ -9,758 +9,582 @@
     <!------------- Полковник Кузнецов(Агропром) ----------------->
 	<!-- D1 -->
     <string id="st_sl_hidden_threat_dialog_kuznetsov_d1_first_1">
-        <text>Здравия желаем, товарищ полковник! Военсталкер %s прибыл в ваше распоряжение!</text>
+        <text>Greetings, Comrade Colonel! Milstalker %s has arrived at your command!</text>
     </string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d1_1_0">
-	    <text>Вольно боец.</text>
+	    <text>At ease, soldier.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d1_1_1">
-        <text>Слушай внимательно, к нам от информатора из рядов наёмников, поступила информация. На базу в 
-		Мёртвом городе прибыл странный визитёр. Странный тем, что информатор не мог определить, 
-		принадлежность к группировке визитёра. Внешне хорошо экипированный и оснащённый спец, но информатор 
-		утверждает, что он не из наёмников. Забрал какой-то кейс у Душмана, и удалился, избегая контакта с 
-		посторонними. Твоя задача: выяснить, кто этот визитер и что он делает в Зоне. Задача ясна?</text>
+        <text>Listen carefully, we've received information from an informant in the mercenary ranks. A strange visitor has arrived at the base in Dead City. Strange in that the informant couldn't identify the visitor's faction. On the surface well-equipped and equipped special, but the informant claims that he is not a mercenary. He took some case from Dushman and left, avoiding contact with outsiders. Your job is to find out who this visitor is and what he's doing in the Zone. Is that clear?</text>
     </string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d1_2_1">
-	    <text>У меня есть вопросы по заданию командир.</text>
+	    <text>I have questions about the mission commander.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d1_4_1">
-	    <text>Есть рекомендации, с чего начать поиск?</text>
+	    <text>Any recommendations as to where to start looking?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d1_5_1">
-	    <text>Почему мы, а не СБУ, этим занимаемся?</text>
+	    <text>Why are we and not SSU doing this?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d1_6_1">
-	    <text>Есть предположения, кто этот визитёр?</text>
+	    <text>Any idea who this visitor is?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d1_7_1">
-	    <text>Я что-то пропустил, можно брифинг сначала?</text>
+	    <text>Did I miss something, can I get a briefing first?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d1_8_1">
-	    <text>В общей сети, проскочила информация, о нападении на стоянку сталкеров в Темной лощине, 
-		пару дней назад. Выжил только один. Сейчас он находится на Ферме, что на Кордоне. О нападающих, 
-		не упоминалось. Нападающие могли быть кто угодно, бандиты, мерки и прочая шушера или кто-то, 
-		связанный с нашим делом. Найди способ, поговорить с выжившим сталкером, и разузнать подробности о 
-		нападении. Это - не бог весть что, рядовое событие в Зоне, но больше ни чего у нас нет.</text>
+	    <text>There was a report of an attack on a stalker camp in Darkscape a few days ago. Only one survived. He's at the farmhouse on Cordon. There was no mention of attackers. The attackers could have been anyone, bandits, mercs and other scum, or someone connected to our case. Find a way to talk to a surviving stalker and find out more about the attack. It's no big deal, an ordinary event in the Zone, but that's all we've got.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d1_9_1">
-	    <text>Я отправил доклад в штаб, и приложил всю информацию, переданную информатором. Пока они 
-		разродятся и отправят оперативника СБУ в Зону, могут уйти недели. Дурное предчувствие у меня боец, 
-		что времени у нас мало. Что-то происходит, и это что-то, пытается скрыться от наших глаз. Поэтому мы 
-		будем действовать самостоятельно, под мою личную ответственность. Ты - один из самых опытных 
-		военсталкеров, больше мне поручить это задание некому.</text>
+	    <text>I sent a report to headquarters, and enclosed all the information given by the informant. It could take weeks for them to get the SSU operative into the Zone. I got a bad feeling, fighter, that we're running out of time. Something's going on, and it's something trying to hide from our eyes. That's why we'll act on our own, on my own responsibility. You're one of the most experienced military officers, there's no one else I can give this assignment to.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d1_10_1">
-	    <text>А полковник Дегтярёв, он же из СБУ?</text>
+	    <text>And Colonel Degtyarev, he's SSU?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d1_11_1">
-	    <text>Полковник Дегтярёв на днях, собрал своих орлов и выдвинулся куда-то на север Зоны. Куда именно, 
-		не сообщил, сам знаешь СБУ перед нами не отчитываются, у них свои секреты. Краем уха, слышал об 
-		Окрестностях Припяти. На связь пока не выходил, и неизвестно когда он объявится. А действовать нужно 
-		сейчас.</text>
+	    <text>The other day Colonel Degtyarev gathered his eagles and headed somewhere to the north of the Zone. I didn't say where exactly, you know the SSU doesn't report to us, they have their own secrets. I heard something about Pripyat outskirts. There is no contact yet, and it is not known when he will appear. We must act now.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d1_12_1">
-	    <text>Есть соображения, но пока я их оставлю при себе. Если найденая тобой информация, подтвердит 
-		мои догадки, то поговорим на эту тему уже основательно.</text>
+	    <text>I have my thoughts, but I'll keep them to myself for now. If the information you've found confirms my guesses, we'll talk about it thoroughly.</text>
 	</string>	
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d1_13_1">
-	    <text>Ясно, командир.</text>
+	    <text>Understood, commander.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d1_13_2">
-	    <text>Я все понял.</text>
+	    <text>I got it.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d1_13_3">
-	    <text>Понятно.</text>
+	    <text>Understood.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d1_13_4">
-	    <text>Принято полковник.</text>
+	    <text>Copy that, Colonel.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d1_14_1">
-	    <text>Вопросов больше нет.</text>
+	    <text>No more questions.</text>
 	</string>
 	<!-- D2 -->
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d2_first_1">
-	    <text>Докладываю. Сталкер мёрт, собрать информацию не удалось.</text>
+	    <text>Report. The stalker is dead, we couldn't get any information.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d2_1_1">
-	    <text>Боец! Еще один провал и я поручу это задание, кому-то более ответственному. Запомни это! 
-		Отправляйся на Лесопилку и осмотрись там, на предмет, любой полезной информации. Приступай.</text>
+	    <text>Soldier! One more failure and I'll assign this mission to someone more responsible. Remember this! Go to the sawmill and look around for any useful information. Get to it.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d2_2_1">
-	    <text>Есть, товарищ полковник! Выполняю.</text>
+	    <text>Yes, Comrade Colonel! Yes, sir.</text>
 	</string>
 	<!-- D3 -->
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d3_first_1">
-	    <text>Командир, я осмотрел Лесопилку в Темной лощине, странно все это.</text>
+	    <text>Commander, I've checked the Sawmill in the Darkscape, it's strange.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d3_1_1">
-	    <text>Продолжай...</text>
+	    <text>Go on...</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d3_2_1">
-	    <text>Работали спецы, со стрелкового оружия НАТО. По всем косвенным признакам - наёмники. 
-		Предполагаю, что вышибли сталкеров с Лесопилки, для того, что атакующим нужна была база на Лесопилке. 
-		Они покинули ее, не задолго до моего прихода туда. Непонятны цели, зачем наёмникам база, в богом 
-		забытом месте?</text>
+	    <text>Specialists were working with NATO small arms. By all accounts, mercenaries. I assume that the stalkers were kicked out of the Sawmill, for the attackers needed a base in the Sawmill. They left it, not long before I got there. It's unclear why the mercenaries need a base, in a godforsaken place?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d3_3_1">
-	    <text>Хм-м... Интересно... Нет тут ни чего странного, если это - не наёмники. База на Лесопилке 
-		идеальное тихое местечко, для того, чтобы скрытся и не отсвечивать. Да вот только выживший сталкер, 
-		испортил им всю малину. Ладно, оставим пока это. Будем ждать больше информации, а пока лишь одни 
-		загадки. Пока свободен, сообщу, когда понадобишься.\n
-		\nИ да, военсталкер. Зайди к сержанту Ложкину, я распорядился выдать тебе новое снаряжение.</text>
+	    <text>Hmmm... I wonder... There's nothing strange about it if they're not mercenaries. The Sawmill base is the perfect hiding place to stay hidden. Except a surviving stalker spoiled it for them. All right, let's leave it at that. We'll wait for more information, but for now there are only riddles. I'll let you know when I need you. And yes, stalker. Go see Sergeant Lozhkin. I've ordered you to get new gear.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d3_4_1">
-	    <text>Спасибо, товарищ полковник.</text>
+	    <text>Thank you, Comrade Colonel.</text>
 	</string>
 	<!-- D4 -->
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d4_first_1">
-	    <text>Товарищ полковник! Задание выполнено.</text>
+	    <text>Comrade Colonel! The task is completed.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d4_first_2">
-	    <text>Товарищ полковник, есть новости по нашему делу?</text>
+	    <text>Comrade Colonel, any news on our case?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d4_1_1">
-	    <text>Возьми это боец, ты заслужил. У нас случилось тут кое-что, что требует немедленного 
-		вмешательства.</text>
+	    <text>Take this, soldier, you've earned it. We've had something happen here that requires immediate intervention.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d4_2_1">
-	    <text>У нас тут случилось кое-что, что требует немедленного вмешательства.</text>
+	    <text>We've got something that requires immediate intervention.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d4_3_1">
-	    <text>Я слушаю.</text>
+	    <text>I'm listening.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d4_4_1">
-	    <text>Перед уходом на север Зоны, Дегтярёв забрал у меня одно отделение бойцов. Куда и какая у них 
-		задача, мне не сообщалось. Бойцам был дан приказ помалкивать. Сегодня от этого отделения пришёл 
-		сигнал «SOS». В сообщении говорилось, что они находятся на территории завода «Юпитер» и были 
-		атакованы неизвестными. Пока держатся, но срочно требуется помощь.
-		\nТвоя задача: помочь бойцам. Так же выяснить, кто эти - «неизвестные». Возможно это наши клиенты, 
-		которых мы разыскиваем. Вопросы есть?</text>
+	    <text>Before leaving for the north of the Zone, Degtyarev took one squad of fighters from me. Where they were going and what their mission was, I was not told. The men were ordered to keep quiet. Today I got an "SOS" signal from this squad. The message said that they were on the territory of the "Jupiter" plant and had been attacked by unknown people. They're holding out for now, but help is urgently needed. \Your task is to help the fighters. Also find out who these "unknowns" are. They could be our clients we're looking for. Any questions?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d4_5_1">
-	    <text>Нет командир, приступаю к выполнению.</text>
+	    <text>No, commander, I'm on it.</text>
 	</string>
 	<!-- D5 -->
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d5_first_1">
-	    <text>Бойцы погибли, с подмогой я опоздал. Но застал тех кто их ликвидировал.</text>
+	    <text>The fighters are dead. I was too late to get help. But I did catch the men who eliminated them.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d5_1_1">
-	    <text>Завод «Юпитер» неблизко, успеть их спасти, почти без шансов. Что удалось выяснить о тех, 
-		кто напал на наших?</text>
+	    <text>The Jupiter plant isn't far, there's almost no chance of saving them. What did you find out about those who attacked ours?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d5_2_1">
-	    <text>Странные сталкеры закрепились на объекте, перекрыли входы и готовились держать оборону. Похоже 
-		что-то искали на территории. Кто такие не понятно, снаряга отменная. Действовали профессионально. 
-		Вот, шеврон одного из них, символика мне незнакома.</text>
+	    <text>Strange stalkers entrenched at the site, blocked the entrances and prepared to hold the defense. It seems they were looking for something in the territory. It's not clear who they were, the equipment is excellent. They acted professionally. Here, a chevron for one of them, the insignia is unfamiliar to me.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d5_3_1">
-	    <text>Хм... За то мне знакома. Значит мои догадки подтвердились. Слушай боец внимательно. Сейчас в 
-		Зоне присутствует Интернациональная исследовательская группа, сокращённо - ИИГ. Создана и существует 
-		группа, под эгидой ООН, но де-факто в большей степени, контролируется из США. Работают в Зоне вполне 
-		официально, но если мы говорим об яйцеголовых. Ну как боец, похожи твои сталкеры на яйцеголовых? 
-		То-то и оно, что нет. Это боевое крыло ИИГ, и пребывают они в Зоне незаконно. Незаконо - потому, 
-		что Украина недавала добро международным организациям, на присуствие военнизированых групп на 
-		своей территории. Наёмники ИИГ, что вынюхивали на заводе «Юпитер» и наткнулись на наших, скорее всего 
-		это была случайная встреча и они засветились. Теперь мы знаем, с кем имеем дело, осталось выяснить: 
-		что они забыли в Зоне. Пока свободен боец, хорошая работа. Сообщу, когда понадобишься.</text>
+	    <text>Hmm... But it's familiar to me. So my hunch is confirmed. Listen carefully, soldier. Now there is an International Study Group in the Zone, in abbreviated form - ISG. Created and exists under the auspices of the UN, but de facto largely controlled by the United States. They work in the Zone quite officially, but if we're talking about eggheads. So, fighter, do your stalkers look like eggheads? That's just it, they don't. They are the fighting wing of the ISG, and they are in the Zone illegally. Illegally, because Ukraine has not allowed international organizations to allow the presence of militarized groups on its territory. The ISG mercenaries, who were sniffing around at the "Jupiter" plant and bumped into ours, most likely it was a chance meeting and they were exposed. Now we know who we're dealing with, it remains to find out: what they forgot in the Zone. As long as the fighter is free, good job. I'll let you know when I need you.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d5_4_1">
-	    <text>Есть командир!</text>
+	    <text>I've got a commander!</text>
 	</string>
 	<!-- D6 -->
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d6_first_1">
-	    <text>Командир, я нарыл кое-что!</text>
+	    <text>Commander, I've got something!</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d6_1_1">
-	    <text>Та-а-ак. Давай в кратце, что на ней и от куда она у тебя?</text>
+	    <text>Well, let's make it short, what's on it and where did you get it?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d6_2_1">
-	    <text>Я был по поручению Кириллова, на нашем объекте, который мы охраняем. Завод над «Х-18». 
-		В момент моего присуствия, объект подвергся нападению группы ИИГ, атака была отбита, у одного из 
-		спецов ИИГ, был найден КПК, на флешке часть информации с этого КПК.</text>
+	    <text>I was on Kirillov's orders, at our facility, which we guard. The factory above X-18. At the time of my presence, the facility was attacked by ISG, the attack was repulsed, one of the ISG specialists was found with a PDA, on a flash drive part of the information from this PDA.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d6_3_1">
-	    <text>Продолжай...</text>
+	    <text>Go on...</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d6_4_1">
-	    <text>На флешке находятся карты Зоны. Где они их раздобыли, не ясно. На картах помечены различные 
-		объекты, и зашифрованые комментарии к меткам. Два объекта я узнал, там я столкнулся с отрядами ИИГ, 
-		это Завод «Юпитер» и вход в лабораторию «Х-18». ИИГ что-то ищет, на разных объектах в Зоне.</text>
+	    <text>The flash drive contains maps of the Zone. Where they got them, it's not clear. On the maps are marked various objects, and encrypted comments to the marks. Two objects I have learned, there I ran into squads ISG, this plant "Jupiter" and the entrance to the laboratory "X-18". ISG is looking for something, at various sites in the Zone.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d6_5_1">
-	    <text>Ясно, боец. Карты и всю необходиму информацию, для своей миссии, ИИГ скорее всего купил у 
-		Душмана. Помнишь того визитёра? В целях секретности, данные забрали на физических носителях в 
-		Мёртвом городе, опасаясь перехвата трансляции.</text>
+	    <text>Got it, fighter. The ISG probably bought the maps and all the information they need for their mission from Dushman. Remember that visitor? For secrecy purposes, the data was taken on physical media in the Dead City for fear of intercepting the broadcasts.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d6_6_1">
-	    <text>Какие наши дальнейшие действия, командир? Эх... найти бы их центр операций, куда бы они не 
-		зарылись...</text>
+	    <text>What's our next move, commander? Uh... I wish we could find their hub of operations, where they wouldn't hole up...</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d6_7_1">
-	    <text>Нам нужно усилить охрану на объектах и держать ушки на макушке. С Большой Земли мне намекнули, 
-		чтобы мы не мешали СБУ, они осведомлены об деятельности ИИГ. Боец... Слушай, идет какая-то игра 
-		по-крупному, и мы лишние на этом празднике жизни. Поэтому отдыхай, ты хорошо поработал. Твою 
-		информацию я переправлю в СБУ.</text>
+	    <text>We need to beef up security at the facilities and keep our ears to the ground. I got hints from Big Earth that we shouldn't interfere with the SSU, they are aware of the ISG's activities. Soldier... Look, there's some big game going on, and we're not welcome at this party of life. So rest up, you did a good job. I'll forward your information to SSU.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d6_8_1">
-	    <text>Принял полковник.</text>
+	    <text>Copy that, Colonel.</text>
 	</string>
 	<!-- D7 -->
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d7_first_1">
-	    <text>Прибыл по-вашему приказу!</text>
+	    <text>Reporting as you commanded!</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d7_1_1">
-	    <text>Вот тут стоит майор СБУ, его личность подтверждена. Более того, я связались с Дягтярёвым, он 
-		был очень удивлён и встревожен, появлением этого майора на базе. Майор сообщил полковнику код: 
-		«красный 2», незнаю, что это значит, но после него, мне поступил от Дегтярёва безпрецидентный приказ, 
-		полностью выполнять указания майора СБУ. Затевается большая операция, подробности узнаешь у майора.</text>
+	    <text>There's an SSU major standing right there, his identity has been confirmed. Moreover, I contacted Diagtyarev, he was very surprised and alarmed by this major's appearance at the base. The major told the colonel the code: "red 2," I don't know what that means, but after that, I received an unprecedented order from Degtyarev to fully comply with the SSU major's instructions. There's a big operation going on, you'll get the details from the major.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kuznetsov_d7_2_1">
-	    <text>Всё понял. Я знаю этого майора, он спас мне жизнь в Госпитале Припяти.</text>
+	    <text>I got it. I know this major, he saved my life in the Pripyat Hospital.</text>
 	</string>
 	<!--------------- Выживший сталкер(Кордон) ------------------->
 	<string id="st_sl_hidden_threat_dialog_survived_first_1">
-	    <text>Эх... как же так получилось... И что мне теперь делать... </text>
+	    <text>Eh... how come... What am I supposed to do now... </text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_survived_1_1">
-	    <text>Здорова сталкер. Есть разговор.</text>
+	    <text>Hello, stalker. We need to talk.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_survived_2_1">
-	    <text>И о чем разговор?</text>
+	    <text>What kind of talk?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_survived_2_2">
-	    <text>Военный! Ах да... Сидорович по связи предупреждал. Мне с военными, говорить не о чём!</text>
+	    <text>Military! Oh, yeah... Sidorovich warned me. I have nothing to talk about with the military!</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_survived_3_1">
-	    <text>Мне нужно знать, кто напал на ваш отряд, на Лесопилке?</text>
+	    <text>I need to know who attacked your unit, at the Sawmill?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_survived_3_2">
-	    <text>Я с людьми, либо разговариваю, либо стреляю в них! Выбирай? Мне нужно знать, кто напал на ваш 
-		отряд, на Лесопилке? Я ищу кое-кого, возможно тех, кто напал на вас и они далеко мне - не друзья.</text>
+	    <text>I either talk to people or shoot them! Choose? I need to know who attacked your unit, at the Sawmill? I'm looking for someone, probably someone who attacked you and they're far from my friends.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_survived_4_1">
-	    <text>Ох... Слушай, не знаю кто на нас напал. Меня старший послал, на Кордон, за провизией. По пути 
-		меня приспичило по-большому. Пока сидел в кустах, услышал стрельбу на Лесопилке. Стихло всё быстро, 
-		пробовал связаться со своими через КПК... тишина. Страшно мне стало мужик... дал я деру от туда, 
-		кустами и на Кордон.</text>
+	    <text>Oh... Look, I don't know who attacked us. My superior sent me to the Cordon to get provisions. On the way, I had to take a big piss. While I was sitting in the bushes, I heard gunfire at the Sawmill. All died down quickly, tried to contact with their own PDA ... silence. I got scared, man... I ran away from there, bushes and Cordon.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_survived_5_1">
-	    <text>Мда-а, не густо. Ну спасибо и на этом. Бывай сталкер.</text>
+	    <text>Yeah, not much. Well, thanks for that. So long, stalker.</text>
 	</string>
 	<!--------------- Сержант Ложкин(Агропром) ------------------->
 	<!-- D1 -->
     <string id="st_sl_hidden_threat_dialog_spooner_d1_first_1">
-	    <text>Слушай, мне тут шепнули, что ты на Кордон собираешься. У меня просьба к тебе. Занеси отчеты 
-		бухгалтерии, майору Журову на Южный блокпост, раз тебе по пути. Ну что скажешь, майор в долгу не 
-		останется?</text>
+	    <text>Listen, I heard a whisper that you're going to Cordon. I have a favor to ask of you. Take the accounting reports to Major Zhurov at the Southern roadblock, if it's on your way. What do you say, Major won't be indebted?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d1_1_1">
-	    <text>Ладно, давай свои отчеты.</text>
+	    <text>All right, give me your reports.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d1_2_1">
-	    <text>Мне сейчас некогда, найди кого-нибудь другого.</text>
+	    <text>I don't have time now, find somebody else.</text>
 	</string>
 	<!-- D2 -->
 	<string id="st_sl_hidden_threat_dialog_spooner_d2_first_1">
-	    <text>Сержант, я за снарягой.</text>
+	    <text>Sarge, I'll get my gear.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d2_first_2">
-	    <text>Сержант, ты что-то еще хотел?</text>
+	    <text>Sergeant, is there anything else you want?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d2_1_1">
-	    <text>Минуточку. Та-а-ак... Военсталкер %s, в списке есть, одобренно полковником. Распишись вот тут... 
-		Хорошо, тебе положено по штату:</text>
+	    <text>Just a minute. Well... Milstalker %s, on the list, approved by the colonel. Sign here... All right, you're entitled to it:</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d2_2_1">
-	    <text>Вот спасибо сержант. Ну, бывай.</text>
+	    <text>Thank you, Sergeant. Well, goodbye.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d2_3_1">
-	    <text>Постой военсталкер! Не хочешь подзаработать? Ко мне должен был прибыть курьер. От него пришло 
-		сообщение, что он на Агропроме, и скоро будет. Прошло уже 2 часа, его все нет. Выясни что с ним 
-		случилось, больше меня интересует посылка, которую он мне нес. Прибыть должен был со Свалки, 
-		поэтому иди по дороге на Свалку и осмотрись.</text>
+	    <text>Wait a minute, soldier! How'd you like to make some extra money? I had a courier coming in. He said he was at Agroprom and would be here soon. It's been two hours, he's still not here. Find out what happened to him. I'm more interested in the package he was carrying. Should have arrived from the junkyard, so go on the road to the junkyard and look around.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d2_4_1">
-	    <text>Хорошо, берусь.</text>
+	    <text>All right, I'll do it.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d2_5_1">
-	    <text>Некогда мне.</text>
+	    <text>I don't have time.</text>
 	</string>
 	<!-- D3 -->
 	<string id="st_sl_hidden_threat_dialog_spooner_d3_first_1">
-	    <text>Курьер мертв, его убили мутанты. Вот твоя посылка.</text>
+	    <text>The courier is dead, killed by mutants. Here's your package.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d3_first_2">
-	    <text>Сержант, ты что-то еще хотел?</text>
+	    <text>Sarge, is there anything else you need?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d3_1_1">
-	    <text>За посылку спасибо. Твоя награда. Эх... жаль, потерял последний источник снабжения.</text>
+	    <text>Thanks for the package. Your reward. Ah... Too bad I lost my last source of supply.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d3_2_1">
-	    <text>Источник снабжения говоришь? Поди я смогу чем помочь?</text>
+	    <text>Supply source, you say? I wonder if there's anything I can do to help.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d3_3_1">
-	    <text>К нам время от времени захаживают, охрана ученых с Янтаря, для пополнения припасов. 
-		Хорошо платять, не скупяться. Некоторые имеют натовское оружие, и интересуются патронами под него. 
-		Как понимаешь, у нас в наличии их почти нет, с земли их не поставляют, выкручиваемся сами как можем.\n
-		\nТак вот, мое предложение заключаеться в том, что приносишь, мне натовские патроны, 
-		я тебе отсыпаю наших, равное количество, того же типа. По штучно меня не интересует, меняю только 
-		пачками, минимальная партия 20 пачек(280-300шт.) на патроны, и 3 штук для подствольных гранат.\n\n
-		\nВот запиши:
-		\n1. Беру 300шт. патронов 9x19, взамен дам 320шт. патронов 9x18.
-		\n2. Беру 300шт. патронов 5.56x45, взамен дам равное количество 5.45x39.
-		\n3. Беру 280шт. патронов .45, взамен дам 90шт. патронов 9x39. 
-		\n4. Беру 300шт. патронов 7.62x51, взамен дам равное количество 7.62x54.
-		\n5. Беру 3 гранат M209, взамен дам равное количество ВОГ-25.</text>
+	    <text>Every once in a while, a guard of scientists from Yantar comes by to replenish supplies. They pay well, they're not stingy. Some of them have NATO weapons, and are interested in ammunition for them. As you understand, we almost don't have them in stock, they don't come from the ground, we make do with what we can. Well, my suggestion is that you bring me Nato ammunition, and I'll give you an equal amount of ours, of the same type. I'm not interested in pieces, I'll trade you only packs, minimum quantity 20 packs (280-300 pcs) for the cartridges, and 3 for the underbarrel grenades: \n1. I'll take 300 rounds of 9x19 ammo and give you 320 rounds of 9x18 ammo in return. \n2. I'll take 300 rounds of 5.56x45 ammo and give you an equal amount of 5.45x39. \n3. I'll take 280 rounds of .45 ammo and give you 90 rounds of 9x39. \n4. I'll take 300 rounds of 7.62x51 ammunition and give an equal amount of 7.62x54. \n5. I'll take three M209 grenades, I'll give equal quantity of VOG-25 in return.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d3_4_1">
-	    <text>Ясно, запомню.</text>
+	    <text>All right, I'll keep that in mind.</text>
 	</string>
 	<!-- D4 -->
 	<string id="st_sl_hidden_threat_dialog_spooner_d4_first_1">
-	    <text>Я хочу обменять боеприпасы.</text>
+	    <text>I want to trade ammunition.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d4_1_1">
-	    <text>Что у тебя есть?</text>
+	    <text>What do you got?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d4_2_1">
-	    <text>Есть патроны 9x19 мм FMJ.</text>
+	    <text>I got 9x19mm FMJ ammo.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d4_3_1">
-	    <text>Есть патроны 9x19 мм Дум-дум.</text>
+	    <text>I got 9x19mm Dum-dum ammo.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d4_4_1">
-	    <text>Есть патроны 9x19 мм БП.</text>
+	    <text>I got 9x19mm bp ammo.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d4_5_1">
-	    <text>Есть патроны 5,56x45 мм FMJ.</text>
+	    <text>There's 5.56x45mm FMJ ammo.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d4_6_1">
-	    <text>Есть патроны 5,56x45 мм EP.</text>
+	    <text>There are 5.56x45mm EP rounds.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d4_7_1">
-	    <text>Есть патроны 5,56x45 мм EPR.</text>
+	    <text>There are 5.56x45mm EPR rounds.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d4_8_1">
-	    <text>Есть патроны .45 ACP.</text>
+	    <text>There are .45 ACP rounds.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d4_9_1">
-	    <text>Есть патроны .45 Hydra-shock.</text>
+	    <text>There are .45 Hydra-shock rounds.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d4_10_1">
-	    <text>Есть патроны 7,62x51 мм НАТО FMJ.</text>
+	    <text>There are 7.62x51mm NATO FMJ rounds.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d4_11_1">
-	    <text>Есть патроны 7,62x51 мм НАТО AP.</text>
+	    <text>There are 7.62x51mm NATO AP rounds.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d4_12_1">
-	    <text>Есть подствольные гранаты М209.</text>
+	    <text>There are M209 underbarrel grenades.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spooner_d4_13_1">
-	    <text>Я передумал.</text>
+	    <text>I changed my mind.</text>
 	</string>
 	<!----------------- Майор Журов(Кордон) ---------------------->
 	<string id="st_sl_hidden_threat_dialog_jurov_first_1">
-	    <text>Товарищ майор! Принес документы с Агропрома.</text>
+	    <text>Comrade Major! Brought the documents from Agroprom.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_jurov_1_1">
-	    <text>Та-а-ак... Бухгалтерский отчет сержанта Ложкина. Спасибо военсталкер. Что хочешь за услугу?</text>
+	    <text>Ta-ah-ah... Sergeant Lozhkin's accounting report. Thank you, soldier. What do you want for the favor?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_jurov_1_2">
-	    <text>Та-а-ак... Бухгалтерский отчет сержанта Ложкина. Спасибо военсталкер. Твоя награда и иди, 
-		не мозоль мне глаза.</text>
+	    <text>Ta-rah-rah... Sergeant Lozhkin's accounting report. Thank you, soldier-stalker. Your reward and go, don't rub it in my face.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_jurov_2_1">
-	    <text>У меня есть проблема, нужно потрещать с одним сталкером на Ферме, и не хотелось бы, заиметь 
-		пару новых пулевых отверстий в себе. Можете устроить перемирие с вольнягами?</text>
+	    <text>I got a stalker on the farm I need to talk to, and I don't want to get a couple of new bullet holes in me. Can you arrange a truce with the freeloaders?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_jurov_3_1">
-	    <text>Деньги мне не помешают.</text>
+	    <text>I could use the money.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_jurov_4_1">
-	    <text>За оказанную услугу, могу устроить тебе на 2 часа эксклюзивное перемирие. Сталкеры разрешат 
-		приблизиться и зайти на их базы, но начнешь палить по ним, перемирию конец. Все, свободен.</text>
+	    <text>For a favor, I can give you an exclusive truce for two hours. The Stalkers will let you get close and go to their bases, but if you start shooting at them, the truce is over. That's it, you're free to go.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_jurov_5_1">
-	    <text>Спасибо, товарищ майор.</text>
+	    <text>Thank you, Comrade Major.</text>
 	</string>
 	<!----------- Ст.лейтенант Кириллов(Агропром) ---------------->
 	<!-- D1 -->
 	<string id="st_sl_hidden_threat_dialog_kirillov_d1_first_1">
-	    <text>Боец у меня к тебе личная просьба. У нашего отряда в Тёмной долине, который стоит на охране 
-		объекта, барахлит одна из раций. Просили прислать новую. Мне нужен курьер. Возьмёшься?</text>
+	    <text>Soldier, I have a personal favor to ask of you. One of the radios in our Dark Valley unit guarding the facility is malfunctioning. They asked me to send a new one. I need a courier. Can you do that?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kirillov_d1_1_1">
-	    <text>Заверни и бантиком перевяжи, доставлю в лучшем виде.</text>
+	    <text>Wrap it up and tie it with a bow, I'll deliver it in the best way.</text>
 	</string>
 	<!-- D2 -->
 	<string id="st_sl_hidden_threat_dialog_kirillov_d2_first_1">
-	    <text>Слушай Кириллов, ты же хороший технарь. У меня тут КПК, и возможно с ценной информацией. 
-		Сможешь его разблокировать?</text>
+	    <text>Listen Kirillov, you're a good techie. I have a PDA, and probably with valuable information. Can you unlock it?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kirillov_d2_1_1">
-	    <text>Увидим, давай его сюда. На быстро не расчитывай, может сутки, а может и больше. Я сообщу когда закончу.</text>
+	    <text>We'll see, give it here. Don't count on it being fast, maybe 24 hours, maybe more. I'll let you know when I'm done.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kirillov_d2_2_1">
-	    <text>Ну ты не затягивай главное.</text>
+	    <text>Well, don't wait too long.</text>
 	</string>
 	<!-- D3 -->
 	<string id="st_sl_hidden_threat_dialog_kirillov_d3_first_1">
-	    <text>Ну что там с КПК?</text>
+	    <text>What's up with the PDA?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kirillov_d3_1_1">
-	    <text>КПК твой не простой, ммм... был. В нём находился специальный модуль дополнительной защиты, с 
-		небольшим количеством взрывчатки. Я пытался с ним разобраться, но что-то сделал не так, и вообщем нет 
-		КПК больше. Успел только внешний накопитель снять, но в нём информации кот наплакал. Карты какие-то 
-		с пометками.</text>
+	    <text>Your PDA wasn't easy, um... it was. It had a special extra security module with a small amount of explosives in it. I tried to figure it out, but I did something wrong, and it's gone. I was only able to remove the external drive, but it was full of information. The cards are all marked up.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_kirillov_d3_2_1">
-	    <text>Карты с пометками говоришь? Хрен с этим КПК, не переживай. Я к полковнику, бывай и спасибо.</text>
+	    <text>Marked cards, huh? Fuck the PDA, don't worry about it. I'm going to see the colonel. Goodbye and thank you.</text>
 	</string>
 	<!-------- Рандомный командир отряда(Темная долина) ---------->
 	<string id="st_sl_hidden_threat_dialog_val_leader_squad_first_1">
-	    <text>Привествую военсталкер, зачем припёрся?</text>
+	    <text>Greetings military-stalker, why did you come here?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_val_leader_squad_1_1">
-	    <text>Связь тебе наладить, держи рацию.</text>
+	    <text>I'll get you a connection, hold the walkie-talkie.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_val_leader_squad_2_1">
-	    <text>Вот за это тебе спасибо!</text>
+	    <text>Thank you for that!</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_val_leader_squad_3_1">
-	    <text>Да не благодари.</text>
+	    <text>Don't thank me.</text>
 	</string>
 	<!---------- Сержант Горобец(Окраины Припяти) ---------------->
 	<string id="st_sl_hidden_threat_dialog_gorobez_first_1">
-	    <text>Я надеялся, что ты не придёшь... Прости...</text>
+	    <text>I was hoping you wouldn't come... I'm sorry...</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_gorobez_1_1">
-	    <text>Ты это, о чем?</text>
+	    <text>What are you talking about?</text>
 	</string>
 	<!----------- Майор Эрнандес(Окраины Припяти) ---------------->
 	<!-- D1 -->
 	<string id="st_sl_hidden_threat_dialog_isg_leader_d1_first_1">
-	    <text>Сорвал две наши операции, похоже ты шустрый малый, нам такие нужны. Поработаешь на нас и мы 
-		обеспечим тебе безопасность. Эвакуация из Зоны, кругленькая сумма на счету в любой стране мира. 
-		Выбора у тебя особо нету, варианта только два.</text>
+	    <text>You've sabotaged two of our operations, you seem like a fast guy, we need that kind of guy. You work for us, we'll keep you safe. Evacuation from the Zone, a tidy sum in an account in any country in the world. You don't have much choice, there are only two options.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_isg_leader_d1_1_1">
-	    <text>А второй какой?</text>
+	    <text>What is the second one?</text>
 	</string>
 	<!-- D2 -->
 	<string id="st_sl_hidden_threat_dialog_isg_leader_d2_first_1">
-	    <text>Ещё вопросы?</text>
+	    <text>Any other questions?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_isg_leader_d2_1_1">
-	    <text>Я пожалуй воздержусь.</text>
+	    <text>I think I'll refrain.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_isg_leader_d2_2_1">
-	    <text>Времени у меня немного, поэтому возиться с тобой некогда.</text>
+	    <text>I don't have much time, so I don't have time to bother with you.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_isg_leader_d2_3_1">
-	    <text>(молчать...)</text>
+	    <text>(silence...)</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_isg_leader_d2_4_1">
-	    <text>Ясно, душевный диалог не сложился. Дам тебе 30 минут, подумать. Позже еще раз побеседуем. 
-		Возможно с пристрастием, зависит от тебя.</text>
+	    <text>All right, I'm not having a heart-to-heart with you. I'll give you 30 minutes to think about it. We'll talk again later. Maybe with a little more passion, it's up to you.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_isg_leader_d2_5_1">
-	    <text>(молчать...)</text>
+	    <text>(silence...)</text>
 	</string>
 	<!----------- Лейтенант Годунов(Окраины Припяти) ------------->
 	<string id="st_sl_hidden_threat_dialog_isg_agent_d1_first_1">
-	    <text>Слушай сюда! Я майор СБУ. В другой день, я бы и пальцем не пошевелил, чтобы спасти твою шкуру, 
-		и рискнуть своим прикрытием в ИИГ. Но похоже сегодня твой день. Вся наша операция пошла наперекосяк. 
-		ИИГ каким-то образом пронюхал об одном сталкере о котором, не должны были узнать. А так же про 
-		встречу Дегтярёва с этим сталкером. Выслана спецгруппа, ликвидировать Дегтярёва и захватить сталкера. 
-		Встреча пройдет в Общежитии. Спецгруппа планирует зайти с черного входа, и выдавить Дягтерёва и его 
-		архаровцев боем, на открытую позицию для снайпера во двор. Снайпер будет ожидать в доме напротив.\n
-		\nТы мне обязан жизнью! Твоя оплата, предупредить полковника о ловушке. Запомни фразу: 
-		«Смерть не ждет, и жизнь ждать не должна». Без кода, Дегтярёв может пустить тебе пулю в лоб, так на 
-		всякий случай. И еще, у меня есть информация особой важности, предать по связи не получится, ИИГ 
-		пеленгуют все частоты. Я спрятал в Универмаге кейс, и ждал удобного случая, и ты мой удобный случай. 
-		Передашь Дегтярёву информацию о кейсе в Универмаге. Все понял?</text>
+	    <text>Listen up! I'm an SSU major. Another day, I wouldn't have lifted a finger to save your skin and risk my cover with the ISG. But it looks like today's your day. Our whole operation is screwed up. ISG somehow got wind of a stalker they weren't supposed to know about. And also about the meeting of Degtyarev with this stalker. Sent a special group to eliminate Degtyarev and capture a stalker. The meeting will take place in the hostel. The special group plans to go in from the back entrance, and squeeze out Degtyarev and his archrivals with combat, to an open position for the sniper in the courtyard. The sniper will be waiting in the house opposite.\n You owe me your life! Your pay is to warn the colonel about the trap. Remember the phrase: "Death does not wait, nor should life wait." Without the code, Degtyarev might put a bullet in your forehead, just in case. And also, I have information of particular importance, betray through communication will not work, ISG pelenguet all frequencies. I hid the case in a department store, and waited for the right opportunity, and you are my opportunity. You'll give Degtyarev the information about the case in the department store. Do you understand?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_isg_agent_d1_1_1">
-	    <text>Да, я все сделаю. И ... спасибо.</text>
+	    <text>Yes, I'll do everything. И ... Thank you.</text>
 	</string>
 	<!---------- Полковник Дегтярёв(Окраины Припяти) ------------->
 	<!-- D1 -->
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d1_first_1">
-	    <text>Так военсталкер, тебе нужно рассказать мне что-то, что объяснит твое появление тут. Ты влез 
-		туда, куда тебе не стоило влезать?</text>
+	    <text>You need to tell me something that explains why you're here. You went where you shouldn't have gone?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d1_1_1">
-	    <text>Постой полковник, у меня для тебя любовное послание от вашего друга - «Смерть не ждет, и жизнь ждать не должна».</text>
+	    <text>Hold on, Colonel, I have a love letter for you from your friend, "Death does not wait, nor should life wait."</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d1_2_1">
-	    <text>Ладно, теперь я доверяю тебе чуть больше, и похоже ты спас наши шкуры. За что тебе отдельное 
-		спасибо. При каких обстоятельствах ты узнал код, и какая информация у тебя есть для меня?</text>
+	    <text>Okay, now I trust you a little more, and it looks like you saved our hides. And thank you very much for that. Under what circumstances did you learn the code, and what information do you have for me?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d1_3_1">
-	    <text>В Госпитале я попал в плен к ИИГ. Офицер ИИГ, неожидано расстрелял мою охрану, вернул мне мои 
-		вещи и оружие. Назвался майором СБУ. Дал мне задание, предупредить тебя, полковник, о западне, 
-		которую готовит ИИГ и сообщил кодовую фразу. Я спешил как мог, но не успел вовремя, и принял 
-		самостоятельное решение - ликвидировать главную угрозу, снайпера в вашем тылу. И еще, 
-		«офицер ИИГ» велел тебе передать, о кейсе, который он спрятал в Универмаге, по его словам там 
-		инофрмация особой важности о деятельности ИИГ.</text>
+	    <text>At the Hospital, I was captured by the ISG. An ISG officer, unexpectedly shot my guards, gave me back my belongings and weapons. Called himself an SSU major. Gave me an assignment to warn you, Colonel, about a trap the ISG was preparing and gave me a code phrase. I rushed as fast as I could, but didn't make it in time, and made an independent decision to eliminate the main threat, a sniper in your rear. One more thing, an "ISG officer" told me to tell you about a case he had hidden in the department store, according to him it contained information of a special importance on the activities of the ISG.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d1_4_1">
-	    <text>Ясно, похоже агент не прогадал, рискнув своим прикрытием. Поскольку людей у меня тут нет, 
-		придёться тебе военсталкер, забрать кейс. Встретимся на базе Агропрома. Выполняй.</text>
+	    <text>I see, it looks like the agent was right to risk his cover. Since I don't have people here, you'll have to take the case. I'll meet you at the Agroprom base. Do it.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d1_5_1">
-	    <text>Есть, товарищ полковник!</text>
+	    <text>Yes, Comrade Colonel!</text>
 	</string>
 	<!-------------- Полковник Дегтярёв(Агропром) ---------------->
 	<!-- D2 -->
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d2_first_1">
-	    <text>Кейс принёс?</text>
+	    <text>Did you get the case?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d2_1_1">
-	    <text>Да, вот он.</text>
+	    <text>Yes, here it is.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d2_2_1">
-	    <text>Отлично, это тебе за оказанную помощь. Боец ты толковый, я решил зачислить тебя в свою 
-		спецгруппу. Подчиняться будешь непосредственно мне. Кузнецов утрясёт все бумаги о переводе. 
-		А пока свободен, я свяжусь с тобой позже.</text>
+	    <text>Good, this is for your help. You're a good soldier, I've decided to put you in my special group. You'll report directly to me. Kuznetsov will arrange the transfer papers. In the meantime, I'll contact you later.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d2_3_1">
-	    <text>Есть товарищ полковник!</text>
+	    <text>Yes, Comrade Colonel!</text>
 	</string>
 	<!-- D3 -->
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d3_first_1">
-	    <text>Я хотел спросить...</text>
+	    <text>I wanted to ask...</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d3_2_1">
-	    <text>Через агента нам наверняка известно где находиться центр операций ИИГ, почему нам просто не 
-		покончить с ними?</text>
+	    <text>Through the agent we must know where the ISG's operations center is, why don't we just finish them off?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d3_3_1">
-	    <text>Мне удалось выяснить, что ИИГ осматривают различные объекты в Зоне, и что-то целенаправлено 
-		ищут. Что нам известно о главной цели, пребывания ИИГ в Зоне?</text>
+	    <text>I was able to find out that the ISG are inspecting various objects in the Zone, and are looking for something on purpose. What do we know about the main purpose of the ISG in the Zone?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d3_4_1">
-	    <text>Тот сталкер в Припяти, я его узнал, это - Стрелок! Почему он так важен для ИИГ?</text>
+	    <text>That stalker in Pripyat, I recognized him; it is a Rifleman! Why is he so important to the ISG?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d3_5_1">
-	    <text>Уничтожение базы лишь отсрочит проблему, а не решит её. ИИГ забросят новую группу, которая может 
-		оказаться более успешной. Несмотря на то, что военизированная группа ИИГ находятся нелегально в Зоне, 
-		их уничтожение повлечёт за собой международный скандал. Наша задача, добыть любую информацию для 
-		дипломатов, которая в целом дискредитирует деятельность ИИГ в Зоне. После, они сами уберутся или 
-		мы им поможем, и ни кто, не пикнет в ООН.</text>
+	    <text>Destroying the base will only delay the problem, not solve it. The ISG will throw in a new group, which may be more successful. Despite the fact that the ISG paramilitary group is illegally in the Zone, destroying them would cause an international scandal. Our job is to get any information for the diplomats that will generally discredit the ISG's activities in the Zone. After that, they will leave on their own, or we will help them, and no one will say a word at the UN.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d3_6_1">
-	    <text>Аналитикам из СБУ с самого прибытия ИИГ известна их цель. ИИГ ищет любую информацию, которая 
-		послужит хотя бы намёком на то, что ЧЗО - является результатом разработки оружия массового 
-		уничтожения и представляет угрозу международной безопасности. Это не обязательно должно быть истиной. 
-		Для ИИГ важно инициировать международное расследование в ЧЗО и под весом добытых материалов, вынудить 
-		Украину дать полный доступ в ЧЗО международным организациям для проведения расследования. Это 
-		фактически лишит Украину монопольного права на ЧЗО, и контроль перейдет к ООН. ИИГ в свою очередь 
-		получать карт-бланш на проведение любых своих операций. А нам скорее всего, настоятельно предложат 
-		убраться из ЧЗО, до окончания расследования.</text>
+	    <text>The SSU analysts have known their purpose since the arrival of the ISG. The ISG is looking for any information that would give even a hint that The Zone is the result of the development of weapons of mass destruction and is a threat to international security. It doesn't have to be the truth. It is important for the ISG to initiate an international investigation into The Zone and, under the weight of the material obtained, to force Ukraine to give full access to The Zone to international organizations to conduct an investigation. This would effectively deprive Ukraine of its monopoly right to The Zone, and control would pass to UN. ISG, in turn, would receive carte blanche to conduct any of its operations. And we are likely to be strongly advised to get out of The Zone until the investigation is completed.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d3_7_1">
-	    <text>Если он окажеться в руках ИИГ, это будет полная катастрофа и провал всей операции. Но это уже 
-		не твоя забота. Мой тебе совет: забудь об этом сталкере, и об всем что с ним связанно. 
-		Дольше проживешь.</text>
+	    <text>If it ends up in the hands of the ISG, it will be a total disaster and a failure of the entire operation. But that's not your concern. My advice to you: forget about this stalker and everything connected with him. You'll live longer.</text>
 	</string>
     <!-- D4 -->
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d4_first_1">
-	    <text>Военсталкер %s прибыл по вашему приказу.</text>
+	    <text>Stalker %s has arrived on your orders.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d4_1_1">
-	    <text>Вольно! Давай без формальностей. Для тебя есть задание. Наш агент передал нам клондайк 
-		информации по деятельности ИИГ. Сейчас меня интересует одна из групп, агенту не удалось выяснить 
-		цель их миссии, она держится в секрете от остальных членов ИИГ. По его наблюдениям эта группа 
-		периодично раз в 2 дня,покидают базу и возвращаются через сутки. Твоя задача: выяснить, их цели.</text>
+	    <text>At ease! Let's cut the formalities. There's a mission for you. Our agent has given us a wealth of information on ISG activities. Now I am interested in one of the groups, the agent could not find out the purpose of their mission, it is kept secret from the other members of the ISG. According to his observations, this group periodically every 2 days, leave the base and return after 24 hours. Your task is to find out what their purpose is.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d4_2_1">
-	    <text>Информации слишком мало командир!</text>
+	    <text>There's too little information, commander!</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d4_3_1">
-	    <text>Это ещё не все. Ранее информатор у наёмников, сообщал нам, о группе ИИГ, которая периодично 
-		появляется в Мёртвом городе. Душман строго-настрого приближаться к одинокому дому на юго-западе 
-		Мёртвого города, и вступать с ними в контакт. Раньше я не придавали особого значения этой информации, 
-		полагая что ИИГ там осуществляет снабжение. Но похоже тут есть связь. Пока есть окно времени, сходи, 
-		осмотри это место по-тихому, и оставь там закладку, диктофон. Ровно через 2 суток заберёшь его и 
-		принесёшь мне. Может, что из этого выгорит. Вопросы есть?</text>
+	    <text>That's not all. Earlier, a mercenary informant told us about an ISG group that appears periodically in the Dead City. The Dushman strictly warned us to approach the lone house in the southwest of Dead City, and to make contact with them. I hadn't paid much attention to this information before, assuming that the ISG was supplying there. But there seems to be a connection. As long as there's a window of time, go check the place out quietly, and leave a bookmark there, a tape recorder. Exactly two days from now, pick it up and bring it to me. Maybe something will come of it. Any questions?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d4_3_2">
-	    <text>Ещё вопросы?</text>
+	    <text>Any other questions?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d4_4_1">
-	    <text>Есть вопросы касательно задания.</text>
+	    <text>Any questions about the assignment.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d4_5_1">
-	    <text>Вопросов нет, выполняю.</text>
+	    <text>No questions, I'll do it.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d4_7_1">
-	    <text>Почему диктофон полковник, мы что бомжи. У нас же есть более современные радиопередатчики?</text>
+	    <text>Why a tape recorder, Colonel? Are we homeless? Don't we have more advanced radio transmitters?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d4_8_1">
-	    <text>Мы работаем против организации, которая гораздо лучше оснащена чем СБУ. Любые радиозакладки, 
-		они обнаружат на раз, детектором. Только вспугнём, и они сменят место. Кириллов специально для этого 
-		задания, собрал диктофон который реаирует на звук, и начинает запись. Он не излучает ни каких 
-		радиоволн, поэтому обнаружить его практически невозможно.</text>
+	    <text>We're working against an organization that's far better equipped than SSU. They'll detect any radio plantations with a detector. We just scare them off, they'll change locations. Kirillov built a recorder specifically for this mission that picks up the sound and starts recording. It does not emit any radio waves, so it is virtually impossible to detect.</text>
 	</string>
 	<!-- D5 -->
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d5_first_1">
-	    <text>Задание выполнено.</text>
+	    <text>Mission accomplished.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d5_1_1">
-	    <text>Молодец. Отдельно от тебя, я оставил наблюдателей, которые вели видеофиксацию происходящего. 
-		Теперь мне нужно время, чтобы проанализировать все аудио и видео материалы с техником.\n
-		\nА для тебя есть непростое задание. ИИГ малочисленна, но их поддерживают наёмники, которым они 
-		хорошо платят. До нас доходит тревожная информация, ИИГ и наёмники концентрируются в Лиманске. 
-		Ты и сам наверное понимаешь зачем. Их цель ЧАЭС. И это может поставить под удар всю нашу операцию. 
-		Благодаря тому, что ты отключил «Выжигатель мозгов», я отправил на ЧАЭС отделение наших бойцов. У них 
-		приказ, ждать тебя, и после сопровождать и выполнять твои приказы. Ваша задача, недопустить ИИГ к 
-		Саркофагу. Главная цель - ликвидировать группу ИИГ, остальные меня мало интересуют.</text>
+	    <text>Well done. Separately from you, I left observers who were videotaping what was going on. Now I need time to analyze all the audio and video material with a technician. The ISG is small, but they are supported by mercenaries who are well paid. We're getting some disturbing information, the ISG and the mercenaries are concentrating in Limansk. You can probably see why. They're targeting the CNPP. And it could jeopardize our entire operation. Thanks to you turning off the Brain Burner, I've sent a squad of our fighters to the CNPP. Their orders are to wait for you, and then accompany and follow your orders. Your task is to prevent the ISG from reaching the Sarcophagus. The main objective is to eliminate the ISG group, the rest is of little interest to me.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d5_2_1">
-	    <text>Есть товарищ полковник.</text>
+	    <text>Yes, Comrade Colonel.</text>
 	</string>
 	<!-- D6 -->
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d6_first_1">
-	    <text>Группа ИИГ ликвидирована.</text>
+	    <text>The ISG has been eliminated.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d6_1_1">
-	    <text>Хорошая работа. Мы закончили анализ, материалов. ИИГ наладил чёрный канал сбыта и поставок через 
-		наймитов. В том доме, где ты устанавливал диктофон, они производили обмен, оружие и боеприпасы, 
-		на артефакты. Что же... ООН не понравиться, что их «ручная» организация - махровые контрабандисты. 
-		Похоже у нас достаточно информации и пора уже поработать нашему дипломатическому корпусу. Я на 
-		Большую Землю, а ты временно в распоряжении Кузнецова, до моего возвращения.</text>
+	    <text>Good work. We've finished analyzing the materials. The ISG has established a black channel of distribution and supply through mercenaries. In the house where you set up the recorder, they were trading weapons and ammunition for artifacts. Well... UN doesn't like that their "hand-to-hand" organization is a smuggling ring. Looks like we have enough information and it's time for our diplomatic corps to get to work. I'm going to Big Earth, and you're temporarily at Kuznetsov's disposal until I return.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_degtyarev_d6_2_1">
-	    <text>Задайте им там жару, командир.</text>
+	    <text>Give them hell there, commander.</text>
 	</string>
 	<!--------------- Майор Верещагин(Агропром) ------------------>
 	<!-- D1 -->
 	<string id="st_sl_hidden_threat_dialog_vereshagin_d1_first_1">
-	    <text>Обрисую ситуацию. Вы тут немного обосрались, и пришлось мне вступать в игру. Пока вы возились 
-		с группой на ЧАЭС, которая так же была прикрытием, основной отряд вместе со своими яйцеголовыми, 
-		проникли в «Х-8» и что-то видимо нашли, чего им не нужно было находить. Так как, Эрнандес, глава 
-		боевой миссии ИИГ в Зоне, приказал сворачиваться и готовиться к эвакуации. Чуешь боец?! Пахнет 
-		жаренным. Глава СБУ, по оперативной связи, дал добро, ликвидировать штаб ИИГ, и не дать информации, 
-		которую они нарыли, за все это время, выйти из ЧЗО. Украину после этого, ждут дипломатические 
-		последствия, но это куда менее важно, чем информация которая может быть у ИИГ, и если она всплывёт 
-		в ООН.\n
-		\nИИГ выбрали для своей базы, отличное место, чтобы затихариться, но отвратительное с точки зрения 
-		стратегии. Мы заперли их со стороны Окраин Припяти и со стороны Юпитера, это было не сложно. Мышь,
-		не проскочет. Теперь о сложном, что тебе предстоит сделать. Возглавить штурмовую группу из опытных 
-		бойцов и зачистить это крысиное гнездо. Заходишь, все кто стреляют в тебя, должны быть ликвидированны. 
-		Или мне поставить командиром другого, а ты к мамочке хочешь?</text>
+	    <text>I'll outline the situation. You guys were shitting your pants a little bit, so I had to step in. While you were messing around with the CNPP group, which was also a cover, the main squad, along with their eggheads, got into the X-8 and apparently found something they didn't need to find. So, Hernandez, the head of the ISG combat mission in the Zone, ordered a wrap up and prepare to evacuate. You smell that, fighter?! I smell something fierce. The head of SSU, on operational communication, gave the go-ahead to liquidate the ISG headquarters, and not to let the information they had dug up, all this time, get out of The Zone. The Ukraine will face diplomatic consequences after that, but that is much less important than the information that the ISG might have, and if it gets out to the UN.\n the ISG chose for their base, a great place to lay low, but disgusting in terms of strategy. We locked them on the side of Pripyat and on the side of Jupiter, it was not difficult. The mouse, it's not going to slip through. Now for the hard part, what you have to do. Lead an assault team of experienced fighters and clean up this rat's nest. You go in, anyone who shoots at you has to be eliminated. Or should I put someone else in charge, and you want your mama?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_vereshagin_d1_1_1">
-	    <text>Попробуйте меня остановить, товарищ майор!</text>
+	    <text>Try to stop me, Comrade Major!</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_vereshagin_d1_2_1">
-	    <text>Хороший настрой боец, одобряю. Приступай, время не ждет.</text>
+	    <text>Good attitude, fighter, I approve. Get to it, time is running out.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_vereshagin_d1_3_1">
-	    <text>Есть!</text>
+	    <text>Yes, sir.</text>
 	</string>
 	<!-- D2 -->
 	<string id="st_sl_hidden_threat_dialog_vereshagin_d2_first_1">
-	    <text>Товарищ майор...</text>
+	    <text>Comrade Major...</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_vereshagin_d2_1_1">
-	    <text>Мне уже доложили по связи, что центр операций ИИГ уничтожен. Я выслал трофейную команду и 
-		оперативников СБУ, они приберут там все ценное. Какие-то разрозненые отряды ИИГ наверняка еще 
-		остались в Зоне, но без единного центра координации и снабжения, они не представляют угрозу, 
-		и со временем растворяться, в других группировках, либо попытаются эвакуироваться самостоятельно. 
-		Ты хорошо поработал.Мы все хорошо поработали. Наша операция закончена. Детали операции, являются 
-		государственной тайной, поэтому держи свой язык за зубами, если не хочешь его лишиться. Будешь 
-		трепаться, СБУ заинтересуются тобой. Это от меня, личный подарок:</text>
+	    <text>I've already been informed by radio that the ISG operations center has been destroyed. I've sent a trophy team and SSU operatives, they'll take everything of value there. Some scattered units of ISG probably still remain in the Zone, but without a unified center of coordination and supply, they are not a threat, and over time, melt into other groups, or try to evacuate on their own. You did a good job. We all did a good job. Our operation is over. The details of the operation are state secrets, so keep your mouth shut if you don't want to lose it. If you talk, SSU will be interested in you. This is from me, a personal gift:</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_vereshagin_d2_2_1">
-	    <text>Спасибо товарищ майор.</text>
+	    <text>Thank you, Comrade Major.</text>
 	</string>
-	<!------------ Рандомный командир отряда(ЧАЭС) --------------->
+	<!------------ Рандомный командир отряда(CNPP) --------------->
 	<string id="st_sl_hidden_threat_dialog_aes_leader_squad_first_1">
-	    <text>Докладываю! Провели разведку, наблюдатели сообщают, монохромные держат главный вход, мерки на 
-		них наседают. Бой идет с переменным успехом, но «Монолит» стягивает свои силы и скоро меркы сдуются.</text>
+	    <text>Reporting! We did reconnaissance, observers report the monochrome are holding the main entrance, the mercs are closing in on them. The fight is going on with varying success, but the Monolith is pulling its forces together and soon the merks will be deflated.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_aes_leader_squad_1_1">
-	    <text>Ммм... а где группа ИИГ?</text>
+	    <text>Mmm... where's the ISG group?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_aes_leader_squad_2_1">
-	    <text>Не могу сказать. Разведчики их не обнаружили.</text>
+	    <text>I can't say. The scouts haven't located them.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_aes_leader_squad_3_1">
-	    <text>Что-то тут не так...</text>
+	    <text>Something's not right...</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_aes_leader_squad_4_1">
-	    <text>Один из наших разведчиков перестал выходить на связь. Его задача контролировать дорогу на 
-		Госпиталь. Последний сеанс связи с ним был час назад и больше он не отвечал.</text>
+	    <text>One of our scouts stopped communicating. His job is to control the road to the hospital. His last contact was an hour ago and he hasn't responded.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_aes_leader_squad_5_1">
-	    <text>Времени у нас мало, проверять некогда, придёться рискнуть и идти вслепую. Здесь нам все равно 
-		делать нечего, пускай мерки и дальше развлекают монохромных, нам только на руку. Поднимай парней, 
-		выдвигаемся!</text>
+	    <text>We don't have much time, there's no time to check, so we'll have to take our chances and go blind. There's nothing for us to do here anyway, so we'd better let the measures keep entertaining the monochrome ones. Get the boys up, let's move out!</text>
 	</string>
-	<!-------------- Рандомный агент СБУ(Юпитер) ----------------->
+	<!-------------- Рандомный агент SSU(Юпитер) ----------------->
 	<string id="st_sl_hidden_threat_dialog_jup_agent_d1_first_1">
-	    <text>Штурмовая группа в боевой готовности. Начинаем штурм?</text>
+	    <text>Assault team on alert. Shall we start the assault?</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_jup_agent_d1_1_1">
-	    <text>Вперёд.</text>
+	    <text>Let's go.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_jup_agent_d1_2_1">
-	    <text>Пока рано.</text>
+	    <text>Not yet.</text>
 	</string>
 	<!--------------- Сущность(Темная лощина) -------------------->
 	<string id="st_sl_hidden_threat_dialog_spirit_d1_first_1">
-	    <text>Что мы имеем? Следы крови у входа в здание. Отсутствие гильз говорит: часового 
-		застали врасплох, он не вел ответный огонь. Посмотрим, что дальше...</text>
+	    <text>What do we got? Traces of blood outside the building. Lack of shell casings means the sentry was taken by surprise and didn't return fire. Let's see what happens next...</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spirit_d1_1_1">
-	    <text>Продолжить...</text>
+	    <text>To continue...</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_spirit_d2_first_1">
-	    <text>Сталкеры внутри здания, не сразу поняли, что происходит, и были атакованы с двух входов, почти 
-		не оказывая сопротивления. Гильзы 5.56х45 натовские... походит на наемников.\n
-		\nХм... нападение было 2 дня назад, а в костре еще теплые угли. Нападающие стояли здесь лагерем 
-		и я с ними немного разминулся. Кто бы это не был, их тут больше нет, пора возвращаться к Кузнецову.</text>
+	    <text>Stalkers inside the building, did not immediately realize what was happening, and were attacked from two entrances, with almost no resistance. 5.56x45 NATO shell casings... looks like mercenaries. Hmm... the attack was two days ago, and the coals in the fire are still warm. The attackers were camped here and I missed them for a while. Whoever it was, they're not here anymore, so it's time to get back to Kuznetsov.</text>
 	</string>
 	<!------------------- Общие диалоги -------------------------->
 	<string id="st_sl_hidden_threat_dialog_all_1_1">
-	    <text>Ясно, командир.</text>
+	    <text>Got it, commander.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_all_1_2">
-	    <text>Я все понял.</text>
+	    <text>I got it.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_all_1_3">
-	    <text>Понятно.</text>
+	    <text>Understood.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_all_1_4">
-	    <text>Принято полковник.</text>
+	    <text>Roger, Colonel.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_all_2_1">
-	    <text>Слушаю.</text>
+	    <text>Go ahead.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_all_2_2">
-	    <text>Валяй.</text>
+	    <text>Go ahead.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_all_2_3">
-	    <text>Спрашивай.</text>
+	    <text>Go ahead.</text>
 	</string>
 	<string id="st_sl_hidden_threat_dialog_all_3_1">
-	    <text>Я передумал.</text>
+	    <text>I changed my mind.</text>
 	</string>
 	<!----------------------- Notes ------------------------------>
 	<string id="encyclopedia__notes_note_from_spooner">
-		<text>Записка от сержанта Ложкина</text>
+		<text>A note from Sergeant Lozhkin.</text>
 	</string>
 	<string id="encyclopedia__notes_note_from_spooner_text">
-		<text>
-			\nЛожкин предлагает обмен:\n
-			\n • Беру 300шт. патронов 9x19, взамен дам 320шт. патронов 9x18;
-			\n • Беру 300шт. патронов 5.56x45, взамен дам равное количество 5.45x39;
-			\n • Беру 280шт. патронов .45, взамен дам 90шт. патронов 9x39;
-			\n • Беру 300шт. патронов 7.62x51, взамен дам равное количество 7.62x54;
-			\n • Беру 5 гранат M209, взамен дам равное количество ВОГ-25.
-		</text>
+		<text> \Lozhkin proposes an exchange: I take 300 rounds of 9x19 ammo, I give you 320 rounds of 9x18; I take 300 rounds of 5.56x45 ammo, I give you an equal amount of 5.45x39; I take 280 rounds of .45. .45 ammo, I will give 90 rounds of 9x39 ammo in return; \n - I will take 300 rounds of 7.62x51 ammo, I will give an equal amount of 7.62x54 ammo in return; \n - I will take 5 M209 grenades, I will give an equal amount of VOG-25 grenades in return. </text>
 	</string>
 </string_table>

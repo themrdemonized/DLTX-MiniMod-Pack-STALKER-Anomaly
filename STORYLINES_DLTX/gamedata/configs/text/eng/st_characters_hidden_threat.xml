@@ -7,24 +7,24 @@
 -->
 <string_table>
     <string id="st_hidden_threat_ser_gorobez_name">
-		<text>Сержант Горобец</text>
+		<text>Sergeant Gorobets</text>
 	</string>
 	<string id="st_hidden_threat_isg_leader_name">
-		<text>Майор Эрнандес</text>
+		<text>Major Hernandez</text>
 	</string>
 	<string id="st_hidden_threat_isg_agent_name">
-		<text>Лейтенант Годунов</text>
+		<text>Lieutenant Godunov</text>
 	</string>
 	<string id="st_hidden_threat_spirit_name">
-		<text>(Мысли вслух):</text>
+		<text>(Thoughts aloud):</text>
 	</string>
 	<string id="st_hidden_threat_strelok_name">
-		<text>Стрелок</text>
+		<text>Strelok</text>
 	</string>
 	<string id="st_hidden_threat_degtyarev_name">
-		<text>Полковник Дегтярёв</text>
+		<text>Colonel Degtyarev</text>
 	</string>
 	<string id="st_agr_1_6_ht_vereshagin_name">
-		<text>Майор Верещагин</text>
+		<text>Major Vereshchagin</text>
 	</string>
 </string_table>
