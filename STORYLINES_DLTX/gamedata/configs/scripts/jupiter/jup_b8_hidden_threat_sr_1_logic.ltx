@@ -1,0 +1,6 @@
+[logic]
+active = {-hidden_threat_disabled} sr_idle@start, nil
+
+[sr_idle@start]
+on_actor_inside = {-jup_b8_isg_combat =squad_exist(jup_b8_isg_attack_squad)} %+jup_b8_isg_combat =ht_add_mine% nil
+

@@ -1,0 +1,69 @@
+[logic@pri_a15_enforcer_1]
+active = walker@enforcer_1
+prior = 250
+suitable = {=target_squad_name(pri_a15_ht_sbu_squad) =check_npc_name(pri_a15_ht_sbu_enforcer_1)} true
+
+[logic@pri_a15_enforcer_2]
+active = walker@enforcer_2
+prior = 250
+suitable = {=target_squad_name(pri_a15_ht_sbu_squad) =check_npc_name(pri_a15_ht_sbu_enforcer_2)} true
+
+[logic@pri_a15_soldier_3]
+active = walker@soldier_3
+prior = 200
+suitable = {=target_squad_name(pri_a15_ht_sbu_squad)} true
+
+[logic@pri_a15_soldier_4]
+active = walker@soldier_4
+prior = 200
+suitable = {=target_squad_name(pri_a15_ht_sbu_squad)} true
+
+[logic@pri_a15_soldier_5]
+active = walker@soldier_5
+prior = 200
+suitable = {=target_squad_name(pri_a15_ht_sbu_squad)} true
+
+[logic@pri_a15_soldier_6]
+active = walker@soldier_6
+prior = 200
+suitable = {=target_squad_name(pri_a15_ht_sbu_squad)} true
+
+[walker@base]
+invulnerable = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+combat_ignore_cond = false
+combat_ignore_keep_when_attacked = false
+meet = no_meet
+
+[walker@enforcer_1]:walker@base
+path_walk = sbu_guard_1_walk
+path_look = sbu_guard_1_look
+def_state_standing = give_orders
+
+[walker@enforcer_2]:walker@base
+path_walk = sbu_guard_2_walk
+path_look = sbu_guard_2_look
+def_state_standing = give_orders
+
+[walker@soldier_3]:walker@base
+path_walk = sbu_guard_3_walk
+path_look = sbu_guard_3_look
+def_state_standing = hide
+
+[walker@soldier_4]:walker@base
+path_walk = sbu_guard_4_walk
+path_look = sbu_guard_4_look
+def_state_standing = hide
+
+[walker@soldier_5]:walker@base
+path_walk = sbu_walker_1_walk
+path_look = sbu_walker_1_look
+def_state_standing = guard
+
+[walker@soldier_6]:walker@base
+path_walk = sbu_walker_2_walk
+path_look = sbu_walker_2_look
+def_state_standing = guard
+

@@ -1,0 +1,1064 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<!--
+    Storyline: Hidden Threat
+    Version:   1.0
+    Autor:     Longreed
+	Last Edit: 01/11/2021
+-->
+<game_dialogs>
+    <!--------------- Полковник Кузнецов (старт сюжетной линии) ---------------------->
+    <dialog id="sl_hidden_threat_dialog_kuznetsov_d1">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+		<dont_has_info>hidden_threat_task_1_stage_2</dont_has_info>
+		<dont_has_info>hidden_threat_task_1_stage_3</dont_has_info>
+	    <has_info>hidden_threat_start</has_info>
+		<phrase_list>
+		    <phrase id="0"> <!-- Actor -->
+			    <script_text>dialogs_hidden_threat.get_phrase_dialog_kuznetsov_d1_first</script_text>
+				<next>1</next>
+				<next>3</next>
+			</phrase>
+			<phrase id="1"> <!-- NPC -->
+			    <dont_has_info>dialog_kuznetsov_first_flag</dont_has_info>
+				<script_text>dialogs_hidden_threat.get_phrase_dialog_kuznetsov_d1_1</script_text>
+				<give_info>dialog_kuznetsov_first_flag</give_info>
+				<action>hidden_threat.sl_hidden_threat_task_1</action>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d1_2_1</text>
+				<next>3</next>
+			</phrase>
+			<phrase id="3"> <!-- NPC -->
+			    <has_info>dialog_kuznetsov_first_flag</has_info>
+			    <script_text>dialogs_hidden_threat.get_phrase_dialog_all_2</script_text>
+				<next>4</next>
+				<next>5</next>
+				<next>6</next>
+				<next>7</next>
+				<next>14</next>
+			</phrase>
+			<phrase id="4"> <!-- Actor -->
+			    <dont_has_info>dialog_kuznetsov_4_flag</dont_has_info>
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d1_4_1</text>
+				<next>8</next>
+			</phrase>
+			<phrase id="5"> <!-- Actor -->
+			    <dont_has_info>dialog_kuznetsov_5_flag</dont_has_info>
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d1_5_1</text>
+				<next>9</next>
+			</phrase>
+			<phrase id="6"> <!-- Actor -->
+			    <dont_has_info>dialog_kuznetsov_6_flag</dont_has_info>
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d1_6_1</text>
+				<next>12</next>
+			</phrase>
+			<phrase id="7"> <!-- Actor -->
+			    <precondition>dialogs_hidden_threat.precond_dialog_kuznetsov_d1_7</precondition>
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d1_7_1</text>
+				<give_info>dialog_kuznetsov_7_flag</give_info>
+				<disable_info>dialog_kuznetsov_first_flag</disable_info>
+				<disable_info>dialog_kuznetsov_4_flag</disable_info>
+				<disable_info>dialog_kuznetsov_5_flag</disable_info>
+				<disable_info>dialog_kuznetsov_6_flag</disable_info>
+				<next>1</next>
+			</phrase>
+			<phrase id="8"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d1_8_1</text>
+				<give_info>dialog_kuznetsov_4_flag</give_info>
+				<give_info>hidden_threat_task_1_stage_1</give_info>
+				<next>13</next>
+			</phrase>
+			<phrase id="9"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d1_9_1</text>
+				<next>10</next>
+			</phrase>
+			<phrase id="10"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d1_10_1</text>
+				<next>11</next>
+			</phrase>
+			<phrase id="11"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d1_11_1</text>
+				<give_info>dialog_kuznetsov_5_flag</give_info>
+				<next>13</next>
+			</phrase>
+			<phrase id="12"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d1_12_1</text>
+				<give_info>dialog_kuznetsov_6_flag</give_info>
+				<next>13</next>
+			</phrase>
+			<phrase id="13"> <!-- Actor -->
+			    <script_text>dialogs_hidden_threat.get_phrase_dialog_all_1</script_text>
+				<next>3</next>
+			</phrase>
+			<phrase id="14"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d1_14_1</text>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_kuznetsov_d2">
+    	<dont_has_info>hidden_threat_disabled</dont_has_info>
+	    <dont_has_info>hidden_threat_task_1_stage_3</dont_has_info>
+		<has_info>hidden_threat_task_1_stage_2</has_info>
+		<phrase_list>
+		    <phrase id="0"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d2_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d2_1_1</text>
+				<give_info>hidden_threat_task_1_stage_3</give_info>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d2_2_1</text>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_kuznetsov_d3">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+	    <dont_has_info>hidden_threat_task_1_complete</dont_has_info>
+		<has_info>ds2_domik_st_ht_cut_scene_end</has_info>
+		<phrase_list>
+		    <phrase id="0"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d3_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d3_1_1</text>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d3_2_1</text>
+				<next>3</next>
+			</phrase>
+			<phrase id="3"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d3_3_1</text>
+				<give_info>hidden_threat_task_1_complete</give_info>
+				<next>4</next>
+			</phrase>
+			<phrase id="4"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d3_4_1</text>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_kuznetsov_d4">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+	    <has_info>bar_deactivate_radar_done</has_info>
+		<has_info>hidden_threat_task_3_msg</has_info>
+		<dont_has_info>hidden_threat_task_3_start</dont_has_info>
+		<phrase_list>
+		    <phrase id="0"> <!-- Actor -->
+				<script_text>dialogs_hidden_threat.get_phrase_dialog_kuznetsov_d4_first</script_text>
+				<next>1</next>
+				<next>2</next>
+			</phrase>
+			<phrase id="1"> <!-- NPC -->
+			    <has_info>hidden_threat_task_2_start</has_info>
+			    <dont_has_info>hidden_threat_task_2_complete</dont_has_info>
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d4_1_1</text>
+				<give_info>hidden_threat_task_2_complete</give_info>
+				<action>dialogs_hidden_threat.postcond_dialog_kuznetsov_d4_1</action>
+				<next>3</next>
+			</phrase>
+			<phrase id="2"> <!-- NPC -->
+			    <precondition>dialogs_hidden_threat.precond_dialog_kuznetsov_d4_2</precondition>
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d4_2_1</text>
+				<next>3</next>
+			</phrase>
+			<phrase id="3"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d4_3_1</text>
+				<next>4</next>
+			</phrase>
+			<phrase id="4"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d4_4_1</text>
+				<action>hidden_threat.sl_hidden_threat_task_3</action>
+				<next>5</next>
+			</phrase>
+			<phrase id="5"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d4_5_1</text>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_kuznetsov_d5">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+	    <has_info>hidden_threat_task_3_start</has_info>
+		<has_info>jup_b8_isg_combat</has_info>
+		<dont_has_info>hidden_threat_task_3_complete</dont_has_info>
+		<precondition>dialogs_hidden_threat.precond_dialog_kuznetsov_d5_first</precondition>
+	    <phrase_list>
+		    <phrase id="0"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d5_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d5_1_1</text>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d5_2_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_kuznetsov_d5_2</action>
+				<next>3</next>
+			</phrase>
+			<phrase id="3"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d5_3_1</text>
+				<give_info>hidden_threat_task_3_complete</give_info>
+				<action>dialogs_hidden_threat.postcond_dialog_kuznetsov_d5_3</action>
+				<next>4</next>
+			</phrase>
+			<phrase id="4"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d5_4_1</text>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_kuznetsov_d6">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+	    <has_info>hidden_threat_task_4_stage_7</has_info>
+		<dont_has_info>hidden_threat_task_4_complete</dont_has_info>
+		<precondition>dialogs_hidden_threat.precond_dialog_kuznetsov_d6_first</precondition>
+		<phrase_list>
+		    <phrase id="0"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d6_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d6_1_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_kuznetsov_d6_1</action>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d6_2_1</text>
+				<next>3</next>
+			</phrase>
+			<phrase id="3"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d6_3_1</text>
+				<next>4</next>
+			</phrase>
+			<phrase id="4"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d6_4_1</text>
+				<next>5</next>
+			</phrase>
+			<phrase id="5"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d6_5_1</text>
+				<next>6</next>
+			</phrase>
+			<phrase id="6"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d6_6_1</text>
+				<next>7</next>
+			</phrase>
+			<phrase id="7"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d6_7_1</text>
+				<give_info>hidden_threat_task_4_complete</give_info>
+				<next>8</next>
+			</phrase>
+			<phrase id="8"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d6_8_1</text>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_kuznetsov_d7">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+		<dont_has_info>hidden_threat_task_7_stage_1</dont_has_info>
+	    <has_info>hidden_threat_task_7_start</has_info>
+		<phrase_list>
+		    <phrase id="0"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d7_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d7_1_1</text>
+				<give_info>hidden_threat_task_7_stage_1</give_info>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kuznetsov_d7_2_1</text>
+				<action>dialogs.break_dialog</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	<!------------------------- Ст.лейтенант Кириллов ---------------------------------->
+	<dialog id="sl_hidden_threat_dialog_kirillov_d1">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+	    <has_info>hidden_threat_task_4_start</has_info>
+		<dont_has_info>dialog_kirillov_1_flag</dont_has_info>
+		<phrase_list>
+		    <phrase id="0"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kirillov_d1_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kirillov_d1_1_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_kirillov_d1_1</action>
+				<give_info>dialog_kirillov_1_flag</give_info>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_kirillov_d2">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+	    <has_info>val_1_2_army_combat</has_info>
+		<dont_has_info>hidden_threat_task_4_stage_5</dont_has_info>
+		<precondition>dialogs_hidden_threat.precond_dialog_kirillov_d2_first</precondition>
+	    <phrase_list>
+		    <phrase id="0"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kirillov_d2_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kirillov_d2_1_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_kirillov_d2_1</action>
+				<give_info>hidden_threat_task_4_stage_5</give_info>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kirillov_d2_2_1</text>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_kirillov_d3">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+	    <has_info>hidden_threat_task_4_stage_6</has_info>
+		<dont_has_info>hidden_threat_task_4_stage_7</dont_has_info>
+		<phrase_list>
+    		<phrase id="0"> <!-- Actor -->
+	    		<text>st_sl_hidden_threat_dialog_kirillov_d3_first_1</text>
+		    	<next>1</next>
+    		</phrase>
+			<phrase id="1"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_kirillov_d3_1_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_kirillov_d3_1</action>
+				<give_info>hidden_threat_task_4_stage_7</give_info>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_kirillov_d3_2_1</text>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	<!-------------------- Выживший сталкер (сюжетная линия) --------------------------->
+	<dialog id="sl_hidden_threat_dialog_survived">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+	    <dont_has_info>hidden_threat_task_1_stage_3</dont_has_info>
+		<phrase_list>
+		    <phrase id="0"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_survived_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_survived_1_1</text>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- NPC -->
+			    <script_text>dialogs_hidden_threat.get_phrase_dialog_survived_2</script_text>
+				<next>3</next>
+			</phrase>
+			<phrase id="3"> <!-- Actor -->
+			    <script_text>dialogs_hidden_threat.get_phrase_dialog_survived_3</script_text>
+				<next>4</next>
+			</phrase>
+			<phrase id="4"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_survived_4_1</text>
+				<next>5</next>
+			</phrase>
+			<phrase id="5"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_survived_5_1</text>
+				<give_info>hidden_threat_task_1_stage_3</give_info>
+				<action>dialogs.break_dialog</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	<!---------------- Сержант Ложкин (дополнительное задание 1) ----------------------->
+    <dialog id="sl_hidden_threat_dialog_spooner_d1">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+	    <has_info>hidden_threat_task_1_stage_1</has_info>
+		<dont_has_info>hidden_threat_second_task_1</dont_has_info>
+		<dont_has_info>hidden_threat_task_1_stage_2</dont_has_info>
+		<dont_has_info>hidden_threat_task_1_stage_3</dont_has_info>
+	    <phrase_list>
+		    <phrase id="0"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_spooner_d1_first_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_spooner_d1_first</action>
+				<next>1</next>
+				<next>2</next>
+			</phrase>
+			<phrase id="1"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_spooner_d1_1_1</text>
+				<give_info>hidden_threat_second_task_1</give_info>
+				<action>hidden_threat.sl_hidden_threat_second_task_1</action>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_spooner_d1_2_1</text>
+				<give_info>hidden_threat_second_task_1</give_info>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_spooner_d2">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+	    <dont_has_info>hidden_threat_second_task_2_start</dont_has_info>
+		<dont_has_info>hidden_threat_second_task_2_fail</dont_has_info>
+		<has_info>hidden_threat_task_1_complete</has_info>
+		<phrase_list>
+		    <phrase id="0"> <!-- Actor -->
+			    <script_text>dialogs_hidden_threat.get_phrase_dialog_spooner_d2_first</script_text>
+				<next>1</next>
+				<next>3</next>
+			</phrase>
+			<phrase id="1"> <!-- NPC -->
+			    <dont_has_info>dialog_spooner_outfit_flag</dont_has_info>
+			    <script_text>dialogs_hidden_threat.get_phrase_dialog_spooner_d2_1</script_text>
+				<action>dialogs_hidden_threat.postcond_dialog_spooner_d2_1</action>
+				<give_info>dialog_spooner_outfit_flag</give_info>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_spooner_d2_2_1</text>
+				<next>3</next>
+			</phrase>
+			<phrase id="3"> <!-- NPC -->
+			    <has_info>dialog_spooner_outfit_flag</has_info>
+			    <text>st_sl_hidden_threat_dialog_spooner_d2_3_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_spooner_d2_3</action>
+				<next>4</next>
+				<next>5</next>
+			</phrase>
+			<phrase id="4"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_spooner_d2_4_1</text>
+				<give_info>hidden_threat_second_task_2_start</give_info>
+				<action>hidden_threat.sl_hidden_threat_second_task_2</action>
+			</phrase>
+			<phrase id="5"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_spooner_d2_5_1</text>
+				<give_info>hidden_threat_second_task_2_fail</give_info>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_spooner_d3">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+	    <has_info>hidden_threat_second_task_2_start</has_info>
+		<dont_has_info>hidden_threat_second_task_2_fail</dont_has_info>
+		<dont_has_info>dialog_spooner_barter_flag</dont_has_info>
+		<precondition>dialogs_hidden_threat.precond_dialog_spooner_d3_first</precondition>
+     	<phrase_list>
+		    <phrase id="0"> <!-- Actor -->
+			    <script_text>dialogs_hidden_threat.get_phrase_dialog_spooner_d3_first</script_text>
+				<next>1</next>
+				<next>3</next>
+			</phrase>
+			<phrase id="1"> <!-- NPC -->
+			    <dont_has_info>hidden_threat_second_task_2_complete</dont_has_info>
+			    <text>st_sl_hidden_threat_dialog_spooner_d3_1_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_spooner_d3_1</action>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_spooner_d3_2_1</text>
+				<next>3</next>
+			</phrase>
+			<phrase id="3"> <!-- NPC -->
+			    <has_info>hidden_threat_second_task_2_complete</has_info>
+			    <text>st_sl_hidden_threat_dialog_spooner_d3_3_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_spooner_d3_3</action>
+				<give_info>dialog_spooner_barter_flag</give_info>
+				<next>4</next>
+			</phrase>
+			<phrase id="4"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_spooner_d3_4_1</text>
+			</phrase>
+    	</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_spooner_d4">
+	    <has_info>dialog_spooner_barter_flag</has_info>
+		<precondition>dialogs_hidden_threat.precond_dialog_spooner_d4_first</precondition>
+		<phrase_list>
+		    <phrase id="0"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_spooner_d4_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_spooner_d4_1_1</text>
+				<next>2</next>
+				<next>3</next>
+				<next>4</next>
+				<next>5</next>
+				<next>6</next>
+				<next>7</next>
+				<next>8</next>
+				<next>9</next>
+				<next>10</next>
+				<next>11</next>
+				<next>12</next>
+				<next>13</next>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <precondition>dialogs_hidden_threat.precond_dialog_spooner_d4_2</precondition>
+			    <text>st_sl_hidden_threat_dialog_spooner_d4_2_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_spooner_d4_2</action>
+				<next>1</next>
+			</phrase>
+			<phrase id="3"> <!-- Actor -->
+			    <precondition>dialogs_hidden_threat.precond_dialog_spooner_d4_3</precondition>
+			    <text>st_sl_hidden_threat_dialog_spooner_d4_3_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_spooner_d4_3</action>
+			</phrase>
+			<phrase id="4"> <!-- Actor -->
+			    <precondition>dialogs_hidden_threat.precond_dialog_spooner_d4_4</precondition>
+			    <text>st_sl_hidden_threat_dialog_spooner_d4_4_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_spooner_d4_4</action>
+			</phrase>
+			<phrase id="5"> <!-- Actor -->
+			    <precondition>dialogs_hidden_threat.precond_dialog_spooner_d4_5</precondition>
+			    <text>st_sl_hidden_threat_dialog_spooner_d4_5_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_spooner_d4_5</action>
+			</phrase>
+			<phrase id="6"> <!-- Actor -->
+			    <precondition>dialogs_hidden_threat.precond_dialog_spooner_d4_6</precondition>
+			    <text>st_sl_hidden_threat_dialog_spooner_d4_6_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_spooner_d4_6</action>
+			</phrase>
+			<phrase id="7"> <!-- Actor -->
+			    <precondition>dialogs_hidden_threat.precond_dialog_spooner_d4_7</precondition>
+			    <text>st_sl_hidden_threat_dialog_spooner_d4_7_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_spooner_d4_7</action>
+			</phrase>
+			<phrase id="8"> <!-- Actor -->
+			    <precondition>dialogs_hidden_threat.precond_dialog_spooner_d4_8</precondition>
+			    <text>st_sl_hidden_threat_dialog_spooner_d4_8_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_spooner_d4_8</action>
+			</phrase>
+			<phrase id="9"> <!-- Actor -->
+			    <precondition>dialogs_hidden_threat.precond_dialog_spooner_d4_9</precondition>
+			    <text>st_sl_hidden_threat_dialog_spooner_d4_9_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_spooner_d4_9</action>
+			</phrase>
+			<phrase id="10"> <!-- Actor -->
+			    <precondition>dialogs_hidden_threat.precond_dialog_spooner_d4_10</precondition>
+			    <text>st_sl_hidden_threat_dialog_spooner_d4_10_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_spooner_d4_10</action>
+			</phrase>
+			<phrase id="11"> <!-- Actor -->
+			    <precondition>dialogs_hidden_threat.precond_dialog_spooner_d4_11</precondition>
+			    <text>st_sl_hidden_threat_dialog_spooner_d4_11_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_spooner_d4_11</action>
+			</phrase>
+			<phrase id="12"> <!-- Actor -->
+			    <precondition>dialogs_hidden_threat.precond_dialog_spooner_d4_12</precondition>
+			    <text>st_sl_hidden_threat_dialog_spooner_d4_12_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_spooner_d4_12</action>
+			</phrase>
+			<phrase id="13"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_spooner_d4_13_1</text>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	<!------------------ Майор Журов (дополнительное задание 1) ------------------------>
+    <dialog id="sl_hidden_threat_dialog_jurov">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+	    <has_info>hidden_threat_task_1_stage_1</has_info>
+		<dont_has_info>hidden_threat_second_task_1_complete</dont_has_info>
+		<precondition>dialogs_hidden_threat.precond_dialog_jurov_first</precondition>
+		<phrase_list>
+		    <phrase id="0"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_jurov_first_1</text>
+			    <next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- NPC -->
+				<script_text>dialogs_hidden_threat.get_phrase_dialog_jurov_1</script_text>
+				<action>dialogs_hidden_threat.postcond_dialog_jurov_1</action>
+				<next>2</next>
+				<next>3</next>
+				<next>5</next>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <dont_has_info>hidden_threat_task_1_stage_2</dont_has_info>
+			    <dont_has_info>hidden_threat_task_1_stage_3</dont_has_info>
+			    <text>st_sl_hidden_threat_dialog_jurov_2_1</text>
+				<next>4</next>
+			</phrase>
+			<phrase id="3"> <!-- Actor -->
+			    <dont_has_info>hidden_threat_task_1_stage_2</dont_has_info>
+				<dont_has_info>hidden_threat_task_1_stage_3</dont_has_info>
+			    <text>st_sl_hidden_threat_dialog_jurov_3_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_jurov_3</action>
+				<give_info>hidden_threat_second_task_1_complete</give_info>
+			</phrase>
+			<phrase id="4"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_jurov_4_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_jurov_4</action>
+				<give_info>hidden_threat_second_task_1_complete</give_info>
+				<next>5</next>
+			</phrase>
+			<phrase id="5"> <!-- Actor -->
+			    <precondition>dialogs_hidden_threat.precond_dialog_jurov_5</precondition>
+			    <text>st_sl_hidden_threat_dialog_jurov_5_1</text>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	<!-------------------- Сержант Горобец(Окраины Припяти) ---------------------------->
+	<dialog id="sl_hidden_threat_dialog_gorobez">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+		<has_info>hidden_threat_task_5_start</has_info>
+	    <dont_has_info>pri_a17_prisoner</dont_has_info>
+		<phrase_list>
+		    <phrase id="0"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_gorobez_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_gorobez_1_1</text>
+				<give_info>pri_a17_prisoner</give_info>
+				<action>dialogs.break_dialog</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	<!------------------------- Майор Эрнандес ----------------------------------------->
+	<dialog id="sl_hidden_threat_dialog_isg_leader_d1">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+		<dont_has_info>dialog_isg_leader_2_flag</dont_has_info>
+		<has_info>dialog_isg_leader_1_flag</has_info>
+		<phrase_list>
+		    <phrase id="0"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_isg_leader_d1_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_isg_leader_d1_1_1</text>
+				<give_info>dialog_isg_leader_2_flag</give_info>
+				<action>dialogs.break_dialog</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_isg_leader_d2">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+		<dont_has_info>dialog_isg_leader_3_flag</dont_has_info>
+		<has_info>dialog_isg_leader_2_flag</has_info>
+		<phrase_list>
+		    <phrase id="0"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_isg_leader_d2_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_isg_leader_d2_1_1</text>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_isg_leader_d2_2_1</text>
+				<next>3</next>
+			</phrase>
+			<phrase id="3"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_isg_leader_d2_3_1</text>
+				<next>4</next>
+			</phrase>
+			<phrase id="4"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_isg_leader_d2_4_1</text>
+				<next>5</next>
+			</phrase>
+			<phrase id="5"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_isg_leader_d2_5_1</text>
+				<give_info>dialog_isg_leader_3_flag</give_info>
+				<action>dialogs.break_dialog</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	<!----------------------- Лейтенант Годунов ---------------------------------------->
+	<dialog id="sl_hidden_threat_dialog_isg_agent_d1">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+		<dont_has_info>hidden_threat_task_5_stage_2</dont_has_info>
+		<has_info>pri_isg_guard_squad_death</has_info>
+		<phrase_list>
+		    <phrase id="0"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_isg_agent_d1_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_isg_agent_d1_1_1</text>
+				<give_info>hidden_threat_task_5_stage_2</give_info>
+				<action>dialogs.break_dialog</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	<!----------------- Рандомный командир отряда(Темная долина) ----------------------->
+	<dialog id="sl_hidden_threat_dialog_darkvalley_squad_leader">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+	    <has_info>hidden_threat_task_4_start</has_info>
+		<dont_has_info>val_1_2_army_combat</dont_has_info>
+		<precondition>dialogs_hidden_threat.precond_dialog_val_leader_squad_first</precondition>
+	    <phrase_list>
+		    <phrase id="0"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_val_leader_squad_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_val_leader_squad_1_1</text>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_val_leader_squad_2_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_val_leader_squad_2</action>
+				<next>3</next>
+			</phrase>
+			<phrase id="3"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_val_leader_squad_3_1</text>
+				<give_info>val_1_2_army_combat</give_info>
+				<action>dialogs.break_dialog</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	<!-------------------- Рандомный командир отряда(ЧАЭС) ----------------------------->
+	<dialog id="sl_hidden_threat_dialog_aes_leader_squad">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+		<dont_has_info>hidden_threat_task_6_stage_6</dont_has_info>
+		<has_info>hidden_threat_task_6_stage_5</has_info>
+		<phrase_list>
+		     <phrase id="0"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_aes_leader_squad_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_aes_leader_squad_1_1</text>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_aes_leader_squad_2_1</text>
+				<next>3</next>
+			</phrase>
+			<phrase id="3"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_aes_leader_squad_3_1</text>
+				<next>4</next>
+			</phrase>
+			<phrase id="4"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_aes_leader_squad_4_1</text>
+				<next>5</next>
+			</phrase>
+			<phrase id="5"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_aes_leader_squad_5_1</text>
+				<give_info>hidden_threat_task_6_stage_6</give_info>
+				<give_info>aes_companion_squad</give_info>
+				<action>dialogs_axr_companion.become_actor_companion</action>
+				<action>dialogs.break_dialog</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	<!------------------- Полковник Дегтярёв(Окраины Припяти) -------------------------->
+	<dialog id="sl_hidden_threat_dialog_degtyarev_d1">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+		<dont_has_info>hidden_threat_task_5_stage_5</dont_has_info>
+		<has_info>pri_b35_mercs_ht_isg_squad_death</has_info>
+		<phrase_list>
+		    <phrase id="0"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d1_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d1_1_1</text>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d1_2_1</text>
+				<next>3</next>
+			</phrase>
+			<phrase id="3"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d1_3_1</text>
+				<next>4</next>
+			</phrase>
+			<phrase id="4"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d1_4_1</text>
+				<next>5</next>
+			</phrase>
+			<phrase id="5"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d1_5_1</text>
+				<give_info>hidden_threat_task_5_stage_5</give_info>
+				<action>dialogs.break_dialog</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	<!----------------------- Полковник Дегтярёв(Агропром) ----------------------------->
+	<dialog id="sl_hidden_threat_dialog_degtyarev_d2">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+		<dont_has_info>hidden_threat_task_5_complete</dont_has_info>
+		<has_info>hidden_threat_task_5_stage_5</has_info>
+		<precondition>dialogs_hidden_threat.precond_dialog_degtyarev_d2_first</precondition>
+		<phrase_list>
+		    <phrase id="0"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d2_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d2_1_1</text>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d2_2_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_degtyarev_d2</action>
+				<give_info>hidden_threat_task_5_complete</give_info>
+				<next>3</next>
+			</phrase>
+			<phrase id="3"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d2_3_1</text>
+				<action>dialogs.break_dialog</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_degtyarev_d3">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+		<has_info>hidden_threat_task_5_complete</has_info>
+		<precondition>dialogs_hidden_threat.precond_dialog_degtyarev_d3_first</precondition>
+	    <phrase_list>
+		    <phrase id="0"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d3_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- NPC -->
+			    <script_text>dialogs_hidden_threat.get_phrase_dialog_all_2</script_text>
+				<next>2</next>
+				<next>3</next>
+				<next>4</next>
+				<next>9</next>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <dont_has_info>dialog_degtyarev_1_flag</dont_has_info>
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d3_2_1</text>
+				<next>5</next>
+			</phrase>
+			<phrase id="3"> <!-- Actor -->
+			    <dont_has_info>dialog_degtyarev_2_flag</dont_has_info>
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d3_3_1</text>
+				<next>6</next>
+			</phrase>
+			<phrase id="4"> <!-- Actor -->
+			    <dont_has_info>dialog_degtyarev_3_flag</dont_has_info>
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d3_4_1</text>
+				<next>7</next>
+			</phrase>
+			<phrase id="5"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d3_5_1</text>
+				<give_info>dialog_degtyarev_1_flag</give_info>
+				<next>8</next>
+			</phrase>
+			<phrase id="6"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d3_6_1</text>
+				<give_info>dialog_degtyarev_2_flag</give_info>
+				<next>8</next>
+			</phrase>
+			<phrase id="7"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d3_7_1</text>
+				<give_info>dialog_degtyarev_3_flag</give_info>
+				<next>8</next>
+			</phrase>
+			<phrase id="8"> <!-- Actor -->
+			    <script_text>dialogs_hidden_threat.get_phrase_dialog_all_1</script_text>
+				<next>1</next>
+			</phrase>
+			<phrase id="9"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_all_3_1</text>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_degtyarev_d4">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+		<dont_has_info>dialog_degtyarev_4_flag</dont_has_info>
+		<has_info>hidden_threat_task_6_start</has_info>
+		<phrase_list>
+		    <phrase id="0"> <!-- Actor -->
+			    <script_text>dialogs_hidden_threat.get_phrase_dialog_degtyarev_d4_first</script_text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d4_1_1</text>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d4_2_1</text>
+				<next>3</next>
+			</phrase>
+			<phrase id="3"> <!-- NPC -->
+			    <script_text>dialogs_hidden_threat.get_phrase_dialog_degtyarev_d4_3</script_text>
+				<next>4</next>
+				<next>5</next>
+			</phrase>
+			<phrase id="4"> <!-- Actor -->
+			    <dont_has_info>dialog_degtyarev_5_flag</dont_has_info>
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d4_4_1</text>
+				<next>6</next>
+			</phrase>
+			<phrase id="5"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d4_5_1</text>
+				<give_info>dialog_degtyarev_4_flag</give_info>
+				<action>dialogs_hidden_threat.postcond_dialog_degtyarev_d4_5</action>
+			</phrase>
+			<phrase id="6"> <!-- NPC -->
+			    <script_text>dialogs_hidden_threat.get_phrase_dialog_all_2</script_text>
+				<next>7</next>
+			</phrase>
+			<phrase id="7"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d4_7_1</text>
+				<next>8</next>
+			</phrase>
+			<phrase id="8"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d4_8_1</text>
+				<give_info>dialog_degtyarev_5_flag</give_info>
+				<next>9</next>
+			</phrase>
+			<phrase id="9"> <!-- Actor -->
+			    <script_text>dialogs_hidden_threat.get_phrase_dialog_all_1</script_text>
+				<next>3</next>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_degtyarev_d5">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+		<dont_has_info>hidden_threat_task_6_stage_5</dont_has_info>
+		<has_info>hidden_threat_task_6_stage_3</has_info>
+		<precondition>dialogs_hidden_threat.precond_dialog_degtyarev_d5_first</precondition>
+		<phrase_list>
+		    <phrase id="0"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d5_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d5_1_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_degtyarev_d5_1</action>
+				<give_info>hidden_threat_task_6_stage_5</give_info>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d5_2_1</text>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_degtyarev_d6">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+		<dont_has_info>hidden_threat_task_6_complete</dont_has_info>
+		<precondition>dialogs_hidden_threat.precond_dialog_degtyarev_d6_first</precondition>
+		<phrase_list>
+		    <phrase id="0"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d6_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d6_1_1</text>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_degtyarev_d6_2_1</text>
+				<give_info>hidden_threat_task_6_complete</give_info>
+				<action>dialogs.break_dialog</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	<!------------------------ Майор Верещагин(Агропром) ------------------------------->
+	<dialog id="sl_hidden_threat_dialog_vereshagin_d1">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+		<dont_has_info>hidden_threat_task_7_stage_2</dont_has_info>
+		<has_info>hidden_threat_task_7_stage_1</has_info>
+		<phrase_list>
+		    <phrase id="0"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_vereshagin_d1_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_vereshagin_d1_1_1</text>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_vereshagin_d1_2_1</text>
+				<next>3</next>
+			</phrase>
+			<phrase id="3"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_vereshagin_d1_3_1</text>
+				<give_info>hidden_threat_task_7_stage_2</give_info>
+				<action>dialogs.break_dialog</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_vereshagin_d2">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+		<dont_has_info>hidden_threat_complete</dont_has_info>
+		<precondition>dialogs_hidden_threat.precond_dialog_vereshagin_d2_first</precondition>
+		<phrase_list>
+		    <phrase id="0"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_vereshagin_d2_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_vereshagin_d2_1_1</text>
+				<action>dialogs_hidden_threat.postcond_dialog_vereshagin_d2_1</action>
+				<next>2</next>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_vereshagin_d2_2_1</text>
+				<give_info>hidden_threat_complete</give_info>
+				<action>dialogs.break_dialog</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	<!----------------------- Рандомный агент СБУ(Юпитер) ------------------------------>
+	<dialog id="sl_hidden_threat_dialog_jup_agent_d1">
+	    <dont_has_info>hidden_threat_disabled</dont_has_info>
+		<dont_has_info>hidden_threat_task_7_stage_3</dont_has_info>
+		<has_info>hidden_threat_task_7_stage_2</has_info>
+		<phrase_list>
+		    <phrase id="0"> <!-- NPC -->
+			    <text>st_sl_hidden_threat_dialog_jup_agent_d1_first_1</text>
+				<next>1</next>
+				<next>2</next>
+			</phrase>
+			<phrase id="1"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_jup_agent_d1_1_1</text>
+				<give_info>hidden_threat_task_7_stage_3</give_info>
+				<action>dialogs.break_dialog</action>
+			</phrase>
+			<phrase id="2"> <!-- Actor -->
+			    <text>st_sl_hidden_threat_dialog_jup_agent_d1_2_1</text>
+				<action>dialogs.break_dialog</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	<!---------------------------  Сущность(Монолог) ----------------------------------->
+	<dialog id="sl_hidden_threat_dialog_spirit_d1">
+	    <dont_has_info>ds2_domik_st_ht_cut_scene_2_flag</dont_has_info>
+		<has_info>ds2_domik_st_ht_cut_scene_1_flag</has_info>
+	    <phrase_list>
+		    <phrase id="0">
+			    <text>st_sl_hidden_threat_dialog_spirit_d1_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1">
+			    <text>st_sl_hidden_threat_dialog_spirit_d1_1_1</text>
+				<give_info>ds2_domik_st_ht_cut_scene_2_flag</give_info>
+				<action>dialogs.break_dialog</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	
+	<dialog id="sl_hidden_threat_dialog_spirit_d2">
+	    <dont_has_info>ds2_domik_st_ht_cut_scene_end</dont_has_info>
+		<has_info>ds2_domik_st_ht_cut_scene_3_flag</has_info>
+	    <phrase_list>
+		    <phrase id="0">
+			    <text>st_sl_hidden_threat_dialog_spirit_d2_first_1</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1">
+			    <text>st_sl_hidden_threat_dialog_spirit_d1_1_1</text>
+				<give_info>ds2_domik_st_ht_cut_scene_end</give_info>
+				<action>dialogs.break_dialog</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
+</game_dialogs>

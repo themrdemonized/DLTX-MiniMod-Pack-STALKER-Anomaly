@@ -1,0 +1,25 @@
+![logic]
+active = ph_door@locked
+
+[ph_door@locked_base]
+locked = true
+closed = true
+tip_open = tip_open_another_site
+snd_open_start = trader_door_locked
+on_info = {+pri_b304_doors_open} ph_door@close
+
+[ph_door@locked]:ph_door@locked_base
+on_use = ph_door@locked_tips %=add_cs_text(st_sl_hidden_threat_locked_door_tips)%
+
+[ph_door@locked_tips]:ph_door@locked_base
+on_timer = 3000 | ph_door@locked %=del_cs_text()%
+
+![ph_door@close]
+on_use = {-pri_b304_big_door_open} ph_door@open %+pri_b304_big_door_open%
+on_info = {+pri_b304_big_door_open} ph_door@open
+!on_info2
+
+![ph_door@open]
+on_use = {+pri_b304_big_door_open} ph_door@close %-pri_b304_big_door_open%
+on_info = {-pri_b304_big_door_open} ph_door@close
+

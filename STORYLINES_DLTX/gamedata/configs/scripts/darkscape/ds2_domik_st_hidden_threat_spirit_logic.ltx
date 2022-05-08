@@ -1,0 +1,74 @@
+[logic]
+active = remark@prestart
+
+[walker@base]
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+meet = no_meet
+
+[meet@base]
+close_anim = nil
+close_victim = nil
+far_anim = nil
+far_victim = nil
+close_distance = 0
+far_distance = 0
+close_snd_distance = 0
+use = {=dist_to_actor_le(30)} self, false
+allow_break = false
+meet_on_talking = false
+trade_enable = false
+
+[remark@prestart]:walker@base
+no_move = true
+no_rotate = true
+on_info = %=ht_npc_set_visual%
+on_info2 = {-ds2_domik_st_ht_cut_scene_1_flag} walker@start_1
+on_info3 = {+ds2_domik_st_ht_cut_scene_1_flag -ds2_domik_st_ht_cut_scene_2_flag} walker@monolog_1
+on_info4 = {+ds2_domik_st_ht_cut_scene_2_flag -ds2_domik_st_ht_cut_scene_3_flag} walker@start_2
+on_info5 = {+ds2_domik_st_ht_cut_scene_3_flag -ds2_domik_st_ht_cut_scene_end} walker@monolog_2
+
+[walker@start_1]:walker@base
+path_walk = ds2_domik_st_ht_cut_scene_1_walk
+path_look = ds2_domik_st_ht_cut_scene_1_look
+on_signal = cut_anim_end_1 | %+ds2_domik_st_ht_cut_scene_1_flag =teleport_npc(ds2_domik_st_ht_monolog_1_walk)% walker@timer_1
+
+[walker@timer_1]:walker@base
+path_walk = ds2_domik_st_ht_monolog_1_walk
+path_look = ds2_domik_st_ht_monolog_1_look
+on_timer = 3000 | walker@monolog_1
+
+[walker@monolog_1]:walker@base
+path_walk = ds2_domik_st_ht_monolog_1_walk
+path_look = ds2_domik_st_ht_monolog_1_look
+meet = meet@monolog_1
+on_info = {+ds2_domik_st_ht_cut_scene_2_flag} %=ht_remove_npc(hidden_threat_spirit)% nil
+
+[meet@monolog_1]:meet@base
+use = {=dist_to_actor_le(30) -ds2_domik_st_ht_cut_scene_2_flag} self, false
+meet_dialog = sl_hidden_threat_dialog_spirit_d1
+
+[walker@start_2]:walker@base
+path_walk = ds2_domik_st_ht_cut_scene_2_walk
+path_look = ds2_domik_st_ht_cut_scene_2_look
+on_signal = cut_anim_end_2 | %+ds2_domik_st_ht_cut_scene_3_flag =teleport_npc(ds2_domik_st_ht_monolog_2_walk)% walker@timer_2
+
+[walker@timer_2]:walker@base
+path_walk = ds2_domik_st_ht_monolog_2_walk
+path_look = ds2_domik_st_ht_monolog_2_look
+on_timer = 3000 | walker@monolog_2
+
+[walker@monolog_2]:walker@base
+path_walk = ds2_domik_st_ht_monolog_2_walk
+path_look = ds2_domik_st_ht_monolog_2_look
+meet = meet@monolog_2
+on_info = {+ds2_domik_st_ht_cut_scene_end} %=ht_remove_npc(hidden_threat_spirit)% nil
+
+[meet@monolog_2]:meet@base
+use = {=dist_to_actor_le(30) +ds2_domik_st_ht_cut_scene_3_flag -ds2_domik_st_ht_cut_scene_end} self, false
+meet_dialog = sl_hidden_threat_dialog_spirit_d2
+

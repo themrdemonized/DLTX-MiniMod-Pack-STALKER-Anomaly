@@ -1,0 +1,43 @@
+[logic@pri_b35_military_isg_sniper]
+active = camper@isg_sniper
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(pri_b35_military_isg_sniper_squad)} true
+
+[remark@base]
+no_move = true
+no_rotate = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+
+[camper@isg_sniper]
+path_walk = isg_sniper_walk
+path_look = isg_sniper_look
+def_state_moving = run
+def_state_standing = threat
+invulnerable = {=dist_to_actor_ge(50)} true, false
+combat_ignore_cond = {=dist_to_actor_ge(10)} true, false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+meet = no_meet
+on_info = {+pri_b35_mercs_fail_scene} remark@isg_sniper_fail_1
+
+[remark@isg_sniper_fail_1]:remark@base
+target = story | hidden_threat_degtyarev
+anim = threat
+on_timer = 4000 | remark@isg_sniper_fail_2
+
+[remark@isg_sniper_fail_2]:remark@base
+target = story | hidden_threat_degtyarev
+anim = threat_sniper_fire
+on_timer = 5000|  remark@isg_sniper_fail_3 %=kill_squad(pri_b35_mercs_ht_degtyarev_squad)%
+
+[remark@isg_sniper_fail_3]:remark@base
+target = nil
+anim = wait
+on_timer = 3000 | nil
+

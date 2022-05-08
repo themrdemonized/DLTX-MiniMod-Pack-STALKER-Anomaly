@@ -1,0 +1,194 @@
+[logic@pri_b35_ht_degtyarev]
+active = smartcover@degtyarev
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(pri_b35_mercs_ht_degtyarev_squad)} true
+
+[logic@pri_b35_ht_strelok]
+active = smartcover@strelok
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(pri_b35_mercs_ht_strelok_squad)} true
+
+[logic@pri_b35_ht_agent_1]
+active = smartcover@agent_1
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(pri_b35_mercs_ht_agents_sbu_squad)} true
+
+[logic@pri_b35_ht_agent_2]
+active = smartcover@agent_2
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(pri_b35_mercs_ht_agents_sbu_squad)} true
+
+[logic@pri_b35_ht_isg_1]
+active = smartcover@isg_1
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(pri_b35_mercs_ht_isg_squad)} true
+
+[logic@pri_b35_ht_isg_2]
+active = smartcover@isg_2
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(pri_b35_mercs_ht_isg_squad)} true
+
+[logic@pri_b35_ht_isg_3]
+active = smartcover@isg_3
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(pri_b35_mercs_ht_isg_squad)} true
+
+[logic@pri_b35_ht_isg_4]
+active = smartcover@isg_4
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(pri_b35_mercs_ht_isg_squad)} true
+
+[logic@pri_b35_ht_isg_5]
+active = smartcover@isg_5
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(pri_b35_mercs_ht_isg_squad)} true
+
+[logic@pri_b35_ht_isg_6]
+active = smartcover@isg_6
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(pri_b35_mercs_ht_isg_squad)} true
+
+[smartcover@base]
+cover_state = = default_behaviour
+use_in_combat = true
+use_camp = false
+invulnerable = {+pri_b35_military_isg_sniper_squad_death} false, {+pri_b35_mercs_fail_scene} false, true
+combat_ignore_cond = false
+combat_ignore_keep_when_attacked = false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+wounded = wounded
+meet = no_meet
+
+[remark@base]
+no_move = true
+no_rotate = true
+gather_items_enabled = false
+corpse_detection_enabled = false
+
+[wounded]
+hp_state = 0|wounded_heavy@help_heavy
+hp_state_see = 0|wounded_heavy@help_heavy
+hp_victim = 0|nil
+hp_fight = 0|false
+hp_cover = 0|false
+
+[smartcover@degtyarev]:smartcover@base
+cover_name = pripyat_smart_cover_0340
+loophole_name = crouch_front_right
+on_info = {+pri_b35_mercs_ht_isg_squad_death} walker@degtyarev
+
+[walker@degtyarev]
+path_walk = degtyarev_walk
+path_look = degtyarev_look
+gather_items_enabled = false
+corpse_detection_enabled = false
+invulnerable = {+hidden_threat_task_5_stage_5} true, false
+meet = meet@degtyarev
+on_actor_dist_le_nvis = 5 | remark@degtyarev
+on_info = {=actor_has_item(sl_ht_case_quest_task_5) =squad_exist(pri_b35_mercs_ht_degtyarev_squad)} %=remove_squad(pri_b35_mercs_ht_degtyarev_squad)% nil
+
+[remark@degtyarev]:remark@base
+target = story | actor
+meet = meet@degtyarev
+on_actor_dist_ge_nvis = 5 | walker@degtyarev
+
+[meet@degtyarev]
+close_anim = nil
+close_victim = nil
+far_anim = nil
+far_victim = nil
+close_distance = 0
+far_distance = 0
+close_snd_distance = 0
+abuse = false
+use = {+hidden_threat_task_5_stage_5} false, true
+meet_on_talking = false
+trade_enable = false
+allow_break = false
+meet_dialog = sl_hidden_threat_dialog_degtyarev_d1
+
+[smartcover@strelok]:smartcover@base
+cover_name = pripyat_smart_cover_0339
+loophole_name = crouch_front_right
+invulnerable = true
+on_info = {=actor_enemy} %=actor_neutral%
+on_info2 = {+pri_b35_mercs_ht_isg_squad_death} walker@strelok
+
+[walker@strelok]
+path_walk = envoy_1_walk
+path_look = envoy_1_look
+gather_items_enabled = false
+corpse_detection_enabled = false
+on_signal = path_end | remark@strelok
+
+[remark@strelok]:remark@base
+anim = sit_knee
+on_info = {=actor_has_item(sl_ht_case_quest_task_5) =squad_exist(pri_b35_mercs_ht_strelok_squad)} %=remove_squad(pri_b35_mercs_ht_strelok_squad)% nil
+
+[smartcover@agent_1]:smartcover@base
+cover_name = pripyat_smart_cover_0337
+loophole_name = stand_front_right
+on_info = {+pri_b35_mercs_fail_scene} nil
+on_info2 = {=actor_enemy} nil
+on_info3 = {+pri_b35_mercs_ht_isg_squad_death} walker@agent_1
+
+[walker@agent_1]:remark@base
+path_walk = walker_1_walk
+path_look = walker_1_look
+meet = default_meet
+
+[smartcover@agent_2]:smartcover@base
+cover_name = pripyat_smart_cover_0338
+loophole_name = stand_front_left
+on_info = {+pri_b35_mercs_fail_scene} nil
+on_info2 = {=actor_enemy} nil
+on_info3 = {+pri_b35_mercs_ht_isg_squad_death} walker@agent_2
+
+[walker@agent_2]:remark@base
+path_walk = walker_2_walk
+path_look = walker_2_look
+meet = default_meet
+on_info = {=actor_has_item(sl_ht_case_quest_task_5) =squad_exist(pri_b35_mercs_ht_agents_sbu_squad)} %=remove_squad(pri_b35_mercs_ht_agents_sbu_squad)% nil
+
+[smartcover@isg_1]:smartcover@base
+cover_name = pripyat_smart_cover_0054
+loophole_name = stand_front_left
+on_info = {+pri_b35_mercs_fail_scene} nil
+
+[smartcover@isg_2]:smartcover@base
+cover_name = pripyat_smart_cover_0053
+loophole_name = crouch_front
+on_info = {+pri_b35_military_isg_sniper_squad_death} nil
+
+[smartcover@isg_3]:smartcover@base
+cover_name = pripyat_smart_cover_0052
+loophole_name = crouch_front
+on_info = {+pri_b35_military_isg_sniper_squad_death} nil
+
+[smartcover@isg_4]:smartcover@base
+cover_name = pripyat_smart_cover_0050
+loophole_name = crouch_front
+on_info = {+pri_b35_military_isg_sniper_squad_death} nil
+
+[smartcover@isg_5]:smartcover@base
+cover_name = pripyat_smart_cover_0051
+loophole_name = crouch_front
+on_info = {+pri_b35_military_isg_sniper_squad_death} nil
+
+[smartcover@isg_6]:smartcover@base
+cover_name = pripyat_smart_cover_0048
+loophole_name = stand_front_right
+on_info = {+pri_b35_military_isg_sniper_squad_death} nil
+

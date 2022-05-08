@@ -1,0 +1,226 @@
+--[[
+
+    Storyline: Hidden Threat
+	Version:   1.0
+    Autor:     Longreed
+	Last Edit: 21/12/2021
+  
+  ]]--
+
+------------------------- Variables ---------------------------------------------
+local uptime = 5
+local cond_rank = 1000
+
+---------------------------------------------------------------------------------
+
+local function hidden_threat_update()
+
+    ResetTimeEvent("cycle","stht_update",uptime)
+
+    if not has_alife_info ("hidden_threat_disabled") then
+	   
+	    if not utils_slht.valid_faction_actor() then
+            db.actor:give_info_portion("hidden_threat_disabled")   
+	    end
+		
+		if utils_slht.debug_mode == true then cond_rank = 0 end
+		
+		if not has_alife_info ("hidden_threat_start") and 
+		   db.actor:character_rank() >= cond_rank then
+			
+			utils_slht.HTCreateNews("kuznetsov", "st_sl_hidden_threat_msg_start", 0, true, true)
+			db.actor:give_info_portion("hidden_threat_start")
+			
+		end
+	else
+	    RemoveTimeEvent("cycle","stht_update")
+	end
+	
+end
+
+local function actor_on_info_callback(actor,info,obj)
+    
+	if info == "hidden_threat_task_1_complete" then
+	    utils_slht.HTCreateTimeEvent("TimeEventTask3Msg",7200, hidden_threat.sl_hidden_threat_init_task_2)
+	elseif info == "hidden_threat_task_3_complete" then
+	    utils_slht.HTCreateTimeEvent("TimeEventTask4Msg",60, hidden_threat.sl_hidden_threat_init_task_4)
+	elseif info == "hidden_threat_task_4_stage_5" then
+	    utils_slht.HTCreateTimeEvent("TimeEventTask4Stg6Msg", 86400, hidden_threat.sl_hidden_threat_task_4_act_6_msg)
+	elseif info == "hidden_threat_task_4_complete" then
+	    utils_slht.HTCreateTimeEvent("TimeEventTask5Msg", 60, hidden_threat.sl_hidden_threat_init_task_5)
+	elseif info == "hidden_threat_task_5_complete" then
+	    utils_slht.HTCreateTimeEvent("TimeEventTask6Msg", 14400, hidden_threat.sl_hidden_threat_init_task_6)
+	elseif info == "hidden_threat_task_6_stage_2" then
+	    utils_slht.HTCreateTimeEvent("TimeEventTask6Stg2", 172800, hidden_threat.sl_hidden_threat_task_6_act_3)
+	elseif info == "hidden_threat_task_6_complete" then
+	    utils_slht.HTCreateTimeEvent("TimeEventTask7Msg", 10800, hidden_threat.sl_hidden_threat_init_task_7)
+	elseif info == "hidden_threat_complete" then
+	    
+		xr_effects.ht_run_postprocess(nil,nil,{"fade_in_out"})
+		    
+		if xr_conditions.squad_exist(nil,nil, {"agr_1_6_ht_vereshagin_squad"}) then
+        	xr_effects.remove_squad(nil,nil,{"agr_1_6_ht_vereshagin_squad"})
+        end	
+        db.actor:give_info_portion("hidden_threat_disabled")
+		
+	end
+	
+end
+
+------------------------------- Tasks ----------------------------------
+local msg
+
+--- Task 1 ---
+function sl_hidden_threat_task_1()
+    if not has_alife_info ("hidden_threat_task_1_start") then
+        task_manager.get_task_manager():give_task("sl_hidden_threat_task_1")
+		db.actor:give_info_portion("hidden_threat_task_1_start")
+	end
+end
+--- Task 2 ---
+function sl_hidden_threat_init_task_2()
+    
+	if has_alife_info("bar_deactivate_radar_done") then
+	    msg = "st_sl_hidden_threat_msg_task_3_start"
+	else
+	    msg = "st_sl_hidden_threat_msg_task_2_start"
+		utils_slht.HTCreateTimeEvent("TimeEventTask3",10, hidden_threat.sl_hidden_threat_task_2)
+	end
+	
+	utils_slht.HTCreateNews("kuznetsov", msg, 0, true, true)
+	db.actor:give_info_portion("hidden_threat_task_3_msg")
+	
+end
+
+function sl_hidden_threat_task_2()
+    if not has_alife_info ("hidden_threat_task_2_start") then
+        task_manager.get_task_manager():give_task("sl_hidden_threat_task_2")
+		db.actor:give_info_portion("hidden_threat_task_2_start")
+		utils_slht.create_reward("Task2Reward", "item_outfit_attach")
+	end
+end
+
+--- Task 3 ---
+function sl_hidden_threat_task_3()
+    if not has_alife_info ("hidden_threat_task_3_start") then
+        task_manager.get_task_manager():give_task("sl_hidden_threat_task_3")
+		db.actor:give_info_portion("hidden_threat_task_3_start")
+		utils_slht.create_reward("Task3Reward", "item_artifacts_container_2")
+	end
+end
+
+--- Task 4 ---
+function sl_hidden_threat_init_task_4()
+    
+	msg = "st_sl_hidden_threat_msg_task_4_start"
+    utils_slht.HTCreateNews("kirillov", msg, 0, true, true)
+	
+	utils_slht.HTCreateTimeEvent("TimeEventTask4",5, hidden_threat.sl_hidden_threat_task_4)
+	db.actor:give_info_portion("hidden_threat_task_4_msg")
+end
+
+function sl_hidden_threat_task_4()
+    if not has_alife_info ("hidden_threat_task_4_start") then
+        task_manager.get_task_manager():give_task("sl_hidden_threat_task_4")
+		db.actor:give_info_portion("hidden_threat_task_4_start")
+	end
+end
+
+function sl_hidden_threat_task_4_act_6_msg()
+    msg = "st_sl_hidden_threat_msg_task_4_stg_6_msg"
+	utils_slht.HTCreateNews("kirillov", msg, 0, true, true)
+	
+	utils_slht.HTCreateTimeEvent("TimeEventTask4",5, hidden_threat.sl_hidden_threat_task_4_act_6)
+	db.actor:give_info_portion("hidden_threat_task_4_stage_6_msg")
+end
+
+function sl_hidden_threat_task_4_act_6()
+    db.actor:give_info_portion("hidden_threat_task_4_stage_6")
+end
+
+--- Task 5 ---
+function sl_hidden_threat_init_task_5()
+    msg = "st_sl_hidden_threat_msg_task_5_start"
+	utils_slht.HTCreateNews("gorobez", msg, 0, true, true)
+	
+	utils_slht.HTCreateTimeEvent("TimeEventTask5",5, hidden_threat.sl_hidden_threat_task_5)
+	db.actor:give_info_portion("hidden_threat_task_5_msg")
+end
+
+function sl_hidden_threat_task_5()
+    if not has_alife_info ("hidden_threat_task_5_start") then
+        task_manager.get_task_manager():give_task("sl_hidden_threat_task_5")
+		db.actor:give_info_portion("hidden_threat_task_5_start")
+		utils_slht.create_reward("Task5Reward", "item_outfit_plate")
+	end
+end
+
+--- Task 6 ---
+function sl_hidden_threat_init_task_6()
+    msg = "st_sl_hidden_threat_msg_task_6_start"
+	utils_slht.HTCreateNews("degtyarev", msg, 0, true, true)
+	
+	utils_slht.HTCreateTimeEvent("TimeEventTask6",5, hidden_threat.sl_hidden_threat_task_6)
+	db.actor:give_info_portion("hidden_threat_task_6_msg")
+end
+
+function sl_hidden_threat_task_6()
+    if not has_alife_info ("hidden_threat_task_6_start") then
+        task_manager.get_task_manager():give_task("sl_hidden_threat_task_6")
+		db.actor:give_info_portion("hidden_threat_task_6_start")
+	end
+end
+
+function sl_hidden_threat_task_6_act_3()
+    db.actor:give_info_portion("hidden_threat_task_6_stage_3")
+end
+
+--- Task 7 ---
+function sl_hidden_threat_init_task_7()
+    msg = "st_sl_hidden_threat_msg_task_7_start"
+	utils_slht.HTCreateNews("kuznetsov", msg, 0, true, true)
+	
+	utils_slht.HTCreateTimeEvent("TimeEventTask7",5, hidden_threat.sl_hidden_threat_task_7)
+	db.actor:give_info_portion("hidden_threat_task_7_msg")
+end
+
+function sl_hidden_threat_task_7()
+    if not has_alife_info ("hidden_threat_task_7_start") then
+        task_manager.get_task_manager():give_task("sl_hidden_threat_task_7")
+		db.actor:give_info_portion("hidden_threat_task_7_start")
+	end
+end
+
+--- Second Task 1 ---
+function sl_hidden_threat_second_task_1(first_speaker, second_speaker)
+    dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "sl_ht_accounting_report", 1)
+	task_manager.get_task_manager():give_task("sl_hidden_threat_second_task_1")
+end
+
+--- Second Task 2 ---
+function sl_hidden_threat_second_task_2(first_speaker, second_speaker)
+	task_manager.get_task_manager():give_task("sl_hidden_threat_second_task_2")
+end
+
+------------------------------- Callbacks ----------------------------------
+
+local function actor_on_first_update()
+    if not utils_slht.valid_faction_actor() and not has_alife_info("hidden_threat_disabled") then
+	    db.actor:give_info_portion("hidden_threat_disabled")
+        printf("![SLHT] Storyline | Hidden Threat : disabled")
+    else
+	    if has_alife_info("hidden_threat_disabled") and
+		   not has_alife_info("hidden_threat_complete") then
+		    printf("![SLHT] Storyline | Hidden Threat : disabled")
+		else
+            printf("-[SLHT] Storyline | Hidden Threat : enabled")
+			CreateTimeEvent("cycle","stht_update", uptime, hidden_threat_update )
+        end			
+	end
+	
+end
+
+function on_game_start()
+    RegisterScriptCallback("actor_on_info_callback", actor_on_info_callback)
+	RegisterScriptCallback("actor_on_first_update", actor_on_first_update)
+end

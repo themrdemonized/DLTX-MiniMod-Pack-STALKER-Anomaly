@@ -1,0 +1,433 @@
+--[[
+
+    Storyline: Hidden Threat
+	Version:   1.0
+    Autor:     Longreed
+	Last Edit: 01/11/2021
+  
+  ]]--
+
+------------------------- Variables ---------------------------------------------
+local stage_status_f = {}
+local campfire_flag = nil
+------------------------- Функтор TARGET ----------------------------------------
+task_functor.hidden_threat_functor_target = function(task_id,field,p,tsk)
+	if not (tsk or tsk.stage) then return nil end
+	
+	local sec = tostring(task_id) .. "_" .. tostring(tsk.stage)
+	local target_task = utils_slht.task_table:r_string_ex(sec,"target") or ""
+	local target_type = utils_slht.task_table:r_string_ex(sec,"target_type") or ""
+	local targets_map_spot = {}
+	local str = utils_slht.task_table:r_string_ex(sec,"enemy_map_spot") or ""
+	if str ~= "" then targets_map_spot = str_explode(str,",") end
+	if (target_type == "smart") then
+        local smart = SIMBOARD.smarts_by_names[target_task]	
+   	    if smart then return smart and smart.id end
+	elseif (target_type == "squad") then
+        local squad = get_story_squad(target_task)
+        if squad then return squad and squad.id end
+	elseif (target_type == "item") then
+	    local item = get_story_se_item(target_task)
+		if item then return item.id end
+	elseif (target_type == "map_spot") then
+	    if targets_map_spot then utils_slht.set_enemy_map_spot(targets_map_spot) end
+	elseif (target_type == "restr") then
+	    local restr = get_story_se_object(target_task)
+		if restr then return restr and restr.id or nil end
+	end
+	
+	return nil
+end
+ 
+------------------------- Функтор TITLE/DESCR -----------------------------------
+task_functor.hidden_threat_functor_string = function(task_id,field,p,tsk)
+	if not (tsk) then return end
+	
+	local str, str_path
+	if (field == "title") then str_path = "_title"
+	elseif (field == "descr") then str_path = "_descr" end
+	
+	str = "st_" .. tostring(task_id) .. "_stage_" .. tostring(tsk.stage) .. str_path
+	
+	return game.translate_string(str) or ""
+end
+
+------------------------- Функтор STATUS ----------------------------------------
+task_status_functor.hidden_threat_functor_status = function(tsk,task_id)
+	if not (tsk) then return end
+	
+	local ret = stage_status_f[tsk.stage] and stage_status_f[tsk.stage](task_id) or tsk.stage
+	
+	if tonumber(ret) then 
+	    tsk.stage = ret
+	else 
+	    return ret 
+	end
+end
+--- Stage first ---
+stage_status_f[0] = function(task_id)
+    --- Task 1 ---
+    if (task_id == "sl_hidden_threat_task_1") then
+	    if has_alife_info ("hidden_threat_task_1_stage_1") then 
+		    xr_effects.create_squad(nil,nil,{"esc_survived_stalker_squad", "esc_smart_terrain_5_7"})
+		    return 1 
+		end
+	--- Task 3 ---
+    elseif (task_id == "sl_hidden_threat_task_3") then
+		if utils_slht.actor_in_smart("jup_b47", 10) then
+		    xr_effects.create_squad(nil,nil,{"jup_b8_army_dead_squad", "jup_b8_smart_terrain"})	
+			if xr_conditions.squad_exist(nil,nil, {"jup_b8_psy_dog_squad"}) then
+     		    xr_effects.kill_squad(nil,nil,{"jup_b8_psy_dog_squad"})
+	    	end
+		    return 1
+		end
+	--- Task 4 ---
+	elseif (task_id == "sl_hidden_threat_task_4") then
+	    if has_alife_info ("dialog_kirillov_1_flag") then 
+		    xr_effects.clear_smart_terrain(nil,nil,{"val_smart_terrain_1_2","true"})
+			xr_effects.create_squad(nil,nil,{"val_1_2_army_defense_squad", "val_smart_terrain_1_2"})
+		    return 1
+		end
+	--- Task 5 ---
+	elseif (task_id == "sl_hidden_threat_task_5") then
+	    if has_alife_info("pri_a17_prisoner") then return 1 end
+	--- Task 6 ---
+	elseif (task_id == "sl_hidden_threat_task_6") then
+	    if has_alife_info("dialog_degtyarev_4_flag") then 
+		    utils_slht.cit_spawn_ph_radio()
+			return 1 
+		end
+	--- Task 7 ---
+	elseif (task_id == "sl_hidden_threat_task_7") then
+	    if has_alife_info("hidden_threat_task_7_stage_1") then return 1 end
+    --- Second Task 2 ---
+	elseif (task_id == "sl_hidden_threat_second_task_2") then
+	    if db.actor:object("sl_ht_spooner_quest_package") then
+		    db.actor:give_info_portion("hidden_threat_second_task_2_box")
+			return 1
+		end
+	end
+    return 0
+end
+--- Stage 1 ---
+stage_status_f[1] = function(task_id)
+    --- Task 1 ---
+    if (task_id == "sl_hidden_threat_task_1") then
+	    if has_alife_info("hidden_threat_task_1_stage_3") then 
+		    xr_effects.clear_smart_terrain(nil,nil,{"ds2_domik_st","true"})
+		    return 3
+		elseif has_alife_info("esc_survived_stalker_squad_death") then 
+		    db.actor:give_info_portion("hidden_threat_task_1_stage_2")
+		    return 2
+		end
+	--- Task 3 ---
+    elseif (task_id == "sl_hidden_threat_task_3") then
+        if xr_conditions.actor_in_zone(db.actor,nil,{"jup_a9_cam_2"}) then
+		    if not xr_conditions.squad_exist(nil,nil, {"jup_b8_isg_attack_squad"}) then
+    		    xr_effects.create_squad(nil,nil,{"jup_b8_isg_attack_squad", "jup_b8_smart_terrain"})
+			end
+		end
+		if has_alife_info ("jup_b8_isg_attack_squad_death") then
+            return 2		
+		end
+	--- Task 4 ---
+	elseif (task_id == "sl_hidden_threat_task_4") then
+	    if has_alife_info ("val_1_2_army_combat") then
+		    utils_slht.val_1_2_attack_msg_sound()
+			xr_effects.clear_smart_terrain(nil,nil,{"val_smart_terrain_8_7","true"})
+			xr_effects.clear_smart_terrain(nil,nil,{"val_smart_terrain_9_6","true"})
+			xr_effects.create_squad(nil,nil,{"val_1_2_attack_isg_squad", "val_smart_terrain_1_2"})
+			return 2
+		end
+	--- Task 5 ---
+	elseif (task_id == "sl_hidden_threat_task_5") then
+	    if has_alife_info("hidden_threat_task_5_stage_2") then 
+    		xr_effects.clear_smart_terrain(nil,nil,{"pri_b35_military","true"})
+			xr_effects.clear_smart_terrain(nil,nil,{"pri_sim_5","true"})
+			xr_effects.clear_smart_terrain(nil,nil,{"pri_b305_dogs","true"})
+	    	xr_effects.create_squad(nil,nil,{"pri_b35_military_isg_sniper_squad", "pri_b35_military"})
+			xr_effects.create_squad(nil,nil,{"pri_b35_military_isg_guard_squad", "pri_b35_military"})
+	    	return 2 
+		end
+	--- Task 6 ---
+	elseif (task_id == "sl_hidden_threat_task_6") then
+	    if has_alife_info("hidden_threat_task_6_stage_2") then return 2 end
+	--- Task 7 ---
+	elseif (task_id == "sl_hidden_threat_task_7") then
+	    if has_alife_info("hidden_threat_task_7_stage_2") then
+		    xr_effects.clear_smart_terrain(nil,nil,{"pri_a15","true"})
+			xr_effects.clear_smart_terrain(nil,nil,{"jup_b208","true"})
+	    	xr_effects.create_squad(nil,nil,{"pri_a15_ht_sbu_squad", "pri_a15"})
+			xr_effects.create_squad(nil,nil,{"jup_b208_ht_sbu_squad", "jup_b208"})
+			xr_effects.create_squad(nil,nil,{"jup_b208_ht_sbu_agent_squad", "jup_b208"})
+			if not txr_routes.is_route_discovered("jup","jup_u") then
+			    txr_routes.open_route("jup","jup_u",true)
+			end
+			return 2
+		end
+	--- Second Task 2 ---
+	elseif (task_id == "sl_hidden_threat_second_task_2") then
+	    if has_alife_info("hidden_threat_second_task_2_box") and
+		   not db.actor:object("sl_ht_spooner_quest_package") then return 0 end
+	    if has_alife_info("hidden_threat_second_task_2_complete") then return "complete" end
+	end
+	return 1
+end
+--- Stage 2 ---
+stage_status_f[2] = function(task_id)
+    --- Task 1 ---
+    if (task_id == "sl_hidden_threat_task_1") then
+	    if has_alife_info("hidden_threat_task_1_stage_3") then 
+		    xr_effects.clear_smart_terrain(nil,nil,{"ds2_domik_st","true"})
+		    return 3
+		end
+	--- Task 3 ---
+	elseif (task_id == "sl_hidden_threat_task_3") then
+	    if db.actor:object("isg_patch") then return 3 end
+	--- Task 4 ---
+	elseif (task_id == "sl_hidden_threat_task_4") then
+	    if has_alife_info("val_1_2_attack_isg_squad_death") then return 3 end
+		if db.actor:object("sl_ht_pda_isg_leader") then return 4 end
+	--- Task 5 ---
+	elseif (task_id == "sl_hidden_threat_task_5") then
+        if utils_slht.actor_in_smart("pri_b35_military", 100) and 
+    	   not has_alife_info("pri_b35_mercs_spawn_scene") then
+            xr_effects.clear_smart_terrain(nil,nil,{"pri_b35_mercs","true"})
+	    	xr_effects.create_squad(nil,nil,{"pri_b35_mercs_ht_degtyarev_squad", "pri_b35_mercs"})
+			xr_effects.create_squad(nil,nil,{"pri_b35_mercs_ht_strelok_squad", "pri_b35_mercs"})
+			xr_effects.create_squad(nil,nil,{"pri_b35_mercs_ht_agents_sbu_squad", "pri_b35_mercs"})
+			xr_effects.create_squad(nil,nil,{"pri_b35_mercs_ht_isg_squad", "pri_b35_mercs"})
+			db.actor:give_info_portion("pri_b35_mercs_spawn_scene")
+		end
+		if has_alife_info("pri_b35_mercs_ht_degtyarev_squad_death") then
+		    return "fail"
+		end
+		if has_alife_info("pri_b35_military_isg_sniper_squad_death") then
+		    return 3
+		end
+	--- Task 6 ---
+	elseif (task_id == "sl_hidden_threat_task_6") then
+	    if has_alife_info("hidden_threat_task_6_stage_3") then return 3 end
+    --- Task 7 ---
+	elseif (task_id == "sl_hidden_threat_task_7") then
+        if has_alife_info("hidden_threat_task_7_stage_3") then
+		    xr_effects.ht_run_postprocess(nil,nil,{"fade_out"})
+			xr_effects.setup_companion_task(nil,nil,{"jup_ht_companion_army_squad","jup_b208"})
+			if xr_conditions.squad_exist(nil,nil, {"jup_b208_ht_sbu_agent_squad"}) then
+        	    xr_effects.remove_squad(nil,nil,{"jup_b208_ht_sbu_agent_squad"})
+        	end
+			return 3
+        end		
+	end
+	return 2
+end
+--- Stage 3 ---
+stage_status_f[3] = function(task_id)
+    --- Task 1 ---
+    if (task_id == "sl_hidden_threat_task_1") then
+	    if has_alife_info("ds2_domik_st_ht_cut_scene_start") then
+		    if xr_conditions.squad_exist(nil,nil, {"esc_survived_stalker_squad"}) then
+           	    xr_effects.remove_squad(nil,nil,{"esc_survived_stalker_squad"})
+        	end
+		    return 4
+		end
+	--- Task 3 ---
+	elseif (task_id == "sl_hidden_threat_task_3") then
+	    if not db.actor:object("isg_patch") then return 2 end
+	--- Task 4 ---
+	elseif (task_id == "sl_hidden_threat_task_4") then
+	    if db.actor:object("sl_ht_pda_isg_leader") then return 4 end
+	--- Task 5 ---
+	elseif (task_id == "sl_hidden_threat_task_5") then
+	    if has_alife_info("pri_b35_mercs_ht_isg_squad_death") then
+		    return 4
+		end
+		if has_alife_info("pri_b35_mercs_ht_degtyarev_squad_death") then
+    		return "fail" 
+		end
+	--- Task 6 ---
+	elseif (task_id == "sl_hidden_threat_task_6") then
+	    if db.actor:object("sl_ht_voice_recorder_task_6") then return 4 end
+	--- Task 7 ---
+	elseif (task_id == "sl_hidden_threat_task_7") then
+		if not has_alife_info("ht_jupiter_und_spawn_1") then
+		    xr_effects.clear_smart_terrain(nil,nil,{"pas_b400_fake","true"})
+			xr_effects.clear_smart_terrain(nil,nil,{"pas_b400_elevator","true"})
+			xr_effects.clear_smart_terrain(nil,nil,{"pas_b400_track","true"})
+        	xr_effects.create_squad(nil,nil,{"pas_b400_fake_isg_squad", "pas_b400_fake"})
+			xr_effects.create_squad(nil,nil,{"pas_b400_elevator_isg_squad", "pas_b400_elevator"})
+			xr_effects.create_squad(nil,nil,{"pas_b400_track_isg_squad", "pas_b400_track"})
+			db.actor:give_info_portion("ht_jupiter_und_spawn_1")
+        end	
+		if level.name() == "jupiter_underground" then return 4 end
+	end
+	return 3
+end
+--- Stage 4 ---
+stage_status_f[4] = function(task_id)
+    --- Task 1 ---
+	if (task_id == "sl_hidden_threat_task_1") then
+		if not has_alife_info ("ds2_domik_st_ht_cut_scene_end") then
+		    if has_alife_info("ds2_domik_st_ht_cut_scene_2_flag") and 
+		       not has_alife_info("ds2_domik_st_ht_cut_scene_3_flag") then
+	    	    utils_slht.map_spot_campfire("ds2_domik_st", true)
+			end
+		else
+			utils_slht.map_spot_campfire("ds2_domik_st", false)
+			return 5
+		end
+	--- Task 4 ---
+	elseif (task_id == "sl_hidden_threat_task_4") then
+	    if has_alife_info("hidden_threat_task_4_stage_5") then return 5 end
+	--- Task 5 ---
+	elseif (task_id == "sl_hidden_threat_task_5") then
+	    if has_alife_info("pri_b35_mercs_ht_degtyarev_squad_death") then
+    		return "fail" 
+		end
+		if has_alife_info("hidden_threat_task_5_stage_5") then
+		    utils_slht.pri_b304_spawn_agent_case()
+		    return 5
+		end
+	--- Task 6 ---
+	elseif (task_id == "sl_hidden_threat_task_6") then
+	    if has_alife_info("hidden_threat_task_6_stage_5") then
+		    xr_effects.ht_alife_release_object(nil,nil,{"cit_ht_ph_quest_radio"})
+            xr_effects.clear_smart_terrain(nil,nil,{"aes_smart_terran_soldier","true"})
+			xr_effects.clear_smart_terrain(nil,nil,{"aes_smart_terrain_monolit_blockpost4","true"})
+			xr_effects.create_squad(nil,nil,{"aes_sm_monolith_blokpost4_monolith_squad","aes_smart_terrain_monolit_blockpost4"})
+			xr_effects.create_squad(nil,nil,{"aes_sm_monolith_blokpost4_merck_squad","aes_smart_terrain_monolit_blockpost4"})
+	    	xr_effects.create_squad(nil,nil,{"aes_sm_soldier_army_squad", "aes_smart_terran_soldier"})
+			if not txr_routes.is_route_discovered("zat","aes1") then
+			    txr_routes.open_route("zat","aes1",true)
+			end
+			return 5
+		end
+	--- Task 7 ---
+	elseif (task_id == "sl_hidden_threat_task_7") then
+		if level.name() ~= "jupiter_underground" then return 3 end
+		if not has_alife_info("ht_jupiter_und_spawn_2") then
+		    if has_alife_info("pas_b400_fake_isg_squad_death") and
+			   has_alife_info("pas_b400_elevator_isg_squad_death") and
+			   has_alife_info("pas_b400_track_isg_squad_death") then
+			    xr_effects.clear_smart_terrain(nil,nil,{"pas_b400_downstairs","true"})
+				xr_effects.clear_smart_terrain(nil,nil,{"pas_b400_tunnel","true"})
+				xr_effects.clear_smart_terrain(nil,nil,{"pas_b400_hall","true"})
+				xr_effects.create_squad(nil,nil,{"pas_b400_tunnel_isg_squad", "pas_b400_tunnel"})
+				xr_effects.create_squad(nil,nil,{"pas_b400_hall_isg_squad", "pas_b400_hall"})
+				xr_effects.create_squad(nil,nil,{"pas_b400_hall_isg_leader_squad", "pas_b400_hall"})
+				db.actor:give_info_portion("ht_jupiter_und_spawn_2")
+			end
+		end
+		if not has_alife_info("jup_und_hall_sniper") then
+		    if has_alife_info("jup_und_hall_door") then
+			    xr_effects.create_squad(nil,nil,{"pas_b400_hall_isg_sniper_squad", "pas_b400_hall"})
+	    		db.actor:give_info_portion("jup_und_hall_sniper")
+			else
+			    if xr_conditions.actor_in_zone(db.actor,nil,{"pas_b400_sr_track_door_in"}) then
+                    db.actor:give_info_portion("jup_und_hall_door")
+                end
+			end
+		end
+		if has_alife_info("pas_b400_tunnel_isg_squad_death") and
+		   has_alife_info("pas_b400_hall_isg_squad_death") and
+		   has_alife_info("pas_b400_hall_isg_leader_squad_death") then
+		    xr_effects.ht_run_postprocess(nil,nil,{"fade_out"})
+		    if xr_conditions.squad_exist(nil,nil, {"jup_ht_companion_army_squad"}) then
+        	    xr_effects.remove_squad(nil,nil,{"jup_ht_companion_army_squad"})
+        	end
+			if xr_conditions.squad_exist(nil,nil, {"jup_b208_ht_sbu_squad"}) then
+        	    xr_effects.remove_squad(nil,nil,{"jup_b208_ht_sbu_squad"})
+        	end
+			if xr_conditions.squad_exist(nil,nil, {"pri_a15_ht_sbu_squad"}) then
+        	    xr_effects.remove_squad(nil,nil,{"pri_a15_ht_sbu_squad"})
+        	end
+			if xr_conditions.squad_exist(nil,nil, {"pas_b400_hall_isg_sniper_squad"}) then
+        	    xr_effects.remove_squad(nil,nil,{"pas_b400_hall_isg_sniper_squad"})
+        	end
+			return 5 
+		end
+	end
+	return 4
+end
+--- Stage 5 ---
+stage_status_f[5] = function(task_id)
+    --- Task 1 ---
+	if (task_id == "sl_hidden_threat_task_1") then
+        if has_alife_info ("hidden_threat_task_1_complete") then return "complete" end
+	--- Task 4 ---
+	elseif (task_id == "sl_hidden_threat_task_4") then
+	    if has_alife_info("hidden_threat_task_4_stage_6") then return 6 end
+	--- Task 5 ---
+	elseif (task_id == "sl_hidden_threat_task_5") then
+	    if db.actor:object("sl_ht_case_quest_task_5") then
+		    xr_effects.create_squad(nil,nil,{"agr_1_6_ht_degtyarev_squad", "agr_smart_terrain_1_6_near_2"})	
+		    return 6
+		end
+	--- Task 6 ---
+	elseif (task_id == "sl_hidden_threat_task_6") then
+        if has_alife_info("hidden_threat_task_6_stage_6") then
+		    xr_effects.clear_smart_terrain(nil,nil,{"aes2_monolith_camp1","true"})
+			xr_effects.clear_smart_terrain(nil,nil,{"aes2_monolith_camp2","true"})
+	    	xr_effects.create_squad(nil,nil,{"aes2_monolith_camp_1_isg_squad", "aes2_monolith_camp1"})
+	    	xr_effects.create_squad(nil,nil,{"aes2_monolith_camp_2_isg_squad", "aes2_monolith_camp2"})
+			if not txr_routes.is_route_discovered("aes1","aes2") then
+			    txr_routes.open_route("aes1","aes2",true)
+			end
+			return 6
+		end
+	end
+    return 5
+end
+--- Stage 6 ---
+stage_status_f[6] = function(task_id)
+    --- Task 4 ---
+	if (task_id == "sl_hidden_threat_task_4") then
+	    if has_alife_info("hidden_threat_task_4_stage_7") then return 7 end
+	--- Task 6 ---
+	elseif (task_id == "sl_hidden_threat_task_6") then
+        if level.name() == "l12_stancia_2" then 
+		    if xr_conditions.squad_exist(nil,nil, {"aes_sm_monolith_blokpost4_monolith_squad"}) then
+                xr_effects.remove_squad(nil,nil,{"aes_sm_monolith_blokpost4_monolith_squad"})
+            end
+			if xr_conditions.squad_exist(nil,nil, {"aes_sm_monolith_blokpost4_merck_squad"}) then
+                xr_effects.remove_squad(nil,nil,{"aes_sm_monolith_blokpost4_merck_squad"})
+            end
+			if campfire_flag == nil then
+			    utils_slht.turn_on_campfires_by_smart("aes2_monolith_camp1")
+				utils_slht.turn_on_campfires_by_smart("aes2_monolith_camp2")
+				campfire_flag = true
+			end
+		    return 7 
+		end
+		utils_slht.aes_companion_squad_in_level()
+	end
+    return 6
+end
+--- Stage 7 ---
+stage_status_f[7] = function(task_id)
+    --- Task 4 ---
+	if (task_id == "sl_hidden_threat_task_4") then
+	    if has_alife_info("hidden_threat_task_4_complete") then return "complete" end
+	--- Task 6 ---
+	elseif (task_id == "sl_hidden_threat_task_6") then
+	    if has_alife_info("aes2_monolith_camp_1_isg_squad_death") and
+		   has_alife_info("aes2_monolith_camp_2_isg_squad_death") then 
+		    if xr_conditions.squad_exist(nil,nil, {"aes_sm_soldier_army_squad"}) then
+			    xr_effects.ht_run_postprocess(nil,nil,{"fade_in_out"})
+                xr_effects.remove_squad(nil,nil,{"aes_sm_soldier_army_squad"})
+            end
+			return 8 
+		end
+		utils_slht.aes_companion_squad_in_level()
+	end
+    return 7
+end
+
+--- Stage 8 ---
+stage_status_f[8] = function(task_id)
+    --- Task 6 ---
+	if (task_id == "sl_hidden_threat_task_6") then
+        if has_alife_info("hidden_threat_task_6_complete") then return "complete" end
+	end
+    return 8
+end

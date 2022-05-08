@@ -1,0 +1,118 @@
+[sl_hidden_threat_task_1]
+icon = ui_iconsTotal_storyline
+prior = 195
+storyline = true
+title_functor = hidden_threat_functor_string
+descr_functor = hidden_threat_functor_string
+target_functor = hidden_threat_functor_target
+status_functor = hidden_threat_functor_status
+condlist_0 = {+hidden_threat_disabled} fail
+on_complete = %=reward_stash(true) =complete_task_inc_goodwill(40:army)%
+on_fail = {=squad_exist(esc_survived_stalker_squad)} %=remove_squad(esc_survived_stalker_squad)%
+
+[sl_hidden_threat_task_2]
+icon = ui_iconsTotal_storyline
+prior = 195
+storyline = true
+title = {-bar_deactivate_radar_done} st_sl_hidden_threat_task_2_stage_0_title, st_sl_hidden_threat_task_2_stage_1_title
+descr = {-bar_deactivate_radar_done} st_sl_hidden_threat_task_2_stage_0_descr, st_sl_hidden_threat_task_2_stage_1_descr
+target = {+bar_deactivate_radar_done} agr_smart_terrain_1_6_near_2_military_colonel_kovalski, rad_space_restrictor_to_bunker
+condlist_0 = {+hidden_threat_task_2_complete} complete
+condlist_1 = {+hidden_threat_disabled} fail
+on_complete = %=reward_money(25000) =reward_stash(true) =complete_task_inc_goodwill(40:army)%
+
+[sl_hidden_threat_task_3]
+icon = ui_iconsTotal_storyline
+prior = 195
+storyline = true
+title_functor = hidden_threat_functor_string
+descr_functor = hidden_threat_functor_string
+target_functor = hidden_threat_functor_target
+status_functor = hidden_threat_functor_status
+condlist_0 = {+hidden_threat_task_3_complete} complete
+condlist_1 = {+hidden_threat_disabled} fail
+on_complete = %=reward_money(7500) =reward_stash(true) =complete_task_inc_goodwill(40:army)%
+on_fail = {=squad_exist(jup_b8_isg_attack_squad)} %=remove_squad(jup_b8_isg_attack_squad)%
+
+[sl_hidden_threat_task_4]
+icon = ui_iconsTotal_storyline
+prior = 195
+storyline = true
+title_functor = hidden_threat_functor_string
+descr_functor = hidden_threat_functor_string
+target_functor = hidden_threat_functor_target
+status_functor = hidden_threat_functor_status
+condlist_0 = {+hidden_threat_task_4_complete} complete
+condlist_1 = {+hidden_threat_disabled} fail
+on_complete = %=reward_money(7500) =reward_stash(true) =complete_task_inc_goodwill(40:army)%
+on_fail = {=actor_has_item(sl_ht_pda_isg_leader)} %=remove_item(sl_ht_pda_isg_leader)%, {=actor_has_item(sl_ht_usb_quest_task_4)} %=remove_item(sl_ht_usb_quest_task_4)%, {=actor_has_item(sl_ht_walkie_talkie)} %=remove_item(sl_ht_walkie_talkie)%
+
+[sl_hidden_threat_task_5]
+icon = ui_iconsTotal_storyline
+prior = 195
+storyline = true
+on_init = %=clear_smart_terrain(pri_a17:true) =create_squad(pri_army_ser_gorobez_squad:pri_a17)%
+title_functor = hidden_threat_functor_string
+descr_functor = hidden_threat_functor_string
+target_functor = hidden_threat_functor_target
+status_functor = hidden_threat_functor_status
+condlist_0 = {+hidden_threat_task_5_complete} complete
+condlist_1 = {+hidden_threat_disabled} fail
+condlist_2 = {=is_squad_enemy_to_actor(pri_b35_mercs_ht_degtyarev_squad)} fail
+on_complete = %=reward_money(7500) =reward_stash(true) =complete_task_inc_goodwill(40:army)%
+on_fail = %=ht_fail_storyline_task_5%
+
+[sl_hidden_threat_task_6]
+icon = ui_iconsTotal_storyline
+prior = 195
+storyline = true
+title_functor = hidden_threat_functor_string
+descr_functor = hidden_threat_functor_string
+target_functor = hidden_threat_functor_target
+status_functor = hidden_threat_functor_status
+condlist_0 = {+hidden_threat_task_6_complete} complete
+condlist_1 = {+hidden_threat_disabled} fail
+on_complete = %=reward_item(military_exo_outfit) =reward_stash(true) =complete_task_inc_goodwill(40:army)%
+on_fail = %=ht_fail_storyline_task_6%
+
+[sl_hidden_threat_task_7]
+icon = ui_iconsTotal_storyline
+prior = 195
+storyline = true
+on_init = %=create_squad(agr_1_6_ht_vereshagin_squad:agr_smart_terrain_1_6_near_2)%
+title_functor = hidden_threat_functor_string
+descr_functor = hidden_threat_functor_string
+target_functor = hidden_threat_functor_target
+status_functor = hidden_threat_functor_status
+condlist_0 = {+hidden_threat_complete} complete
+condlist_1 = {+hidden_threat_disabled} fail
+on_complete = %=reward_money(7500) =reward_stash(true) =complete_task_inc_goodwill(40:army)%
+on_fail = %=ht_fail_storyline_task_7%
+
+[sl_hidden_threat_second_task_1]
+icon = ui_iconsTotal_storyline
+prior = 105
+storyline = false
+title = st_sl_hidden_threat_second_task_1_stage_0_title
+descr = st_sl_hidden_threat_second_task_1_stage_0_descr
+target = esc_3_16_military_trader
+condlist_0 = {+hidden_threat_second_task_1_complete} complete
+condlist_1 = {+hidden_threat_disabled} fail
+on_complete = %=complete_task_inc_goodwill(20:army)%
+on_fail = {=actor_has_item(sl_ht_accounting_report)} %=remove_item(sl_ht_accounting_report)%
+
+[sl_hidden_threat_second_task_2]
+icon = ui_iconsTotal_storyline
+prior = 105
+storyline = false
+on_init = %=ht_init_second_task_2%
+title_functor = hidden_threat_functor_string
+descr_functor = hidden_threat_functor_string
+target_functor = hidden_threat_functor_target
+status_functor = hidden_threat_functor_status
+condlist_0 = {+hidden_threat_second_task_2_complete} complete
+condlist_1 = {+hidden_threat_second_task_2_fail} fail
+condlist_2 = {+hidden_threat_disabled} fail
+on_complete = %=reward_money(2500) =complete_task_inc_goodwill(20:army) =ht_alife_release_object(agr_dead_courier)%
+on_fail = %=fail_task_dec_goodwill(10:army) =ht_alife_release_object(agr_dead_courier)%
+

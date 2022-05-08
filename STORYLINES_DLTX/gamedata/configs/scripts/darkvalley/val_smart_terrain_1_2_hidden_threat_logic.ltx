@@ -1,0 +1,105 @@
+[logic@val_smart_terrain_1_2_army_leader_squad]
+active = walker@leader
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(val_1_2_army_defense_squad) =is_squad_commander} true
+
+[logic@val_smart_terrain_1_2_isg_1]
+active = camper@isg_1
+prior = 200
+suitable = {=target_squad_name(val_1_2_attack_isg_squad) =is_squad_commander} true
+
+[logic@val_smart_terrain_1_2_isg_2]
+active = camper@isg_2
+prior = 200
+suitable = {=target_squad_name(val_1_2_attack_isg_squad) !is_squad_commander} true
+
+[logic@val_smart_terrain_1_2_isg_3]
+active = camper@isg_3
+prior = 200
+suitable = {=target_squad_name(val_1_2_attack_isg_squad) !is_squad_commander} true
+
+[logic@val_smart_terrain_1_2_isg_4]
+active = camper@isg_4
+prior = 200
+suitable = {=target_squad_name(val_1_2_attack_isg_squad) !is_squad_commander} true
+
+[logic@val_smart_terrain_1_2_isg_5]
+active = camper@isg_5
+prior = 200
+suitable = {=target_squad_name(val_1_2_attack_isg_squad) !is_squad_commander} true
+
+[logic@val_smart_terrain_1_2_isg_6]
+active = camper@isg_6
+prior = 200
+suitable = {=target_squad_name(val_1_2_attack_isg_squad) !is_squad_commander} true
+
+[walker@base]
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[camper@base]:walker@base
+radius = 1
+def_state_standing = hide
+invulnerable = true
+meet = no_meet
+on_timer = 5000 | camper@isg_attack
+
+[walker@leader]:walker@base
+path_walk = leader_walk
+path_look = leader_look
+def_state_moving1 = run
+def_state_standing = ward
+meet = meet@leader
+on_info = {+val_1_2_army_combat} nil
+
+[meet@leader]
+close_anim = nil
+close_victim = nil
+close_snd_hello = nil
+close_snd_bye = nil
+far_anim = nil
+far_victim = nil
+close_distance = 0
+far_distance = 0
+trade_enable = false
+allow_break = false
+use = {=actor_enemy} false, true
+meet_dialog = sl_hidden_threat_dialog_darkvalley_squad_leader
+
+[camper@isg_1]:camper@base
+path_walk = isg_1_walk
+path_look = isg_1_look
+on_info = {!npc_has_item(sl_ht_pda_isg_leader) -darkvalley_spawn_pda} %=give_items(sl_ht_pda_isg_leader) +darkvalley_spawn_pda%
+
+[camper@isg_2]:camper@base
+path_walk = isg_2_walk
+path_look = isg_2_look
+
+[camper@isg_3]:camper@base
+path_walk = isg_3_walk
+path_look = isg_3_look
+
+[camper@isg_4]:camper@base
+path_walk = isg_4_walk
+path_look = isg_4_look
+
+[camper@isg_5]:camper@base
+path_walk = isg_5_walk
+path_look = isg_5_look
+
+[camper@isg_6]:camper@base
+path_walk = isg_6_walk
+path_look = isg_6_look
+
+[camper@isg_attack]
+path_walk = attack_isg_patrol_walk
+radius = 15
+invulnerable = false
+gather_items_enabled = true
+help_wounded_enabled = true
+corpse_detection_enabled = false
+meet = no_meet
+on_signal = path_end | nil
+

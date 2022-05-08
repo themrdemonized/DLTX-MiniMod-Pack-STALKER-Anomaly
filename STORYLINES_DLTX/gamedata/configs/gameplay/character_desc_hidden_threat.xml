@@ -1,0 +1,319 @@
+﻿<?xml version='1.0' encoding="windows-1251"?>
+<!--
+    Storyline: Hidden Threat
+	Version:   1.0
+    Autor:     Longreed
+	Last Edit: 01/11/2021
+-->
+<xml>
+    <!----------------------- @@@ ---------------------------------->
+    <specific_character id="hidden_threat_spirit" team_default = "1">
+        <name>st_hidden_threat_spirit_name</name>
+        <icon>ui_inGame2_no_data</icon>
+        <map_icon x="1" y="0"></map_icon>
+        <bio>None.</bio>
+        <class>hidden_threat_spirit</class>
+        <community>trader</community>
+        <terrain_sect>stalker_terrain</terrain_sect>
+        <snd_config>characters_voice\human\stalker_2\</snd_config>
+        <rank>0</rank>
+        <reputation>0</reputation>
+        <visual>actors\stalker_osoznanie\stalker_osoznanie_1</visual>
+        <supplies>
+            [spawn] \n
+        </supplies>
+#include "gameplay\character_criticals.xml"
+    </specific_character>
+    <!------------------ Сержант Горобец ---------------------------->
+	<specific_character id="army_ser_gorobez" team_default = "1">
+        <name>st_hidden_threat_ser_gorobez_name</name>
+        <icon>ui_inGame2_Soldier_1</icon>  
+        <map_icon x="1" y="0"></map_icon>
+        <bio>None.</bio>
+        <class>army_ser_gorobez</class>
+        <community>army</community>
+        <terrain_sect>stalker_terrain</terrain_sect>
+        <snd_config>characters_voice\human\stalker_2\</snd_config>
+        <rank>1240</rank>
+        <reputation>350</reputation>
+        <visual>actors\stalker_soldier\stalker_soldier_1</visual>
+        <supplies>
+            [spawn] \n
+        </supplies>
+#include "gameplay\character_criticals.xml"
+    </specific_character>
+	<!--------------------- Майор Эрнандес ----------------------------->
+	<specific_character id="hidden_threat_isg_leader" team_default = "1">
+	    <name>st_hidden_threat_isg_leader_name</name>
+		<icon>ui_inGame2_Hernandez</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>None.</bio>
+		<class>hidden_threat_isg_leader</class>
+		<community>isg</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human\killer_1\</snd_config>
+		<rank>25000</rank>
+		<reputation>0</reputation>
+		<visual>actors\stalker_isg\stalker_isg_leader</visual>
+		<supplies>
+		    [spawn] \n
+    			wpn_aug_modern = 1 \n
+	    		ammo_5.56x45_ss190 = 1 \n
+	    		wpn_hpsa = 1 \n
+	    		ammo_9x19_fmj = 1 \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+	<!------------------ Лейтенант Годунов ----------------------------->
+	<specific_character id="hidden_threat_isg_agent" team_default = "1">
+	    <name>st_hidden_threat_isg_agent_name</name>
+		<icon>ui_inGame2_Soldier_4</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>None.</bio>
+		<class>hidden_threat_isg_agent</class>
+		<community>isg</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human\killer_3\</snd_config>
+		<rank>20000</rank>
+		<reputation>1550</reputation>
+		<visual>actors\stalker_isg\stalker_isg_military</visual>
+		<supplies>
+		    [spawn] \n
+	    		wpn_fnx45_custom = 1 \n
+	    		ammo_11.43x23_hydro = 1 \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+	<!------------ Cнайпер ИИГ(pri_b35_military) ----------------------->
+	<specific_character id="pri_b35_military_isg_sniper" team_default = "1">
+	    <name>GENERATE_NAME_senior_sergeant</name>
+		<icon>ui_inGame2_neutral_3</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>None.</bio>
+		<class>pri_b35_military_isg_sniper</class>
+		<community>isg</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human\killer_3\</snd_config>
+		<rank min="5000" max="10000" />
+		<reputation min="-1500" max="2100" />
+		<visual>actors\stalker_isg\stalker_isg_radiationsuit</visual>
+		<supplies>
+		    [spawn] \n
+	    		wpn_l96a1 = 1 \n
+	     		ammo_7.62x51_ap = 3 \n
+	    		wpn_hpsa = 1 \n
+	    		ammo_9x19_fmj = 1 \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+	<!------------ Cнайпер ИИГ(aes2_monolith_camp) ----------------------->
+	<specific_character id="aes2_mc_isg_sniper" team_default = "1">
+	    <name>GENERATE_NAME_lieutenant</name>
+		<icon>ui_inGame2_neutral_4</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>None.</bio>
+		<class>aes2_mc_isg_sniper</class>
+		<community>isg</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human\killer_3\</snd_config>
+		<rank min="10000" max="15000" />
+		<reputation min="-1500" max="2100" />
+		<visual>actors\stalker_isg\stalker_isg_exoskeleton</visual>
+		<supplies>
+		    [spawn_loadout] \n
+            	wpn_m24 = 1 \n
+				wpn_l96a1m = 1 \n
+				wpn_m98b = 1 \n
+				wpn_trg = 1 \n
+				wpn_vssk = 1 \n
+	        [spawn_loadout2] \n
+	            wpn_usp_match = 1 \n
+				wpn_glock = 1 \n
+				wpn_fnx45 = 1 \n
+				wpn_fnp45 = 1 \n
+				wpn_desert_eagle = 1 \n
+		    [spawn] \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+	<!------------------ Полковник Дегтярёв ---------------------------->
+	<specific_character id="hidden_threat_degtyarev" team_default = "1">
+	    <name>st_hidden_threat_degtyarev_name</name>
+		<icon>ui_inGame2_Hero</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>None.</bio>
+		<class>hidden_threat_degtyarev</class>
+		<community>army_npc</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human\military_1\</snd_config>
+		<rank>25000</rank>
+     	<reputation>1500</reputation>
+		<visual>actors\stalker_hero\army_degtyarev_military</visual>
+		<supplies>
+		    [spawn] \n
+	    		wpn_vintorez_nimble = 1 \n
+        		ammo_9x39_ap = 3 \n
+        		wpn_pm_actor = 1 \n
+        		ammo_9x18_fmj = 3 \n
+        		grenade_f1 = 2 \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+    <start_dialog>sl_hidden_threat_dialog_degtyarev_d2</start_dialog>
+	<actor_dialog>sl_hidden_threat_dialog_degtyarev_d3</actor_dialog>
+	<actor_dialog>sl_hidden_threat_dialog_degtyarev_d4</actor_dialog>
+	<actor_dialog>sl_hidden_threat_dialog_degtyarev_d5</actor_dialog>
+	<actor_dialog>sl_hidden_threat_dialog_degtyarev_d6</actor_dialog>
+	<actor_dialog>actor_break_dialog</actor_dialog>
+	</specific_character>
+	<!---------------------- Агент СБУ 1 ------------------------------->
+	<specific_character id="pri_b35_mercs_agent_sbu_1" team_default = "1">
+	    <name>GENERATE_NAME_senior_sergeant</name>
+		<icon>ui_inGame2_Soldier_3</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>None.</bio>
+		<class>pri_b35_mercs_agent_sbu_1</class>
+		<community>army_npc</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human\military_3\</snd_config>
+		<rank>7500</rank>
+     	<reputation>800</reputation>
+		<visual>actors\stalker_soldier\stalker_soldier_3</visual>
+		<supplies>
+		    [spawn_loadout] \n
+            	wpn_abakan_kobra = 1 \n
+	            wpn_aks74_new = 1 \n
+	            wpn_ak74m_camo = 1 \n
+	            wpn_aek971_kobra = 1 \n
+	            wpn_ak101_eot = 1 \n
+	            wpn_ak102_eot = 1 \n
+	            wpn_ak103_kobra = 1 \n
+	            wpn_ak104_kobra = 1 \n
+                wpn_ak105_kobra = 1 \n
+	            wpn_vepr_kobra = 1 \n
+	        [spawn_loadout2] \n
+	            wpn_gsh18 = 1 \n
+	            wpn_mp443 = 1 \n
+	            wpn_fort = 1 \n
+		    [spawn] \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+	<!---------------------- Агент СБУ 2 ------------------------------->
+	<specific_character id="pri_b35_mercs_agent_sbu_2" team_default = "1">
+	    <name>GENERATE_NAME_senior_sergeant</name>
+		<icon>ui_inGame2_Soldier_3</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>None.</bio>
+		<class>pri_b35_mercs_agent_sbu_2</class>
+		<community>army_npc</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human\military_1\</snd_config>
+		<rank>6900</rank>
+     	<reputation>300</reputation>
+		<visual>actors\stalker_soldier\stalker_soldier_3</visual>
+		<supplies>
+		    [spawn_loadout] \n
+            	wpn_groza = 1 \n
+           	    wpn_val_kobra = 1 \n
+        	    wpn_vepr_kobra = 1 \n
+    	    [spawn_loadout2] \n
+        	    wpn_gsh18 = 1 \n
+        	    wpn_mp443 = 1 \n
+    	        wpn_fort = 1 \n
+		    [spawn] \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+	<!------------------------ Стрелок --------------------------------->
+	<specific_character id="hidden_threat_strelok" team_default = "1">
+	    <name>st_hidden_threat_strelok_name</name>
+		<icon>ui_inGame2_strelok_ico</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>None.</bio>
+		<class>hidden_threat_strelok</class>
+		<community>stalker</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human\stalker_2\</snd_config>
+		<rank>35000</rank>
+     	<reputation>1500</reputation>
+		<visual>actors\stalker_neutral\stalker_neutral_strelok</visual>
+		<supplies>
+		    [spawn] \n
+	    		wpn_sig550_sniper = 1 \n
+                ammo_5.56x45_ap = 3 \n
+        		wpn_colt1911 = 1 \n
+                ammo_11.43x23_fmj = 1 \n           
+        		grenade_f1 = 1 \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+	<!-------------- Майор Верещагин(Агропром) ------------------------->
+	<specific_character id="agr_1_6_ht_vereshagin" team_default = "1">
+	    <name>st_agr_1_6_ht_vereshagin_name</name>
+		<icon>ui_npc_u_stalker_militari_1</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>None.</bio>
+		<class>agr_1_6_ht_vereshagin</class>
+		<community>army_npc</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human\military_3\</snd_config>
+		<rank>15000</rank>
+		<reputation>1250</reputation>
+		<visual>actors\stalker_soldier\stalker_soldier_4_skat</visual>
+		<supplies>
+		    [spawn] \n
+	    		wpn_ak12_ac10632 = 1, silencer = 1 \n
+                ammo_5.45x39_ap = 1 \n
+        		wpn_mp443 = 1 \n
+                ammo_9x19_ap = 1 \n           
+        		grenade_f1 = 1 \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+    <start_dialog>sl_hidden_threat_dialog_vereshagin_d1</start_dialog>
+	<actor_dialog>sl_hidden_threat_dialog_vereshagin_d2</actor_dialog>
+	<actor_dialog>actor_break_dialog</actor_dialog>
+	</specific_character>
+	<!------------ Штурмовик СБУ(Припять, Юпитер) ---------------------->
+	<specific_character id="pri_a15_ht_sbu_enforcer" team_default = "1">
+	    <name>GENERATE_NAME_captain</name>
+		<icon>ui_inGame2_nosorog</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>None.</bio>
+		<class>pri_a15_ht_sbu_enforcer</class>
+		<community>army_npc</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human\military_3\</snd_config>
+		<rank min="15000" max="20000" />
+     	<reputation min="0" max="1200" />
+		<visual>actors\stalker_soldier\stalker_soldier4nosorog</visual>
+		<supplies>
+		    [spawn] \n
+			    wpn_pkp = 1 \n
+                ammo_7.62x54_ap = 1 \n
+        		wpn_gsh18 = 1 \n
+                ammo_9x19_ap = 1 \n           
+        		grenade_f1 = 1 \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+	<!------------ Рандомный сотрудник СБУ(Юпитер) ----------------------->
+	<specific_character id="jup_b208_ht_sbu_agent" team_default = "1">
+	    <name>GENERATE_NAME_captain</name>
+		<icon>ui_npc_u_stalker_militari_1</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>None.</bio>
+		<class>jup_b208_ht_sbu_agent</class>
+		<community>army_npc</community>
+		<terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human\military_3\</snd_config>
+		<rank min="15000" max="20000" />
+     	<reputation min="0" max="1200" />
+		<visual>actors\stalker_soldier\stalker_soldier_4_skat</visual>
+		<supplies>
+		    [spawn] \n
+		</supplies>
+#include "gameplay\character_criticals.xml"
+	</specific_character>
+</xml>

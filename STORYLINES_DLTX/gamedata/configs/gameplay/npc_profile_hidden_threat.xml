@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding="UTF-8"?>
+<!--
+    Storyline: Hidden Threat
+	Version:   1.0
+    Autor:     Longreed
+	Last Edit: 30/10/2021
+-->
+<xml>
+	<character id="hidden_threat_spirit">
+		<class>hidden_threat_spirit</class>
+	</character>
+	<character id="army_ser_gorobez">
+		<class>army_ser_gorobez</class>
+	</character>
+	<character id="hidden_threat_isg_leader">
+		<class>hidden_threat_isg_leader</class>
+	</character>
+	<character id="hidden_threat_isg_agent">
+		<class>hidden_threat_isg_agent</class>
+	</character>
+	<character id="pri_b35_military_isg_sniper">
+		<class>pri_b35_military_isg_sniper</class>
+	</character>
+	<character id="hidden_threat_degtyarev">
+		<class>hidden_threat_degtyarev</class>
+	</character>
+	<character id="pri_b35_mercs_agent_sbu_1">
+		<class>pri_b35_mercs_agent_sbu_1</class>
+	</character>
+	<character id="pri_b35_mercs_agent_sbu_2">
+		<class>pri_b35_mercs_agent_sbu_2</class>
+	</character>
+	<character id="hidden_threat_strelok">
+		<class>hidden_threat_strelok</class>
+	</character>
+	<character id="aes2_mc_isg_sniper">
+		<class>aes2_mc_isg_sniper</class>
+	</character>
+	<character id="agr_1_6_ht_vereshagin">
+		<class>agr_1_6_ht_vereshagin</class>
+	</character>
+	<character id="pri_a15_ht_sbu_enforcer">
+		<class>pri_a15_ht_sbu_enforcer</class>
+	</character>
+	<character id="jup_b208_ht_sbu_agent">
+		<class>jup_b208_ht_sbu_agent</class>
+	</character>
+</xml>

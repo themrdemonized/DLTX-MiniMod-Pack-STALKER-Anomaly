@@ -1,0 +1,11 @@
+[logic]
+active = sr_idle@wait
+
+[sr_idle@wait]
+on_actor_inside = sr_idle@start
+
+[sr_idle@start]
+on_info = {!squad_exist(pri_b304_ht_burer_squad_1)} %=create_squad(pri_b304_ht_burer_squad_1:pri_b304_monsters_smart_terrain)%
+on_info2 = {!squad_exist(pri_b304_ht_burer_squad_2)} %=create_squad(pri_b304_ht_burer_squad_2:pri_b304_monsters_smart_terrain)%
+on_info3 = %+pri_b304_doors_open% nil
+

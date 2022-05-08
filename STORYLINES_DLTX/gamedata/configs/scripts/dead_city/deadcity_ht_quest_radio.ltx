@@ -1,0 +1,15 @@
+[logic]
+active = ph_idle@wait
+
+[ph_idle@wait]
+on_info = {=actor_has_item(sl_ht_voice_recorder_task_6) -hidden_threat_task_6_stage_2} ph_idle@wait_2
+on_info2 = {+hidden_threat_task_6_stage_3} ph_idle@wait_3
+
+[ph_idle@wait_2]
+tips = st_sl_hidden_threat_radio_tips_1
+on_use = %+hidden_threat_task_6_stage_2 =remove_item(sl_ht_voice_recorder_task_6)% ph_idle@wait
+
+[ph_idle@wait_3]
+tips = st_sl_hidden_threat_radio_tips_2
+on_use = %=actor_add_item(sl_ht_voice_recorder_task_6)% nil
+

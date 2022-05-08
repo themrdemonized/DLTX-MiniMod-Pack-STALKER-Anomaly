@@ -1,0 +1,83 @@
+[logic@aes_sm_soldier_army_1]
+active = walker@leader
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_soldier_army_squad) =is_squad_commander} true
+
+[logic@aes_sm_soldier_army_2]
+active = walker@army_2
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_soldier_army_squad) !is_squad_commander} true
+
+[logic@aes_sm_soldier_army_3]
+active = walker@army_3
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_soldier_army_squad) !is_squad_commander} true
+
+[logic@aes_sm_soldier_army_4]
+active = walker@army_4
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_soldier_army_squad) !is_squad_commander} true
+
+[logic@aes_sm_soldier_army_5]
+active = walker@army_5
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_soldier_army_squad) !is_squad_commander} true
+
+[logic@aes_sm_soldier_army_6]
+active = walker@army_6
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_soldier_army_squad) !is_squad_commander} true
+
+[walker@base]
+use_camp = false
+invulnerable = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+meet = no_meet
+on_info = {+hidden_threat_task_6_stage_6} nil
+
+[walker@leader]:walker@base
+path_walk = ht_commander_walk
+path_look = ht_commander_look
+meet = meet@leader
+
+[meet@leader]
+close_anim = nil
+close_victim = nil
+close_snd_hello = nil
+close_snd_bye = nil
+far_anim = nil
+far_victim = nil
+close_distance = 0
+far_distance = 0
+trade_enable = false
+allow_break = false
+use = {+hidden_threat_task_6_stage_6} false, true
+meet_dialog = sl_hidden_threat_dialog_aes_leader_squad
+
+[walker@army_2]:walker@base
+path_walk = walker_1_walk
+path_look = walker_1_look
+
+[walker@army_3]:walker@base
+path_walk = guard_3_walk
+
+[walker@army_4]:walker@base
+path_walk = guard_1_walk
+path_look = guard_1_look
+
+[walker@army_5]:walker@base
+path_walk = guard_5_walk
+path_look = guard_5_look
+
+[walker@army_6]:walker@base
+path_walk = camper_1_walk
+path_look = camper_1_look
+

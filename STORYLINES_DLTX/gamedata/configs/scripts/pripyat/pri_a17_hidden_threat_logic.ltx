@@ -1,0 +1,258 @@
+[logic@pri_a17_gorobez]
+active = walker@gorobez
+prior = 200
+suitable = {=target_squad_name(pri_army_ser_gorobez_squad)} true
+dont_keep_items = true
+can_select_weapon = false
+on_hit = hit@gorobez
+on_death = death@gorobez
+
+[logic@pri_a17_isg_leader]
+active = walker@isg_leader
+prior = 200
+suitable = {=target_squad_name(pri_isg_leader_squad)} true
+
+[logic@pri_a17_isg_guard_1]
+active = walker@isg_guard_1
+prior = 200
+suitable = {=target_squad_name(pri_isg_guard_squad)} true
+
+[logic@pri_a17_isg_guard_2]
+active = walker@isg_guard_2
+prior = 200
+suitable = {=target_squad_name(pri_isg_guard_squad)} true
+
+[logic@pri_a17_isg_agent]
+active = walker@isg_agent
+prior = 200
+suitable = {=target_squad_name(pri_isg_agent_squad)} true
+
+[walker@base]
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+
+[walker@base_isg_guard]:walker@base
+def_state_standing = threat
+meet = no_meet
+
+[remark@base]
+no_move = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+
+[meet@base]
+close_anim = nil
+close_victim = nil
+close_snd_hello = nil
+close_snd_bye = nil
+far_anim = nil
+far_victim = nil
+close_distance = 0
+far_distance = 0
+trade_enable = false
+allow_break = false
+
+[walker@gorobez]:remark@base
+path_walk = gorobez_walk
+path_look = gorobez_look
+on_signal = path_end | remark@gorobez_1
+
+[remark@gorobez_1]:remark@base
+anim = ward_noweap
+target = path | pri_a17_gorobez_idle_look,0
+invulnerable = true
+meet = meet@gorobez
+on_info = {+pri_a17_prisoner} remark@gorobez_2
+
+[remark@gorobez_2]:remark@base
+anim = hands_up
+target = path | pri_b301_home_1,0
+invulnerable = false
+meet = meet@gorobez
+on_info = {+dialog_isg_leader_2_flag} remark@gorobez_3
+
+[remark@gorobez_3]:remark@base
+anim = hands_up
+target = path | pri_b301_home_1,0
+invulnerable = false
+meet = meet@gorobez
+on_hit = hit@gorobez
+
+[meet@gorobez]:meet@base
+use = {-pri_a17_prisoner} true, false
+meet_dialog = sl_hidden_threat_dialog_gorobez
+
+[hit@gorobez]
+on_info = {=squad_exist(pri_army_ser_gorobez_squad)} %=kill_squad(pri_army_ser_gorobez_squad)%
+
+[death@gorobez]
+on_info = {-dialog_isg_leader_2_flag} %+hidden_threat_disabled% nil
+
+[walker@isg_leader]
+path_walk = isg_leader_walk
+path_look = isg_leader_look
+on_signal = path_end | remark@isg_leader_1
+
+[remark@isg_leader_1]:remark@base
+anim = ward_noweap_short
+target = story | actor
+meet = meet@isg_leader_1
+on_info = {+dialog_isg_leader_2_flag} remark@isg_leader_2
+
+[remark@isg_leader_2]:remark@base
+anim = ward_noweap_short
+target = story | army_ser_gorobez
+meet = no_meet
+on_timer = 3000 | remark@isg_leader_3
+
+[remark@isg_leader_3]:remark@base
+anim = ward_noweap_short
+target = story | actor
+meet = no_meet
+on_timer = 3000 | remark@isg_leader_4 %=enable_imput(true)%
+
+[remark@isg_leader_4]:remark@base
+anim = ward_noweap_short
+target = story | actor
+meet = meet@isg_leader_2
+on_info = {+dialog_isg_leader_3_flag} walker@isg_leader_end %=disable_ui%
+
+[walker@isg_leader_end]:walker@base
+path_walk = isg_leader_end_walk
+def_state_moving1 = walk_noweap
+on_signal = path_end | {=squad_exist(pri_isg_leader_squad)} %=remove_squad(pri_isg_leader_squad)%
+
+[meet@isg_leader_1]:meet@base
+use = {+dialog_isg_leader_1_flag -dialog_isg_leader_2_flag} self, false
+meet_dialog = sl_hidden_threat_dialog_isg_leader_d1
+
+[meet@isg_leader_2]:meet@base
+use = {+dialog_isg_leader_2_flag -dialog_isg_leader_3_flag} self, false
+meet_dialog = sl_hidden_threat_dialog_isg_leader_d2
+
+[walker@isg_guard_1]:walker@base_isg_guard
+path_walk = isg_guard_1_walk
+path_look = isg_guard_1_look
+on_signal = path_end | remark@isg_guard_1_1
+
+[remark@isg_guard_1_1]:remark@base
+anim = threat
+target = story | army_ser_gorobez
+meet = no_meet
+on_info = {+dialog_isg_leader_2_flag} remark@isg_guard_1_2
+
+[remark@isg_guard_1_2]:remark@base
+anim = threat
+target = story | army_ser_gorobez
+meet = no_meet
+on_timer = 3500 | remark@isg_guard_1_3
+
+[remark@isg_guard_1_3]:remark@base
+anim = threat_sniper_fire
+target = story | army_ser_gorobez
+meet = no_meet
+on_info = %=ht_hit_obj_on_job(pri_a17:pri_a17_gorobez)%
+on_timer = 1000 | walker@isg_guard_1_4
+
+[walker@isg_guard_1_4]:walker@base_isg_guard
+path_walk = isg_guard_1_1_walk
+path_look = isg_guard_1_1_look
+on_signal = path_end | remark@isg_guard_1_5
+
+[remark@isg_guard_1_5]:remark@base
+anim = threat
+target = story | actor
+meet = no_meet
+on_info = {+dialog_isg_leader_3_flag} remark@isg_guard_1_6
+
+[remark@isg_guard_1_6]:remark@base
+anim = threat
+target = story | actor
+meet = no_meet
+on_timer = 3000 | walker@isg_guard_1_7
+
+[walker@isg_guard_1_7]:walker@base_isg_guard
+path_walk = player_walk
+def_state_moving1 = walk_noweap
+on_actor_dist_le_nvis = 2 | remark@isg_guard_1_8
+
+[remark@isg_guard_1_8]:remark@base
+anim = punch
+target = story | actor
+meet = no_meet
+on_timer = 700 | {-pri_a17_punch_play_sound} %=play_sound(pri_actor_punch_sound) +pri_a17_punch_play_sound% walker@isg_guard_1_9
+
+[walker@isg_guard_1_9]:walker@base_isg_guard
+path_walk = isg_guard_1_1_walk
+path_look = isg_guard_1_1_look
+on_signal = path_end | remark@isg_guard_1_10
+on_info = %=disable_ui%
+
+[remark@isg_guard_1_10]:remark@base
+anim = threat
+target = story | actor
+meet = no_meet
+
+[walker@isg_guard_2]:walker@base_isg_guard
+path_walk = isg_guard_2_walk
+path_look = isg_guard_2_look
+
+[walker@isg_agent]:walker@base
+path_walk = isg_agent_walk
+path_look = isg_agent_look
+on_info = %=actor_neutral%
+on_timer = 3000 | walker@agent_1
+
+[walker@agent_1]:walker@base
+path_walk = isg_agent_start_walk
+def_state_standing = threat
+on_signal = path_end | remark@agent_2
+
+[remark@agent_2]:walker@base
+target = job | logic@pri_a17_isg_guard_2, pri_a17
+anim = threat_sniper_fire
+meet = no_meet
+on_info = %=ht_hit_obj_on_job(pri_a17:pri_a17_isg_guard_2)%
+on_timer = 1000 | remark@agent_3
+
+[remark@agent_3]:walker@base
+target = job | logic@pri_a17_isg_guard_1, pri_a17
+anim = threat_sniper_fire
+meet = no_meet
+on_info = %=ht_hit_obj_on_job(pri_a17:pri_a17_isg_guard_1)%
+on_timer = 1000 | walker@agent_4
+
+[walker@agent_4]:walker@base
+path_walk = isg_leader_walk
+path_look = isg_leader_look
+meet = no_meet
+on_signal = path_end | remark@agent_5
+
+[remark@agent_5]:remark@base
+anim = wait_na
+target = story | actor
+meet = no_meet
+on_timer = 1000 | remark@agent_6 %=enable_imput(true)%
+
+[remark@agent_6]:remark@base
+anim = wait_na
+target = story | actor
+meet = meet@agent
+on_info = {+hidden_threat_task_5_stage_2} walker@agent_7
+
+[walker@agent_7]:walker@base
+path_walk = isg_leader_end_walk
+def_state_moving1 = sprint
+meet = no_meet
+on_signal = path_end | {=squad_exist(pri_isg_agent_squad)} %=remove_squad(pri_isg_agent_squad)%
+
+[meet@agent]:meet@base
+use = {+pri_isg_guard_squad_death -hidden_threat_task_5_stage_2} self, false
+meet_dialog = sl_hidden_threat_dialog_isg_agent_d1
+

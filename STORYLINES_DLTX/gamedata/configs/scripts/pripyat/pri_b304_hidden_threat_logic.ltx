@@ -1,0 +1,23 @@
+[logic@pri_b304_ht_burer_1]
+active = mob_home@squad_1
+prior = 299
+monster_job = true
+suitable = {=target_squad_name(pri_b304_ht_burer_squad_1)} true
+
+[logic@pri_b304_ht_burer_2]
+active = mob_home@squad_2
+prior = 299
+monster_job = true
+suitable = {=target_squad_name(pri_b304_ht_burer_squad_2)} true
+
+[mob_home@base]
+home_min_radius = 3
+home_max_radius = 3
+aggressive = true
+
+[mob_home@squad_1]:mob_home@base
+path_home = spawn_2
+
+[mob_home@squad_2]:mob_home@base
+path_home = spawn_6
+

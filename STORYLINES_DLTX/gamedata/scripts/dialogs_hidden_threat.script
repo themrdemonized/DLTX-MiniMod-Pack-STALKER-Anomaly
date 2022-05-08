@@ -1,0 +1,460 @@
+--[[
+
+    Storyline: Hidden Threat
+	Version:   1.0
+    Autor:     Longreed
+	Last Edit: 06/12/2021
+  
+  ]]--
+
+------------------------- Полковник Кузнецов ---------------------------
+--- D1 Phrase first ---
+function get_phrase_dialog_kuznetsov_d1_first(first_speaker, second_speaker)
+    if not has_alife_info ("dialog_kuznetsov_first_flag") then
+    	local phrase = game.translate_string("st_sl_hidden_threat_dialog_kuznetsov_d1_first_1")
+    	return strformat(phrase, utils_slht.actor_name())
+    end
+	return game.translate_string("st_sl_hidden_threat_dialog_kuznetsov_d1_2_1")
+end
+--- D1 Phrase 1 ---
+function get_phrase_dialog_kuznetsov_d1_1(first_speaker, second_speaker)
+    local phrase = game.translate_string("st_sl_hidden_threat_dialog_kuznetsov_d1_1_1")
+	if not has_alife_info ("dialog_kuznetsov_7_flag") then
+	    local path = game.translate_string("st_sl_hidden_threat_dialog_kuznetsov_d1_1_0")
+		phrase = path .. " " .. phrase
+	end
+	return phrase or "Error! Phrase 1: none"
+end
+
+--- D1 Phrase 7 ---
+function precond_dialog_kuznetsov_d1_7(first_speaker, second_speaker)
+    if has_alife_info ("dialog_kuznetsov_4_flag") or
+	   has_alife_info ("dialog_kuznetsov_5_flag") or
+	   has_alife_info ("dialog_kuznetsov_6_flag") then return true end
+	return false
+end
+
+ --- D4 Phrase first ---
+function get_phrase_dialog_kuznetsov_d4_first(first_speaker, second_speaker)
+    if has_alife_info ("hidden_threat_task_2_start") and 
+	   not has_alife_info ("hidden_threat_task_2_complete") then
+        return game.translate_string("st_sl_hidden_threat_dialog_kuznetsov_d4_first_1")	
+	end
+	return game.translate_string("st_sl_hidden_threat_dialog_kuznetsov_d4_first_2")
+end
+
+--- D4 Phrase 1 ---
+function postcond_dialog_kuznetsov_d4_1(first_speaker, second_speaker)
+	if utils_slht.reward_table and utils_slht.reward_table["Task2Reward"] then
+	    dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, utils_slht.reward_table["Task2Reward"], 1)
+	end
+end
+
+--- D4 Phrase 2 ---
+function precond_dialog_kuznetsov_d4_2(first_speaker, second_speaker)
+    if has_alife_info ("hidden_threat_task_2_start") and
+	   not has_alife_info ("hidden_threat_task_2_complete") then
+	    return false
+	end
+	return true
+end
+
+--- D5 Phrase first ---
+function precond_dialog_kuznetsov_d5_first(first_speaker, second_speaker)
+    if db.actor:object("isg_patch") then return true end
+    return false
+end
+
+--- D5 Phrase 2 ---
+function postcond_dialog_kuznetsov_d5_2(first_speaker, second_speaker)
+    if db.actor:object("isg_patch") then
+		xr_effects.remove_item(first_speaker, second_speaker,{"isg_patch"})
+	end
+end
+
+--- D5 Phrase 3 ---
+function postcond_dialog_kuznetsov_d5_3(first_speaker, second_speaker)
+	if utils_slht.reward_table and utils_slht.reward_table["Task3Reward"] then
+	    dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, utils_slht.reward_table["Task3Reward"], 1)
+	end
+end
+
+--- D6 Phrase first ---
+function precond_dialog_kuznetsov_d6_first(first_speaker, second_speaker)
+    if db.actor:object("sl_ht_usb_quest_task_4") then return true end
+	return false
+end
+
+--- D6 Phrase 1 ---
+function postcond_dialog_kuznetsov_d6_1(first_speaker, second_speaker)
+    if db.actor:object("sl_ht_usb_quest_task_4") then
+        xr_effects.remove_item(first_speaker, second_speaker,{"sl_ht_usb_quest_task_4"})		
+	end
+end
+
+-------------------------- Выживший сталкер ----------------------------
+--- Phrase 2 ---
+function get_phrase_dialog_survived_2(first_speaker, second_speaker)
+    if has_alife_info ("hidden_threat_second_task_1_complete") then
+	    return game.translate_string("st_sl_hidden_threat_dialog_survived_2_2")
+	end
+	return game.translate_string("st_sl_hidden_threat_dialog_survived_2_1")
+end
+
+--- Phrase 3 ---
+function get_phrase_dialog_survived_3(first_speaker, second_speaker)
+    if has_alife_info ("hidden_threat_second_task_1_complete") then
+	    return game.translate_string("st_sl_hidden_threat_dialog_survived_3_2")
+	end
+	return game.translate_string("st_sl_hidden_threat_dialog_survived_3_1")
+end
+
+-------------------------- Лейтенант Ложкин ----------------------------
+--- D1 Phrase first ---
+function postcond_dialog_spooner_d1_first(first_speaker, second_speaker)
+	local descr = game.translate_string("st_sl_hidden_threat_second_task_1_stage_0_title")
+	local icon = "ui_iconsTotal_storyline"
+	db.actor:give_talk_message2(descr, "", icon, "iconed_answer_item")
+end
+
+--- D2 Phrase first ---
+function get_phrase_dialog_spooner_d2_first(first_speaker, second_speaker)
+    if has_alife_info ("dialog_spooner_outfit_flag") then
+	    return game.translate_string("st_sl_hidden_threat_dialog_spooner_d2_first_2")
+	end
+	return game.translate_string("st_sl_hidden_threat_dialog_spooner_d2_first_1")
+end
+
+--- D2 Phrase 1 ---
+function get_phrase_dialog_spooner_d2_1(first_speaker, second_speaker)
+    local phrase = game.translate_string("st_sl_hidden_threat_dialog_spooner_d2_1_1")
+    return strformat(phrase, utils_slht.actor_name()) or "Error! Phrase 1: none"
+end
+
+function postcond_dialog_spooner_d2_1(first_speaker, second_speaker)
+    dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "helm_tactic", 1)
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "specops_outfit", 1)
+end
+
+--- D2 Phrase 3 ---
+function postcond_dialog_spooner_d2_3(first_speaker, second_speaker)
+    local descr = game.translate_string("st_sl_hidden_threat_second_task_2_stage_0_title")
+	local icon = "ui_iconsTotal_storyline"
+	db.actor:give_talk_message2(descr, "", icon, "iconed_answer_item")
+end
+
+--- D3 Phrase first ---
+function precond_dialog_spooner_d3_first(first_speaker, second_speaker)
+    if db.actor:object("sl_ht_spooner_quest_package") or 
+	   has_alife_info ("hidden_threat_second_task_2_complete") then
+	    return true
+	end
+	return false
+end
+
+function get_phrase_dialog_spooner_d3_first(first_speaker, second_speaker)
+    if has_alife_info ("hidden_threat_second_task_2_complete") then
+	    return game.translate_string("st_sl_hidden_threat_dialog_spooner_d3_first_2")
+	end
+	return game.translate_string("st_sl_hidden_threat_dialog_spooner_d3_first_1")
+end
+
+--- D3 Phrase 1 ---
+function postcond_dialog_spooner_d3_1(first_speaker, second_speaker)
+    if db.actor:object("sl_ht_spooner_quest_package") then
+		xr_effects.remove_item(first_speaker, second_speaker,{"sl_ht_spooner_quest_package"})
+		db.actor:give_info_portion ("hidden_threat_second_task_2_complete")
+	end
+end
+
+--- D3 Phrase 3 ---
+function postcond_dialog_spooner_d3_3(first_speaker, second_speaker)
+    local title = game.translate_string("st_sl_hidden_threat_spooner_notes_title")
+    local descr = game.translate_string("st_sl_hidden_threat_spooner_notes_descr")
+	local icon = "ui_icon_news_trx_common"
+	db.actor:give_talk_message2(title, descr, icon, "iconed_answer_item")
+	SendScriptCallback("actor_on_interaction", "notes", nil, "note_from_spooner")
+end
+
+--- D4 Phrase first ---
+function precond_dialog_spooner_d4_first(first_speaker, second_speaker)
+	return utils_slht.check_ammo_with_actor("ammo_all")
+end
+
+--- D4 Phrase 2 ---
+function precond_dialog_spooner_d4_2(first_speaker, second_speaker)
+    return utils_slht.check_ammo_with_actor("ammo_1")
+end
+
+function postcond_dialog_spooner_d4_2(first_speaker, second_speaker)
+    utils_slht.exchange_ammo_with_actor(first_speaker, second_speaker, "ammo_1")
+end
+
+--- D4 Phrase 3 ---
+function precond_dialog_spooner_d4_3(first_speaker, second_speaker)
+    return utils_slht.check_ammo_with_actor("ammo_2")
+end
+
+function postcond_dialog_spooner_d4_3(first_speaker, second_speaker)
+    utils_slht.exchange_ammo_with_actor(first_speaker, second_speaker, "ammo_2")
+end
+
+--- D4 Phrase 4 ---
+function precond_dialog_spooner_d4_4(first_speaker, second_speaker)
+    return utils_slht.check_ammo_with_actor("ammo_3")
+end
+
+function postcond_dialog_spooner_d4_4(first_speaker, second_speaker)
+    utils_slht.exchange_ammo_with_actor(first_speaker, second_speaker, "ammo_3")
+end
+
+--- D4 Phrase 5 ---
+function precond_dialog_spooner_d4_5(first_speaker, second_speaker)
+    return utils_slht.check_ammo_with_actor("ammo_4")
+end
+
+function postcond_dialog_spooner_d4_5(first_speaker, second_speaker)
+    utils_slht.exchange_ammo_with_actor(first_speaker, second_speaker, "ammo_4")
+end
+
+--- D4 Phrase 6 ---
+function precond_dialog_spooner_d4_6(first_speaker, second_speaker)
+    return utils_slht.check_ammo_with_actor("ammo_5")
+end
+
+function postcond_dialog_spooner_d4_6(first_speaker, second_speaker)
+    utils_slht.exchange_ammo_with_actor(first_speaker, second_speaker, "ammo_5")
+end
+
+--- D4 Phrase 7 ---
+function precond_dialog_spooner_d4_7(first_speaker, second_speaker)
+    return utils_slht.check_ammo_with_actor("ammo_6")
+end
+
+function postcond_dialog_spooner_d4_7(first_speaker, second_speaker)
+    utils_slht.exchange_ammo_with_actor(first_speaker, second_speaker, "ammo_6")
+end
+
+--- D4 Phrase 8 ---
+function precond_dialog_spooner_d4_8(first_speaker, second_speaker)
+    return utils_slht.check_ammo_with_actor("ammo_7")
+end
+
+function postcond_dialog_spooner_d4_8(first_speaker, second_speaker)
+    utils_slht.exchange_ammo_with_actor(first_speaker, second_speaker, "ammo_7")
+end
+
+--- D4 Phrase 9 ---
+function precond_dialog_spooner_d4_9(first_speaker, second_speaker)
+    return utils_slht.check_ammo_with_actor("ammo_8")
+end
+
+function postcond_dialog_spooner_d4_9(first_speaker, second_speaker)
+    utils_slht.exchange_ammo_with_actor(first_speaker, second_speaker, "ammo_8")
+end
+
+--- D4 Phrase 10 ---
+function precond_dialog_spooner_d4_10(first_speaker, second_speaker)
+    return utils_slht.check_ammo_with_actor("ammo_9")
+end
+
+function postcond_dialog_spooner_d4_10(first_speaker, second_speaker)
+    utils_slht.exchange_ammo_with_actor(first_speaker, second_speaker, "ammo_9")
+end
+
+--- D4 Phrase 11 ---
+function precond_dialog_spooner_d4_11(first_speaker, second_speaker)
+    return utils_slht.check_ammo_with_actor("ammo_10")
+end
+
+function postcond_dialog_spooner_d4_11(first_speaker, second_speaker)
+    utils_slht.exchange_ammo_with_actor(first_speaker, second_speaker, "ammo_10")
+end
+
+--- D4 Phrase 12 ---
+function precond_dialog_spooner_d4_12(first_speaker, second_speaker)
+    return utils_slht.check_ammo_with_actor("ammo_11")
+end
+
+function postcond_dialog_spooner_d4_12(first_speaker, second_speaker)
+    utils_slht.exchange_ammo_with_actor(first_speaker, second_speaker, "ammo_11")
+end
+---------------------------- Майор Журов -------------------------------
+--- Phrase first ---
+function precond_dialog_jurov_first(first_speaker, second_speaker)
+    if db.actor:object("sl_ht_accounting_report") then return true end
+	return false
+end
+
+--- Phrase 1 ---
+function get_phrase_dialog_jurov_1(first_speaker, second_speaker)
+    if has_alife_info ("hidden_threat_task_1_stage_2") or
+       has_alife_info ("hidden_threat_task_1_stage_3")	then
+	    return game.translate_string("st_sl_hidden_threat_dialog_jurov_1_2")
+	end
+	return game.translate_string("st_sl_hidden_threat_dialog_jurov_1_1")
+end
+
+function postcond_dialog_jurov_1(first_speaker, second_speaker)
+    if db.actor:object("sl_ht_accounting_report") then
+        xr_effects.remove_item(first_speaker, second_speaker,{"sl_ht_accounting_report"})		
+	end
+	if has_alife_info ("hidden_threat_task_1_stage_2") or
+       has_alife_info ("hidden_threat_task_1_stage_3") then
+	    postcond_dialog_jurov_3(first_speaker, second_speaker)
+		db.actor:give_info_portion("hidden_threat_second_task_1_complete")
+	end
+end
+
+--- Phrase 3 ---
+function postcond_dialog_jurov_3(first_speaker, second_speaker)
+    dialogs.relocate_money_to_actor(first_speaker, second_speaker, 2500)
+end
+
+--- Phrase 4 ---
+function postcond_dialog_jurov_4(first_speaker, second_speaker)
+    utils_slht.bribe_exclusive_2_hours_stalker()
+end
+
+--- Phrase 5 ---
+function precond_dialog_jurov_5(first_speaker, second_speaker)
+    if has_alife_info ("hidden_threat_second_task_1_complete") or
+       has_alife_info ("hidden_threat_task_1_stage_2") or	
+	   has_alife_info ("hidden_threat_task_1_stage_3") then
+	    return true
+	end
+    return false
+end
+
+-------------------- Ст.лейтенант Кириллов -----------------------------
+--- D1 Phrase 1 ---
+function postcond_dialog_kirillov_d1_1(first_speaker, second_speaker)
+    dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "sl_ht_walkie_talkie", 1)
+end
+
+--- D2 Phrase first ---
+function precond_dialog_kirillov_d2_first(first_speaker, second_speaker)
+    if db.actor:object("sl_ht_pda_isg_leader") then return true end
+	return false
+end
+
+--- D2 Phrase 1 ---
+function postcond_dialog_kirillov_d2_1(first_speaker, second_speaker)
+    if db.actor:object("sl_ht_pda_isg_leader") then
+        xr_effects.remove_item(first_speaker, second_speaker,{"sl_ht_pda_isg_leader"})			
+	end
+end
+
+--- D3 Phrase 1 ---
+function postcond_dialog_kirillov_d3_1(first_speaker, second_speaker)
+    dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "sl_ht_usb_quest_task_4", 1)
+end
+
+-------------- Рандомный командир(Темная долина) -----------------------
+--- Phrase first ---
+function precond_dialog_val_leader_squad_first(first_speaker, second_speaker)
+    if db.actor:object("sl_ht_walkie_talkie") then return true end
+	return false
+end
+
+--- Phrase 2 ---
+function postcond_dialog_val_leader_squad_2(first_speaker, second_speaker)
+    xr_effects.remove_item(first_speaker, second_speaker,{"sl_ht_walkie_talkie"})
+	dialogs.relocate_money_to_actor(first_speaker, second_speaker, 2500)
+end
+
+---------------- Полковник Дегтярёв(Агропром) --------------------------
+--- D2 Phrase first ---
+function precond_dialog_degtyarev_d2_first(first_speaker, second_speaker)
+    if db.actor:object("sl_ht_case_quest_task_5") then return true end
+	return false
+end
+
+--- D2 Phrase 2 ---
+function postcond_dialog_degtyarev_d2(first_speaker, second_speaker)
+    if db.actor:object("sl_ht_case_quest_task_5") then
+        dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "sl_ht_case_quest_task_5")	
+	end
+	if utils_slht.reward_table and utils_slht.reward_table["Task5Reward"] then
+	    dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, utils_slht.reward_table["Task5Reward"], 1)
+	end
+end
+
+--- D3 Phrase first ---
+function precond_dialog_degtyarev_d3_first(first_speaker, second_speaker)
+    if has_alife_info("dialog_degtyarev_1_flag") and
+	   has_alife_info("dialog_degtyarev_2_flag") and
+	   has_alife_info("dialog_degtyarev_3_flag") then return false end
+	return true
+end
+
+--- D4 Phrase first ---
+function get_phrase_dialog_degtyarev_d4_first(first_speaker, second_speaker)
+    local phrase = game.translate_string("st_sl_hidden_threat_dialog_degtyarev_d4_first_1")
+    return strformat(phrase, utils_slht.actor_name()) or "Error! Phrase first: none"
+end
+
+--- D4 Phrase 3 ---
+function get_phrase_dialog_degtyarev_d4_3(first_speaker, second_speaker)
+    if not has_alife_info("dialog_degtyarev_5_flag") then
+	    return game.translate_string("st_sl_hidden_threat_dialog_degtyarev_d4_3_1")
+	end
+	return game.translate_string("st_sl_hidden_threat_dialog_degtyarev_d4_3_2")
+end
+
+--- D4 Phrase 5 ---
+function postcond_dialog_degtyarev_d4_5(first_speaker, second_speaker)
+    dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "sl_ht_voice_recorder_task_6", 1)
+end
+
+--- D5 Phrase first ---
+function precond_dialog_degtyarev_d5_first(first_speaker, second_speaker)
+    if db.actor:object("sl_ht_voice_recorder_task_6")  then return true end
+	return false
+end
+
+--- D5 Phrase 1 ---
+function postcond_dialog_degtyarev_d5_1(first_speaker, second_speaker)
+    if db.actor:object("sl_ht_voice_recorder_task_6") then
+	    xr_effects.remove_item(first_speaker, second_speaker,{"sl_ht_voice_recorder_task_6"})	
+	end
+end
+
+--- D6 Phrase first ---
+function precond_dialog_degtyarev_d6_first(first_speaker, second_speaker)
+	if has_alife_info("aes2_monolith_camp_1_isg_squad_death") and
+	   has_alife_info("aes2_monolith_camp_2_isg_squad_death") then return true end
+	return false
+end
+
+----------------- Майор Верещагин(Агропром) ----------------------------
+--- D2 Phrase first ---
+function precond_dialog_vereshagin_d2_first(first_speaker, second_speaker)
+    if has_alife_info("pas_b400_fake_isg_squad_death") and
+	   has_alife_info("pas_b400_elevator_isg_squad_death") and
+	   has_alife_info("pas_b400_track_isg_squad_death") and
+	   has_alife_info("pas_b400_tunnel_isg_squad_death") and 
+	   has_alife_info("pas_b400_hall_isg_squad_death") and
+	   has_alife_info("pas_b400_hall_isg_leader_squad_death") and
+       has_alife_info("pas_b400_hall_isg_sniper_squad_death") then return true end
+	return false
+end
+
+--- D2 Phrase 1 ---
+function postcond_dialog_vereshagin_d2_1(first_speaker, second_speaker)
+    dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "wpn_pkm_zulus", 1)
+end
+
+---------------------- Общие фразы -------------------------------------
+--- Ph1 ---
+function get_phrase_dialog_all_1(first_speaker, second_speaker)
+	return game.translate_string("st_sl_hidden_threat_dialog_all_1_" .. 
+	       tostring(math.random(1,4))) or "Error! Phrase All 1: none"
+end
+
+--- Ph2 ---
+function get_phrase_dialog_all_2(first_speaker, second_speaker)
+	return game.translate_string("st_sl_hidden_threat_dialog_all_2_" .. 
+	       tostring(math.random(1,3))) or "Error! Phrase All 2: none"
+end
+

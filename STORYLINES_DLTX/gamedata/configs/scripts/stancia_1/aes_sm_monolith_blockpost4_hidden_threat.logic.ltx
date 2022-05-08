@@ -1,0 +1,133 @@
+[logic@aes_sm_monolith_blockpost4_monolith_1]
+active = smartcover@monolith_1
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_monolith_blokpost4_monolith_squad)} true
+
+[logic@aes_sm_monolith_blockpost4_monolith_2]
+active = smartcover@monolith_2
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_monolith_blokpost4_monolith_squad)} true
+
+[logic@aes_sm_monolith_blockpost4_monolith_3]
+active = smartcover@monolith_3
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_monolith_blokpost4_monolith_squad)} true
+
+[logic@aes_sm_monolith_blockpost4_monolith_4]
+active = smartcover@monolith_4
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_monolith_blokpost4_monolith_squad)} true
+
+[logic@aes_sm_monolith_blockpost4_monolith_5]
+active = smartcover@monolith_5
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_monolith_blokpost4_monolith_squad)} true
+
+[logic@aes_sm_monolith_blockpost4_monolith_6]
+active = smartcover@monolith_6
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_monolith_blokpost4_monolith_squad)} true
+
+[logic@aes_sm_monolith_blockpost4_merc_1]
+active = smartcover@merc_1
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_monolith_blokpost4_merck_squad)} true
+
+[logic@aes_sm_monolith_blockpost4_merc_2]
+active = smartcover@merc_2
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_monolith_blokpost4_merck_squad)} true
+
+[logic@aes_sm_monolith_blockpost4_merc_3]
+active = smartcover@merc_3
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_monolith_blokpost4_merck_squad)} true
+
+[logic@aes_sm_monolith_blockpost4_merc_4]
+active = smartcover@merc_4
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_monolith_blokpost4_merck_squad)} true
+
+[logic@aes_sm_monolith_blockpost4_merc_5]
+active = smartcover@merc_5
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_monolith_blokpost4_merck_squad)} true
+
+[logic@aes_sm_monolith_blockpost4_merc_6]
+active = smartcover@merc_6
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes_sm_monolith_blokpost4_merck_squad)} true
+
+[smartcover@base]
+cover_state = = default_behaviour
+use_in_combat = false
+use_camp = false
+invulnerable = {=fighting_actor} false, true
+combat_ignore_cond = false
+combat_ignore_keep_when_attacked = false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+wounded = wounded
+meet = no_meet
+
+[smartcover@monolith_1]:smartcover@base
+cover_name = stancia_smart_cover_ht_001
+loophole_name = stand_front_right
+
+[smartcover@monolith_2]:smartcover@base
+cover_name = stancia_smart_cover_ht_002
+loophole_name = stand_front_right
+
+[smartcover@monolith_3]:smartcover@base
+cover_name = stancia_smart_cover_ht_003
+loophole_name = crouch_front
+
+[smartcover@monolith_4]:smartcover@base
+cover_name = stancia_smart_cover_ht_004
+loophole_name = crouch_front
+
+[smartcover@monolith_5]:smartcover@base
+cover_name = stancia_smart_cover_ht_005
+loophole_name = stand_front_right
+
+[smartcover@monolith_6]:smartcover@base
+cover_name = stancia_smart_cover_ht_006
+loophole_name = crouch_front
+
+[smartcover@merc_1]:smartcover@base
+cover_name = stancia_smart_cover_ht_007
+loophole_name = stand_front_left
+
+[smartcover@merc_2]:smartcover@base
+cover_name = stancia_smart_cover_ht_008
+loophole_name = stand_front_left
+
+[smartcover@merc_3]:smartcover@base
+cover_name = stancia_smart_cover_ht_009
+loophole_name = crouch_front
+
+[smartcover@merc_4]:smartcover@base
+cover_name = stancia_smart_cover_ht_010
+loophole_name = crouch_front
+
+[smartcover@merc_5]:smartcover@base
+cover_name = stancia_smart_cover_ht_011
+loophole_name = stand_front_right
+
+[smartcover@merc_6]:smartcover@base
+cover_name = stancia_smart_cover_ht_012
+loophole_name = stand_front_left
+

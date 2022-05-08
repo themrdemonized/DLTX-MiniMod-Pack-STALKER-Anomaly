@@ -1,0 +1,50 @@
+[logic]
+active = {-hidden_threat_disabled} sr_idle@precondition, nil
+
+[sr_idle@precondition]
+on_actor_inside = {+pri_a17_prisoner -hidden_threat_task_5_stage_2} sr_idle@scene_cam_1
+on_info = {+pri_a17_prisoner +hidden_threat_task_5_stage_2} nil
+
+[sr_idle@scene_cam_1]
+on_info = %=disable_ui%
+on_info2 = %=ht_run_postprocess(fade_in:2990) =play_sound_on_actor(cutscenes\hit_pain_1)%
+on_info3 = %=run_cam_effector(surge_02:7415:false)%
+on_info4 = %=create_squad(pri_isg_guard_squad:pri_a17) =create_squad(pri_isg_leader_squad:pri_a17)% sr_idle@wait_1
+
+[sr_idle@wait_1]
+on_signal = cameff_end | %=ht_run_postprocess(black:2990:true) =teleport_actor(pri_a17_player_walk:pri_a17_player_look) =ht_pri_a17_play_sound% sr_idle@timer_1
+
+[sr_idle@timer_1]
+on_timer = 7000 | sr_idle@scene_cam_2
+
+[sr_idle@scene_cam_2]
+on_info = %=ht_run_postprocess(fade_out:2990) =ht_run_postprocess(snd_shock:2991)%
+on_info2 = %=run_cam_effector(prison_1:7415:false)% sr_idle@wait_2
+
+[sr_idle@wait_2]
+on_signal = cameff_end | %+dialog_isg_leader_1_flag =enable_imput(true)% sr_idle@action_2_1
+
+[sr_idle@action_2_1]
+on_info = {+dialog_isg_leader_2_flag} %=disable_ui% sr_idle@action_2_2
+
+[sr_idle@action_2_2]
+on_info2 = {+pri_a17_punch_play_sound} sr_idle@scene_cam_3
+
+[sr_idle@scene_cam_3]
+on_info = %=ht_run_postprocess(deimos1:2920:true) =ht_run_postprocess(blur:2921:true)%
+on_info2 = %=run_cam_effector(fatigue:7415:true)%
+on_info3 = %=create_squad(pri_isg_agent_squad:pri_a17)% sr_idle@wait_cam_3
+
+[sr_idle@wait_cam_3]
+on_info = {+pri_isg_guard_squad_death} sr_idle@scene_cam_4
+
+[sr_idle@scene_cam_4]
+on_info = %=ht_run_postprocess(fade_out:2920) =ht_run_postprocess(snd_shock:2921)%
+on_info2 = %=run_cam_effector(prison_1:7415:false)% sr_idle@wait_4
+
+[sr_idle@wait_4]
+on_signal = cameff_end | %=ht_stop_postprocess(2921)% sr_idle@action_4_1
+
+[sr_idle@action_4_1]
+on_info = {+hidden_threat_task_5_stage_2 !squad_exist(pri_isg_agent_squad)} %=enable_ui% nil
+

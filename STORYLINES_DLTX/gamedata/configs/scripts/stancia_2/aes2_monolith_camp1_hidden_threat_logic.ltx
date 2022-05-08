@@ -1,0 +1,103 @@
+[logic@aes2_monolith_camp_1_isg_1]
+active = walker@isg_1
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes2_monolith_camp_1_isg_squad)} true
+
+[logic@aes2_monolith_camp_1_isg_2]
+active = walker@isg_2
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes2_monolith_camp_1_isg_squad)} true
+
+[logic@aes2_monolith_camp_1_isg_3]
+active = walker@isg_3
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes2_monolith_camp_1_isg_squad)} true
+
+[logic@aes2_monolith_camp_1_isg_4]
+active = walker@isg_4
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes2_monolith_camp_1_isg_squad)} true
+
+[logic@aes2_monolith_camp_1_isg_5]
+active = walker@isg_5
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes2_monolith_camp_1_isg_squad)} true
+
+[logic@aes2_monolith_camp_1_isg_6]
+active = walker@isg_6
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes2_monolith_camp_1_isg_squad)} true
+
+[logic@aes2_monolith_camp_1_isg_7]
+active = walker@isg_7
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes2_monolith_camp_1_isg_squad)} true
+
+[logic@aes2_monolith_camp_1_isg_8]
+active = walker@isg_8
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes2_monolith_camp_1_isg_squad)} true
+
+[logic@aes2_monolith_camp_1_isg_9]
+active = walker@isg_9
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(aes2_monolith_camp_1_isg_squad)} true
+
+[walker@base]
+use_camp = false
+turn_on_campfire = false
+combat_ignore_cond = false
+combat_ignore_keep_when_attacked = false
+gather_items_enabled = false
+corpse_detection_enabled = false
+meet = no_meet
+
+[walker@isg_1]:walker@base
+path_walk = isg_guard_1_walk
+path_look = isg_guard_1_look
+
+[walker@isg_2]:walker@base
+path_walk = isg_guard_2_walk
+path_look = isg_guard_2_look
+
+[walker@isg_3]:walker@base
+path_walk = isg_patrol_1_walk
+path_look = isg_patrol_1_look
+
+[walker@isg_4]:walker@base
+path_walk = isg_guard_3_walk
+path_look = isg_guard_3_look
+
+[walker@isg_5]:walker@base
+path_walk = isg_walker_1_walk
+path_look = isg_walker_1_look
+def_state_standing = sit_ass
+
+[walker@isg_6]:walker@base
+path_walk = isg_walker_2_walk
+path_look = isg_walker_2_look
+def_state_standing = sit_knee
+
+[walker@isg_7]:walker@base
+path_walk = isg_walker_3_walk
+path_look = isg_walker_3_look
+def_state_standing = sit
+
+[walker@isg_8]:walker@base
+path_walk = isg_walker_4_walk
+path_look = isg_walker_4_look
+def_state_standing = sit
+
+[walker@isg_9]:walker@base
+path_walk = isg_patrol_2_walk
+path_look = isg_patrol_2_look
+

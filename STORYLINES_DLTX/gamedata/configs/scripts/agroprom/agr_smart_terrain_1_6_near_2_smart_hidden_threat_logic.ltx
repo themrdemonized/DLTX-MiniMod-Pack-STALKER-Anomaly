@@ -1,0 +1,65 @@
+[logic@agr_1_6_degtyarev]
+active = walker@degtyarev
+prior = 200
+level_spot = quest_npc
+suitable = {=target_squad_name(agr_1_6_ht_degtyarev_squad)} true
+
+[logic@agr_1_6_vereshagin]
+active = walker@vereshagin
+prior = 200
+level_spot = quest_npc
+suitable = {=target_squad_name(agr_1_6_ht_vereshagin_squad)} true
+
+[walker@base]
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+turn_on_campfire = false
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+
+[walker@degtyarev]:walker@base
+path_walk = degtyarev_walk
+path_look = degtyarev_look
+meet = meet@degtyarev
+on_actor_dist_le = 10 | {=actor_in_zone(agr_smart_terrain_1_6_surge_hide_a1)} remark@degtyarev
+on_info = {+hidden_threat_task_6_complete} remark@end
+
+[remark@degtyarev]:walker@base
+anim = guard
+meet = meet@degtyarev
+on_actor_dist_ge = 10 | walker@degtyarev
+on_info = {+hidden_threat_task_6_complete} remark@end
+
+[remark@end]
+anim = guard
+on_timer = 1000 | %=ht_run_postprocess(fade_in_out) =remove_squad(agr_1_6_ht_degtyarev_squad)% nil
+
+[meet@degtyarev]
+close_anim = ward
+close_distance = 3
+close_victim = actor
+allow_break = {+hidden_threat_task_6_start -dialog_degtyarev_4_flag} false, true
+use = {=actor_enemy} false, {=dist_to_actor_le(2.5)} true, false
+trade_enable = false
+
+[walker@vereshagin]:walker@base
+path_walk = degtyarev_walk
+path_look = degtyarev_look
+meet = meet@vereshagin
+on_actor_dist_le = 10 | {=actor_in_zone(agr_smart_terrain_1_6_surge_hide_a1)} remark@vereshagin
+
+[remark@vereshagin]:walker@base
+anim = guard
+meet = meet@vereshagin
+on_actor_dist_ge = 10 | walker@vereshagin
+
+[meet@vereshagin]
+close_anim = ward
+close_distance = 3
+close_victim = actor
+allow_break = {+hidden_threat_task_7_stage_1 -hidden_threat_task_7_stage_2} false, true
+use = {=actor_enemy} false, {=dist_to_actor_le(2.5)} true, false
+trade_enable = false
+

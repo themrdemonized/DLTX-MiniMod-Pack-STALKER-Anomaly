@@ -1,0 +1,20 @@
+[logic]
+active = {-hidden_threat_disabled} sr_idle@precondition, nil
+
+[sr_idle@precondition]
+on_actor_inside = {-pri_b35_military_isg_sniper_squad_death +pri_b35_mercs_spawn_scene} sr_idle@prestart_cam_1
+on_info = {+pri_b35_military_isg_sniper_squad_death} nil, {+pri_b35_mercs_fail_scene} nil
+
+[sr_idle@prestart_cam_1]
+on_info = %=disable_ui +pri_b35_mercs_fail_scene%
+on_info2 = %=ht_run_postprocess(fade_out:2920) =ht_pri_b35_teleport_actor(safe)% sr_idle@timer
+
+[sr_idle@timer]
+on_timer = 700 | sr_idle@cam_start
+
+[sr_idle@cam_start]
+on_info = %=run_cam_effector_global(scenario_cam\pripyat\pri_b35_mercs_scene_fail_ht_task_5)% sr_idle@wait
+
+[sr_idle@wait]
+on_signal = cameff_end | %=ht_pri_b35_teleport_actor() =enable_ui% nil
+

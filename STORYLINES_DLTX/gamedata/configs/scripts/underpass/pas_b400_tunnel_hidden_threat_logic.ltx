@@ -1,0 +1,64 @@
+[logic@pas_b400_tunnel_isg_1]
+active = walker@isg_1
+prior = 200
+suitable = {=target_squad_name(pas_b400_tunnel_isg_squad)} true
+
+[logic@pas_b400_tunnel_isg_2]
+active = walker@isg_2
+prior = 200
+suitable = {=target_squad_name(pas_b400_tunnel_isg_squad)} true
+
+[logic@pas_b400_tunnel_isg_3]
+active = walker@isg_3
+prior = 200
+suitable = {=target_squad_name(pas_b400_tunnel_isg_squad)} true
+
+[logic@pas_b400_tunnel_isg_4]
+active = walker@isg_4
+prior = 200
+suitable = {=target_squad_name(pas_b400_tunnel_isg_squad)} true
+
+[logic@pas_b400_tunnel_isg_5]
+active = walker@isg_5
+prior = 200
+suitable = {=target_squad_name(pas_b400_tunnel_isg_squad)} true
+
+[logic@pas_b400_tunnel_isg_6]
+active = walker@isg_6
+prior = 200
+suitable = {=target_squad_name(pas_b400_tunnel_isg_squad)} true
+
+[walker@base]
+use_camp = false
+def_state_standing = hide
+turn_on_campfire = false
+combat_ignore_cond = false
+combat_ignore_keep_when_attacked = false
+gather_items_enabled = false
+corpse_detection_enabled = false
+meet = no_meet
+
+[walker@isg_1]:walker@base
+path_walk = isg_walker_1_walk
+path_look = isg_walker_1_look
+
+[walker@isg_2]:walker@base
+path_walk = isg_walker_2_walk
+path_look = isg_walker_2_look
+
+[walker@isg_3]:walker@base
+path_walk = isg_walker_3_walk
+path_look = isg_walker_3_look
+
+[walker@isg_4]:walker@base
+path_walk = isg_walker_4_walk
+path_look = isg_walker_4_look
+
+[walker@isg_5]:walker@base
+path_walk = isg_walker_5_walk
+path_look = isg_walker_5_look
+
+[walker@isg_6]:walker@base
+path_walk = isg_walker_6_walk
+path_look = isg_walker_6_look
+

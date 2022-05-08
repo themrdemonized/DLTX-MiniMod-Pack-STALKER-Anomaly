@@ -1,0 +1,195 @@
+[logic@pas_b400_hall_leader_isg]
+active = walker@leader_isg
+prior = 200
+suitable = {=target_squad_name(pas_b400_hall_isg_leader_squad)} true
+on_hit = hit
+on_death = death
+
+[logic@pas_b400_hall_isg_1]
+active = walker@isg_1
+prior = 200
+suitable = {=target_squad_name(pas_b400_hall_isg_squad)} true
+on_hit = hit
+on_death = death
+
+[logic@pas_b400_hall_isg_2]
+active = walker@isg_2
+prior = 200
+suitable = {=target_squad_name(pas_b400_hall_isg_squad)} true
+on_hit = hit
+on_death = death
+
+[logic@pas_b400_hall_isg_3]
+active = walker@isg_3
+prior = 200
+suitable = {=target_squad_name(pas_b400_hall_isg_squad)} true
+on_hit = hit
+on_death = death
+
+[logic@pas_b400_hall_isg_4]
+active = walker@isg_4
+prior = 200
+suitable = {=target_squad_name(pas_b400_hall_isg_squad)} true
+on_hit = hit
+on_death = death
+
+[logic@pas_b400_hall_isg_5]
+active = walker@isg_5
+prior = 200
+suitable = {=target_squad_name(pas_b400_hall_isg_squad)} true
+on_hit = hit
+on_death = death
+
+[logic@pas_b400_hall_isg_6]
+active = walker@isg_6
+prior = 200
+suitable = {=target_squad_name(pas_b400_hall_isg_squad)} true
+on_hit = hit
+on_death = death
+
+[logic@pas_b400_hall_isg_7]
+active = walker@isg_7
+prior = 200
+suitable = {=target_squad_name(pas_b400_hall_isg_squad)} true
+on_hit = hit
+on_death = death
+
+[logic@pas_b400_hall_isg_8]
+active = walker@isg_8
+prior = 200
+suitable = {=target_squad_name(pas_b400_hall_isg_squad)} true
+on_hit = hit
+on_death = death
+
+[logic@pas_b400_hall_isg_9]
+active = walker@isg_9
+prior = 200
+suitable = {=target_squad_name(pas_b400_hall_isg_squad)} true
+on_hit = hit
+on_death = death
+
+[logic@pas_b400_hall_isg_10]
+active = walker@isg_10
+prior = 200
+suitable = {=target_squad_name(pas_b400_hall_isg_squad)} true
+on_hit = hit
+on_death = death
+
+[logic@pas_b400_hall_isg_11]
+active = walker@isg_11
+prior = 200
+suitable = {=target_squad_name(pas_b400_hall_isg_squad)} true
+on_hit = hit
+on_death = death
+
+[logic@pas_b400_hall_isg_12]
+active = walker@isg_12
+prior = 200
+suitable = {=target_squad_name(pas_b400_hall_isg_squad)} true
+on_hit = hit
+on_death = death
+
+[logic@pas_b400_hall_isg_specops_1]
+active = camper@isg_specops_1
+prior = 200
+suitable = {=target_squad_name(pas_b400_hall_isg_sniper_squad)} true
+
+[logic@pas_b400_hall_isg_specops_2]
+active = camper@isg_specops_2
+prior = 200
+suitable = {=target_squad_name(pas_b400_hall_isg_sniper_squad)} true
+
+[walker@base]
+use_camp = false
+def_state_standing = hide
+turn_on_campfire = false
+combat_ignore_cond = {+jup_und_hall_door} false, true
+combat_ignore_keep_when_attacked = {+jup_und_hall_door} false, true
+gather_items_enabled = false
+corpse_detection_enabled = false
+on_hit = hit
+on_death = death
+
+[camper@base]
+radius = 10
+def_state_moving = sneak_run
+def_state_campering = hide_na
+def_state_campering_fire = hide_fire
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+wounded = wounded
+
+[wounded]
+hp_state = 0 | wounded_heavy@help_heavy
+hp_state_see = 0 | wounded_heavy@help_heavy
+hp_victim = 0 | nil
+hp_cover = 0 | false
+hp_fight = 0 | false
+
+[hit]
+on_info = {-jup_und_hall_door} %+jup_und_hall_door%
+
+[death]
+on_info = {-jup_und_hall_door} %+jup_und_hall_door%
+
+[walker@leader_isg]:walker@base
+path_walk = isg_leader_walker_1_walk
+path_look = isg_leader_walker_1_look
+
+[walker@isg_1]:walker@base
+path_walk = isg_walker_1_walk
+path_look = isg_walker_1_look
+
+[walker@isg_2]:walker@base
+path_walk = isg_walker_2_walk
+path_look = isg_walker_2_look
+
+[walker@isg_3]:walker@base
+path_walk = isg_walker_3_walk
+path_look = isg_walker_3_look
+
+[walker@isg_4]:walker@base
+path_walk = isg_walker_4_walk
+path_look = isg_walker_4_look
+
+[walker@isg_5]:walker@base
+path_walk = isg_walker_5_walk
+path_look = isg_walker_5_look
+
+[walker@isg_6]:walker@base
+path_walk = isg_walker_6_walk
+path_look = isg_walker_6_look
+
+[walker@isg_7]:walker@base
+path_walk = isg_walker_7_walk
+path_look = isg_walker_7_look
+
+[walker@isg_8]:walker@base
+path_walk = isg_walker_8_walk
+path_look = isg_walker_8_look
+
+[walker@isg_9]:walker@base
+path_walk = isg_walker_9_walk
+path_look = isg_walker_9_look
+
+[walker@isg_10]:walker@base
+path_walk = isg_walker_10_walk
+path_look = isg_walker_10_look
+
+[walker@isg_11]:walker@base
+path_walk = isg_walker_11_walk
+path_look = isg_walker_11_look
+
+[walker@isg_12]:walker@base
+path_walk = isg_walker_12_walk
+path_look = isg_walker_12_look
+
+[camper@isg_specops_1]:camper@base
+path_walk = mono_sniper_1_walk
+path_look = mono_sniper_1_look
+
+[camper@isg_specops_2]:camper@base
+path_walk = mono_sniper_2_walk
+path_look = mono_sniper_2_look
+

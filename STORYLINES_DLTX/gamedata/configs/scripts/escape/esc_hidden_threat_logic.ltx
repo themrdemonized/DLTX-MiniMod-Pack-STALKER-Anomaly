@@ -1,0 +1,36 @@
+[logic@survived_stalker]
+active = animpoint@survived_stalker
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(esc_survived_stalker_squad) } true
+
+[walker@base]
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+invulnerable = {=fighting_actor} false, {=dist_to_actor_le(30)} false, true
+on_info = {-esc_survived_stalker_squad_death !fighting_actor} %=play_sound(esc_survived_stalker_sound)%
+
+[animpoint@survived_stalker]:walker@base
+cover_name = esc_smart_terrain_5_7_animpoint_kamp14
+avail_animations = animpoint_sit_normal_drink_vodka
+reach_movement = walk_noweap
+reach_distance = 10
+use_camp = false
+meet = meet@survived_stalker
+
+[meet@survived_stalker]
+close_anim = nil
+close_victim = nil
+far_anim = nil
+far_victim = nil
+close_distance = 0
+far_distance = 0
+close_snd_distance = 0
+abuse = false
+use = {+hidden_threat_task_1_stage_3} false, {=fighting_actor} false, true
+meet_on_talking = false
+trade_enable = false
+allow_break = false
+meet_dialog = sl_hidden_threat_dialog_survived
+

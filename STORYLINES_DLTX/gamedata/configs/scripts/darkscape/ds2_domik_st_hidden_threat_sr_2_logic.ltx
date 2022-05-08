@@ -1,0 +1,16 @@
+[logic]
+active = {-hidden_threat_disabled} sr_idle, nil
+
+[sr_idle]
+on_actor_inside = {+ds2_domik_st_ht_cut_scene_2_flag -ds2_domik_st_ht_cut_scene_3_flag} sr_idle@start_cam %=run_postprocess(black:2280) =ht_ds_domik_st_prestart_cut_scene(2) =disable_ui%
+
+[sr_idle@start_cam]
+on_info = sr_idle@wait_cam %=ht_run_cam_effector_global(scenario_cam\darkscape\ds2_domik_st_ht_cut_scene_2:7890:true)%
+
+[sr_idle@wait_cam]
+on_info = {+ds2_domik_st_ht_cut_scene_3_flag} sr_idle@end_cam %=stop_cam_effector(7890) =teleport_actor(ds2_domik_st_ht_cut_scene_end_2_walk:ds2_domik_st_ht_cut_scene_end_2_look) =ht_run_postprocess(fade_out:2380)%
+on_timer = 1000 | %=stop_postprocess(2280)%
+
+[sr_idle@end_cam]
+on_timer = 2500 | %=enable_ui% nil
+

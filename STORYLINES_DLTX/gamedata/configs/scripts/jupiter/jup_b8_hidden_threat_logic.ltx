@@ -1,0 +1,131 @@
+[logic@jup_b8_army_1]
+active = walker@army_1
+prior = 200
+suitable = {=target_squad_name(jup_b8_army_dead_squad)} true
+
+[logic@jup_b8_army_2]
+active = walker@army_2
+prior = 200
+suitable = {=target_squad_name(jup_b8_army_dead_squad)} true
+
+[logic@jup_b8_army_3]
+active = walker@army_3
+prior = 200
+suitable = {=target_squad_name(jup_b8_army_dead_squad)} true
+
+[logic@jup_b8_army_4]
+active = walker@army_4
+prior = 200
+suitable = {=target_squad_name(jup_b8_army_dead_squad)} true
+
+[logic@jup_b8_army_5]
+active = walker@army_5
+prior = 200
+suitable = {=target_squad_name(jup_b8_army_dead_squad)} true
+
+[logic@jup_b8_army_6]
+active = walker@army_6
+prior = 200
+suitable = {=target_squad_name(jup_b8_army_dead_squad)} true
+
+[logic@jup_b8_isg_1]
+active = walker@isg_1
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(jup_b8_isg_attack_squad)} true
+
+[logic@jup_b8_isg_2]
+active = walker@isg_2
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(jup_b8_isg_attack_squad)} true
+
+[logic@jup_b8_isg_3]
+active = walker@isg_3
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(jup_b8_isg_attack_squad)} true
+
+[logic@jup_b8_isg_4]
+active = walker@isg_4
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(jup_b8_isg_attack_squad)} true
+
+[logic@jup_b8_isg_5]
+active = walker@isg_5
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(jup_b8_isg_attack_squad)} true
+
+[logic@jup_b8_isg_6]
+active = walker@isg_6
+prior = 200
+post_combat_time = 0,0
+suitable = {=target_squad_name(jup_b8_isg_attack_squad)} true
+
+[walker@base]
+use_camp = false
+combat_ignore_cond = {-jup_b8_isg_combat} true, false
+combat_ignore_keep_when_attacked = {-jup_b8_isg_combat} true, false
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+meet = no_meet
+
+[walker@army_base]:walker@base
+def_state_moving1 = run
+on_signal = path_end | %=kill_npc%
+
+[walker@isg_idle]:walker@base
+def_state_standing = hide
+on_info = {+jup_b8_isg_combat} walker@attack_isg
+
+[walker@attack_isg]:walker@base
+path_walk = attack_isg_1_walk
+path_look = attack_isg_1_look
+def_state_moving1 = sneak_run
+on_timer = 5000 | nil
+
+[walker@army_1]:walker@army_base
+path_walk = army_1_walk
+
+[walker@army_2]:walker@army_base
+path_walk = army_2_walk
+
+[walker@army_3]:walker@army_base
+path_walk = army_3_walk
+
+[walker@army_4]:walker@army_base
+path_walk = army_4_walk
+
+[walker@army_5]:walker@army_base
+path_walk = army_5_walk
+
+[walker@army_6]:walker@army_base
+path_walk = army_6_walk
+
+[walker@isg_1]:walker@isg_idle
+path_walk = isg_1_walk
+path_look = isg_1_look
+
+[walker@isg_2]:walker@isg_idle
+path_walk = isg_2_walk
+path_look = isg_2_look
+
+[walker@isg_3]:walker@isg_idle
+path_walk = isg_3_walk
+path_look = isg_3_look
+
+[walker@isg_4]:walker@isg_idle
+path_walk = isg_4_walk
+path_look = isg_4_look
+
+[walker@isg_5]:walker@isg_idle
+path_walk = isg_5_walk
+path_look = isg_5_look
+
+[walker@isg_6]:walker@isg_idle
+path_walk = isg_6_walk
+path_look = isg_6_look
+

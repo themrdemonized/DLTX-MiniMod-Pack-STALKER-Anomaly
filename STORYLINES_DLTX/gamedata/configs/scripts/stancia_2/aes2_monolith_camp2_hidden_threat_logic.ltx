@@ -1,0 +1,53 @@
+[logic@aes2_monolith_camp_2_isg_sniper_1]
+active = smartcover@isg_sniper_1
+prior = 200
+suitable = {=target_squad_name(aes2_monolith_camp_2_isg_squad)} true
+
+[logic@aes2_monolith_camp_2_isg_sniper_2]
+active = smartcover@isg_sniper_2
+prior = 200
+suitable = {=target_squad_name(aes2_monolith_camp_2_isg_squad)} true
+
+[logic@aes2_monolith_camp_2_isg_sniper_3]
+active = smartcover@isg_sniper_3
+prior = 200
+suitable = {=target_squad_name(aes2_monolith_camp_2_isg_squad)} true
+
+[smartcover@base]
+cover_state = default_behaviour
+use_in_combat = false
+invulnerable = false
+combat_ignore_cond = false
+combat_ignore_keep_when_attacked = false
+gather_items_enabled = false
+corpse_detection_enabled = false
+meet = no_meet
+danger = danger_condition
+wounded = wounded
+
+[danger_condition]
+ignore_distance = 250
+ignore_distance_grenade = 250
+ignore_distance_corpse = 250
+ignore_distance_hit = 250
+ignore_distance_sound = 250
+
+[wounded]
+hp_state = 0|wounded_heavy@help_heavy
+hp_state_see = 0|wounded_heavy@help_heavy
+hp_victim = 0|nil
+hp_fight = 0|false
+hp_cover = 0|false
+
+[smartcover@isg_sniper_1]:smartcover@base
+cover_name = stancia_2_smart_cover_ht_001
+loophole_name = prone
+
+[smartcover@isg_sniper_2]:smartcover@base
+cover_name = stancia_2_smart_cover_ht_002
+loophole_name = prone
+
+[smartcover@isg_sniper_3]:smartcover@base
+cover_name = stancia_2_smart_cover_ht_003
+loophole_name = prone
+
