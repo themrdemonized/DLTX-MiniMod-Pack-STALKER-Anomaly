@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	
+	<string id="st_dyn_news_gossip_task_dp_1">
+		<text>Я могу... наблюдать за тобой... Я могу... наблюдать за тобой...</text>
+	</string>
+	<string id="st_dyn_news_gossip_task_dp_2">
+		<text>Я слежу... за тобой... Я слежу... за тобой...</text>
+	</string>
+	<string id="st_dyn_news_gossip_task_dp_3">
+		<text>Куда бы ты не пошел, %s... ты не сможешь уйти... ты не сможешь спрятаться...</text>
+	</string>
+	<string id="st_dyn_news_gossip_task_dp_4">
+		<text>Насилие... порождает насилие... порождает насилие...</text>
+	</string>
+	<string id="st_dyn_news_gossip_task_dp_5">
+		<text>Умереть... ты должен... умереть... ты должен...</text>
+	</string>
+	<string id="st_dyn_news_gossip_task_dp_6">
+		<text>Забвение ждет...</text>
+	</string>
+	<string id="st_dyn_news_gossip_task_dp_7">
+		<text>Священный свет Вырая сияет... как никогда прежде.</text>
+	</string>
+	<string id="st_dyn_news_gossip_task_dp_8">
+		<text>Ты должен умереть... враг Монолита.</text>
+	</string>
+
+</string_table>

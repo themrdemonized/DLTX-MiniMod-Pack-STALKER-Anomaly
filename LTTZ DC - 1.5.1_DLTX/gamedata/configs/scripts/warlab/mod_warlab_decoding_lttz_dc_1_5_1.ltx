@@ -1,0 +1,18 @@
+![sr_idle@scene1]
+on_timer = 8000 | sr_idle@oso_spawner %=enable_ui +warlab_finish_decoding%
+
+![sr_idle@oso_spawner]
+on_info = {+warlab_finish_decoding +warlab_door_opened +warlab_actor_teleported} sr_idle@nil %=create_squad(lab_greh_sabaoth_squad:warlab_common_consciousness_smart_terrain)%
+
+!![sr_idle@scene2]
+!on_timer
+
+!![sr_idle@scene3]
+!on_timer
+
+!![sr_idle@scene4]
+!on_info
+
+!![sr_idle@scene5]
+!on_timer
+

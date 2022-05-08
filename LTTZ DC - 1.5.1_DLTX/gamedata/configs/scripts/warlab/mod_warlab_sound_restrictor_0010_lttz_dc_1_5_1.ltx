@@ -1,0 +1,6 @@
+![sr_idle]
+on_info = {=actor_on_level(l13u_warlab) +gen_greh_sabaoth_mortal_sin_generators -war_stitch_msg} sr_idle@war_stitch_message %+war_stitch_msg%
+
+[sr_idle@war_stitch_message]
+on_game_timer = 60 | sr_idle@nil %=war_stitch_message%
+

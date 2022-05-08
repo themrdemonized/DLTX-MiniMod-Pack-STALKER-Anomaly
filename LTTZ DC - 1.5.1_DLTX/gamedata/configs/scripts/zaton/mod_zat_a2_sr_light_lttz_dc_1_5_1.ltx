@@ -1,0 +1,6 @@
+![sr_idle@oa_encrypted_transmission]
+on_info = {=actor_in_zone(zat_b100_heli_2_cat) +operation_afterglow =actor_has_item(decryption_radio)} sr_timer@decryption %=decryption_noise%
+
+![sr_timer@decryption]
+on_value = 0 | sr_idle@decryption_done %=decoder_beep +decryption_done%
+

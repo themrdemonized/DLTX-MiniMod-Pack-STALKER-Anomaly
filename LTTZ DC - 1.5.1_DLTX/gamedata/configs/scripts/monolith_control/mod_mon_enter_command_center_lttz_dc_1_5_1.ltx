@@ -1,0 +1,7 @@
+![sr_idle]
+on_actor_inside = %+sar_enter_command_center%
+on_info = {+monolith_chernobyl_defence_squad_death +sar_enter_command_center} sr_idle@msg
+
+[sr_idle@msg]
+on_game_timer = 60 | sr_idle@nil %=mon_strelok_message%
+

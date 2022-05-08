@@ -7,8 +7,8 @@
 	<!-- Professor Kalancha (Clear Sky Medic) Character Description
 	<!--
 	<!--	Modified by SarisKhan
-	<!--	for Lost to the Zone
-	<!--	September 17, 2017
+	<!--	for S.T.A.L.K.E.R.: Anomaly 1.5
+	<!--	August 09, 2020
 	<!--
 	<!-- ----------------------------------------------------------------------------------------- -->
     <specific_character id="mar_smart_terrain_base_doctor" team_default = "1">
@@ -16,9 +16,9 @@
     <icon>ui_npc_u_nebo_2_face_2</icon>
     <map_icon x="1" y="0">
     </map_icon>
-    <bio>Doctor.</bio>
+    <bio>Professor Kalancha.</bio>
     <class>mar_smart_terrain_base_doctor</class>
-    <community>trader</community>
+    <community>csky</community>
     <terrain_sect>stalker_terrain</terrain_sect>
     <snd_config>characters_voice\human\stalker_2\</snd_config>
     <rank>14500</rank>
@@ -66,7 +66,7 @@
 			cit_doctors_pda = 1 \n
 		</supplies>
 		<start_dialog>cit_doctor_hello_dialog</start_dialog>
-		<actor_dialog>cit_doctor_main_dialog</actor_dialog>
+		<!--actor_dialog>cit_doctor_main_dialog</actor_dialog-->
 		<!-- LTTZ -->
 		<actor_dialog>doctor_living_legend</actor_dialog>
 		<actor_dialog>doctor_living_legend_strelok</actor_dialog>
@@ -82,7 +82,7 @@
 		<icon>ui_inGame2_librarian</icon>
 		<map_icon x="1" y="0">
 		</map_icon>
-		<bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+		<bio>ГЋГЇГ»ГІГ­Г»Г© Г±ГІГ Г«ГЄГҐГ°. Г„ГҐГІГ Г«ГјГ­Г Гї ГЁГ­ГґГ®Г°Г¬Г Г¶ГЁГї Г®ГІГ±ГіГІГ±ГІГўГіГҐГІ.</bio>
 		<class>mar_base_stalker_barmen</class>
 		<community>csky</community>
 		<terrain_sect>stalker_terrain</terrain_sect>
@@ -125,7 +125,7 @@
 		<icon>ui_inGame2_csky_trade</icon>
 		<map_icon x="1" y="0">
 		</map_icon>
-		<bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+		<bio>ГЋГЇГ»ГІГ­Г»Г© Г±ГІГ Г«ГЄГҐГ°. Г„ГҐГІГ Г«ГјГ­Г Гї ГЁГ­ГґГ®Г°Г¬Г Г¶ГЁГї Г®ГІГ±ГіГІГ±ГІГўГіГҐГІ.</bio>
 		<class>mar_base_owl_stalker_trader</class>
 		<community>csky</community>
 		<terrain_sect>stalker_terrain</terrain_sect>
@@ -139,11 +139,6 @@
 
 		<start_dialog>mar_base_owl_stalker_trader_start_dialog</start_dialog>
 		<actor_dialog>dm_init_trader</actor_dialog>
-                <actor_dialog>information_about_stash_aslan</actor_dialog>
-		<actor_dialog>information_about_stash_aslan1</actor_dialog>
-                <actor_dialog>cs_task0_dialog</actor_dialog>
-                <actor_dialog>cs_task0_dialog1</actor_dialog>
-                <actor_dialog>cs_task2_dialog</actor_dialog>
 		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
 		<actor_dialog>dm_broker_dialog</actor_dialog>
 		<actor_dialog>dm_ordered_task_dialog</actor_dialog>
@@ -163,7 +158,7 @@
         <icon>ui_inGame2_Novikov</icon>
         <map_icon x="1" y="0">
         </map_icon>
-        <bio>Опытный сталкер. Техник Азот.</bio>
+        <bio>ГЋГЇГ»ГІГ­Г»Г© Г±ГІГ Г«ГЄГҐГ°. Г’ГҐГµГ­ГЁГЄ ГЂГ§Г®ГІ.</bio>
         <class>mar_base_stalker_tech</class>
         <community>csky</community>
         <!--mechanic_mode>1</mechanic_mode-->
@@ -227,12 +222,6 @@
 
 		<start_dialog>hello_dialog</start_dialog>
 		<actor_dialog>cold_questlines_about_dialog</actor_dialog>
-                <actor_dialog>cs_task0_ambush_renegade</actor_dialog>
-                <actor_dialog>cs_task0_ambush_renegade_vip</actor_dialog>
-                <actor_dialog>cs_task0_ambush_renegade_vip2</actor_dialog>
-                <actor_dialog>cs_task0_ambush_renegade_vip3</actor_dialog>
-                <actor_dialog>cs_task3_cold_dialog</actor_dialog>
-                <actor_dialog>holod_end_cs_story</actor_dialog>
 		<actor_dialog>dm_ordered_task_dialog</actor_dialog> <!-- LTTZ -->
 		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog> <!-- LTTZ -->
 		<actor_dialog>drx_sl_mar_smart_terrain_base_stalker_leader_marsh_game_start_dialog_1</actor_dialog>

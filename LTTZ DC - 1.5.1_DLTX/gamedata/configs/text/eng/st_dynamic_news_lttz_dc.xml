@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="st_dyn_news_gossip_task_dp_1">
+		<text>See you... I can... see you... I can...</text>
+	</string>
+	<string id="st_dyn_news_gossip_task_dp_2">
+		<text>I am watching... you... I am watching... you...</text>
+	</string>
+	<string id="st_dyn_news_gossip_task_dp_3">
+		<text>Wherever you go, %s... you cannot run... you cannot hide...</text>
+	</string>
+	<string id="st_dyn_news_gossip_task_dp_4">
+		<text>Violence... begets violence... begets violence...</text>
+	</string>
+	<string id="st_dyn_news_gossip_task_dp_5">
+		<text>Die... you must... die... you must...</text>
+	</string>
+	<string id="st_dyn_news_gossip_task_dp_6">
+		<text>Oblivion awaits...</text>
+	</string>
+	<string id="st_dyn_news_gossip_task_dp_7">
+		<text>The holy light of Vyraj is shining... ever brighter.</text>
+	</string>
+	<string id="st_dyn_news_gossip_task_dp_8">
+		<text>You will die... enemy of the Monolith.</text>
+	</string>
+
+</string_table>

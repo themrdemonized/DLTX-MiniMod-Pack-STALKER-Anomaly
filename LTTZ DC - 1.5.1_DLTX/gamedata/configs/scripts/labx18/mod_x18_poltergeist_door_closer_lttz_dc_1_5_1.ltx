@@ -1,0 +1,10 @@
+![sr_idle@wait_assault]
+on_info = {+dar_door3_free} sr_idle@wait_dream %=dark_presence_aftershock%
+
+![sr_idle@dream]
+on_info = {+x18_dark_presence_final_dead -mil_greh_radogost_dark_presence_enemy} sr_idle@nil
+on_info2 = {+x18_dark_presence_final_dead +mil_greh_radogost_dark_presence_enemy} sr_idle@wait_sound
+
+![sr_idle@wait_sound]
+on_timer = 100 | sr_idle@nil %=create_squad(x18_greh_avenger_squad:dar_military_scout)%
+

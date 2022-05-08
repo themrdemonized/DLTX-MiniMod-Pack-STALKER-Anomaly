@@ -1,0 +1,6 @@
+![sr_crow_spawner]
+on_info = {+monolith_eidolon_recon_squad_death -pri_eidolon_msg =actor_on_level(l11_pripyat)} sr_idle@msg
+
+[sr_idle@msg]:sr_crow_spawner
+on_game_timer = 80 | sr_crow_spawner %=pri_eidolon_message +pri_eidolon_msg%
+

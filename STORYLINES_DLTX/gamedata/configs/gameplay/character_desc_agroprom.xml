@@ -223,7 +223,6 @@
 
 		<actor_dialog>dm_init_batender</actor_dialog>
 		<actor_dialog>barmen_about_himself_1_6_army_mlr</actor_dialog>
-		<actor_dialog>minigames_military</actor_dialog>
 		<actor_dialog>actor_break_dialog</actor_dialog>
 	</specific_character>
 

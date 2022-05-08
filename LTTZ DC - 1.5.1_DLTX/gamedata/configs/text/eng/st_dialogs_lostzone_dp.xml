@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<!--===========================================================
+<
+< TEXT STRINGS FOR LOST TO THE ZONE: DARK PRESENCE TASK
+<	Anomaly 1.5 - Lost to the Zone: Dark Presence
+<
+<	Made by: SarisKhan
+<	Last revised: 29 October 2020
+<
+<===========================================================-->
+
+<string_table>
+
+<!-- Radogost -->
+	<string id="mil_greh_radogost_dialog_0">
+		<text>Welcome, stalker. Please, take a seat.</text>
+	</string>
+	
+	<string id="mil_greh_radogost_st_0">
+		<text>I'm grateful that you have come.</text>
+	</string>
+	<string id="mil_greh_radogost_st_1">
+		<text>Now that's a surprise. I didn't expect to meet a friendly member of Sin. Who are you?</text>
+	</string>
+	<string id="mil_greh_radogost_st_11">
+		<text>Identify yourself at once. I need an explanation.</text>
+	</string>
+	<string id="mil_greh_radogost_st_111">
+		<text>What the fuck!? You'd better give me a good reason not to shoot you where you stand. I'm counting down.</text>
+	</string>
+	<string id="mil_greh_radogost_st_2">
+		<text>Your attitude fills me with hope. My name is Radogost. I am one of the founding members of Sin, and the leader of this peaceful community. The Masters endowed me with the power of healing, so that I can mend all physical damage in a matter of moments. I've been striving to make the best use of my talent, although I wish I were able to heal broken minds as well... Nevertheless, you can always rely on me in a time of need.</text>
+	</string>
+	<string id="mil_greh_radogost_st_22">
+		<text>Yes, of course. My name is Radogost. I am one of the founding members of Sin, and the leader of this peaceful community. The Masters endowed me with the power of healing, so that I can mend all physical damage in a matter of moments. I've been striving to make the best use of my talent, although I wish I were able to heal broken minds as well... No matter.</text>
+	</string>
+	<string id="mil_greh_radogost_st_222">
+		<text>Please, there's no need for violence! Hear me out. My name is Radogost. I am one of the founding members of Sin, and the leader of this peaceful community. The Masters endowed me with the power of healing, so that I can mend all physical damage in a matter of moments. I've been striving to make the best use of my talent, although I wish I were able to heal broken minds as well... Perhaps, we could've avoided that carnage...</text>
+	</string>
+	
+	<string id="mil_greh_radogost_dark_presence_0">
+		<text>Okay, so why did you call me? Are you the one sending all those creepy PDA messages to me?</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_1">
+		<text>No, of course not, but I believe I know what is their source.</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_2">
+		<text>I'm all ears.</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_3">
+		<text>During your many excursions and adventures across the Zone, you slew numerous servants of the Masters. Their physical forms perished, although their blessed souls ascended to Vyraj. And with each consecutive death its warm, holy light grew ever hotter. Searing, torrid.</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_4">
+		<text>That sounds a little farfetched.</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_5">
+		<text>You must understand! The Zone is a truly miraculous place: the focal point for a global field that links and reflects human minds and thoughts. Its influence is tangible! And it used to be a peaceful place, but not any more...\n \nOur Father, Chernobog, was once a gentle leader. We were all content living in the tranquil realm of Vyraj. However, his vision was poisoned and twisted when the man called "Strelok" murdered our Masters. He was overcome with wrath and hatred, obsessed with revenge. The Zone began boiling. Fortunately, you managed to quell the bloody crusade that ensued, and the turmoil caused by violence subsided. For a time.\n \nEventually, I sensed a hateful, oppressive presence. Elusive at first, but slowly growing stronger, spreading, as if accumulating energy... I felt inhuman wrath and hatred permeating the Zone, electrifying the air... I heard an infernal choir of voices lusting for blood. And one day that "dark presence" invaded the minds of my docile brethren, turning most of them into brutal slaves. Only we have escaped.\n \nListen! The Zone is boiling again. An unimaginable catastrophe is coming. Please, you must travel to the undeground complex in what you stalkers call the Dark Valley. You must stop the dark presence before it's too late!</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_6">
+		<text>I am not sure about this.</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_7">
+		<text>Please, I beg of you! As a warrior of Duty you surely understand the gravity of this situation! If given time, the dark presence will become an enormous threat to everyone!</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_71">
+		<text>Please, I beg of you! This is beyond personal gain, but surely you cannot ignore such a threat to your career!</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_72">
+		<text>Please, I beg of you! This is beyond personal gain, but surely you cannot ignore such a threat to your future adventures!</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_73">
+		<text>Please, I beg of you! As a member of Clear Sky you surely understand the gravity of this situation! If given time, the dark presence will destabilise the Zone beyond recognition!</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_74">
+		<text>Please, I beg of you! As a member of Freedom you surely cannot let the miracle that is the Zone become a hell on earth!</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_75">
+		<text>Please, I beg of you! As a man of science you surely understand the gravity of this situation! If given time, the dark presence will destabilise the Zone beyond recognition!</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_8">
+		<text>Very well, thank you for telling me about this. I will investigate the situation. Stay out of trouble.</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_81">
+		<text>Fine. I'm not sure I can trust you, but I'll have to investigate myself. In the meantime, you'd better pick a more remote location to inhabit. And don't think I'll forget about you.</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_811">
+		<text>All right, thanks for the heads-up. I'll go investigate the situation, but there's a more immediate threat here that I'll deal with first. Say your prayers.</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_9">
+		<text>Thank you! Please, take this with you, I believe this fruit of Vyraj helped protect us from the dark presence's foul influence. I wish you good luck.</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_901">
+		<text>Thank you. I've known there was a special kind of good in you from the moment you showed mercy to our captive brother. Please, take this with you, I believe this fruit of Vyraj helped protect us from the dark presence's foul influence. I wish you good luck.</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_91">
+		<text>I suppose our more militant brethren have ruined our reputation forever. I thought you could forgive us, as you spared our captive brother once... Very well, we shall leave, never to be seen again.</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_92">
+		<text>I suppose our more militant brethren have ruined our reputation forever. Very well, we shall leave, never to be seen again.</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_911">
+		<text>Perhaps I have misjudged. Maybe our Father was the lesser evil after all...</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_912">
+		<text>Perhaps I have misjudged. You chose to slay our captive brother not out of necessity, but ruthlesness... Maybe our Father was the lesser evil after all...</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_101">
+		<text>This is for the better. Farewell.</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_1011">
+		<text>Think what you want. I plan to tie up loose ends.</text>
+	</string>
+
+	<string id="mil_greh_radogost_heal_0">
+		<text>I need medical attention.</text>
+	</string>
+	<string id="mil_greh_radogost_heal_1">
+		<text>Let me treat you.</text>
+	</string>
+	<string id="mil_greh_radogost_heal_2">
+		<text>Your body is in perfect condition. Perhaps it's your mind that is ailing.</text>
+	</string>
+	<string id="mil_greh_radogost_heal_3">
+		<text>[Continue...]</text>
+	</string>
+	<string id="mil_greh_radogost_heal_4">
+		<text>I have mended your physical injuries.</text>
+	</string>
+	
+	<string id="mil_greh_radogost_dark_presence_final_0">
+		<text>Hey, Radogost. It was quite an experience, but I managed to deal with that... thing.</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_final_1">
+		<text>Marvellous! I'm very glad to hear it. The dark presence was tainting the Zone with its fury, hatred, and hostility. Now, we can finally live in peace.</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_final_2">
+		<text>Don't mention it.</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_final_3">
+		<text>You deserve a reward for your effort. Please, take this as a token of our gratitude. May the Zone treat you well.</text>
+	</string>
+	<string id="mil_greh_radogost_dark_presence_final_4">
+		<text>Thank you. Goodbye.</text>
+	</string>
+	
+	<!-- dark presence -->
+	<string id="x18_dark_presence_dialog_0">
+		<text>You have come... of course you have...</text>
+	</string>
+	<string id="x18_dark_presence_dialog_1">
+		<text>Shit!... Okay, well, this isn't the first time I'm talking with a disembodied voice. Are you the "dark presence" that Radogost talked about?</text>
+	</string>
+	<string id="x18_dark_presence_dialog_111">
+		<text>Shit!... Okay, well, this isn't the first time I'm talking with a disembodied voice. Are you the "dark presence" that Sin scum yammered about?</text>
+	</string>
+	<string id="x18_dark_presence_dialog_2">
+		<text>[...]</text>
+	</string>
+	<string id="x18_dark_presence_dialog_3">
+		<text>... All right, I take that as a yes. As a soldier of Duty, it is my mission to eliminate threats like you, creature.</text>
+	</string>
+	<string id="x18_dark_presence_dialog_31">
+		<text>... All right, I take that as a yes. I haven't got a contract from Dushman to kill you. This one's on me.</text>
+	</string>
+	<string id="x18_dark_presence_dialog_32">
+		<text>... All right, I take that as a yes. The guys back at Rookie Village won't believe the story I'll tell once I'm done with you.</text>
+	</string>
+	<string id="x18_dark_presence_dialog_33">
+		<text>... All right, I take that as a yes. One of the primary goals of Clear Sky is to contain the Zone. This includes you.</text>
+	</string>
+	<string id="x18_dark_presence_dialog_34">
+		<text>... Wow, alrighty, I take that as a yes. Y'know, I prefer the Zone the way it is, so I'm gonna stop you right here.</text>
+	</string>
+	<string id="x18_dark_presence_dialog_35">
+		<text>... All right, I take that as a yes. This is way above my paygrade, but I will not ignore such a grave threat.</text>
+	</string>
+	<string id="x18_dark_presence_dialog_4">
+		<text>You... YOU... cannot stop me... us... puny mortal. Even though you are... AN ENEMY!... of the Monolith... Even though you... spilt the blood of our righteous brethren... you, in the end, have set this in motion. You are responsible for my... OUR!... creation, mortal.</text>
+	</string>
+	<string id="x18_dark_presence_dialog_5">
+		<text>What? How?</text>
+	</string>
+	<string id="x18_dark_presence_dialog_6">
+		<text>I am, we are, I am, we are... an amalgam... collective... gestalt... of the fallen. We have ascended, and together, we shall... harness the power of the mighty Monolith, AND CLEANSE THE WORLD WITH THE HOLY LIGHT OF VYRAJ!</text>
+	</string>
+	<string id="x18_dark_presence_dialog_6_alt">
+		<text>I am, we are, I am, we are... an amalgam... collective... gestalt... of the fallen. Enemies... and friends alike. We have ascended, and together, we shall... harness the power of the mighty Monolith, AND CLEANSE THE WORLD WITH THE HOLY LIGHT OF VYRAJ!</text>
+	</string>
+	<string id="x18_dark_presence_dialog_7">
+		<text>There's no turning back after all I've been through. I will nip your scheme in the bud.</text>
+	</string>
+	<string id="x18_dark_presence_dialog_8">
+		<text>NO!</text>
+	</string>
+	<string id="x18_dark_presence_dialog_9">
+		<text>I won't let you intimidate me! Time to put an end to this.</text>
+	</string>
+	<string id="x18_dark_presence_dialog_10">
+		<text>So be it... DIE!</text>
+	</string>
+	<string id="x18_dark_presence_dialog_11">
+		<text>After you.</text>
+	</string>
+
+</string_table>

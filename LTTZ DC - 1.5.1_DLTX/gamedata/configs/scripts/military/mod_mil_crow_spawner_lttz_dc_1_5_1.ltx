@@ -1,0 +1,13 @@
+![sr_crow_spawner]
+on_info = {+lttz_oa_loose_ends_done -sector_clear} sr_idle@spawn %=clear_smart_terrain(mil_smart_terrain_2_4) +sector_clear%
+on_info2 = {+lttz_oa_loose_ends_done -mil_radogost_msg =actor_on_level(l07_military)} sr_idle@msg
+on_info3 = {+mil_greh_radogost_dark_presence_neutral -mil_greh_radogost_despawn} %=remove_special_task_squad(mil_greh_radogost) =remove_special_task_squad(mil_greh_survivor_squad) +mil_greh_radogost_despawn%
+on_info4 = {+mil_greh_radogost_dark_presence_enemy} %=lttz_set_squad_enemy_to_actor(mil_greh_radogost) =lttz_set_squad_enemy_to_actor(mil_greh_survivor_squad)%
+on_info5 = {+mil_greh_radogost_dark_presence -greh_enemies_spawn} %=clear_smart_terrain(val_smart_terrain_1_2) =create_squad(dar_greh_hostile_squad:val_smart_terrain_1_2) =create_squad(dar_zombied_soldiers_squad:val_smart_terrain_1_2) +greh_enemies_spawn%
+
+[sr_idle@spawn]
+on_info = {+sector_clear -greh_survivors_spawn} sr_crow_spawner %=create_squad(mil_greh_radogost_squad:mil_smart_terrain_2_4) =create_squad(mil_greh_survivor_squad:mil_smart_terrain_2_4) +greh_survivors_spawn%
+
+[sr_idle@msg]:sr_crow_spawner
+on_game_timer = 180 | sr_crow_spawner %=mil_radogost_message +mil_radogost_msg =give_task(lttz_dp_noosphere_voice)%
+

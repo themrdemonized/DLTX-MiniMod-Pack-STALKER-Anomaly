@@ -1,0 +1,22 @@
+Main tweaks & updates:
+- Revised the "Living Legend: Champion of the Monolith" quest so that Eidolon lives up to expectations.
+- Revised the "Mortal Sin: Urban Warfare" quest to spawn enemies in stages to avoid a situation where all Sin forces come to a single place at the same time.
+- Revised the "Mortal Sin: Endgame" quest according to its original concept.
+- Added "Dark Presence: Voice of the Noosphere", a special post-"Operation Afterglow" quest.
+- Added several PDA messages to improve the flow of story progression.
+- Adjusted load-outs of several characters.
+- Adjusted ranks of SSU story NPCs.
+- Added a separate rank & name system for UNISG (originally made by indyora).
+- Disabling the Miracle Machine now opens the route from Yantar to the Dead City.
+- Improved Gatekeeper's position and interaction.
+- Degtyarev stores his Compass in an AAM.
+- Fixed resistances assigned to some Sin character meshes.
+- Fixed sound effects triggered by storyline events.
+- Colonel Degtyarev rewards the player based on their performance at the end of OA.
+
+Other tweaks & updates:
+- Restored 2 stationary loner squads to Cordon Farm to prevent the "Bandits shooting at immortal NPCs" issue.
+- Changed Professor Kalancha's faction from Trader to Clear Sky.
+- Revised the Duty squad that guards the entrance to Rostok from Garbage.
+- Promoted a few NPCs.
+- Revised profiles and names of several NPCs.

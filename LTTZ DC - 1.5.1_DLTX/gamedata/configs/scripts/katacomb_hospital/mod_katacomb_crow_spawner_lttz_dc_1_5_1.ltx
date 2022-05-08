@@ -1,0 +1,6 @@
+![sr_crow_spawner]
+on_info = {+stalker_rogue_mortal_sin_destruction -kat_rogue_msg =actor_on_level(l11_hospital)} sr_idle@msg
+
+[sr_idle@msg]:sr_crow_spawner
+on_game_timer = 60 | sr_crow_spawner %=kat_rogue_message +kat_rogue_msg%
+

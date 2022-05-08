@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="st_lttz_pri_eidolon_message">
+		<text>Я чувствую тебя. Я тебя вижу, я тебя слышу. Куда бы ты ни отправился. Ты не пройдешь.</text>
+	</string>
+	<string id="st_lttz_mil_radogost_message">
+		<text>Я чувствую твое присутствие, сталкер. Иди ко мне, нам нужно поговорить.</text>
+	</string>
+	<string id="st_lttz_x18_stitch_message">
+		<text>Почему... ты не... помог мне?</text>
+	</string>
+	<string id="st_lttz_x18_rogue_message">
+		<text>Умри, враг Монолита!</text>
+	</string>
+	<string id="st_lttz_x18_degtyarev_message">
+		<text>Ты ничто кроме как ублюдок-предатель.</text>
+	</string>
+	<string id="st_lttz_x18_strelok_message">
+		<text>Ты предал меня.</text>
+	</string>
+	<string id="st_lttz_x18_eidolon_message">
+		<text>О, могучий Монолит. Даже после смерти я служу. Вечно.</text>
+	</string>
+	<string id="st_lttz_x18_chernobog_message">
+		<text>Даже из могилы я пролью свет Вырия... на этот греховный мир .</text>
+	</string>
+	<string id="st_lttz_x18_dark_presence_message">
+		<text>СДОХНИ!</text>
+	</string>
+</string_table>

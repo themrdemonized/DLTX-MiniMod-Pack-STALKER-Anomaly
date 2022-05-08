@@ -16,7 +16,7 @@
     <icon>ui_npc_u_nebo_2_face_2</icon>
     <map_icon x="1" y="0">
     </map_icon>
-    <bio>Doctor.</bio>
+    <bio>Professor Kalancha.</bio>
     <class>mar_smart_terrain_base_doctor</class>
     <community>trader</community>
     <terrain_sect>stalker_terrain</terrain_sect>
@@ -82,7 +82,7 @@
 		<icon>ui_inGame2_librarian</icon>
 		<map_icon x="1" y="0">
 		</map_icon>
-		<bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+		<bio>ГЋГЇГ»ГІГ­Г»Г© Г±ГІГ Г«ГЄГҐГ°. Г„ГҐГІГ Г«ГјГ­Г Гї ГЁГ­ГґГ®Г°Г¬Г Г¶ГЁГї Г®ГІГ±ГіГІГ±ГІГўГіГҐГІ.</bio>
 		<class>mar_base_stalker_barmen</class>
 		<community>csky</community>
 		<terrain_sect>stalker_terrain</terrain_sect>
@@ -125,7 +125,7 @@
 		<icon>ui_inGame2_csky_trade</icon>
 		<map_icon x="1" y="0">
 		</map_icon>
-		<bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+		<bio>ГЋГЇГ»ГІГ­Г»Г© Г±ГІГ Г«ГЄГҐГ°. Г„ГҐГІГ Г«ГјГ­Г Гї ГЁГ­ГґГ®Г°Г¬Г Г¶ГЁГї Г®ГІГ±ГіГІГ±ГІГўГіГҐГІ.</bio>
 		<class>mar_base_owl_stalker_trader</class>
 		<community>csky</community>
 		<terrain_sect>stalker_terrain</terrain_sect>
@@ -163,7 +163,7 @@
         <icon>ui_inGame2_Novikov</icon>
         <map_icon x="1" y="0">
         </map_icon>
-        <bio>Опытный сталкер. Техник Азот.</bio>
+        <bio>ГЋГЇГ»ГІГ­Г»Г© Г±ГІГ Г«ГЄГҐГ°. Г’ГҐГµГ­ГЁГЄ ГЂГ§Г®ГІ.</bio>
         <class>mar_base_stalker_tech</class>
         <community>csky</community>
         <!--mechanic_mode>1</mechanic_mode-->
@@ -205,7 +205,7 @@
 		<icon>ui_inGame2_cold</icon>
 		<map_icon x="1" y="0">
 		</map_icon>
-		<bio>??????? ???????. Ж’???????В¤ ?????????В¤ ???????????.</bio>
+		<bio>??????? ???????. Г†вЂ™???????Г‚В¤ ?????????Г‚В¤ ???????????.</bio>
 		<class>mar_smart_terrain_base_stalker_leader_marsh</class>
 		<community>csky</community>
 		<terrain_sect>stalker_terrain</terrain_sect>

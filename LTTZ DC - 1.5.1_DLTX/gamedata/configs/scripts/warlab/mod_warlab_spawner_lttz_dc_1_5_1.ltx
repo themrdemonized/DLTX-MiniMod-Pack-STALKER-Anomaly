@@ -1,0 +1,6 @@
+![sr_idle@spawner]
+on_info = {=actor_in_zone(warlab_door_marker) +gen_greh_sabaoth_mortal_sin_generators} sr_idle@destroyer %=spawn_object(warlab_invisible_stalker:warlab_invisible_stalker_spawn_point:0) =create_squad(warlab_main_polter_squad:warlab_common_consciousness_smart_terrain) +warlab_kill_crazy_entity_task_started%
+
+![sr_idle@destroyer]
+on_info = {+war_chernobog_challenge} sr_idle@spawner2 %=destroy_object(story:warlab_invisible_stalker) +warlab_main_polter_scene_start%
+

@@ -1,0 +1,54 @@
+[logic@lab_greh_sabaoth]
+active = animpoint@lab_greh_sabaoth
+suitable = {=check_npc_name(lab_greh_sabaoth)} true
+prior = 200
+
+[walker@generic]
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+turn_on_campfire = false
+
+[walker]:walker@generic
+path_walk = oso_walk
+path_look = oso_look
+meet = meet
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+danger = danger_condition@lab_greh_sabaoth
+show_spot = false
+def_state_standing = guard_na
+def_state_moving = guard_na
+def_state_campering = guard_na
+out_restr = mon_monolith_proektor_restr
+
+[animpoint@lab_greh_sabaoth]:walker@generic
+cover_name = warlab_animpoint_osoznanie
+avail_animations = guard_na
+meet = meet
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+danger = danger_condition@lab_greh_sabaoth
+show_spot = false
+out_restr = mon_monolith_proektor_restr
+
+[meet]
+close_distance = 10
+close_anim = guard_na
+close_victim = actor
+far_distance = 10
+far_anim = guard_na
+far_victim = actor
+close_snd_hello = nil
+close_snd_bye = nil
+use = {+oso_init_dialog} self, false
+meet_dialog = war_chernobog_final
+trade_enable = false
+abuse = false
+allow_break = false
+
+[danger_condition@lab_greh_sabaoth]
+ignore_distance = 0
+

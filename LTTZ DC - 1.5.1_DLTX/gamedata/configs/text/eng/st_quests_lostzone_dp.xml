@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<!--===========================================================
+<
+< TEXT STRINGS FOR LOST TO THE ZONE: DARK PRESENCE TASK
+<	Anomaly 1.5 - Lost to the Zone: Dark Presence
+<
+<	Made by: SarisKhan
+<	Last revised: 29 October 2020
+<
+<===========================================================-->
+
+<string_table>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Dark Presence Task -->
+	<string id="lttz_dp_noosphere_voice_name">
+		<text>Dark Presence: Voice of the Noosphere</text>
+	</string>
+	
+	<string id="lttz_dp_noosphere_voice_text">
+		<text>Mysterious survivor from the Sin faction has sent you an invitation. Confront him.</text>
+	</string>
+	<string id="lttz_dp_noosphere_voice_text2">
+		<text>Something ominous is going on in the Dark Valley. Investigate.</text>
+	</string>
+	<string id="lttz_dp_noosphere_voice_text3">
+		<text>Reach the old factory in the Dark Valley.</text>
+	</string>
+	<string id="lttz_dp_noosphere_voice_text4">
+		<text>Descend to Laboratory X18.</text>
+	</string>
+	<string id="lttz_dp_noosphere_voice_text5">
+		<text>Reach and confront the "dark presence".</text>
+	</string>
+	<string id="lttz_dp_noosphere_voice_text6">
+		<text>You have vanquished the "dark presence". Report your success to Radogost.</text>
+	</string>
+	
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+</string_table>

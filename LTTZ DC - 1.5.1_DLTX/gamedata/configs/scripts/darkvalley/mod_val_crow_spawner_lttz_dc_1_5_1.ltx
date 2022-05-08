@@ -1,0 +1,11 @@
+![sr_crow_spawner]
+on_info = {+mil_greh_radogost_dark_presence -dp_invitation =actor_on_level(l04_darkvalley)} sr_idle@dark_presence_invitation
+on_info2 = {+dp_invitation -unlock_x18 =actor_on_level(l04_darkvalley)} %=dark_presence_whispers%
+on_info3 = {+dar_greh_hostile_squad_dead +dar_zombied_soldiers_squad_dead -unlock_x18} sr_idle@emission %=create_squad(x18_dark_presence_squad:dar_control_poltergeist) =open_route(dar:x18) +unlock_x18%
+
+[sr_idle@dark_presence_invitation]:sr_crow_spawner
+on_game_timer = 80 | sr_crow_spawner %=dark_presence_invitation +dp_invitation%
+
+[sr_idle@emission]:sr_crow_spawner
+on_game_timer = 20 | sr_crow_spawner %=dark_presence_emission%
+

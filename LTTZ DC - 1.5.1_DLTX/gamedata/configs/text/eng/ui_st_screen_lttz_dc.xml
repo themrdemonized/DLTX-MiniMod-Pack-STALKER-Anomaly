@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="st_lttz_pri_eidolon_message">
+		<text>I can perceive you. I see you, I hear you. Wherever you go. You shall not pass.</text>
+	</string>
+	<string id="st_lttz_war_stitch_message">
+		<text>Crap, of course the door's locked. You know, the code to the back entrance was 26041986, maybe it's the same here. Give it a try.</text>
+	</string>
+	<string id="st_lttz_mil_radogost_message">
+		<text>I can sense your presence, stalker. Come to me, we need to talk.</text>
+	</string>
+	<string id="st_lttz_x18_stitch_message">
+		<text>Whyyy... didn't you... heeelp me?</text>
+	</string>
+	<string id="st_lttz_x18_rogue_message">
+		<text>Die, enemy of the Monolith!</text>
+	</string>
+	<string id="st_lttz_x18_degtyarev_message">
+		<text>You're nothing but a damn traitor.</text>
+	</string>
+	<string id="st_lttz_x18_strelok_message">
+		<text>You betrayed me.</text>
+	</string>
+	<string id="st_lttz_x18_eidolon_message">
+		<text>Oh, mighty Monolith. Even in death, I serve. Eternal.</text>
+	</string>
+	<string id="st_lttz_x18_chernobog_message">
+		<text>Even from beyond the grave, I shall cast the light of Vyraj... upon this sinful world.</text>
+	</string>
+	<string id="st_lttz_x18_dark_presence_message">
+		<text>DIE!</text>
+	</string>
+</string_table>

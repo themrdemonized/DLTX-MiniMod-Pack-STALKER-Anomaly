@@ -1,0 +1,53 @@
+[logic@x18_dark_presence]
+active = beh@x18_dark_presence
+suitable = {=check_npc_name(x18_dark_presence)} true
+prior = 200
+can_select_weapon = false
+dont_keep_items = true
+
+[beh@general]
+behavior_state = beh_move
+target = waypoint
+walk_dist = 100
+jog_dist = 220
+wait_anim = ward_noweap
+walk_anim = walk_noweap
+jog_anim = sprint
+run_anim = sprint
+delay_anim = ward_noweap
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+out_restr = dar_poltergeist_territory
+invulnerable = true
+on_info = {=actor_on_level(l04u_labx18) -x18_dark_presence_confrontation} %=dark_presence_ambience%
+on_info2 = {=actor_in_zone(x18_poltergeist_door_closer)} beh@general2
+on_info3 = {+x18_dark_presence_dialog} %=remove_squad(x18_dark_presence) +x18_dark_presence_despawn%
+meet = no_meet
+danger = danger_condition@x18_dark_presence
+
+[beh@general2]:beh@general
+meet = meet
+
+[meet]
+close_distance = 0
+close_victim = nil
+far_distance = 0
+far_victim = nil
+close_snd_hello = nil
+close_snd_bye = nil
+use = {=dist_to_actor_le(18)} self, false
+meet_dialog = x18_dark_presence_dialog
+trade_enable = false
+abuse = false
+allow_break = false
+
+[beh@x18_dark_presence]:beh@general
+pt1 = 88860000,ward_noweap | pos:16.116231918335,-6.6201643943787,-14.13272190094 look:16.323471859097,-6.6201643943787,-15.058864593506
+path_end = loop
+
+[danger_condition@x18_dark_presence]
+ignore_distance = 0
+
