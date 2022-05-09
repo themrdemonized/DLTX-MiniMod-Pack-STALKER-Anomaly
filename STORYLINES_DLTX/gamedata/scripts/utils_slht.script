@@ -336,7 +336,8 @@ xr_effects.ht_ds_domik_st_prestart_cut_scene = function(actor,npc,p)
 	assert(tonumber(p[1]), 'value must be a number')
 	local ind = tonumber(p[1])
     db.actor:set_actor_position(patrol("ds2_ht_actor_cam_position_walk"):point(0))
-	alife_create("hidden_threat_spirit", points[ind][1],points[ind][2],points[ind][3])
+	local se_obj = alife_create("hidden_threat_spirit", points[ind][1],points[ind][2],points[ind][3])
+	utils_obj.switch_online(se_obj.id)
 end
 
 xr_effects.ht_npc_set_visual = function(actor,npc,p)
