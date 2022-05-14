@@ -166,7 +166,7 @@
 	    <text>Hidden Threat: Find the case in the department store</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_5_stage_5_descr">
-	    <text>The colonel instructed him to retrieve the briefcase from the department store, left by an SSU agent.</text>
+	    <text>The colonel instructed me to retrieve the briefcase from the department store, left by an SSU agent.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_5_stage_6_title">
 	    <text>Hidden Threat: Take the case to the Agroprom</text>
@@ -179,7 +179,7 @@
 	    <text>Hidden Threat: Talk to Colonel Degtyarev</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_0_descr">
-	    <text>Received an order from the colonel, return to the base and go to him.</text>
+	    <text>I received an order from the colonel, return to the base and talk to him.</text>
 	</string>
 	<string id="st_sl_hidden_threat_task_6_stage_1_title">
 	    <text>Hidden Threat: Bookmark the Dead City</text>

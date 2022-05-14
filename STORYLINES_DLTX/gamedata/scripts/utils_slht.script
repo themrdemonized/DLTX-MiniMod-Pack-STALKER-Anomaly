@@ -639,6 +639,32 @@ HTCreateTimeEvent = function(teid,value,func,...)
 	end
 end
 
+--code demonized
+xr_effects.clear_scene_from_monsters = function(actor, npc, p)
+	local smart_name = p[1]
+	if not smart_name then 
+		printf("Hidden Threat, no smart specified")
+		return
+	end
+	local smart = SIMBOARD.smarts_by_names[smart_name]
+	if not smart then
+		printf("Hidden Threat, no smart found with name %s", smart_name)
+		return
+	end
+
+	local clean_distance = (p[2] or 60) ^ 2
+	for i = 1, 65534 do
+		local se_obj = alife_object(i)
+		if se_obj and IsMonster(nil, se_obj:clsid()) then
+			local dist = smart.position:distance_to_sqr(se_obj.position)
+			if dist <= clean_distance then
+				printf("Hidden Threat, cleaning scene from monster %s, dist_sqr %s", se_obj:name(), dist)
+				alife():release(se_obj)
+			end
+		end
+	end
+end
+--code demonized end
 
 local function save_state(m_data)
 	m_data.slht_queue_time_event = queue_time_event

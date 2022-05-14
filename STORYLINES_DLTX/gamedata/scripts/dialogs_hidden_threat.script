@@ -430,13 +430,17 @@ end
 ----------------- Майор Верещагин(Агропром) ----------------------------
 --- D2 Phrase first ---
 function precond_dialog_vereshagin_d2_first(first_speaker, second_speaker)
-    if has_alife_info("pas_b400_fake_isg_squad_death") and
-	   has_alife_info("pas_b400_elevator_isg_squad_death") and
-	   has_alife_info("pas_b400_track_isg_squad_death") and
-	   has_alife_info("pas_b400_tunnel_isg_squad_death") and 
-	   has_alife_info("pas_b400_hall_isg_squad_death") and
-	   has_alife_info("pas_b400_hall_isg_leader_squad_death") and
-       has_alife_info("pas_b400_hall_isg_sniper_squad_death") then return true end
+    if	
+    	has_alife_info("pas_b400_fake_isg_squad_death")
+    and	has_alife_info("pas_b400_elevator_isg_squad_death")
+   	and	has_alife_info("pas_b400_track_isg_squad_death")
+   	and	has_alife_info("pas_b400_tunnel_isg_squad_death")
+   	and	has_alife_info("pas_b400_hall_isg_squad_death")
+   	and	has_alife_info("pas_b400_hall_isg_leader_squad_death") 
+   -- and has_alife_info("pas_b400_hall_isg_sniper_squad_death") 
+	then
+   		return true
+   	end
 	return false
 end
 

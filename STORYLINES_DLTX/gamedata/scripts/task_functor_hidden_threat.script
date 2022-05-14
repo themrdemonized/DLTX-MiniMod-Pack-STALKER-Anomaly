@@ -343,6 +343,7 @@ stage_status_f[4] = function(task_id)
         	end
 			if xr_conditions.squad_exist(nil,nil, {"pas_b400_hall_isg_sniper_squad"}) then
         	    xr_effects.remove_squad(nil,nil,{"pas_b400_hall_isg_sniper_squad"})
+        	    db.actor:give_info_portion("pas_b400_hall_isg_sniper_squad_death")
         	end
 			return 5 
 		end
