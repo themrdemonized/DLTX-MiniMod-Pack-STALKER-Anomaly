@@ -1,7 +1,7 @@
 
 Smoother Progression addon version 1.0 for Anomaly 1.5.1
 by KronQ
-(2021-07-19)
+(2022-06-19)
 
 
 1. Description
@@ -25,6 +25,7 @@ by KronQ
 	Then this mod is for you.
 
 	The main idea behind this addon is to make the early to mid-game way more fun by giving the player more options with his equipment. Hoarding money and rushing to find tools should no longer be the only way to progress.
+	Late game on the other hand is gonna get a bit pricier, so it's less boring once you get to the top of the food chain.
 
 	GET MCM TO ACCESS FULL FUNCTIONALITY OF THE MOD
 	https://www.moddb.com/mods/stalker-anomaly/addons/anomaly-mod-configuration-menu
@@ -38,6 +39,7 @@ by KronQ
 	-	Basic and advanced toolkits now unlock different tier 2 upgrades
 	-	Any Exoskeleton sprint upgrade requires advanced tools minimum (to offset the aforementioned changes)
 	-	Many starter weapons/outfits can be fully upgraded without any tools (full list in Readme)
+	- 	Repair costs for outfits depend on the type of repair kits they take - your early starting jacket is going to be very cheap to repair, medium suits are considerably cheaper than vanilla, heavy suits and exos are pricier
 	-	Rebalanced outfit upgrade prices based on how useful they actually are – passive healing is now properly expensive while some minor buffs not so much (remove upgrade_presets.ltx if you prefer vanilla values)
 	-	Halved upgrade prices for weapons to make them reasonable and encourage people to try out different shooters (can be changed via MCM)
 	-	Less drastic changes in prices for completing tool tasks (compared to vanilla you’ll pay less early game but more during end game)
@@ -56,7 +58,7 @@ by KronQ
 
 	Low tier suits should be overall cheaper to upgrade while high-end stuff remained more or less the same. To have a fully upgraded weapon you are going to spend about half of what you used to, so you can play around with more pew-pews without burning a hole in your pocket.
 
-	Keep in mind that various technicians have different prices. You also get discounts for completing tool quests. For obvious reasons prices were balanced mostly with default medium difficulty in mind. 
+	Keep in mind that various technicians have different prices. You also get discounts for completing tool quests.
 
 
 
@@ -71,6 +73,9 @@ by KronQ
 3. Important notes
 
 	If you change the values in MCM you have to save and load the game for the prices to change.
+	
+	For now repair modifiers are only editable via the script - I don't think the vast majority of players even know which particular suits fall into what category without checking the code, time will tell if MCM is needed here.
+	I tried to balance it to make it as interesting gameplay-wise as possible and try to revitalize light and medium class suits, but if you really want to change those values, go into zzzzzzz_repair_modifiers.script and change the numbers inside the table at the top.
 
 	This mod affects only technicians. Vices and other stuff remains as they were.
 
@@ -87,9 +92,13 @@ by KronQ
 
 4. Compatibility	
 
+	inventory_upgrades_mp.script is shared between multiple addons - if you see a conflict because of this file, it is intended and it's safe to overwrite it.
+
 	The mod operates on its own scripts, however any other mod modifying inventory_upgrades.script might break something because it serves as a basis.
 
 	The upgrade_presets.ltx can be freely removed/replaced, it only affects pricing of specific outfit upgrades, the game will simply revert to vanilla values.
+	
+	New repair prices depend on zzzzzzz_repair_modifiers.script and inventory_upgrades_mp.script, they can be removed to disable this part of the addon.
 
 	I don’t expect many other mods to touch on stalkers_upgrade_info.ltx or anything inside the upgrade_infos folder, however if it does, some things might not work correctly.
 
@@ -150,8 +159,14 @@ by KronQ
 
 	1.0.3 - small bugfix for Mags Redux
 	1.0.4 - fixed a syntax error from previous version that caused the script to die (thx Haruka)
+	1.1 - new feature of repair prices depending on repair_type of suits
 
 
+	Future plans:
+	1. Not die from heat
+	2. Maybe expand MCM
+	3. Maybe redo upgrade type prices
+	4. Maybe redo the outfit repair price criteria
 
 
 7. Credits
@@ -162,6 +177,6 @@ by KronQ
 	To thank certain people:
 
 	- Raven Ascendant for setting up the script base I expanded upon, his monkey patch tutorial, MCM
+	- arti and Haruka for help with code and arti's inventory_upgrades_mp.script
 	- Jurkonov for testing and letting me work on his addon
-	- HarukaSai for showing me why I'm an idiot
 	- Anomaly dev team for making and still working on this amazing mod
