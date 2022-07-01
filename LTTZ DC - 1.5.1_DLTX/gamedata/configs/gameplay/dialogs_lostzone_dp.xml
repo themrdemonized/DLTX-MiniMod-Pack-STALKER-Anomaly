@@ -81,6 +81,11 @@
                 <text>mil_greh_radogost_dark_presence_6</text>
 				<give_info>mil_greh_radogost_dark_presence_quest</give_info>
                 <next>7</next>
+                <next>71</next>
+                <next>72</next>
+                <next>73</next>
+                <next>74</next>
+                <next>75</next>
             </phrase>
             <phrase id="7">
 			<has_info>operation_afterglow_dolg</has_info>
