@@ -1360,7 +1360,7 @@ function UIWorkshopUpgrade:DischargeKit(sec)
 	end
 			
 	local tbl = self.upgr_tools[sec]
-	if tbl then
+	if tbl and is_not_empty(tbl) then
 		local id = random_key_table(tbl)
 		local uses = tbl[id]
 		if uses and uses > 0 then
