@@ -434,7 +434,7 @@
  <text> I don't think so. </text>
  </string>      
     <string id = "skabinsky_1_quest_4">
-<text> Good, I like you spirit. Getting there will be extremely difficult, however. Take this advanced detector here. It's a next generation model, that will show the exact locations of anomalies close to you. Now go, we are running out of time! </text>
+<text> Good, I like your spirit. Getting there will be extremely difficult, however. I hope you have a good detector to find the samples and see the anomalies, that area is quite dangerous. Now go, we are running out of time! </text>
  </string>      
     <string id = "skabinsky_1_quest_5">
  <text> Thank you. See you soon, professor. </text>
@@ -917,7 +917,7 @@
         <text>I found them, here.</text>
     </string>
     <string id="prinesi_military_docs_done_1">
-        <text>prinesi_military_docs_done_1</text>
+        <text>Good, very good my friend. Here's a small payment to cover your travel expenses and your bullets eheheh. Now let's talk business to get these information you are after... </text>
     </string>
     <string id="cs_task3_sidor_dialog_0">
         <text>I'm looking for a certain mercenary named Scar. You know him?</text>

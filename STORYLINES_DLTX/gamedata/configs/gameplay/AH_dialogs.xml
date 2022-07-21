@@ -1291,7 +1291,7 @@
         </phrase_list>
     </dialog>		
 	
-       <!--Блядь, этот квест должен быть последний в линейке Чернова-->
+       <!--пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ-->
 	<dialog id="chernov_6_quest">
         <has_info>ahi_meet_actor</has_info>
 		<has_info>ahi_chernov_5_quest_end</has_info>
@@ -1596,8 +1596,7 @@
                 <action>dialogs.break_dialog</action>				
             </phrase>		
 			<phrase id="4">
-                <text>skabinsky_1_quest_4</text>				
-                <action>ah_dialogs.give_expert_detector</action>				
+                <text>skabinsky_1_quest_4</text>						
 				<next>5</next>	
             </phrase>						
             <phrase id="5">
