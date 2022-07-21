@@ -1,0 +1,6 @@
+prepare_stats_table = utils_ui.prepare_stats_table
+utils_ui.prepare_stats_table = function(...)
+	prepare_stats_table(...)
+	utils_ui.stats_table["booster"]["eat_satiety"]["magnitude"] = 3000
+end
+
