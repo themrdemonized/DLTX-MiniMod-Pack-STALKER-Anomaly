@@ -1,4 +1,4 @@
-damage_radius = 3
+damage_radius = 3.5
 
 function change_psy_health(amount)
     local m_data = alife_storage_manager.get_state() 
