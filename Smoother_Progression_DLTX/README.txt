@@ -1,7 +1,7 @@
 
 Smoother Progression addon version 1.0 for Anomaly 1.5.1
 by KronQ
-(2022-06-19)
+(2022-08-04)
 
 
 1. Description
@@ -157,9 +157,10 @@ by KronQ
 
 6. Changelog
 
-	1.0.3 - small bugfix for Mags Redux
-	1.0.4 - fixed a syntax error from previous version that caused the script to die (thx Haruka)
-	1.1 - new feature of repair prices depending on repair_type of suits
+	1.0.3 	 - small bugfix for Mags Redux
+	1.0.4	 - fixed a syntax error from previous version that caused the script to die (thx Hawu)
+	1.1	 - new feature of repair prices depending on repair_type of suits
+	1.1.1 	 - code rewrite for better compatibility (Hawu), updated with 1.5.2 fixes
 
 
 	Future plans:

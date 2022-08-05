@@ -49,7 +49,7 @@ function inventory_upgrades.effect_repair_item( item_name, item_condition)
 	local price = how_much_repair( item_name, item_condition )
 	db.actor:give_money(-price)
 
-	if (item_name == "wpn_binoc") or (ui_options.get("gameplay/general/mechanic_feature") ~= true) then 
+	if (ui_options.get("gameplay/general/mechanic_feature") ~= true) then 
 		return
 	end
 
@@ -65,10 +65,43 @@ function inventory_upgrades.effect_repair_item( item_name, item_condition)
 	db.actor:iterate_inventory(itr,db.actor)
 
 	if (item) then
+	
+		local cls = item:clsid()
+		if (cls == "WP_BINOC") then 
+			return
+		end
+	
 		local victim = get_speaker()
 		if (victim) then
 			local damage_factor = 1.0 - clamp(item_condition, 0.0, 1.0)
 			inventory_upgrades.lend_item_for_repair(item,victim:section(),6000*damage_factor)
 		end
 	end
+end
+
+local repair_id
+OnRepair = ui_inventory.UIInventory.RMode_OnRepair
+function ui_inventory.UIInventory:RMode_OnRepair()
+	self:Print(nil, "RMode_OnRepair")
+	
+	if (not self.upgr.id) then
+		return
+	end
+	
+	local obj = level.object_by_id(self.upgr.id)
+	if (not obj) then
+		return
+	end
+	repair_id = self.upgr.id
+	OnRepair(self)
+end
+
+RepairYes = ui_inventory.UIInventory.RMode_RepairYes
+
+function ui_inventory.UIInventory:RMode_RepairYes()
+	RepairYes(self)
+	repair_id = nil
+end
+function get_repair_id()
+	return repair_id
 end

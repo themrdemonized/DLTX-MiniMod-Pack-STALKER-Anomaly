@@ -18,42 +18,12 @@ function get_tierdisc(key)
 	end
 end
 
+CanRepair = inventory_upgrades.can_repair_item
 
 function inventory_upgrades.can_repair_item( sec, cond, mechanic ) --( string, float, string )
-	if (sec == "pri_a17_gauss_rifle") then
-		return false
-	end
-
-	if string.find(sec, "mag_") then
-		return false
-	end
-	
-	if IsItem("battery", sec) 
-	or IsItem("device", sec)
-	or IsItem("part", sec)
-	or IsItem("consumable",sec)
-	then
-		return false
-	end
-		
 	local obj = db.actor:object(sec)
-	if obj then
-		local clsid = obj:clsid()
-		
-		if IsWeapon(nil,clsid) then
-			wpn_disc_apply = true
-			return true
-		elseif IsOutfit(nil,clsid)
-		or IsHeadgear(nil,clsid)
-		then
-			wpn_disc_apply = false
-			return true
-		elseif IsArtefact(nil,clsid) then
-			return false
-		end
-	end
-
-	return ini_sys:r_bool_ex(sec,"use_condition")
+	wpn_disc_apply = obj and IsWeapon(obj) or false
+	return CanRepair(sec, cond, mechanic)
 end
 
 function get_wpndisc(key)
