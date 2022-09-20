@@ -1086,7 +1086,7 @@ function CSurgeManager:displayIndicators(power)
 	end
 	local indik
 	if power>=0.8 then indik="red"
-	elseif power>=0.6 then indik="d_orange"
+	elseif power>=0.6 then indik="orange"
 	elseif power>=0.4 then indik="yellow"
 	elseif power>=0.1 then indik="green"
 	else indik=nil end

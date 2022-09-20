@@ -102,7 +102,6 @@
         wpn_groza \n
         ammo_9x39_ap = 2 \n
         detector_simple \n
-        detector_elite \n
         granade_f1 = 2 \n
 
     </supplies>
@@ -138,7 +137,6 @@
         wpn_fn2000 \n
         ammo_5.56x45_ap = 2 \n
         detector_simple \n
-        detector_advanced \n
 
     </supplies>
 #include "gameplay\character_criticals_1.xml"
@@ -176,7 +174,6 @@
         wpn_l85 \n
         ammo_5.56x45_ap = 2 \n
         detector_simple \n
-        detector_scientific \n      
 
     </supplies>
 #include "gameplay\character_criticals_1.xml"
@@ -214,7 +211,6 @@
         wpn_g36 \n
         ammo_5.56x45_ap = 2 \n
         detector_simple \n
-        detector_elite \n
 
     </supplies>
 #include "gameplay\character_criticals_1.xml"
@@ -256,7 +252,6 @@
         wpn_sig550 \n
         ammo_5.56x45_ap = 2 \n
         detector_simple \n
-        detector_scientific \n
         granade_f1 = 3 \n
 
     </supplies>
@@ -295,7 +290,6 @@
         wpn_protecta \n
         ammo_12x70_buck = 2 \n
         detector_simple \n
-        detector_elite \n
         
 
     </supplies>
@@ -333,9 +327,6 @@
         wpn_fn2000 \n
         ammo_5.56x45_ap = 2 \n
         detector_simple \n
-        detector_advanced \n
-        detector_elite \n
-        detector_scientific \n      
 
     </supplies>
 #include "gameplay\character_criticals_1.xml"
@@ -365,9 +356,6 @@
         wpn_fn2000 \n
         ammo_5.56x45_ap = 2 \n
         detector_simple \n
-        detector_advanced \n
-        detector_elite \n
-        detector_scientific \n      
 
     </supplies>
 #include "gameplay\character_criticals_1.xml"

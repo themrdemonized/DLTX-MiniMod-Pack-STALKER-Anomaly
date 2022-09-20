@@ -1,0 +1,180 @@
+function xr_effects.eidolon_strelok_message()
+	local msg = game.translate_string("st_lttz_eidolon_strelok_message")
+	local name = game.translate_string("stalker_strelok_oa_name")
+	local comm = game.translate_string("st_dyn_news_comm_stalker_6")
+	local se = strformat("%s, %s",name,comm)
+	db.actor:give_game_news(se, msg, "ui_inGame2_strelok_ico", 0, 20000)
+	xr_sound.set_sound_play(AC_ID, "pda_task")
+end
+
+function xr_effects.pri_eidolon_message()
+	local msg = game.translate_string("st_lttz_pri_eidolon_message")
+	local name = game.translate_string("monolith_eidolon_name")
+	local comm = game.translate_string("st_dyn_news_comm_monolith_6")
+	local se = strformat("%s, %s",name,comm)
+	db.actor:give_game_news(se, msg, "ui_inGame2_monolit_1", 0, 20000)
+	xr_sound.set_sound_play(AC_ID, "pda_task")
+end
+
+function xr_effects.stancia_strelok_message()
+	local msg = game.translate_string("st_lttz_stancia_strelok_message")
+	local name = game.translate_string("stalker_strelok_oa_name")
+	local comm = game.translate_string("st_dyn_news_comm_stalker_6")
+	local se = strformat("%s, %s",name,comm)
+	db.actor:give_game_news(se, msg, "ui_inGame2_strelok_ico", 0, 20000)
+	xr_sound.set_sound_play(AC_ID, "pda_task")
+end
+
+function xr_effects.mon_strelok_message()
+	local msg = game.translate_string("st_lttz_mon_strelok_message")
+	local name = game.translate_string("stalker_strelok_oa_name")
+	local comm = game.translate_string("st_dyn_news_comm_stalker_6")
+	local se = strformat("%s, %s",name,comm)
+	db.actor:give_game_news(se, msg, "ui_inGame2_strelok_ico", 0, 20000)
+	xr_sound.set_sound_play(AC_ID, "pda_task")
+end
+
+function xr_effects.limansk_rogue_message()
+	local msg = game.translate_string("st_lttz_limansk_rogue_message")
+	local name = game.translate_string("stalker_rogue_oa_name")
+	local comm = game.translate_string("st_dyn_news_comm_stalker_6")
+	local se = strformat("%s, %s",name,comm)
+	db.actor:give_game_news(se, msg, "ui_inGame2_neutral_2_merc", 0, 20000)
+	xr_sound.set_sound_play(AC_ID, "pda_task")
+end
+
+function xr_effects.kat_rogue_message()
+	local msg = game.translate_string("st_lttz_kat_rogue_message")
+	local name = game.translate_string("stalker_rogue_oa_name")
+	local comm = game.translate_string("st_dyn_news_comm_stalker_6")
+	local se = strformat("%s, %s",name,comm)
+	db.actor:give_game_news(se, msg, "ui_inGame2_neutral_2_merc", 0, 20000)
+	xr_sound.set_sound_play(AC_ID, "pda_task")
+end
+
+function xr_effects.war_stitch_message()
+	local msg = game.translate_string("st_lttz_war_stitch_message")
+	local name = game.translate_string("stalker_stitch_oa_name")
+	local comm = game.translate_string("st_dyn_news_comm_stalker_6")
+	local se = strformat("%s, %s",name,comm)
+	db.actor:give_game_news(se, msg, "ui_inGame2_neutral_2_mask", 0, 20000)
+	xr_sound.set_sound_play(AC_ID, "pda_task")
+end
+
+function xr_effects.premature_emission(actor, npc)
+	level.set_weather_fx("fx_surge_day_3_stancia")
+	xr_sound.set_sound_play(AC_ID, "blowout_hit_2")
+	xr_effects.aes_earthshake(npc)
+end
+
+function xr_effects.chernobog_vanish()
+	xr_sound.set_sound_play(AC_ID, "chernobog_vanish")
+end
+
+function xr_effects.chernobog_death_cry()
+	xr_sound.set_sound_play(AC_ID, "chernobog_death_cry")
+end
+
+function xr_effects.decryption_noise()
+	xr_sound.set_sound_play(AC_ID, "decryption_noise")
+end
+
+function xr_effects.decoder_beep()
+	xr_sound.set_sound_play(AC_ID, "decoder_beep")
+end
+
+function xr_effects.mil_radogost_message()
+	local msg = game.translate_string("st_lttz_mil_radogost_message")
+	local name = game.translate_string("mil_greh_radogost_name")
+	local comm = game.translate_string("st_dyn_news_comm_greh_6")
+	local se = strformat("%s, %s",name,comm)
+	db.actor:give_game_news(se, msg, "ui_inGame2_bandit_4", 0, 20000)
+	xr_sound.set_sound_play(AC_ID, "pda_task")
+end
+
+function xr_effects.dark_presence_invitation()
+	xr_sound.set_sound_play(AC_ID, "chernobog_call")
+end
+
+function xr_effects.dark_presence_whispers()
+	xr_sound.set_sound_play(AC_ID, "dark_presence_whispers")
+end
+
+function xr_effects.dark_presence_emission(actor, npc)
+	if (level.get_time_hours() >= 5 and level.get_time_hours() <= 20) then
+				level.set_weather_fx("fx_blowout_day")
+				xr_effects.aes_earthshake(npc)
+				xr_sound.set_sound_play(AC_ID, "dark_presence_rumble")
+			else
+				level.set_weather_fx("fx_blowout_night")
+				xr_effects.aes_earthshake(npc)
+				xr_sound.set_sound_play(AC_ID, "dark_presence_rumble")
+			end
+end
+
+function xr_effects.dark_presence_ambience()
+	xr_sound.set_sound_play(AC_ID, "dark_presence_ambience")
+end
+
+function xr_effects.x18_stitch_message()
+	local msg = game.translate_string("st_lttz_x18_stitch_message")
+	local name = game.translate_string("stalker_stitch_oa_name")
+	local comm = game.translate_string("st_dyn_news_comm_zombied_6")
+	local se = strformat("%s, %s",name,comm)
+	db.actor:give_game_news(se, msg, "ui_inGame2_neutral_2_mask", 0, 10000)
+end
+
+function xr_effects.x18_rogue_message()
+	local msg = game.translate_string("st_lttz_x18_rogue_message")
+	local name = game.translate_string("stalker_rogue_oa_name")
+	local comm = game.translate_string("st_dyn_news_comm_monolith_6")
+	local se = strformat("%s, %s",name,comm)
+	db.actor:give_game_news(se, msg, "ui_inGame2_neutral_2_merc", 0, 10000)
+end
+
+function xr_effects.x18_degtyarev_message()
+	local msg = game.translate_string("st_lttz_x18_degtyarev_message")
+	local name = game.translate_string("army_degtyarev_name")
+	local comm = game.translate_string("st_dyn_news_ssu")
+	local se = strformat("%s, %s",name,comm)
+	db.actor:give_game_news(se, msg, "ui_inGame2_Hero", 0, 10000)
+end
+
+function xr_effects.x18_strelok_message()
+	local msg = game.translate_string("st_lttz_x18_strelok_message")
+	local name = game.translate_string("stalker_strelok_oa_name")
+	local comm = game.translate_string("st_dyn_news_comm_stalker_6")
+	local se = strformat("%s, %s",name,comm)
+	db.actor:give_game_news(se, msg, "ui_inGame2_strelok_ico", 0, 10000)
+end
+
+function xr_effects.x18_eidolon_message()
+	local msg = game.translate_string("st_lttz_x18_eidolon_message")
+	local name = game.translate_string("monolith_eidolon_name")
+	local comm = game.translate_string("st_dyn_news_comm_monolith_6")
+	local se = strformat("%s, %s",name,comm)
+	db.actor:give_game_news(se, msg, "ui_inGame2_monolit_1", 0, 10000)
+end
+
+function xr_effects.x18_chernobog_message()
+	local msg = game.translate_string("st_lttz_x18_chernobog_message")
+	local name = game.translate_string("kat_greh_sabaoth_name")
+	local comm = game.translate_string("st_dyn_news_comm_greh_6")
+	local se = strformat("%s, %s",name,comm)
+	db.actor:give_game_news(se, msg, "ui_inGame2_monolit_4", 0, 10000)
+end
+
+function xr_effects.x18_dark_presence_message()
+	local msg = game.translate_string("st_lttz_x18_dark_presence_message")
+	local name = game.translate_string("st_dyn_news_unknown_contact")
+	db.actor:give_game_news(name, msg, "ui_inGame2_D_gonets_pravosudiya", 0, 10000)
+end
+
+function xr_effects.dark_presence_final()
+	xr_sound.set_sound_play(AC_ID, "dark_presence_rumble")
+end
+
+function xr_effects.dark_presence_aftershock(actor,npc,p)
+	level.add_pp_effector("psi.ppe", 5000, false)
+	level.add_cam_effector("camera_effects\\fatigue.anm", 5000, false, "")
+end

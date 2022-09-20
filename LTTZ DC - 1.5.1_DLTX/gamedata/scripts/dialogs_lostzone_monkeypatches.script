@@ -1,0 +1,35 @@
+function dialogs_lostzone.oa_degtyarev_good_reward(first_speaker, second_speaker)
+	dialogs.relocate_money_to_actor(first_speaker, second_speaker, 5000)
+	xr_effects.inc_faction_goodwill_to_actor(db.actor, nil, {"army_npc", 100})
+end
+
+function dialogs_lostzone.oa_degtyarev_best_reward(first_speaker, second_speaker)
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_compass_af_aam")
+	xr_effects.inc_faction_goodwill_to_actor(db.actor, nil, {"army_npc", 250})
+end
+
+------------------------
+-- Dark Presence
+------------------------
+function dialogs_lostzone.radogost_psy_protection(first_speaker, second_speaker)
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_pin_af_aac")
+	xr_effects.inc_faction_goodwill_to_actor(db.actor, nil, {"greh_npc", 50})
+end
+
+function dialogs_lostzone.dark_presence_voices(first_speaker, second_speaker)
+	xr_sound.set_sound_play(AC_ID, "dark_presence_voices")
+end
+
+function dialogs_lostzone.dark_presence_laughter(first_speaker, second_speaker)
+	xr_sound.set_sound_play(AC_ID, "dark_presence_laughter")
+end
+
+function dialogs_lostzone.dark_presence_anger(first_speaker, second_speaker)
+	xr_effects.aes_earthshake(npc)
+	xr_sound.set_sound_play(AC_ID, "dark_presence_fury")
+end
+
+function dialogs_lostzone.dp_noosphere_voice_good_reward(first_speaker, second_speaker)
+	dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "af_empty_af_aac")
+	xr_effects.inc_faction_goodwill_to_actor(db.actor, nil, {"greh_npc", 250})
+end

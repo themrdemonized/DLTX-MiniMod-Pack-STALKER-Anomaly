@@ -1,0 +1,30 @@
+character_id_funcs = {
+	["bar_dolg_general_zoneguard_stalker"] = function(data)
+		data.name = "GENERATE_NAME_senior_sergeant"
+	end,
+	["bar_visitors_stalker_mechanic"] = function(data)
+		data.rank_min = 8692
+		data.rank_max = 8692
+	end,
+	["bar_dolg_medic"] = function(data)
+		data.rank_min = 11000
+		data.rank_max = 11000
+	end,
+	["red_greh_trader"] = function(data)
+		data.rank_min = 8500
+		data.rank_max = 8500
+	end,
+	["red_greh_tech"] = function(data)
+		data.rank_min = 9300
+		data.rank_max = 9300
+	end,
+}
+
+function on_game_start()
+	RegisterScriptCallback("on_specific_character_init", function(character_id, data)
+		if character_id_funcs[character_id] then
+			printf("LTTZ DC DXML patching, altering %s", character_id)
+			character_id_funcs[character_id](data)
+		end
+	end)
+end
