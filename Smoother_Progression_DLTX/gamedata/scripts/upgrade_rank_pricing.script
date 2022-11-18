@@ -12,6 +12,15 @@ local rank_discount ={
         f = smooth_prog_mcm.get_tierdisc("tier3"),
 }          
 
+outfit_type_upgrade = {
+    ["outfit_novice"] = 0.3,
+    ["outfit_light"] = 0.7,
+    ["outfit_medium"] = 0.85,
+    ["outfit_heavy"] = 1.15,
+    ["outfit_exo"] = 1.4,
+    ["helmet_light"] = 0.6,
+    ["helmet"] = 1.3,
+    }
 
 
 local upgr_tier_con = {
@@ -60,6 +69,16 @@ local property_table = {
 	["prop_rpm"]					=	{[1]="rpm",							[2]=1,		[3]=false,	[4]="",},
 }
 
+function get_upgrade_price_coeff(upgr_sec)
+	upgr_sec = upgr_sec or ""
+	local coeff
+    if IsItem("outfit", upgr_sec) or IsItem("helmet", upgr_sec) then
+    	coeff = ui_mcm.get("smooth_prog/out_upgr_mult") * (outfit_type_upgrade[SYS_GetParam(0, upgr_sec, "repair_type", "")] or 1)
+    else
+    	coeff = smooth_prog_mcm.get_wpndisc("wpn_upgr_mult")
+    end
+    return coeff
+end
 
 
 function inventory_upgrades.get_upgrade_cost(section)
@@ -69,8 +88,8 @@ function inventory_upgrades.get_upgrade_cost(section)
     if db.actor then
         -- Read the amount necessary for installation
         rank = section:sub(14,14)
-        local price = math.floor(char_ini:r_u32(section, "cost")*cur_price_percent*smooth_prog_mcm.get_wpndisc("wpn_upgr_mult")*(rank_discount[rank] or 1))
-        
+        local outfit_sec = ui_inventory.GUI.upgr.sec or ""
+        local price =  math.floor(char_ini:r_u32(section, "cost") * cur_price_percent * (rank_discount[rank] or 1) * get_upgrade_price_coeff(outfit_sec))    
                     
         -- Enter into the text variable the cost of the upgrade
         str = " " .. game.translate_string("st_upgr_cost") .. ": " .. price
@@ -155,7 +174,8 @@ function inventory_upgrades.precondition_functor_a( param1, section ) -- disable
 	if actor then
 		-- We check the availability of the required amount
 		rank = section:sub(14,14)
-        local price = math.floor(char_ini:r_u32(section, "cost")*cur_price_percent*smooth_prog_mcm.get_wpndisc("wpn_upgr_mult")*(rank_discount[rank] or 1))
+		local outfit_sec = ui_inventory.GUI.upgr.sec or ""
+        local price =  math.floor(char_ini:r_u32(section, "cost") * cur_price_percent * (rank_discount[rank] or 1) * get_upgrade_price_coeff(outfit_sec))
 		local cash = actor:money()
 		if(cash<price) then
 			ret = 2
@@ -174,7 +194,8 @@ function inventory_upgrades.effect_functor_a( param2, section, loading ) --( str
 	
 	if loading == 0 then
 		rank = section:sub(14,14)
-        local price = math.floor(char_ini:r_u32(section, "cost")*cur_price_percent*smooth_prog_mcm.get_wpndisc("wpn_upgr_mult")*(rank_discount[rank] or 1))
+        local outfit_sec = ui_inventory.GUI.upgr.sec or ""
+        local price =  math.floor(char_ini:r_u32(section, "cost") * cur_price_percent * (rank_discount[rank] or 1) * get_upgrade_price_coeff(outfit_sec))
 		db.actor:give_money( -1 * price )
 
 		inventory_upgrades.effect_funct = true
@@ -241,7 +262,8 @@ function inventory_upgrades.prereq_functor_a( param3, section )
 	if actor then
 		-- We read from the upgrade section its price
 		rank = section:sub(14,14)
-        local price = math.floor(char_ini:r_u32(section, "cost")*cur_price_percent*smooth_prog_mcm.get_wpndisc("wpn_upgr_mult")*(rank_discount[rank] or 1))
+        local outfit_sec = ui_inventory.GUI.upgr.sec or ""
+        local price =  math.floor(char_ini:r_u32(section, "cost") * cur_price_percent * (rank_discount[rank] or 1) * get_upgrade_price_coeff(outfit_sec))
 		-- Read the number of dough from YY
 		local cash = actor:money()
 		-- If the bubble is not enough, then we list the corresponding line

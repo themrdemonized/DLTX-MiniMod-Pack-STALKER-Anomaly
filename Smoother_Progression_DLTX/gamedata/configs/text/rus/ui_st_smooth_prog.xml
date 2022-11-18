@@ -21,6 +21,9 @@
 	<string id="ui_mcm_smooth_prog_wpn_upgr_mult">
 		<text>Множитель цены улучшения оружия</text>
 	</string>
+	<string id="ui_mcm_smooth_prog_out_upgr_mult">
+		<text>Множитель цены улучшения костюмов</text>
+	</string>
 	<string id="ui_mcm_desc_smooth">
 		<text>Сохранить и эагрузить игру чтобы изменения вступили в силу!</text>
 	</string>

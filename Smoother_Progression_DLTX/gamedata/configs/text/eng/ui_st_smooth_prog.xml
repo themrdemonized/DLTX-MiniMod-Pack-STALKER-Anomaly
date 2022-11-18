@@ -21,6 +21,9 @@
 	<string id="ui_mcm_smooth_prog_wpn_upgr_mult">
 		<text>Weapon upgrades cost multiplier</text>
 	</string>
+	<string id="ui_mcm_smooth_prog_out_upgr_mult">
+		<text>Outfit upgrades cost multiplier</text>
+	</string>
 	<string id="ui_mcm_desc_smooth">
 		<text>Save and load the game for the changes to apply!</text>
 	</string>
