@@ -14,8 +14,8 @@ local rank_discount ={
 
 outfit_type_upgrade = {
     ["outfit_novice"] = 0.3,
-    ["outfit_light"] = 0.7,
-    ["outfit_medium"] = 0.85,
+    ["outfit_light"] = 0.6,
+    ["outfit_medium"] = 0.9,
     ["outfit_heavy"] = 1.15,
     ["outfit_exo"] = 1.4,
     ["helmet_light"] = 0.6,
